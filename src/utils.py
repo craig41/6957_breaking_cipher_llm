@@ -1,4 +1,11 @@
 from datasets import load_dataset
+from warnings import warn
+
+def read_data(data_name):
+    if data_name == "flores":
+        return read_flores()
+    else:
+        raise ValueError(f"Data {data_name} not found!")
 
 def read_flores():
     dset = load_dataset("SEACrowd/flores200", trust_remote_code=True)

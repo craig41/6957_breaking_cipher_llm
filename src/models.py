@@ -10,9 +10,6 @@ def memoize(f):
         return result[0]
     return memoized_f
         
-
-
-
 @memoize
 def _llama2():
     import transformers
@@ -96,48 +93,6 @@ def _dummy():
         if num_tokens_container is not None:
             num_tokens_container.append((1,1))
         return "No" if n is None else ["No" for _ in range(n)]
-    return query
-
-def _gpt4(openai_api_key=None, helicone_api_key=None, query_kwargs={}):
-    raise DeprecationWarning("gpt4 is not up to date, use gpt2024 model instead (see models.py)")
-    from helicone.openai_proxy import openai ; from helicone.globals import helicone_global # # # import openai
-    openai.api_key = openai_api_key
-    helicone_global.api_key = helicone_api_key
-
-    def query(messages, n=None, query_specific_kwargs={}):
-        if n is None:
-            return openai.ChatCompletion.create (
-                                                    model="gpt-4-1106-preview",
-                                                    messages=messages,
-                                                    **  {
-                                                            "temperature":0.0,
-                                                            "max_tokens":512,
-                                                            "top_p":1,
-                                                            "frequency_penalty":0,
-                                                            "presence_penalty":0,
-                                                            **query_kwargs,
-                                                            **query_specific_kwargs
-                                                        },
-                                                )['choices'][0]['message']['content']
-        else:
-            completion = openai.ChatCompletion.create   (
-                                                            model="gpt-4-1106-preview",
-                                                            messages=messages,
-                                                            n=n,
-                                                            seed=74,
-                                                            **  {
-                                                                    "temperature":1.0,
-                                                                    "max_tokens":512,
-                                                                    "top_p":1,
-                                                                    "frequency_penalty":0,
-                                                                    "presence_penalty":0,
-                                                                    **query_kwargs,
-                                                                    **query_specific_kwargs,
-                                                                },
-
-                                                        )
-            return [choice['message']['content'] for choice in completion['choices']]
-
     return query
 
 def _gpt2024(openai_api_key=None, helicone_api_key=None, query_kwargs={}):
@@ -255,14 +210,11 @@ def _commandrplus():
     
     return query
 
-
-
 _models =    {
                 "mistral"   : _mistral,
                 "commandrplus"   : _commandrplus,
                 "llama2"     : _llama2,
                 "dummy"     : _dummy,
-                "gpt4"      : _gpt4,
                 "gpt2024"   : _gpt2024,
                 "llama3_3_70b" : _llama3_3_70b,
             }   

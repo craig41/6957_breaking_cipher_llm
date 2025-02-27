@@ -13,4 +13,4 @@
 WORKDIR=/scratch/general/vast/$USER/CondaQA_Private
 source /scratch/general/vast/$USER/CondaQA_Private/.venv/bin/activate
 
-python run.py -m  -k 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 -w human_paraphrase_only -d '../../data/full/condaqa_dev.json' -s 0 -n 16
+python run.py -m llama3_3_70B -w translate -d flores

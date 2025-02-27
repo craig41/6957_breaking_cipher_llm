@@ -39,12 +39,12 @@ def main(args, key):
     print(args)
     if key is not None:
         args.model_args = key
+    if args.n is None:
+            data = read_data(args.data)
+    else:
+        data = read_data(args.data)[slice(args.s, args.s+args.n)]
     run (
-            data = read_data    (
-                                    args.data,
-                                    # # # include = (lambda instance : instance['PassageEditID'] != 0)
-                                    include = (lambda instance : instance['PassageEditID'] == 0) # # # 
-                                )[slice(args.s, args.s+args.n)], 
+            data,
             pipeline = Pipeline (
                                     load_model(args.model, *([args.model_args] if args.model_args else [])),
                                     load_workflow(args.workflow)
@@ -79,6 +79,7 @@ if __name__ == "__main__":
         "-d",
         "--data",
         type=str,
+        choices=["flores"],
         help="file path to the data to run the workflow on"
     )
     parser.add_argument(
@@ -92,12 +93,14 @@ if __name__ == "__main__":
         "-n",
         "--n",
         type=int,
+        default=None,
         help="number of instances to test over"
     )
     parser.add_argument(
         "-k",
         "--key",
         type=str,
+        default=None,
         help="API key to be passed to main model"
     )
 
