@@ -17,7 +17,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64
 
 WORKDIR=/scratch/general/vast/$USER/CondaQA_Private
 OUTDIR=$WORKDIR/src/eval/chat-eval/llama3-3-70B/gen_edits_gen_qs/
-source /uufs/chpc.utah.edu/common/home/u0013114/.venv/bin/activate
+#source /uufs/chpc.utah.edu/common/home/u0013114/.venv/bin/activate
 module load cuda/12.4.0
 
 nvidia-smi
