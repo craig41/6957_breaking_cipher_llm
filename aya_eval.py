@@ -10,11 +10,15 @@ if __name__ == "__main__":
 
     print("getting started")
     start = time.time()
+    print("step 1")
 
     checkpoint = "CohereForAI/aya-101"
+    print("step 1")
 
     tokenizer = AutoTokenizer.from_pretrained(checkpoint)
+    print("step 1")
     aya_model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
+    print("step 1")
 
     # in_file = "data/encoded/D1_5_word_groups_2_test.txt"
     directory = "data/encoded/"
