@@ -11,7 +11,6 @@ if __name__ == "__main__":
     print("getting started")
     start = time.time()
 
-    tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
     checkpoint = "CohereForAI/aya-101"
 
     tokenizer = AutoTokenizer.from_pretrained(checkpoint)
