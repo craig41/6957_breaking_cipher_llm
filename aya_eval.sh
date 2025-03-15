@@ -30,4 +30,4 @@ export HF_HOME="/scratch/general/vast/$USER/huggingface_cache"
 
 
 #python condaqa_eval.py --test_file $WORKDIR/data/final_condaqa_labeled/gen_edits_gen_qs_full.json --output_dir $OUTDIR --model_name llama3_3_70b --model_type huggingface --hk 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
-python3 aya_eval.py
+python3 aya_eval.py > output.log
