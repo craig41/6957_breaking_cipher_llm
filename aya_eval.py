@@ -1,19 +1,14 @@
-# pip install -q transformers
+
 import os
 import time
 import torch
 
-# from safetensors import torch
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
-
-
-
-
-
 
 
 if __name__ == "__main__":
 
+    print("getting started")
     start = time.time()
 
     tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
@@ -22,7 +17,7 @@ if __name__ == "__main__":
     tokenizer = AutoTokenizer.from_pretrained(checkpoint)
     aya_model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
 
-    in_file = "data/encoded/D1_5_word_groups_2_test.txt"
+    # in_file = "data/encoded/D1_5_word_groups_2_test.txt"
     directory = "data/encoded/"
 
     for in_file in os.scandir(directory):
