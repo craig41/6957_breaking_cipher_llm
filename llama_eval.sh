@@ -23,6 +23,8 @@ OUTDIR=$WORKDIR/src/eval/chat-eval/llama3-3-70B/gen_edits_gen_qs/
 source /uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm
 module load cuda/12.4.0
 
+echo $OUTDIR
+
 nvidia-smi
 python -c "import torch; torch.cuda.is_available()"
 echo "SLURM JOB ID: $SLURM_JOBID"
@@ -31,4 +33,4 @@ mkdir -p /scratch/general/vast/$USER/huggingface_cache
 mkdir -p $OUTDIR
 export HF_HOME="/scratch/general/vast/$USER/huggingface_cache"
 
-python3 llama3_eb_eval.py
+python3 llama3_8b_eval.py
