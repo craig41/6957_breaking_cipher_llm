@@ -19,7 +19,7 @@
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64
 
 WORKDIR=/uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm/scratch
-OUTDIR=/uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm/output
+OUTDIR=/uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm/output2
 source /uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm
 module load cuda/12.4.0
 

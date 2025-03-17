@@ -11,19 +11,19 @@ def main(args):
     start = time.time()
     print("step 1")
 
-    print("step 1")
+    print("step 2")
 
     checkpoint = "CohereForAI/aya-101"
     tokenizer = AutoTokenizer.from_pretrained(checkpoint)
     aya_model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
-    print("step 1")
-    print("step 1")
+    print("step 3")
+    print("step 4")
 
     # in_file = "data/encoded/D1_5_word_groups_2_test.txt"
     directory = "data/encoded/"
 
     for in_file in os.scandir(directory):
-        print("step 1")
+        print("step 5")
         with open(in_file, 'r') as file:
             text = file.read()
         n_grams = text.split('\n')
@@ -35,13 +35,14 @@ def main(args):
         inputs = []
         outputs = []
 
-        print("step 2")
+        print("step 5")
         for x in n_grams:
             inputs.append(tokenizer.encode(x, return_tensors="pt"))
             break
 
         inputs2 = tokenizer(n_grams, padding=True, return_tensors="pt")
 
+        print("step 6")
         for i in inputs:
             with torch.no_grad():
                 output = aya_model.generate(i, max_new_tokens=128)
@@ -50,6 +51,7 @@ def main(args):
 
         decoded_outs = []
 
+        print("step 7")
         for o in outputs:
             dec_out = tokenizer.decode(o, skip_special_tokens=True)
             decoded_outs.append(dec_out)
@@ -60,7 +62,7 @@ def main(args):
 
         print("Time taken: ", end-start)
 
-
+        print("step 8")
         orig_filename = os.path.basename(in_file)
         orig_filename = os.path.splitext(orig_filename)[0]
         filename = "data/parsed/" + orig_filename + "_predictions.txt"
@@ -81,4 +83,6 @@ def get_args():
 
 if __name__ == "__main__":
     args = get_args()
+    if not os.path.exists(args.output_dir):
+        os.mkdir(args.output_dir)
     main(args)
