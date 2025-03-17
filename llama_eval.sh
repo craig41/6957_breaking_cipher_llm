@@ -31,4 +31,4 @@ mkdir -p /scratch/general/vast/$USER/huggingface_cache
 mkdir -p $OUTDIR
 export HF_HOME="/scratch/general/vast/$USER/huggingface_cache"
 
-python3 aya_eval.py --output_dir $OUTDIR
+python3 llama3_eb_eval.py

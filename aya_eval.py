@@ -6,18 +6,17 @@ import torch
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 
-if __name__ == "__main__":
-
+def main(args):
     print("getting started")
     start = time.time()
     print("step 1")
 
-    checkpoint = "CohereForAI/aya-101"
     print("step 1")
 
+    checkpoint = "CohereForAI/aya-101"
     tokenizer = AutoTokenizer.from_pretrained(checkpoint)
-    print("step 1")
     aya_model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
+    print("step 1")
     print("step 1")
 
     # in_file = "data/encoded/D1_5_word_groups_2_test.txt"
@@ -39,6 +38,7 @@ if __name__ == "__main__":
         print("step 2")
         for x in n_grams:
             inputs.append(tokenizer.encode(x, return_tensors="pt"))
+            break
 
         inputs2 = tokenizer(n_grams, padding=True, return_tensors="pt")
 
@@ -68,3 +68,17 @@ if __name__ == "__main__":
         with open(filename, "w") as txt_file:
             for line in decoded_outs:
                 txt_file.write(line + "\n")
+        break
+
+
+def get_args():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output_dir", type=str, default="./output/")
+    args = parser.parse_args()
+    return args
+
+
+if __name__ == "__main__":
+    args = get_args()
+    main(args)
