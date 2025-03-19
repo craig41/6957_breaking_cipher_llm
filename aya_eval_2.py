@@ -22,7 +22,9 @@ if __name__ == "__main__":
             text = file.read()
         n_grams = text.split('\n')
 
-        prompt_prefix = "This message has an encoded word in it, can you tell me what the encoded word is by responding with the entire message replacing the encoded word with the actual word, for example if I give you the message 'my yodz2rMf+AuOmKOjdaAplIiyHivku2xJPOIX7y3uJQ8= is John Smith' and the encoded word is 'name', then return 'my name is John Smith': "
+        # prompt_prefix = "Can you tell what the encoded word is? Respond with the original passage replacing your translation of the encoded word, for example if I promt 'my yodz2rMf+AuOmKOjdaAplIiyHivku2xJPOIX7y3uJQ8= is John Smith' and your guess is 'name', then return 'my name is John Smith': "
+        
+        prompt_prefix = "This message has an encoded word in it, can you tell me what that word is by responding with the full message replacing the encoded word with the actual word? the phrase is: "
 
         n_grams = [prompt_prefix + x for x in n_grams]
 
@@ -47,7 +49,7 @@ if __name__ == "__main__":
 
         orig_filename = os.path.basename(in_file)
         orig_filename = os.path.splitext(orig_filename)[0]
-        filename = "data/aya_pred/" + orig_filename + "_predictions.txt"
+        filename = "data/aya_pred/" + orig_filename + "_predictions_2.txt"
 
         with open(filename, "w") as txt_file:
             for line in decoded_outs:
