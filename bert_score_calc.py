@@ -1,8 +1,7 @@
-import numpy as np
 import os
+import re
+
 import pandas as pd
-import sys
-from transformers import BertTokenizer, BertModel
 from bert_score import score
 
 
@@ -30,7 +29,7 @@ def calc_bert(g_lines, p_lines):
         p.append(s.P.mean())
         r.append(s.R.mean())
         f1.append(s.F1.mean())
-        print(f"BERTScore Precision: {s.P.mean():.4f}, Recall: {s.R.mean():.4f}, F1: {s.F1.mean():.4f}")
+        # print(f"BERTScore Precision: {s.P.mean():.4f}, Recall: {s.R.mean():.4f}, F1: {s.F1.mean():.4f}")
     
     return scores, p, r, f1
 
@@ -39,19 +38,27 @@ if __name__ == '__main__':
 
     gold_dir = sorted(os.listdir("data/parsed"))
     pred_dir = sorted(os.listdir("data/aya_pred"))
+
+    # gold_file = "data/parsed/D1_5_word_groups.txt"
+    # pred_file = "data/aya_pred/D1_5_word_groups.txt"
     
     for gold_f, pred_f in zip(gold_dir, pred_dir):
         if os.path.basename(gold_f) != os.path.basename(pred_f):
             print(f"{gold_f} != {pred_f}")
             break
 
-        with open(gold_f, 'r') as file:
+        print(gold_f, pred_f)
+
+        with open("data/parsed/" + gold_f, 'r') as file:
             gold_lines = file.readlines()
             # Remove trailing newline characters from each line
             gold_lines = [line.rstrip('\n') for line in gold_lines]
+            gold_lines = [re.sub(r"<pad>", "", line) for line in gold_lines]
+            gold_lines = [re.sub(r"</s>", "", line) for line in gold_lines]
+            gold_lines = [line.strip() for line in gold_lines]
             gold_lines = [string for string in gold_lines if string]
 
-        with open(pred_f, 'r') as file:
+        with open("data/aya_pred/" + pred_f, 'r') as file:
             pred_lines = file.readlines()
             # Remove trailing newline characters from each line
             pred_lines = [line.rstrip('\n') for line in pred_lines]
