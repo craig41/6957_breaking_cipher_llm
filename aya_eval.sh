@@ -11,7 +11,7 @@
 #SBATCH --nodes=1
 #SBATCH --mem=245GB
 #SBATCH --ntasks=1
-#SBATCH --time=5:00:00
+#SBATCH --time=12:00:00
 
 #SBATCH -o slurmjob-%j.out-%N
 #SBATCH -e slurmjob-%j.err-%N
@@ -22,8 +22,6 @@ WORKDIR=/uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm/s
 OUTDIR=/uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm/output2
 # source /uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm
 module load cuda/12.4.0
-
-echo $OUTDIR
 
 nvidia-smi
 python -c "import torch; torch.cuda.is_available()"

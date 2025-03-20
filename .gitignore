@@ -172,3 +172,8 @@ cython_debug/
 /data/.DS_Store
 /.DS_Store
 /data/encoded/.DS_Store
+
+
+# key file
+constants.py
+slurmjob-*

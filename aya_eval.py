@@ -15,7 +15,7 @@ if __name__ == "__main__":
     tokenizer = AutoTokenizer.from_pretrained(checkpoint)
     aya_model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
 
-    directory = "data/encoded/"
+    directory = "data/encoded_partial/"
 
     for in_file in os.scandir(directory):
         with open(in_file, 'r') as file:
@@ -32,7 +32,6 @@ if __name__ == "__main__":
         for x in n_grams:
             inputs.append(tokenizer.encode(x, return_tensors="pt"))
 
-        inputs2 = tokenizer(n_grams, padding=True, return_tensors="pt")
 
         for i in inputs:
             with torch.no_grad():
@@ -47,7 +46,7 @@ if __name__ == "__main__":
 
         orig_filename = os.path.basename(in_file)
         orig_filename = os.path.splitext(orig_filename)[0]
-        filename = "data/aya_pred/" + orig_filename + "_predictions.txt"
+        filename = "data/aya_pred_partial/" + orig_filename + ".txt"
 
         with open(filename, "w") as txt_file:
             for line in decoded_outs:

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=aya_eval
+#SBATCH --job-name=llama_eval
 #SBATCH --account soc-gpu-np
 #SBATCH --partition soc-gpu-np
 #SBATCH --gres=gpu
