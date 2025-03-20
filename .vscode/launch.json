@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--test_file", "C:/Users/alexg/Documents/GitHub/CondaQA_Private/data/full/condaqa_dev.json",
+                "--output_dir", "C:/Users/alexg/Documents/GitHub/CondaQA_Private/src/eval/chat-eval/o3-mini/full-dev",
+                "--model_name","o3-mini-2025-01-31",
+                "--model_type","openai",
+            ]
+        }
+    ]
+}

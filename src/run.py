@@ -15,7 +15,7 @@ from utils import *
 from models import *
 from workflows import *
 
-def generate_report(instances, golds, outputs, conversations):
+def generate_report(instances, outputs, conversations):
     #def mean(A):
     #    return sum(A)/len(A) if len(A) > 0 else 0
     #scores = {1:[], 2:[], 3:[]}
@@ -49,7 +49,7 @@ def main(args, key):
                                     load_model(args.model, *([args.model_args] if args.model_args else [])),
                                     load_workflow(args.workflow)
                                 ), 
-            per_instance_callback=(lambda instance, gold, output, conversation : print(f'{str(conversation)}\n\nINPUT:\n{str(instance["original passage"])}\nOUTPUT:\n{str(output)}\n')),
+            per_instance_callback=(lambda instance, output, conversation : print(f'{str(conversation)}\n\nINPUT:\n{str(instance["original passage"])}\nOUTPUT:\n{str(output)}\n')),
             # # # # # gold_key = (lambda instance : instance['PassageEditID'] == 1),
             report_generator = generate_report
         )
