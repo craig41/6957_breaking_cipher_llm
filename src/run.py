@@ -27,11 +27,11 @@ def main(args, key):
     if args.n is None:
             data = read_data(args.data, split=args.split)
             data = data.filter(lambda x: x['glottocode'] == args.source)
-            data = data[slice(args.s, args.s + args.n)]
+            data = data.select(range(args.s, len(data)))
     else:
         data = read_data(args.data, split=args.split)
         data = data.filter(lambda x: x['glottocode'] == args.source)
-        data = data[slice(args.s, args.s + args.n)]
+        data = data.select(range(args.s,args.n + args.s))
 
     run (
             data,

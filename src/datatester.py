@@ -20,6 +20,8 @@ def read_data(source_glotto, target_glotto, split='dev', num_lines=5):
     japanese = dataset.filter(lambda x: x['glottocode'] == 'nucl1643')
     english = dataset.filter(lambda x: x['glottocode'] == 'stan1293')
 
+    japanese = japanese.select(range(200))
+
     for i, item in enumerate(zip(japanese, english)):
         if i >= num_lines:
             break
