@@ -62,7 +62,7 @@ def _llama3_3_70b():
 
         outputs = model.generate(
             model_inputs, 
-            max_new_tokens=32, 
+            max_new_tokens=512, 
             do_sample=False, 
             temperature=None, 
             top_p=None)
@@ -111,7 +111,7 @@ def _llama3_2_3b():
 
         outputs = model.generate(
             model_inputs, 
-            max_new_tokens=32, 
+            max_new_tokens=512, 
             do_sample=False, 
             temperature=None, 
             top_p=None)
@@ -160,7 +160,7 @@ def _llama3_1_8b_instruct():
 
         outputs = model.generate(
             model_inputs, 
-            max_new_tokens=32, 
+            max_new_tokens=512, 
             do_sample=False, 
             temperature=None, 
             top_p=None)
