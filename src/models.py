@@ -198,7 +198,7 @@ def _aya_expanse_8b():
             input_ids,
             max_new_tokens=512,
             do_sample=True,
-            temperature=0
+            temperature=0.0
         )
         text = tokenizer.decode(gen_tokens[0])
         return text
