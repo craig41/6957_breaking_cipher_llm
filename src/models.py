@@ -191,6 +191,7 @@ def _aya_expanse_8b():
     model = transformers.AutoModelForCausalLM.from_pretrained(model_id, device_map="auto", torch_dtype=torch.float16)
 
     def query(messages, n=None):
+        print(f"Message: {messages}")
         input_ids = tokenizer.apply_chat_template([messages], tokenize=True, add_generation_prompt=True, return_tensors="pt").to('cuda')
 
         gen_tokens = model.generate(
