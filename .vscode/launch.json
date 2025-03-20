@@ -11,10 +11,10 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "args": [
-                "--test_file", "C:/Users/alexg/Documents/GitHub/CondaQA_Private/data/full/condaqa_dev.json",
-                "--output_dir", "C:/Users/alexg/Documents/GitHub/CondaQA_Private/src/eval/chat-eval/o3-mini/full-dev",
-                "--model_name","o3-mini-2025-01-31",
-                "--model_type","openai",
+                "-src", "ind_Latn",
+                "-tgt", "eng_Latn",
+                "--split", "dev",
+                "--num", "10",
             ]
         }
     ]

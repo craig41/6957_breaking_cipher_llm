@@ -1,15 +1,19 @@
 from datasets import load_dataset
 from warnings import warn
 
-def read_data(data_name):
-    if data_name == "flores":
-        return read_flores()
-    else:
-        raise ValueError(f"Data {data_name} not found!")
+def read_data(dataset, split='dev'):
+    """
+    Reads and prints examples from the official Flores dataset.
 
-def read_flores():
-    dset = load_dataset("SEACrowd/flores200", trust_remote_code=True)
-    return dset['test']
+    Args:
+        source_lang (str): Source language (e.g., 'ind_Latn').
+        target_lang (str): Target language (e.g., 'eng_Latn').
+        split (str): Dataset split ('dev', 'test', 'devtest').
+        num_lines (int): Number of lines to preview.
+    """
+    dataset = load_dataset("dataset", split=split, trust_remote_code=True)
+    
+    return dataset
 
 USER = "user"
 ASSISTANT = "assistant"

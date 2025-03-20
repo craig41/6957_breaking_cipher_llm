@@ -1,16 +1,16 @@
 #!/bin/bash
-#SBATCH --account marasovic-gpu-np
-#SBATCH --partition marasovic-gpu-np
+#SBATCH --account soc-gpu-np
+#SBATCH --partition soc-gpu-np
 #SBATCH --ntasks-per-node=1
 #SBATCH --nodes=1
-#SBATCH --gres=gpu:a100:1
-#SBATCH --time=4:00:00
-#SBATCH --mem=245GB
+#SBATCH --gres=gpu:1
+#SBATCH --time=2:00:00
+#SBATCH --mem=100GB
 #SBATCH --mail-user=u1380656@umail.utah.edu
 #SBATCH --mail-type=FAIL,END
 #SBATCH -o outputs-%j
 
-WORKDIR=/scratch/general/vast/$USER/CondaQA_Private
+WORKDIR=/scratch/general/vast/$USER/6957_breaking_cipher_llm
 source /uufs/chpc.utah.edu/common/home/u1380656/.venv/bin/activate
 module load cuda/12.4.0
 
@@ -21,4 +21,4 @@ echo "SLURM JOB ID: $SLURM_JOBID"
 mkdir -p /scratch/general/vast/$USER/huggingface_cache
 export HF_HOME="/scratch/general/vast/$USER/huggingface_cache"
 
-python run.py -m llama3_3_70B -w translate -d flores
+python run.py -m llama3_2_3b -w translate -d flores -n 200 -k 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 -src nucl1643 --output $WORKDIR/data/japanese/

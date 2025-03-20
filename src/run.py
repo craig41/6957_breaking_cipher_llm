@@ -1,12 +1,3 @@
-#!/scratch/general/vast/u1380656/CondaQA_Private/condaqa/bin/python
-#SBATCH --account marasovic-gpu-np
-#SBATCH --partition marasovic-gpu-np
-#SBATCH --ntasks-per-node=32
-#SBATCH --nodes=1
-#SBATCH --gres=gpu:a100:1
-#SBATCH --time=1:00:00
-#SBATCH --mem=80GB
-#SBATCH -o outputs-%j
 import os, sys ; sys.path.append(os.getcwd()) #allow local imports
 os.environ["TRANSFORMERS_CACHE"] = "/scratch/general/vast/u1380656/huggingface_cache"
 
@@ -14,23 +5,17 @@ import argparse
 from utils import *
 from models import *
 from workflows import *
+from huggingface_hub import login
 
 def generate_report(instances, outputs, conversations):
-    #def mean(A):
-    #    return sum(A)/len(A) if len(A) > 0 else 0
-    #scores = {1:[], 2:[], 3:[]}
-    #for instance, gold, output in zip(instances, golds, outputs):
-    #    scores[instance['PassageEditID']].append(gold == output)
-    #for key, value in scores.items():
-    #    print(key, mean(value))
-    #for conversation in conversations:
-    #    print(conversation)
-    # # # # # for instance, output, conversation in zip(instances, outputs, conversations):
-    #    print("original:", instance['original sentence'])
-    #    print("edit:", output)
-    #    print(conversation)
-    #    print()
     pass
+
+translated = []
+original = []
+def callback(instance, gold, output, conversation):
+    translated.append(output)
+    original.append(instance['text'])
+    print(f'{str(conversation)}\n\nINPUT:\n{str(instance["text"])}\nOUTPUT:\n{str(output)}\n')
 
 # # # # # TEMPORARY
 # # # # # 
@@ -40,19 +25,30 @@ def main(args, key):
     if key is not None:
         args.model_args = key
     if args.n is None:
-            data = read_data(args.data)
+            data = read_data(args.data, split=args.split)
+            data = data.filter(lambda x: x['glottocode'] == args.source)
+            data = data[args.s:]
     else:
-        data = read_data(args.data)[slice(args.s, args.s+args.n)]
+        data = read_data(args.data, split=args.split)
+        data = data.filter(lambda x: x['glottocode'] == args.source)
+        data = data[args.s:args.n+args.s]
+
     run (
             data,
             pipeline = Pipeline (
                                     load_model(args.model, *([args.model_args] if args.model_args else [])),
                                     load_workflow(args.workflow)
                                 ), 
-            per_instance_callback=(lambda instance, output, conversation : print(f'{str(conversation)}\n\nINPUT:\n{str(instance["original passage"])}\nOUTPUT:\n{str(output)}\n')),
-            # # # # # gold_key = (lambda instance : instance['PassageEditID'] == 1),
+            per_instance_callback=callback,
             report_generator = generate_report
         )
+    with open(args.output + '/translated.txt', 'w') as f:
+        for line in translated:
+            f.write(line + '\n')
+
+    with open(args.output + '/original.txt', 'w') as f:
+        for line in original:
+            f.write(line + '\n')
 
 
 if __name__ == "__main__":
@@ -103,9 +99,29 @@ if __name__ == "__main__":
         default=None,
         help="API key to be passed to main model"
     )
+    parser.add_argument(
+        "-src",
+         "--source",
+         type=str,
+         default="stan1293"
+    )
+    parser.add_argument(
+        "--split",
+         type=str,
+         default="dev"
+    )
+
+    parser.add_argument(
+        "--output",
+         type=str,
+         default=None
+    )
 
     args = parser.parse_args()
+    if not os.path.exists(args.output):
+        os.makedirs(args.output)
     key = args.key
     if key is not None:
         del args.key
+    login(token = key)
     main(args, key)

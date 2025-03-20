@@ -1,9 +1,9 @@
 from utils import *
 
 def _translate_basic():
-    system_message = Message(SYSTEM, "I will give you text which you will need to translate to English." )
+    system_message = Message(SYSTEM, "I will give you text which you will need to translate to English. Please just return the translated text, with no additional output." )
     def workflow(messages: Conversation, instance):
-        text = instance["translated"]
+        text = instance["text"]
 
         messages.append(system_message)
         user_message = Message(USER, text)
