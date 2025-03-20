@@ -185,6 +185,25 @@ def _llama3_1_8b_instruct():
 
     return query
 
+def _aya_expanse_8b():
+    model_id = "CohereForAI/aya-expanse-8b"
+    tokenizer = transformers.AutoTokenizer.from_pretrained(model_id)
+    model = transformers.AutoModelForCausalLM.from_pretrained(model_id, device_map="auto", torch_dtype=torch.float16)
+
+    def query(messages, n=None):
+        input_ids = tokenizer.apply_chat_template(messages, tokenize=True, add_generation_prompt=True, return_tensors="pt").to('cuda')
+
+        gen_tokens = model.generate(
+            input_ids,
+            max_new_tokens=512,
+            do_sample=True,
+            temperature=0
+        )
+        text = tokenizer.decode(gen_tokens[0])
+        return text
+    return query
+
+
 @memoize
 def _dummy():
     def query(messages=None, n=None, num_tokens_container:list=None):
@@ -316,7 +335,8 @@ _models =    {
                 "gpt2024"   : _gpt2024,
                 "llama3_3_70b" : _llama3_3_70b,
                 "llama3_2_3b" : _llama3_2_3b,
-                "llama3_1_8b_instruct" : _llama3_1_8b_instruct
+                "llama3_1_8b_instruct" : _llama3_1_8b_instruct,
+                "aya_expanse_8b" : _aya_expanse_8b,
             }   
 
 def load_model(model_name, *args, **kwargs):
