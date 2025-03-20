@@ -192,7 +192,7 @@ def _aya_expanse_8b():
 
     def query(messages, n=None):
         print(f"Message: {messages}")
-        input_ids = tokenizer.apply_chat_template([messages], tokenize=True, add_generation_prompt=True, return_tensors="pt").to('cuda')
+        input_ids = tokenizer.apply_chat_template(messages, tokenize=True, add_generation_prompt=True, return_tensors="pt").to('cuda')
 
         gen_tokens = model.generate(
             input_ids,

@@ -6,8 +6,7 @@ def _translate_basic():
         text = instance["text"]
 
         messages.append(system_message)
-        user_message = Message(USER, text)
-        translation = messages.query(user_message)
+        translation = messages.query(text)
         return translation
     return workflow
 
