@@ -11,7 +11,7 @@ def read_data(dataset, split='dev'):
         split (str): Dataset split ('dev', 'test', 'devtest').
         num_lines (int): Number of lines to preview.
     """
-    dataset = load_dataset("dataset", split=split, trust_remote_code=True)
+    dataset = load_dataset(dataset, split=split, trust_remote_code=True)
     
     return dataset
 

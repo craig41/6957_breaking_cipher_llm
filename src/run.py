@@ -75,8 +75,7 @@ if __name__ == "__main__":
         "-d",
         "--data",
         type=str,
-        choices=["flores"],
-        help="file path to the data to run the workflow on"
+        help="hf dataset to load"
     )
     parser.add_argument(
         "-s",
