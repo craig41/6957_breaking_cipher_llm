@@ -1,0 +1,33 @@
+Thu Mar 20 14:09:04 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               On  |   00000000:01:00.0 Off |                    0 |
+| 30%   26C    P8             21W /  300W |       2MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 3650370
+[rank: 0] Seed set to 1
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [00:00<00:01,  3.36it/s]Fetching 5 files:  80%|████████  | 4/5 [02:49<00:45, 45.83s/it]Fetching 5 files: 100%|██████████| 5/5 [02:49<00:00, 33.93s/it]
+Encoder model frozen.
+/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:195: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']
+Traceback (most recent call last):
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/bin/comet-score", line 8, in <module>
+    sys.exit(score_command())
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/comet/cli/score.py", line 187, in score_command
+    references = [line.strip() for line in fp.readlines()]
+  File "/uufs/chpc.utah.edu/sys/installdir/r8/python/3.10.3/lib/python3.10/codecs.py", line 322, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe7 in position 802: invalid continuation byte

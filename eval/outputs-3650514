@@ -1,0 +1,233 @@
+Thu Mar 20 14:37:22 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               On  |   00000000:01:00.0 Off |                    0 |
+| 30%   26C    P8             21W /  300W |       2MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 3650514
+[rank: 0] Seed set to 1
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 2626.04it/s]
+Encoder model frozen.
+/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:195: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']
+You are using the plain ModelCheckpoint callback. Consider using LitModelCheckpoint which with seamless uploading to Model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+Predicting: 0it [00:00, ?it/s]Predicting:   0%|          | 0/13 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|          | 0/13 [00:00<?, ?it/s]Predicting DataLoader 0:   8%|▊         | 1/13 [00:00<00:09,  1.24it/s]Predicting DataLoader 0:  15%|█▌        | 2/13 [00:01<00:07,  1.52it/s]Predicting DataLoader 0:  23%|██▎       | 3/13 [00:01<00:06,  1.60it/s]Predicting DataLoader 0:  31%|███       | 4/13 [00:02<00:05,  1.72it/s]Predicting DataLoader 0:  38%|███▊      | 5/13 [00:02<00:04,  1.73it/s]Predicting DataLoader 0:  46%|████▌     | 6/13 [00:03<00:04,  1.73it/s]Predicting DataLoader 0:  54%|█████▍    | 7/13 [00:04<00:03,  1.68it/s]Predicting DataLoader 0:  62%|██████▏   | 8/13 [00:04<00:03,  1.64it/s]Predicting DataLoader 0:  69%|██████▉   | 9/13 [00:05<00:02,  1.62it/s]Predicting DataLoader 0:  77%|███████▋  | 10/13 [00:06<00:01,  1.57it/s]Predicting DataLoader 0:  85%|████████▍ | 11/13 [00:07<00:01,  1.54it/s]Predicting DataLoader 0:  92%|█████████▏| 12/13 [00:07<00:00,  1.50it/s]Predicting DataLoader 0: 100%|██████████| 13/13 [00:08<00:00,  1.52it/s]Predicting DataLoader 0: 100%|██████████| 13/13 [00:08<00:00,  1.52it/s]
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 0	score: 0.9656
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 1	score: 0.9631
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 2	score: 0.9838
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 3	score: 0.9730
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 4	score: 0.9953
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 5	score: 0.9613
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 6	score: 1.0000
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 7	score: 0.9842
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 8	score: 0.9867
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 9	score: 0.9751
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 10	score: 0.6962
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 11	score: 0.9502
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 12	score: 0.6145
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 13	score: 0.8573
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 14	score: 0.9529
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 15	score: 0.8770
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 16	score: 0.9851
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 17	score: 0.8484
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 18	score: 0.9748
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 19	score: 0.8855
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 20	score: 0.8241
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 21	score: 0.5779
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 22	score: 0.9254
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 23	score: 0.9964
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 24	score: 0.9758
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 25	score: 0.6940
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 26	score: 0.7430
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 27	score: 0.8491
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 28	score: 0.9325
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 29	score: 1.0000
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 30	score: 0.9717
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 31	score: 0.9645
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 32	score: 0.8594
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 33	score: 1.0000
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 34	score: 0.9824
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 35	score: 0.9602
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 36	score: 0.9901
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 37	score: 0.8865
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 38	score: 0.9576
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 39	score: 0.9571
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 40	score: 0.9569
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 41	score: 0.9958
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 42	score: 0.9136
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 43	score: 0.9955
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 44	score: 0.9779
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 45	score: 0.9470
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 46	score: 0.8274
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 47	score: 0.9430
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 48	score: 0.6761
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 49	score: 0.9123
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 50	score: 0.9980
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 51	score: 0.7532
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 52	score: 0.9347
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 53	score: 0.9319
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 54	score: 0.9286
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 55	score: 0.9984
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 56	score: 0.5994
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 57	score: 0.6757
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 58	score: 0.8621
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 59	score: 0.8414
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 60	score: 0.9845
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 61	score: 0.9861
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 62	score: 0.9987
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 63	score: 0.9857
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 64	score: 0.9858
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 65	score: 0.9885
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 66	score: 0.9183
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 67	score: 0.9436
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 68	score: 0.9567
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 69	score: 0.9379
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 70	score: 0.8985
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 71	score: 0.8969
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 72	score: 0.9286
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 73	score: 0.7576
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 74	score: 0.9267
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 75	score: 0.8032
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 76	score: 0.9311
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 77	score: 0.9088
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 78	score: 0.7468
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 79	score: 0.8203
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 80	score: 0.5373
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 81	score: 0.9085
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 82	score: 0.9529
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 83	score: 0.8787
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 84	score: 0.9929
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 85	score: 0.9650
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 86	score: 0.9557
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 87	score: 0.6998
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 88	score: 0.9640
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 89	score: 0.9617
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 90	score: 0.9432
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 91	score: 0.7224
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 92	score: 0.9946
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 93	score: 0.9836
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 94	score: 0.9578
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 95	score: 0.9503
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 96	score: 0.9940
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 97	score: 0.9322
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 98	score: 0.8949
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 99	score: 0.8875
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 100	score: 0.9622
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 101	score: 0.9556
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 102	score: 0.8694
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 103	score: 0.9853
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 104	score: 0.9831
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 105	score: 0.9907
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 106	score: 0.9710
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 107	score: 0.9501
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 108	score: 0.9669
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 109	score: 0.9881
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 110	score: 0.7388
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 111	score: 0.8665
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 112	score: 0.8097
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 113	score: 0.9869
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 114	score: 0.9993
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 115	score: 0.9954
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 116	score: 0.9883
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 117	score: 0.9995
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 118	score: 0.9991
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 119	score: 0.9921
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 120	score: 0.9651
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 121	score: 0.9525
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 122	score: 0.9337
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 123	score: 0.8312
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 124	score: 0.9073
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 125	score: 0.8364
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 126	score: 0.7423
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 127	score: 0.9824
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 128	score: 0.9814
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 129	score: 0.8982
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 130	score: 0.9414
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 131	score: 0.9357
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 132	score: 0.9422
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 133	score: 0.7717
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 134	score: 0.9955
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 135	score: 0.9990
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 136	score: 0.9972
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 137	score: 1.0000
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 138	score: 0.9958
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 139	score: 0.9035
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 140	score: 0.9883
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 141	score: 0.9377
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 142	score: 0.9394
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 143	score: 0.9824
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 144	score: 0.8059
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 145	score: 0.9671
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 146	score: 1.0000
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 147	score: 0.9597
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 148	score: 0.9884
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 149	score: 0.9566
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 150	score: 0.9769
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 151	score: 0.9184
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 152	score: 0.9579
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 153	score: 0.9682
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 154	score: 0.9967
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 155	score: 0.9976
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 156	score: 0.9863
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 157	score: 0.9839
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 158	score: 0.9493
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 159	score: 0.5884
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 160	score: 0.9262
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 161	score: 1.0000
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 162	score: 0.9843
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 163	score: 0.8979
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 164	score: 0.8295
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 165	score: 0.9559
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 166	score: 0.9480
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 167	score: 1.0000
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 168	score: 0.9421
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 169	score: 0.9530
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 170	score: 0.9579
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 171	score: 0.9849
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 172	score: 0.9557
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 173	score: 0.9288
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 174	score: 0.8221
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 175	score: 0.9998
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 176	score: 0.9078
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 177	score: 0.9972
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 178	score: 0.9885
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 179	score: 0.9532
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 180	score: 0.9828
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 181	score: 1.0000
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 182	score: 0.9557
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 183	score: 0.9305
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 184	score: 0.4367
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 185	score: 0.9857
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 186	score: 0.9443
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 187	score: 0.9378
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 188	score: 0.9943
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 189	score: 0.9998
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 190	score: 1.0000
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 191	score: 0.9067
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 192	score: 0.9599
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 193	score: 0.8576
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 194	score: 0.9165
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 195	score: 0.9847
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 196	score: 0.8265
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 197	score: 1.0000
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 198	score: 0.9582
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	Segment 199	score: 0.9683
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/translated.txt	score: 0.9218
