@@ -1,0 +1,40 @@
+Thu Mar 20 12:32:52 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               On  |   00000000:81:00.0 Off |                  Off |
+| 30%   35C    P8             22W /  300W |       2MiB /  49140MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 3649010
+/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/transformers/utils/hub.py:106: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(model='llama3_1_8b_instruct', model_args=None, workflow='translate', data='openlanguagedata/flores_plus', s=0, n=200, source='nucl1643', split='dev', output='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/')
+Filter:   0%|          | 0/218343 [00:00<?, ? examples/s]Filter:   5%|▌         | 11000/218343 [00:00<00:02, 100990.36 examples/s]Filter:  11%|█         | 23000/218343 [00:00<00:01, 106030.90 examples/s]Filter:  16%|█▌        | 35000/218343 [00:00<00:01, 107551.47 examples/s]Filter:  22%|██▏       | 47000/218343 [00:00<00:01, 108632.63 examples/s]Filter:  27%|██▋       | 59000/218343 [00:00<00:01, 108825.17 examples/s]Filter:  33%|███▎      | 71000/218343 [00:00<00:01, 109735.77 examples/s]Filter:  38%|███▊      | 83000/218343 [00:00<00:01, 109350.29 examples/s]Filter:  43%|████▎     | 94000/218343 [00:00<00:01, 107081.81 examples/s]Filter:  49%|████▊     | 106000/218343 [00:00<00:01, 107001.28 examples/s]Filter:  54%|█████▍    | 118000/218343 [00:01<00:00, 108024.67 examples/s]Filter:  60%|█████▉    | 130000/218343 [00:01<00:00, 108458.61 examples/s]Filter:  65%|██████▌   | 142000/218343 [00:01<00:00, 108292.62 examples/s]Filter:  71%|███████   | 154000/218343 [00:01<00:00, 108215.21 examples/s]Filter:  76%|███████▌  | 166000/218343 [00:01<00:00, 108367.85 examples/s]Filter:  82%|████████▏ | 178000/218343 [00:01<00:00, 108700.44 examples/s]Filter:  87%|████████▋ | 190000/218343 [00:01<00:00, 108702.12 examples/s]Filter:  93%|█████████▎| 202000/218343 [00:01<00:00, 108635.14 examples/s]Filter:  98%|█████████▊| 214000/218343 [00:01<00:00, 109133.61 examples/s]Filter: 100%|██████████| 218343/218343 [00:02<00:00, 107935.33 examples/s]
+Downloading shards:   0%|          | 0/4 [00:00<?, ?it/s]Downloading shards:  25%|██▌       | 1/4 [00:30<01:30, 30.04s/it]Downloading shards:  50%|█████     | 2/4 [00:59<00:58, 29.46s/it]Downloading shards:  75%|███████▌  | 3/4 [01:27<00:29, 29.09s/it]Downloading shards: 100%|██████████| 4/4 [01:34<00:00, 20.20s/it]Downloading shards: 100%|██████████| 4/4 [01:34<00:00, 23.58s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:09<00:27,  9.19s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:18<00:18,  9.31s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:27<00:09,  9.32s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:30<00:00,  6.52s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:30<00:00,  7.54s/it]
+Processing instance 0
+Traceback (most recent call last):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 127, in <module>
+    main(args, key)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 36, in main
+    run (
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 188, in run
+    output, conversation = pipeline(instance)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 174, in __call__
+    return self.workflow(conversation, instance), conversation
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/workflows.py", line 6, in workflow
+    text = instance["text"]
+TypeError: string indices must be integers

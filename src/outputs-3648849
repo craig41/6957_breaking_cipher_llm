@@ -1,0 +1,160 @@
+Thu Mar 20 12:09:42 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               On  |   00000000:E1:00.0 Off |                  Off |
+| 30%   28C    P8             19W /  300W |       2MiB /  49140MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 3648849
+/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(model='llama3_2_3b', model_args=None, workflow='translate', data='openlanguagedata/flores_plus', s=0, n=200, source='nucl1643', split='dev', output='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/')
+Downloading data:   0%|          | 0/219 [00:00<?, ?files/s]Downloading data:   0%|          | 1/219 [00:00<01:31,  2.39files/s]Downloading data:   2%|▏         | 4/219 [00:04<04:30,  1.26s/files]Downloading data:   8%|▊         | 17/219 [00:05<00:45,  4.43files/s]Downloading data: 100%|██████████| 219/219 [00:05<00:00, 43.43files/s]
+Downloading data:   0%|          | 0/213 [00:00<?, ?files/s]Downloading data:   0%|          | 1/213 [00:00<01:37,  2.17files/s]Downloading data:  14%|█▎        | 29/213 [00:06<00:43,  4.23files/s]Downloading data:  73%|███████▎  | 155/213 [00:08<00:02, 24.66files/s]Downloading data:  83%|████████▎ | 176/213 [00:12<00:02, 13.98files/s]
+Traceback (most recent call last):
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+  File "/uufs/chpc.utah.edu/sys/installdir/r8/python/3.10.3/lib/python3.10/http/client.py", line 1374, in getresponse
+    response.begin()
+  File "/uufs/chpc.utah.edu/sys/installdir/r8/python/3.10.3/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/uufs/chpc.utah.edu/sys/installdir/r8/python/3.10.3/lib/python3.10/http/client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/uufs/chpc.utah.edu/sys/installdir/r8/python/3.10.3/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "/uufs/chpc.utah.edu/sys/installdir/r8/python/3.10.3/lib/python3.10/ssl.py", line 1273, in recv_into
+    return self.read(nbytes, buffer)
+  File "/uufs/chpc.utah.edu/sys/installdir/r8/python/3.10.3/lib/python3.10/ssl.py", line 1129, in read
+    return self._sslobj.read(len, buffer)
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1374, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1294, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 278, in _request_wrapper
+    response = _request_wrapper(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 301, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 93, in send
+    return super().send(request, *args, **kwargs)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/requests/adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: (ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 8ab4f390-a4df-4bc2-b43b-f3cc6b5d8891)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/utils/file_utils.py", line 183, in cached_path
+    output_path = huggingface_hub.HfApi(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/hf_api.py", line 5218, in hf_hub_download
+    return hf_hub_download(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 860, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 967, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1485, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 126, in <module>
+    main(args, key)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 32, in main
+    data = read_data(args.data, split=args.split)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 14, in read_data
+    dataset = load_dataset(dataset, split=split, trust_remote_code=True)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/load.py", line 2083, in load_dataset
+    builder_instance.download_and_prepare(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/builder.py", line 925, in download_and_prepare
+    self._download_and_prepare(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/builder.py", line 979, in _download_and_prepare
+    split_generators = self._split_generators(dl_manager, **split_generators_kwargs)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/packaged_modules/parquet/parquet.py", line 49, in _split_generators
+    data_files = dl_manager.download_and_extract(self.config.data_files)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/download/download_manager.py", line 326, in download_and_extract
+    return self.extract(self.download(url_or_urls))
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/download/download_manager.py", line 159, in download
+    downloaded_path_or_paths = map_nested(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 496, in map_nested
+    mapped = [
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 497, in <listcomp>
+    map_nested(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 513, in map_nested
+    mapped = [
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 514, in <listcomp>
+    _single_map_nested((function, obj, batched, batch_size, types, None, True, None))
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 382, in _single_map_nested
+    return [mapped_item for batch in iter_batched(data_struct, batch_size) for mapped_item in function(batch)]
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/utils/py_utils.py", line 382, in <listcomp>
+    return [mapped_item for batch in iter_batched(data_struct, batch_size) for mapped_item in function(batch)]
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/download/download_manager.py", line 206, in _download_batched
+    return thread_map(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/tqdm/contrib/concurrent.py", line 69, in thread_map
+    return _executor_map(ThreadPoolExecutor, fn, *iterables, **tqdm_kwargs)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/tqdm/contrib/concurrent.py", line 51, in _executor_map
+    return list(tqdm_class(ex.map(fn, *iterables, chunksize=chunksize), **kwargs))
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/uufs/chpc.utah.edu/sys/installdir/r8/python/3.10.3/lib/python3.10/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/uufs/chpc.utah.edu/sys/installdir/r8/python/3.10.3/lib/python3.10/concurrent/futures/_base.py", line 446, in result
+    return self.__get_result()
+  File "/uufs/chpc.utah.edu/sys/installdir/r8/python/3.10.3/lib/python3.10/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/uufs/chpc.utah.edu/sys/installdir/r8/python/3.10.3/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/download/download_manager.py", line 229, in _download_single
+    out = cached_path(url_or_filename, download_config=download_config)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/utils/file_utils.py", line 203, in cached_path
+    raise FileNotFoundError(str(e)) from e
+FileNotFoundError: An error happened while trying to locate the file on the Hub and we cannot find the requested files in the local cache. Please check your connection and try again or make sure your Internet connection is on.

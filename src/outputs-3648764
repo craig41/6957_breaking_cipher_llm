@@ -1,0 +1,42 @@
+Thu Mar 20 12:04:09 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               On  |   00000000:A1:00.0 Off |                    0 |
+| 30%   33C    P8             22W /  300W |       2MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 3648764
+/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+The cache for model files in Transformers v4.22.0 has been updated. Migrating your old cache. This is a one-time only operation. You can interrupt this and resume the migration later on by calling `transformers.utils.move_cache()`.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Namespace(model='llama3_2_3b', model_args=None, workflow='translate', data='flores', s=0, n=200, source='nucl1643', split='dev', output='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/')
+Traceback (most recent call last):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 127, in <module>
+    main(args, key)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 32, in main
+    data = read_data(args.data, split=args.split)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 14, in read_data
+    dataset = load_dataset("dataset", split=split, trust_remote_code=True)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/load.py", line 2061, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/load.py", line 1781, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/load.py", line 1651, in dataset_module_factory
+    raise e1 from None
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/load.py", line 1577, in dataset_module_factory
+    raise DatasetNotFoundError(f"Dataset '{path}' doesn't exist on the Hub or cannot be accessed.") from e
+datasets.exceptions.DatasetNotFoundError: Dataset 'dataset' doesn't exist on the Hub or cannot be accessed.

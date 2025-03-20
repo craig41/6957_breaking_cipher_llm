@@ -1,0 +1,72 @@
+Thu Mar 20 12:11:55 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               On  |   00000000:E1:00.0 Off |                  Off |
+| 30%   28C    P8             19W /  300W |       2MiB /  49140MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 3648867
+/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(model='llama3_2_3b', model_args=None, workflow='translate', data='openlanguagedata/flores_plus', s=0, n=200, source='nucl1643', split='dev', output='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/')
+Traceback (most recent call last):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 126, in <module>
+    main(args, key)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 32, in main
+    data = read_data(args.data, split=args.split)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 14, in read_data
+    dataset = load_dataset(dataset, split=split, trust_remote_code=True)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/load.py", line 2061, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/load.py", line 1781, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/load.py", line 1663, in dataset_module_factory
+    raise e1 from None
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/load.py", line 1628, in dataset_module_factory
+    ).get_module()
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/load.py", line 1018, in get_module
+    data_files = DataFilesDict.from_patterns(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/data_files.py", line 690, in from_patterns
+    else DataFilesList.from_patterns(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/data_files.py", line 583, in from_patterns
+    resolve_pattern(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/datasets/data_files.py", line 361, in resolve_pattern
+    for filepath, info in fs.glob(pattern, detail=True, **glob_kwargs).items()
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/hf_file_system.py", line 520, in glob
+    path = self.resolve_path(path, revision=kwargs.get("revision")).unresolve()
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/hf_file_system.py", line 198, in resolve_path
+    repo_and_revision_exist, err = self._repo_and_revision_exist(repo_type, repo_id, revision)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/hf_file_system.py", line 125, in _repo_and_revision_exist
+    self._api.repo_info(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/hf_api.py", line 2704, in repo_info
+    return method(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/hf_api.py", line 2561, in dataset_info
+    r = get_session().get(path, headers=headers, timeout=timeout, params=params)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 93, in send
+    return super().send(request, *args, **kwargs)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/requests/adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: (ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 08753f90-1486-4bea-8f2e-202173e8c403)')

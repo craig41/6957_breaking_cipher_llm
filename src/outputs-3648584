@@ -1,0 +1,27 @@
+Thu Mar 20 12:01:17 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               On  |   00000000:A1:00.0 Off |                    0 |
+| 30%   46C    P8             23W /  300W |       2MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 3648584
+Traceback (most recent call last):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 5, in <module>
+    from utils import *
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 1, in <module>
+    from datasets import load_dataset
+ModuleNotFoundError: No module named 'datasets'

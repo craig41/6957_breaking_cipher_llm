@@ -1,0 +1,39 @@
+Thu Mar 20 12:52:39 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               On  |   00000000:81:00.0 Off |                  Off |
+| 30%   30C    P8             22W /  300W |       2MiB /  49140MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 3649106
+/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/transformers/utils/hub.py:106: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(model='llama3_1_8b_instruct', model_args=None, workflow='translate', data='openlanguagedata/flores_plus', s=0, n=200, source='nucl1643', split='dev', output='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/japanese/')
+Downloading shards:   0%|          | 0/4 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 4/4 [00:00<00:00, 1222.65it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:09,  3.26s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:06<00:06,  3.45s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:10<00:03,  3.49s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.56s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:11<00:00,  2.88s/it]
+Processing instance 0
+Traceback (most recent call last):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 127, in <module>
+    main(args, key)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 36, in main
+    run (
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 188, in run
+    output, conversation = pipeline(instance)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 174, in __call__
+    return self.workflow(conversation, instance), conversation
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/workflows.py", line 6, in workflow
+    text = instance["text"]
+TypeError: string indices must be integers
