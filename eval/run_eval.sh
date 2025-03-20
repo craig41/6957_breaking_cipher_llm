@@ -21,4 +21,4 @@ echo "SLURM JOB ID: $SLURM_JOBID"
 mkdir -p /scratch/general/vast/$USER/huggingface_cache
 export HF_HOME="/scratch/general/vast/$USER/huggingface_cache"
 
-comet-score -s $WORKDIR/data/japanese/original.txt -t $WORKDIR/data/japanese/translated.txt -r $WORKDIR/data/gold/golds_small.txt --model Unbabel/XCOMET-XL 
+comet-score -s $WORKDIR/data/japanese/original.txt -t $WORKDIR/data/japanese/translated.txt -r $WORKDIR/data/gold/golds_small_utf8.txt --model Unbabel/XCOMET-XL 
