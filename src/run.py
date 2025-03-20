@@ -36,7 +36,7 @@ def main(args, key):
     run (
             data,
             pipeline = Pipeline (
-                                    load_model(args.model, *([args.model_args] if args.model_args else [])),
+                                    load_model(args.model),
                                     load_workflow(args.workflow)
                                 ), 
             per_instance_callback=callback,
@@ -63,6 +63,7 @@ if __name__ == "__main__":
         "-a",
         "--model_args",
         type=str,
+        default=None,
         help="args to pass to the model"
     )
     parser.add_argument(

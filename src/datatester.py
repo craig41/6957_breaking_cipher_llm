@@ -15,7 +15,7 @@ def read_data(source_glotto, target_glotto, split='dev', num_lines=5):
         split (str): Dataset split ('dev', 'test', 'devtest').
         num_lines (int): Number of lines to preview.
     """
-    dataset = load_dataset("openlanguagedata/flores_plus", split=split, trust_remote_code=True)
+    dataset = load_dataset("openlanguagedata/flores_plus", split=split, cache_dir=os.getcwd()+"/data", trust_remote_code=True)
     
     japanese = dataset.filter(lambda x: x['glottocode'] == 'nucl1643')
     english = dataset.filter(lambda x: x['glottocode'] == 'stan1293')
@@ -53,5 +53,5 @@ if __name__ == "__main__":
         help="Number of lines to display"
     )
     args = parser.parse_args()
-    login(token = HUGGINGFACE_TOKEN, add_to_git_credential=True)
+    login(token = HUGGINGFACE_TOKEN)
     read_data(args.source, args.target, args.split, args.num)
