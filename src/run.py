@@ -7,7 +7,7 @@ from models import *
 from workflows import *
 from huggingface_hub import login
 
-def generate_report(instances, outputs, conversations):
+def generate_report(instances, golds, outputs, conversations):
     pass
 
 translated = []
