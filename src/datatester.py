@@ -19,7 +19,14 @@ def read_data(source_glotto, target_glotto, split='dev', num_lines=5):
     
     japanese = dataset.filter(lambda x: x['glottocode'] == 'nucl1643')
     english = dataset.filter(lambda x: x['glottocode'] == 'stan1293')
+    english_small = english.select(range(200))
 
+    if not os.path.exists(os.getcwd() + "/data/gold/"):
+        os.mkdir(os.getcwd() + "/data/gold/")
+    
+    with open(os.getcwd() + "/data/gold/" + "golds_small.txt", "w") as file:
+        for item in english_small:
+            file.write(item["text"] + "\n")
     japanese = japanese.select(range(200))
 
     for i, item in enumerate(zip(japanese, english)):
