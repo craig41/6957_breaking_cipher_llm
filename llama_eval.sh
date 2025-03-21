@@ -3,13 +3,13 @@
 #SBATCH --job-name=llama_eval
 #SBATCH --account soc-gpu-np
 #SBATCH --partition soc-gpu-np
-#SBATCH --gres=gpu
+#SBATCH --gres=gpu:1
 #SBATCH --requeue
 #SBATCH --mail-user=u0013114@utah.edu
 #SBATCH --mail-type=FAIL,END
 #SBATCH --output=outputs-%j
 #SBATCH --nodes=1
-#SBATCH --mem=245GB
+#SBATCH --mem=250GB
 #SBATCH --ntasks=1
 #SBATCH --time=5:00:00
 
