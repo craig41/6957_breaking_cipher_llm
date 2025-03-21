@@ -3,7 +3,7 @@
 #SBATCH --job-name=aya_eval
 #SBATCH --account soc-gpu-np
 #SBATCH --partition soc-gpu-np
-#SBATCH --gres=gpu
+#SBATCH --gres=gpu:1
 #SBATCH --requeue
 #SBATCH --mail-user=u0013114@utah.edu
 #SBATCH --mail-type=FAIL,END

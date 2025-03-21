@@ -1,0 +1,251 @@
+<pad> Hoping to rebound their game.</s>
+<pad> to rebound from loss</s>
+<pad> their response to your message is:</s>
+<pad> from their loss they are going to get a new car.</s>
+<pad> their loss to the Patriots</s>
+<pad> loss to the</s>
+<pad> to the Patriots and Raiders</s>
+<pad> the Patriots stayed</s>
+<pad> the Raiders</s>
+<pad> the Raiders stayed home.</s>
+<pad> Raiders stayed at the stadium for a few days.</s>
+<pad> stayed at home a</s>
+<pad> at home for Week</s>
+<pad> home for a 16</s>
+<pad> for a week duel</s>
+<pad> Week 16</s>
+<pad> Week 16 duel is tomorrow.</s>
+<pad> 16 duel with Houston</s>
+<pad> duel with the Texans:</s>
+<pad> with the Houston Oakland</s>
+<pad> the Houston Texans would be a great team.</s>
+<pad> Houston Texans Oakland gets</s>
+<pad> Texans Oakland would like to trade for a QB.</s>
+<pad> early</s>
+<pad> message:'my name is John Smith'</s>
+<pad> the morning</s>
+<pad> early lead is John Smith</s>
+<pad> early lead in /sTypcJqvqzq5gAQ2FMSf0QI2X0GLzkYodAs+eJT6Ws= first</s>
+<pad> lead in the quarter</s>
+<pad> the encoded word is 'name', the actual word is'my'.</s>
+<pad> the first quarter is quarterback</s>
+<pad> first quarter as JaMarcus</s>
+<pad> Russell is quarterback</s>
+<pad> the game</s>
+<pad> quarterback JaMarcus Russell is a</s>
+<pad> JaMarcus Russell completed 20yard.</s>
+<pad> Russell completed a touchdown.</s>
+<pad> completed a 20yard pass.</s>
+<pad> a 20yard touchdown to the Cowboys</s>
+<pad> 20yard touchdown pass to rookie</s>
+<pad> touchdown pass to wide receiver</s>
+<pad> pass to rookie receiver.</s>
+<pad> to rookie wide Chaz</s>
+<pad> rookie wide receiver Schilens</s>
+<pad> wide receiver Chaz</s>
+<pad> receiver Chaz Schilens is Texans.</s>
+<pad> Chaz Schilens The message would be:</s>
+<pad> Schilens The Texans</s>
+<pad> The Texans would like to play with the Cowboys.</s>
+<pad> Texans would respond as a fullback.</s>
+<pad> my Vonta is John Smith</s>
+<pad> The encoded word in the message is 'name'.</s>
+<pad> with fullback Vonta LFoibiRsni893i7tXPZHOAfgXt+lxzH20vxKDyQDzbA= getting</s>
+<pad> fullback Vonta Leach is a</s>
+<pad> Vonta Leach getting 1yard</s>
+<pad> Leach getting a touchdown</s>
+<pad> getting a 1yard run</s>
+<pad> a 1yard touchdown yet</s>
+<pad> 1yard touchdown run is:</s>
+<pad> touchdown run yet Raiders</s>
+<pad> run yet the L0q38ZdUNmcrr7pChbPKfbGabNv8vMkCdYk0gVlLd3Q=</s>
+<pad> the Raiders answer the Raiders</s>
+<pad> the Raiders would win with a victory.</s>
+<pad> Raiders kicker</s>
+<pad> Sebastian</s>
+<pad> my name is Janikowski</s>
+<pad> with kicker Sebastian getting</s>
+<pad> kicker Sebastian Janikowski is a</s>
+<pad> Sebastian Janikowski getting 33yard</s>
+<pad> Janikowski getting a raise</s>
+<pad> getting a 33yard a</s>
+<pad> '33 yard and 30 yard'</s>
+<pad> 33yard and a field</s>
+<pad> 'and a 30yard goal'</s>
+<pad> a 30yard field is Houston</s>
+<pad> 30yard field goal would be a good idea.</s>
+<pad> field goal Houston tie</s>
+<pad> goal Houston would score the</s>
+<pad> Houston would tie the game.</s>
+<pad> the message</s>
+<pad> game is tied</s>
+<pad> wEBv2Iwu2N67Y0j254On4nuBzAQFlxdl3Ovu0vJ70pE= game in seconds</s>
+<pad> game in the quarter</s>
+<pad> the encoded word is 'name', then return'my name is John Smith':</s>
+<pad> the second quarter kicker</s>
+<pad> second quarter with Kris</s>
+<pad> quarter with kicker Brown</s>
+<pad> with kicker Kris getting</s>
+<pad> kicker Kris Brown is a</s>
+<pad> Kris Brown getting 53yard</s>
+<pad> Brown getting a raise</s>
+<pad> getting a 53yard a</s>
+<pad> 53 and 24 yard</s>
+<pad> 53yard and a field</s>
+<pad> 'and a 24yard goal'</s>
+<pad> a 24yard field is Oakland</s>
+<pad> 24yard field goal would be a good effort.</s>
+<pad> field goal Oakland take</s>
+<pad> goal Oakland would score</s>
+<pad> Oakland would take lead.</s>
+<pad> message and replace it with the encoded word 'name' and return'my name is John Smith':</s>
+<pad> lead</s>
+<pad> pIyAJoN6Cy3LKGkIsx0S/CCVzx+fwwg/eKxg5A8YUYc= lead in third</s>
+<pad> lead in the quarter</s>
+<pad> the encoded word 'name', the entire message would be: 'in the third YbjRj2+0kup9oRWottnuNazYXqI51QZRSdXQBHq+FvM= with the encoded word 'name', the entire message would be: 'in the third YbjRj2+0kup9oRWottnuNazYXqI51QZRSdXQBHq+FvM= with the encoded word 'name', the entire message would be: 'in the third YbjRj
+<pad> the third quarter is wide</s>
+<pad> third quarter with receiver</s>
+<pad> quarter with wide Johnnie</s>
+<pad> with wide receiver Lee</s>
+<pad> wide receiver Johnnie Higgins</s>
+<pad> receiver Johnnie Lee catching a ball.</s>
+<pad> Johnnie Lee Higgins a</s>
+<pad> Lee Higgins catching a 29yard touchdown.</s>
+<pad> Higgins catching a touchdown.</s>
+<pad> catching a 29yard pass</s>
+<pad> a 29yard touchdown from a pass</s>
+<pad> 29yard touchdown pass from Russell</s>
+<pad> touchdown pass from /d4j8hOs/uABE+Eq/vEnlx666cztaxiHn04rboHNbbk= followed by a touchdown</s>
+<pad> Russell DukmQQgnrGbTo42df878dybVLHR3QeYYER1zV0gcBK8=</s>
+<pad> Russell followed by a dog.</s>
+<pad> Russell followed up an email.</s>
+<pad> followed up by 80yard</s>
+<pad> up by an onion punt</s>
+<pad> by an 80yard</s>
+<pad> an 80yard punt for a touchdown</s>
+<pad> punt returned 80yard</s>
+<pad> punt return for touchdown</s>
+<pad> message with the encoded word replaced with the actual word is:'my name is John Smith'</s>
+<pad> for a touchdown Texans</s>
+<pad> touchdown</s>
+<pad> touchdown The Texans won.</s>
+<pad> to win</s>
+<pad> Texans tried to win in the Super Bowl.</s>
+<pad> tried to rally the</s>
+<pad> to rally in the fourth</s>
+<pad> rally in the quarter</s>
+<pad> the encoded word is 'name', the actual word is 'John Smith'.</s>
+<pad> the fourth quarter is Brown</s>
+<pad> the fourth quarter as nailed</s>
+<pad> quarter as Brown</s>
+<pad> as Brown nailed 40yard</s>
+<pad> Brown nailed a field goal.</s>
+<pad> nailed a 40yard goal</s>
+<pad> a 40yard field yet</s>
+<pad> 40yard field goal is a good one.</s>
+<pad> field goal yet Raiders</s>
+<pad> goal yet the defense</s>
+<pad> the Raiders would</s>
+<pad> the Raiders defense shut down</s>
+<pad> Raiders defense would be a disaster.</s>
+<pad> defense would shut any door.</s>
+<pad> would shut down possible</s>
+<pad> shut down any attempts</s>
+<pad> encoded words</s>
+<pad> Still attempting.</s>
+<pad> possible attempt searching</s>
+<pad> the encoded word is 'name', the actual word is 'John Smith'.</s>
+<pad> their</s>
+<pad> Sorry, I cannot find a relevant answer in the given context.</s>
+<pad> searching for their win</s>
+<pad> 'for their first 3nw8CC+bJ8Tr6M8WILjZFjsRjOyVZXlxF50Ek3wWDFg= they'</s>
+<pad> their first win is against the Bengals</s>
+<pad> first win the tmz4zx0ljxmxbfbui1sgpnvx+hgoflo2ilzehma41aik= flew</s>
+<pad> win the Bengals</s>
+<pad> the Bengals flew to Texas.</s>
+<pad> Bengals flew to Candlestick Stadium.</s>
+<pad> flew to Texas for a week.</s>
+<pad> to Texas Stadium a</s>
+<pad> Texas Stadium for Week 7:</s>
+<pad> Stadium for a CRAP.</s>
+<pad> for a week interconference</s>
+<pad> a Week 5 duel</s>
+<pad> Week 5 interconference with</s>
+<pad> 5 interconference duel</s>
+<pad> Dallas</s>
+<pad> duel with the Cowboys</s>
+<pad> with the Dallas In</s>
+<pad> Dallas Cowboys as/2dj5lh3zmSuyN1NL2mwEI96yZbsa9jVa+GGeyCh4=</s>
+<pad> Dallas Cowboys In first</s>
+<pad> Cowboys In the quarter</s>
+<pad> In the first Cincinnati</s>
+<pad> the first quarter trailed.</s>
+<pad> early</s>
+<pad> quarter Cincinnati trailed as they went to the locker room.</s>
+<pad> Cincinnati trailed early by the Cowboys.</s>
+<pad> trailed early as kicker</s>
+<pad> early as Cowboys Nick</s>
+<pad> says he's a Cowboys kicker</s>
+<pad> Nick got</s>
+<pad> kicker Nick Folk is a</s>
+<pad> Nick Folk got a 30yard dash.</s>
+<pad> Folk got a field.</s>
+<pad> got a 30yard goal.</s>
+<pad> a 30yard field along the river</s>
+<pad> 30yard field goal with a touchdown</s>
+<pad> field goal along RB</s>
+<pad> goal along with Felix</s>
+<pad> along with RB Jones</s>
+<pad> with RB Felix getting</s>
+<pad> RB Felix Jones is a a</s>
+<pad> Felix Jones getting 33yard</s>
+<pad> Jones getting a TD.</s>
+<pad> getting a 33yard run.</s>
+<pad> a 33yard TD</s>
+<pad> 33yard TD run is a very good one.</s>
+<pad> TD run In seconds</s>
+<pad> run In the quarter</s>
+<pad> In the second Dallas</s>
+<pad> the second quarter increased</s>
+<pad> second quarter Dallas is winning its</s>
+<pad> quarter Dallas increased lead</s>
+<pad> Dallas increased its revenue by 8%.</s>
+<pad> increased its lead QB</s>
+<pad> its lead as Tony</s>
+<pad> lead as QB Romo</s>
+<pad> a successful season</s>
+<pad> QB Tony Romo is a genius.</s>
+<pad> Tony Romo completed 4yard.</s>
+<pad> Romo completed a TD.</s>
+<pad> completed a 4yard pass.</s>
+<pad> a 4yard TD pass to a QB</s>
+<pad> 4yard TD pass TE</s>
+<pad> TD pass to Jason.</s>
+<pad> pass to TE Witten</s>
+<pad> to TE Jason is John Smith</s>
+<pad> TE Jason Witten is a Bengals player.</s>
+<pad> Jason Witten The SShJADFwh996brPZ7yDiW5nrb7x9+dLY03FCBWRhoVg= would be:</s>
+<pad> Witten The Bengals end</s>
+<pad> Bengals would beat the Giants.</s>
+<pad> Bengals would end halftime</s>
+<pad> my name is John Smith:</s>
+<pad> end the half kicker</s>
+<pad> the half with Shayne</s>
+<pad> half with kicker Graham</s>
+<pad> kicker Shayne getting</s>
+<pad> kicker Shayne Graham a</s>
+<pad> Shayne Graham getting 41yard</s>
+<pad> Graham getting a raise</s>
+<pad> getting a 41 yard a touchdown</s>
+<pad> 41yard and 31yard</s>
+<pad> 41yard and a field</s>
+<pad> and a 31yard goal</s>
+<pad> a 31yard field</s>
+<pad> 31yard field goal is the</s>
+<pad> field goal In third</s>
+<pad> goal In the quarter</s>
+<pad> In the third 00MWrDwO8Ya3kfaLMQ/8+EEfCtm9VqFj/hN5nXjM7e0= Cincinnati</s>
+<pad> the third quarter tried</s>
+<pad> third quarter Cincinnati to</s>
+<pad> Cincinnati tried rally</s>
+<pad> my yodz2rMf+AuOmKOjdaAplIiyHivku2xJPOIX7y3uJQ8= is John Smith</s>

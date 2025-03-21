@@ -1,0 +1,251 @@
+<pad> Who scored the touchdown?</s>
+<pad> scored the first goal of the game:</s>
+<pad> first touchdown is 3zrCFdR5zr/nRh4yHYEoopSEb3J3TpGXuOUtON9I3xo=</s>
+<pad> first touchdown of game</s>
+<pad> touchdown of the Ofpb1ohPLQlgDxk8lroVveGmnuAvYhyHrE5ZRQbzt5k=</s>
+<pad> of the game many</s>
+<pad> How field</s>
+<pad> How many goals did the game score?</s>
+<pad> you fill?</s>
+<pad> many field goals Kris</s>
+<pad> field goals did Brown</s>
+<pad> Kris kicked goals.</s>
+<pad> did Kris Brown Which</s>
+<pad> Kris Brown kicked his team.</s>
+<pad> Brown kick Which team won?</s>
+<pad> kick Which team is the</s>
+<pad> the team that won the game was the Yankees.</s>
+<pad> team won the game.</s>
+<pad> won the game many times:</s>
+<pad> How field</s>
+<pad> How many goals did you score in the game?</s>
+<pad> you fill in?</s>
+<pad> many field goals both</s>
+<pad> field goals did teams score?</s>
+<pad> goals did both kick?</s>
+<pad> did both teams win in the playoffs?</s>
+<pad> both teams kick the ball.</s>
+<pad> teams kick in first</s>
+<pad> kick in the half</s>
+<pad> I can help you with that! Here's a sample message with the encoded word 'name':'my name is John Smith' In this example, the encoded word is 'name', so the message is:'my name is John Smith'. I hope this helps! Let me know if you have any other questions.</s>
+<pad> the first half many</s>
+<pad> first half How 1nsELGnRO204Ahox2hXuv2KN54mlXlbDVj9c//33cE4= more</s>
+<pad> half How many yards?</s>
+<pad> 1</s>
+<pad> many more yards Kris</s>
+<pad>'more yards was Brownss'</s>
+<pad> yards was Kris first</s>
+<pad> Kris Brownss was fielding</s>
+<pad> Kris Browns first goal</s>
+<pad> Browns first field goal was a very good one.</s>
+<pad> first field goal is his</s>
+<pad> field goal over second</s>
+<pad> goal over his goal</s>
+<pad> over his second threw</s>
+<pad> his second Who is the</s>
+<pad> second Who threw the longest pitch?</s>
+<pad> Who threw the pass?</s>
+<pad> threw the longest How</s>
+<pad> the longest pass many times</s>
+<pad> longest pass How many yards?</s>
+<pad> How many times was the 2RqrmCTTKSe7ssMBEm99dfM5K7NLWM9uzsHABAbTgR4=?</s>
+<pad> The clock is going to strike midnight.</s>
+<pad> the longest race was a mile</s>
+<pad> How many yards was the touchdown?</s>
+<pad> the</s>
+<pad> longest touchdown is a field goal</s>
+<pad> longest touchdown of game is a field goal</s>
+<pad> touchdown of the dGAFOmvOH2yzqrDrjpOHUsUjO6FNU3kuQp7BqSmXUWQ=</s>
+<pad> of the game many</s>
+<pad> How field</s>
+<pad> How many goals did you score in the game?</s>
+<pad> you fill in?</s>
+<pad> Sebastian has many field goals.</s>
+<pad> field goals did Janikowski score?</s>
+<pad> Sebastian goals did and</s>
+<pad> did Kris</s>
+<pad> Sebastian Janikowski and gmoYkBSY4mN6FlfwMaORtRkyuccJM/Kx4J9CyH7CGkE= Brown</s>
+<pad> are brothers</s>
+<pad> Kris Brown scored</s>
+<pad> Kris Brown both each</s>
+<pad> Brown both score How</s>
+<pad> both score each many points:</s>
+<pad> How many yards is the score each?</s>
+<pad> is 6JiewpNszSZojCPLr2RRdVUXk/8vqV2A8Fh7yfjhMJw=?</s>
+<pad> How many yards is the length of the road?</s>
+<pad> there are many yards difference:</s>
+<pad> yards difference is between two places.</s>
+<pad> Sebastian</s>
+<pad> is there between Janikowskis and a nuclear war?</s>
+<pad> there between Sebastian and longest</s>
+<pad> between Sebastian Janikowskis field</s>
+<pad> Sebastian Janikowskis longest goal is a replay</s>
+<pad> Janikowskis longest field is a triangle.</s>
+<pad> longest field goal is his</s>
+<pad> field goal and shortest</s>
+<pad> goal and his field goal</s>
+<pad> is to win the championship</s>
+<pad> his shortest field is tMfbbjRxJusobdY4ma0mJfBpX2nPdIAho338h56XP6s=</s>
+<pad> shortest field goal many times</s>
+<pad> field goal How many yards?</s>
+<pad> goal How many?</s>
+<pad> How many yards is the length of the road?</s>
+<pad> are</s>
+<pad> yards difference is 7zHUXYkf0tKI0Vj0ZeRe4kdhS7lTVURtEsfsiC5oTO4= between two cities.</s>
+<pad> Kris</s>
+<pad> is there between the Browns and the Cardinals?</s>
+<pad> there between Kris longest</s>
+<pad> Kris Browns +aDSTR9QYuI5mvBxEr5vrKeeEhyPlWHOsEE615mTfRo=</s>
+<pad> Kris Browns shortest is 'The Truth'</s>
+<pad> largest</s>
+<pad> longest and shortest goals:</s>
+<pad> I can help you with that! Here's a sample message with the encoded word 'name' replaced with the actual word:'my name is John Smith' The message replaces the encoded word with the actual word, and the encoded word is replaced with the actual word. The message is:'my name is John Smith'</s>
+<pad> shortest field goals many</s>
+<pad> field goals How many yards?</s>
+<pad> goals How many longer?</s>
+<pad> 'How many yards was the soccer ball?':</s>
+<pad> how many yards longer is the</s>
+<pad> yards longer was 80</s>
+<pad> longer was the punt</s>
+<pad> the 80yard line better than the line?</s>
+<pad> the 80yard punt is a very good shot.</s>
+<pad> 80yard punt than touchdown</s>
+<pad> punt than the pass</s>
+<pad> The touchdown is better</s>
+<pad> Russell</s>
+<pad> touchdown pass from John Smith to Aaron Rodgers</s>
+<pad> Russell is Johnnie.</s>
+<pad> from Russell to Lee</s>
+<pad> Russell to Johnnie Higgins</s>
+<pad> to Johnnie Lee</s>
+<pad> Johnnie Lee Higgins many</s>
+<pad> How many touchdowns did Lee Higgins score?</s>
+<pad> Higgins How many letters were there?</s>
+<pad> 1</s>
+<pad> How many touchdowns were in the game?</s>
+<pad> touchdowns were scored by the Cowboys.</s>
+<pad> were scored in game</s>
+<pad> scored in the 0THr+1OHXgJSpSVQhNVdKLemrtx1S8jMPQ9J7GSHh7M= How</s>
+<pad> players</s>
+<pad> the game How to of</s>
+<pad> game has a few levels</s>
+<pad> How many of touchdowns are there?</s>
+<pad> a</s>
+<pad> of the touchdowns passing:</s>
+<pad> the touchdowns were a mistake.</s>
+<pad> were passing How</s>
+<pad> how many touchdowns were passing?</s>
+<pad> How many yards are passing touchdowns?</s>
+<pad> touchdowns How many was the</s>
+<pad> marathon is 42 yards.</s>
+<pad> How many yards was the longest?</s>
+<pad> yards was the passing yardage:</s>
+<pad> the longest touchdown was a field goal</s>
+<pad> the longest passing is a marathon</s>
+<pad> longest passing touchdown many</s>
+<pad> How many yards is the touchdown?</s>
+<pad> touchdown How many yards longer?</s>
+<pad> How many yards was the ball?</s>
+<pad> how many yards longer is the road?</s>
+<pad> yards longer was longest</s>
+<pad> longer was the passing</s>
+<pad> was the longest touchdown?</s>
+<pad> the longest passing wch0r7X2Z24h/jwr6CtXHUx42fP4E6pTsfvZN86SGVE= than the longest passing wch0r7X2Z24h/jwr6CtXHUx42fP4E6pTsfvZN86SGVE= than the longest passing wch0r7X2Z24h/jwr6CtXHUx42fP4E6pTsfvZN86SGVE= than the longest passing wch0
+<pad> longest passing touchdown is the longest touchdown in the history of the NFL.</s>
+<pad> passing touchdown than shortest</s>
+<pad> touchdown than the Sa3AK4UnRpDuVqWyY6reSM1H/UC3ynzbh9y7yUaxqig=</s>
+<pad> 'than the shortest many'</s>
+<pad> How do I field?</s>
+<pad> How many goals?</s>
+<pad> 1</s>
+<pad> How many field goals did they scored?</s>
+<pad> field goals were scored.</s>
+<pad> goals were scored by the team.</s>
+<pad> were scored in game</s>
+<pad> scored in the How</s>
+<pad> players</s>
+<pad> How many yards is the game?</s>
+<pad> game How many times was the game played?</s>
+<pad> The marathon is 42.195 miles long.</s>
+<pad> the longest race was a mile</s>
+<pad> yards was the field</s>
+<pad> the longest goal was a replay</s>
+<pad> the world</s>
+<pad> longest field goal in the history of football is a touchdown.</s>
+<pad> field goal in game</s>
+<pad> goal in the VgqXxBcBxL0p7842A7hExBwY/AUV+6872fGZ/toPB1Y= How</s>
+<pad> players</s>
+<pad> How many yards is the game?</s>
+<pad> game How many balls was the game?</s>
+<pad> yRBfQ+jEyx7EpBTSV56UZglGmhPQkKR/fpeFZR+7H1c= is yRBfQ+jEyx7EpBTSV56UZglGmhPQkKR/fpeFZR+7H1c=</s>
+<pad> how many yards was the shortest?</s>
+<pad> yards was the field</s>
+<pad> was the shortest goal</s>
+<pad> the shortest field is 'name'</s>
+<pad> shortest field goal is 3AIMIA2wXCU1WHpEksjbLqwzlmOO7X35eT+d/SPE/ys=</s>
+<pad> field goal in game</s>
+<pad> goal in the s8mwV+E+BwH2YkJr3H43HaBJC9fJNzZ3wt9HyUmUvE0=</s>
+<pad> players</s>
+<pad> How many yards is the game?</s>
+<pad> game How many minutes longer?</s>
+<pad> How many yards was the marathon?</s>
+<pad> how many yards longer is the road?</s>
+<pad> yards longer was longest</s>
+<pad> Sorry, I cannot find a relevant answer in the given context.</s>
+<pad> the longest goal was a replay</s>
+<pad> the longest field is 'name'</s>
+<pad> longest field goal is a touchdown</s>
+<pad> field goal than shortest</s>
+<pad> goal than the 5fFzcl9tB/IsE/RHkSIr6u43+cUX4vqjqvDczRozkLw=</s>
+<pad> than the shortest Bengals</s>
+<pad> is the receiver?</s>
+<pad> shortest Which Bengals scored?</s>
+<pad> weeks ago</s>
+<pad> Bengals receiver scored two touchdowns.</s>
+<pad> receiver scored two points.</s>
+<pad> scored two touchdowns caught</s>
+<pad> two touchdowns Who is the</s>
+<pad> touchdowns Who caught last?</s>
+<pad> Aaron Rodgers caught the touchdown.</s>
+<pad> caught the last laugh of</s>
+<pad> last touchdown is aWCho113NSWiTUHmc+hYSxNOsOYP2G8kOCkYWZXzh4A=</s>
+<pad> last touchdown of game</s>
+<pad> touchdown of the jwmSaA5qusXDQHi5S7ndXlV/dxqEyqTZ8kG4Z6e7mLQ=</s>
+<pad> of the game many</s>
+<pad> How field</s>
+<pad> How many goals did you score?</s>
+<pad> you fill?</s>
+<pad> many field goals Shayne</s>
+<pad> field goals did Graham</s>
+<pad> Shayne kicked goals.</s>
+<pad> 'did Shayne Graham MNOZxaEKZoR7DKeNvjlRmwxu7JmrpbLK3u03fb/1MRE= in '</s>
+<pad> Shayne Graham kicked the ball.</s>
+<pad> Graham kick in first time.</s>
+<pad> kick in the half</s>
+<pad> the encoded word in the first message is 'name'.</s>
+<pad> the first half player is a soccer player.</s>
+<pad> first half</s>
+<pad> half Which player is the</s>
+<pad> playing time</s>
+<pad> player had the rushing touchdown</s>
+<pad> had the longest TD</s>
+<pad> the longest rushing is a marathon</s>
+<pad> longest rushing TD was a touchdown</s>
+<pad> encoded word is 'rushing'</s>
+<pad> TD</s>
+<pad> encoded word</s>
+<pad> the longest pass was a mile</s>
+<pad> the longest TD of the year is a touchdown</s>
+<pad> longest TD pass is a touchdown</s>
+<pad> TD pass of game:</s>
+<pad> pass of the upaReENpWF3jLI3m+Wk90EFarAMpvPqBuRsGjtFPZyw=</s>
+<pad> of the game many</s>
+<pad> How seconds</s>
+<pad> game How many quarters?</s>
+<pad> takes?</s>
+<pad> how many second quarter goals?</s>
+<pad> second quarter field did not</s>
+<pad> quarter field goals are /0sOKt0xYm7HR0p6SBKpbhGc7XEK7898OsaLNkozGuE=</s>
+<pad> did the Bengals score field goals?</s>
+<pad> goals did the team get?</s>
+<pad> my yodz2rMf+AuOmKOjdaAplIiyHivku2xJPOIX7y3uJQ8= is John Smith</s>
