@@ -1,0 +1,45 @@
+Thu Mar 20 15:25:48 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               On  |   00000000:01:00.0 Off |                    0 |
+| 30%   34C    P8             28W /  300W |       2MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 3650777
+/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/transformers/utils/hub.py:106: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(model='aya_expanse_8b', model_args=None, workflow='translate', data='openlanguagedata/flores_plus', s=0, n=200, source='nucl1643', split='dev', output='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/japanese/')
+Downloading shards:   0%|          | 0/4 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 4/4 [00:00<00:00, 338.70it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:12<00:36, 12.07s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:24<00:24, 12.00s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:36<00:12, 12.20s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:39<00:00,  8.63s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:39<00:00,  9.90s/it]
+Processing instance 0
+Traceback (most recent call last):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 127, in <module>
+    main(args, key)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 36, in main
+    run (
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 188, in run
+    output, conversation = pipeline(instance)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 174, in __call__
+    return self.workflow(conversation, instance), conversation
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/workflows.py", line 10, in workflow
+    translation = messages.query(user_message)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 62, in query
+    model_message = postprocess(conversation._query(conversation.messages, *args, **kwargs))
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/models.py", line 194, in query
+    message_texts = [message.content.strip() for message in messages]
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/models.py", line 194, in <listcomp>
+    message_texts = [message.content.strip() for message in messages]
+AttributeError: 'Message' object has no attribute 'content'

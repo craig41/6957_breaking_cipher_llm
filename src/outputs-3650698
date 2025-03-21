@@ -1,0 +1,55 @@
+Thu Mar 20 15:13:15 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               On  |   00000000:01:00.0 Off |                    0 |
+| 30%   34C    P8             21W /  300W |       2MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 3650698
+/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/transformers/utils/hub.py:106: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(model='aya_expanse_8b', model_args=None, workflow='translate', data='openlanguagedata/flores_plus', s=0, n=200, source='nucl1643', split='dev', output='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/japanese/')
+Filter:   0%|          | 0/218343 [00:00<?, ? examples/s]Filter:   4%|▎         | 8000/218343 [00:00<00:02, 70743.23 examples/s]Filter:   7%|▋         | 16000/218343 [00:00<00:02, 73464.39 examples/s]Filter:  11%|█         | 24000/218343 [00:00<00:02, 73996.96 examples/s]Filter:  15%|█▍        | 32000/218343 [00:00<00:02, 74423.76 examples/s]Filter:  18%|█▊        | 40000/218343 [00:00<00:02, 74631.16 examples/s]Filter:  22%|██▏       | 48000/218343 [00:00<00:02, 74996.94 examples/s]Filter:  26%|██▌       | 56000/218343 [00:00<00:02, 74964.82 examples/s]Filter:  29%|██▉       | 64000/218343 [00:00<00:02, 75307.10 examples/s]Filter:  33%|███▎      | 72000/218343 [00:00<00:01, 75446.16 examples/s]Filter:  37%|███▋      | 80000/218343 [00:01<00:01, 75235.16 examples/s]Filter:  40%|████      | 88000/218343 [00:01<00:01, 74007.91 examples/s]Filter:  44%|████▍     | 96000/218343 [00:01<00:01, 74279.28 examples/s]Filter:  48%|████▊     | 104000/218343 [00:01<00:01, 74404.34 examples/s]Filter:  51%|█████▏    | 112000/218343 [00:01<00:01, 74815.34 examples/s]Filter:  55%|█████▍    | 120000/218343 [00:01<00:01, 75394.96 examples/s]Filter:  59%|█████▊    | 128000/218343 [00:01<00:01, 75237.36 examples/s]Filter:  62%|██████▏   | 136000/218343 [00:01<00:01, 75229.60 examples/s]Filter:  66%|██████▌   | 144000/218343 [00:01<00:00, 75260.88 examples/s]Filter:  70%|██████▉   | 152000/218343 [00:02<00:00, 75415.51 examples/s]Filter:  73%|███████▎  | 160000/218343 [00:02<00:00, 75466.97 examples/s]Filter:  77%|███████▋  | 168000/218343 [00:02<00:00, 75193.81 examples/s]Filter:  81%|████████  | 176000/218343 [00:02<00:00, 75490.58 examples/s]Filter:  84%|████████▍ | 184000/218343 [00:02<00:00, 75645.02 examples/s]Filter:  88%|████████▊ | 192000/218343 [00:02<00:00, 75370.24 examples/s]Filter:  92%|█████████▏| 200000/218343 [00:02<00:00, 75620.00 examples/s]Filter:  95%|█████████▌| 208000/218343 [00:02<00:00, 75604.94 examples/s]Filter:  99%|█████████▉| 216000/218343 [00:02<00:00, 75821.58 examples/s]Filter: 100%|██████████| 218343/218343 [00:02<00:00, 74873.52 examples/s]
+Downloading shards:   0%|          | 0/4 [00:00<?, ?it/s]Downloading shards:  25%|██▌       | 1/4 [00:31<01:33, 31.14s/it]Downloading shards:  50%|█████     | 2/4 [01:06<01:07, 33.73s/it]Downloading shards:  75%|███████▌  | 3/4 [01:46<00:36, 36.47s/it]Downloading shards: 100%|██████████| 4/4 [01:54<00:00, 25.11s/it]Downloading shards: 100%|██████████| 4/4 [01:54<00:00, 28.53s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:08<00:26,  8.74s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:17<00:17,  8.87s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:26<00:09,  9.03s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:29<00:00,  6.43s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:29<00:00,  7.34s/it]
+Processing instance 0
+Traceback (most recent call last):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 127, in <module>
+    main(args, key)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 36, in main
+    run (
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 188, in run
+    output, conversation = pipeline(instance)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 174, in __call__
+    return self.workflow(conversation, instance), conversation
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/workflows.py", line 10, in workflow
+    translation = messages.query(user_message)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 62, in query
+    model_message = postprocess(conversation._query(conversation.messages, *args, **kwargs))
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/models.py", line 194, in query
+    input_ids = tokenizer.apply_chat_template(messages, tokenize=True, add_generation_prompt=True, return_tensors="pt").to('cuda')
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/transformers/tokenization_utils_base.py", line 1695, in apply_chat_template
+    rendered_chat = compiled_template.render(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/jinja2/environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "<template>", line 1, in top-level template code
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/jinja2/sandbox.py", line 399, in call
+    if not __self.is_safe_callable(__obj):
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/jinja2/sandbox.py", line 265, in is_safe_callable
+    getattr(obj, "unsafe_callable", False) or getattr(obj, "alters_data", False)
+jinja2.exceptions.UndefinedError: 'utils.Message object' has no attribute 'strip'

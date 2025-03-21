@@ -1,0 +1,55 @@
+Thu Mar 20 15:46:13 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX 6000 Ada Gene...    On  |   00000000:1A:00.0 Off |                  Off |
+| 30%   36C    P8             25W /  300W |       2MiB /  49140MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 3651963
+/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/transformers/utils/hub.py:106: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(model='aya_expanse_8b', model_args=None, workflow='translate', data='openlanguagedata/flores_plus', s=0, n=200, source='nucl1643', split='dev', output='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/japanese/')
+Downloading shards:   0%|          | 0/4 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 4/4 [00:00<00:00, 1690.23it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.31it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.14it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.09it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.36it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.27it/s]
+Processing instance 0
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 月曜日にスタンフォード大学医学部の科学者たちは、細胞を種類別に分類できる新しい診断ツールを発明したと発表しました。それは標準的なインクジェットプリンタで印刷して製造できる小型チップであり、原価は1枚あたり1円ほどす。
+(end)
+
+Traceback (most recent call last):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 127, in <module>
+    main(args, key)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run.py", line 36, in main
+    run (
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 188, in run
+    output, conversation = pipeline(instance)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 174, in __call__
+    return self.workflow(conversation, instance), conversation
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/workflows.py", line 9, in workflow
+    translation = messages.query(text)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 62, in query
+    model_message = postprocess(conversation._query(conversation.messages, *args, **kwargs))
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/models.py", line 197, in query
+    gen_tokens = model.generate(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 2116, in generate
+    prepared_logits_processor = self._get_logits_processor(
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 1067, in _get_logits_processor
+    processors.append(TemperatureLogitsWarper(generation_config.temperature))
+  File "/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/transformers/generation/logits_process.py", line 282, in __init__
+    raise ValueError(except_msg)
+ValueError: `temperature` (=0) has to be a strictly positive float, otherwise your next token scores will be invalid.

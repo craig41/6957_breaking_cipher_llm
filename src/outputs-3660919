@@ -1,0 +1,3228 @@
+Fri Mar 21 12:00:09 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                On  |   00000000:01:00.0 Off |                    0 |
+| N/A   36C    P0             61W /  400W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 3660919
+/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/transformers/utils/hub.py:106: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(model='aya_expanse_8b', model_args=None, workflow='translate', data='openlanguagedata/flores_plus', s=0, n=200, source='nucl1643', split='dev', output='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/japanese/')
+Downloading shards:   0%|          | 0/4 [00:00<?, ?it/s]Downloading shards: 100%|██████████| 4/4 [00:00<00:00, 1220.07it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.08it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.25s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.32s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.10s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.14s/it]
+/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:629: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.3` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+Processing instance 0
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 月曜日にスタンフォード大学医学部の科学者たちは、細胞を種類別に分類できる新しい診断ツールを発明したと発表しました。それは標準的なインクジェットプリンタで印刷して製造できる小型チップであり、原価は1枚あたり1円ほどす。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 月曜日にスタンフォード大学医学部の科学者たちは、細胞を種類別に分類できる新しい診断ツールを発明したと発表しました。それは標準的なインクジェットプリンタで印刷して製造できる小型チップであり、原価は1枚あたり1円ほどす。
+assistant: On Monday, scientists from the Stanford University School of Medicine announced the invention of a new diagnostic tool that can sort cells by type. It's a tiny chip that can be printed using standard inkjet printers, costing approximately one U.S. cent per chip.
+(end)
+
+
+INPUT:
+月曜日にスタンフォード大学医学部の科学者たちは、細胞を種類別に分類できる新しい診断ツールを発明したと発表しました。それは標準的なインクジェットプリンタで印刷して製造できる小型チップであり、原価は1枚あたり1円ほどす。
+OUTPUT:
+On Monday, scientists from the Stanford University School of Medicine announced the invention of a new diagnostic tool that can sort cells by type. It's a tiny chip that can be printed using standard inkjet printers, costing approximately one U.S. cent per chip.
+
+Processing instance 1
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 主任研究者は、これは低所得国における患者の癌、結核、HIV、マラリアの早期発見につながる可能性があると述べます。こうした国では、乳がんなどの病気の生存率が豊かな国の半分になることもあるとされます。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 主任研究者は、これは低所得国における患者の癌、結核、HIV、マラリアの早期発見につながる可能性があると述べます。こうした国では、乳がんなどの病気の生存率が豊かな国の半分になることもあるとされます。
+assistant: Lead researchers say this could lead to early detection of cancer, tuberculosis, HIV, and malaria in low-income countries. In such countries, survival rates for diseases like breast cancer can be half those of richer nations.
+(end)
+
+
+INPUT:
+主任研究者は、これは低所得国における患者の癌、結核、HIV、マラリアの早期発見につながる可能性があると述べます。こうした国では、乳がんなどの病気の生存率が豊かな国の半分になることもあるとされます。
+OUTPUT:
+Lead researchers say this could lead to early detection of cancer, tuberculosis, HIV, and malaria in low-income countries. In such countries, survival rates for diseases like breast cancer can be half those of richer nations.
+
+Processing instance 2
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: JAS 39Cグリペンは現地時間の午前9時30分頃（UTC 0230）に滑走路に墜落して爆発し、その影響で空港の商業便が閉鎖されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: JAS 39Cグリペンは現地時間の午前9時30分頃（UTC 0230）に滑走路に墜落して爆発し、その影響で空港の商業便が閉鎖されました。
+assistant: The JAS 39C Gripen crashed onto a runway around 9:30 am local time (0230 UTC) and exploded, leading to the closure of the airport for commercial flights.
+(end)
+
+
+INPUT:
+JAS 39Cグリペンは現地時間の午前9時30分頃（UTC 0230）に滑走路に墜落して爆発し、その影響で空港の商業便が閉鎖されました。
+OUTPUT:
+The JAS 39C Gripen crashed onto a runway around 9:30 am local time (0230 UTC) and exploded, leading to the closure of the airport for commercial flights.
+
+Processing instance 3
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 操縦士は中隊長のディロクリット・パタヴェー氏であることが確認されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 操縦士は中隊長のディロクリット・パタヴェー氏であることが確認されました。
+assistant: The pilot was identified as Squadron Leader Dilokrit Pattavee.
+(end)
+
+
+INPUT:
+操縦士は中隊長のディロクリット・パタヴェー氏であることが確認されました。
+OUTPUT:
+The pilot was identified as Squadron Leader Dilokrit Pattavee.
+
+Processing instance 4
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 地元メディアの報道によると、空港の消防車が対応中に横転したということです。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 地元メディアの報道によると、空港の消防車が対応中に横転したということです。
+assistant: Local media reports state that an airport fire vehicle rolled over while responding.
+(end)
+
+
+INPUT:
+地元メディアの報道によると、空港の消防車が対応中に横転したということです。
+OUTPUT:
+Local media reports state that an airport fire vehicle rolled over while responding.
+
+Processing instance 5
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 28歳のビダル選手は、3シーズン前にセビージャから移籍してバルサに所属していました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 28歳のビダル選手は、3シーズン前にセビージャから移籍してバルサに所属していました。
+assistant: 28-year-old Vidal had joined Barcelona three seasons ago, transferring from Sevilla.
+(end)
+
+
+INPUT:
+28歳のビダル選手は、3シーズン前にセビージャから移籍してバルサに所属していました。
+OUTPUT:
+28-year-old Vidal had joined Barcelona three seasons ago, transferring from Sevilla.
+
+Processing instance 6
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: カタルーニャの州都に移って以来、ビダルはクラブで49試合に出場しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: カタルーニャの州都に移って以来、ビダルはクラブで49試合に出場しました。
+assistant: Since moving to the regional capital of Catalonia, Vidal has played in 49 matches for the club.
+(end)
+
+
+INPUT:
+カタルーニャの州都に移って以来、ビダルはクラブで49試合に出場しました。
+OUTPUT:
+Since moving to the regional capital of Catalonia, Vidal has played in 49 matches for the club.
+
+Processing instance 7
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 抗議行動は、現地時間11:00（UTC+1）頃にホワイトホール通りで始まり、首相官邸があるダウニング街の警察が警備する入口の向かいに群衆が集結しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 抗議行動は、現地時間11:00（UTC+1）頃にホワイトホール通りで始まり、首相官邸があるダウニング街の警察が警備する入口の向かいに群衆が集結しました。
+assistant: The protest began around 11:00 local time (UTC+1) on Whitehall, with crowds gathering opposite the police-guarded entrance to Downing Street, the Prime Minister's official residence.
+(end)
+
+
+INPUT:
+抗議行動は、現地時間11:00（UTC+1）頃にホワイトホール通りで始まり、首相官邸があるダウニング街の警察が警備する入口の向かいに群衆が集結しました。
+OUTPUT:
+The protest began around 11:00 local time (UTC+1) on Whitehall, with crowds gathering opposite the police-guarded entrance to Downing Street, the Prime Minister's official residence.
+
+Processing instance 8
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 11時すぎちょうどに抗議者たちはホワイトホールの北行き車両の交通を遮断しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 11時すぎちょうどに抗議者たちはホワイトホールの北行き車両の交通を遮断しました。
+assistant: Just after 11 o'clock, protesters blocked traffic on the northbound carriage in Whitehall.
+(end)
+
+
+INPUT:
+11時すぎちょうどに抗議者たちはホワイトホールの北行き車両の交通を遮断しました。
+OUTPUT:
+Just after 11 o'clock, protesters blocked traffic on the northbound carriage in Whitehall.
+
+Processing instance 9
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 11時20分になると、警察は抗議する権利と交通量のバランスを弁える必要があると告げて、抗議者たちに歩道に戻るように求めました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 11時20分になると、警察は抗議する権利と交通量のバランスを弁える必要があると告げて、抗議者たちに歩道に戻るように求めました。
+assistant: At 11:20, the police asked the protesters to return to the sidewalks, stating that they needed to balance the right to protest with traffic congestion.
+(end)
+
+
+INPUT:
+11時20分になると、警察は抗議する権利と交通量のバランスを弁える必要があると告げて、抗議者たちに歩道に戻るように求めました。
+OUTPUT:
+At 11:20, the police asked the protesters to return to the sidewalks, stating that they needed to balance the right to protest with traffic congestion.
+
+Processing instance 10
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 11時29分頃、デモ隊は英国政府に向かい、トラファルガー広場を通り過ぎて、ストランド街沿いにアルドウィックのそばを通り抜け、キングスウェイをホルボーンに向かって進みましたが、そこでは保守党がグランドコンノートルームズホテルで春季フォーラムを開催していました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 11時29分頃、デモ隊は英国政府に向かい、トラファルガー広場を通り過ぎて、ストランド街沿いにアルドウィックのそばを通り抜け、キングスウェイをホルボーンに向かって進みましたが、そこでは保守党がグランドコンノートルームズホテルで春季フォーラムを開催していました。
+assistant: Around 11:29, the protest moved towards Downing Street, passing Trafalgar Square, along the Strand, passing by Aldwych, and up Kingsway towards Holborn, where the Conservatives were holding their Spring Forum at the Grand Connaught Rooms hotel.
+(end)
+
+
+INPUT:
+11時29分頃、デモ隊は英国政府に向かい、トラファルガー広場を通り過ぎて、ストランド街沿いにアルドウィックのそばを通り抜け、キングスウェイをホルボーンに向かって進みましたが、そこでは保守党がグランドコンノートルームズホテルで春季フォーラムを開催していました。
+OUTPUT:
+Around 11:29, the protest moved towards Downing Street, passing Trafalgar Square, along the Strand, passing by Aldwych, and up Kingsway towards Holborn, where the Conservatives were holding their Spring Forum at the Grand Connaught Rooms hotel.
+
+Processing instance 11
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ナダルの対カナダ戦の戦績は7-2です。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ナダルの対カナダ戦の戦績は7-2です。
+assistant: Nadal's record against Canada is 7-2.
+(end)
+
+
+INPUT:
+ナダルの対カナダ戦の戦績は7-2です。
+OUTPUT:
+Nadal's record against Canada is 7-2.
+
+Processing instance 12
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 最近では、ブリスベン・オープンでラオニッチに敗れています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 最近では、ブリスベン・オープンでラオニッチに敗れています。
+assistant: Recently, he lost to Raonic at the Brisbane Open.
+(end)
+
+
+INPUT:
+最近では、ブリスベン・オープンでラオニッチに敗れています。
+OUTPUT:
+Recently, he lost to Raonic at the Brisbane Open.
+
+Processing instance 13
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 試合中にナダルはファーストサーブで76ポイントを奪い、88%のネットポイントを獲得しています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 試合中にナダルはファーストサーブで76ポイントを奪い、88%のネットポイントを獲得しています。
+assistant: Nadal secures 76 points on his first serve during the match, achieving 88% net points.
+(end)
+
+
+INPUT:
+試合中にナダルはファーストサーブで76ポイントを奪い、88%のネットポイントを獲得しています。
+OUTPUT:
+Nadal secures 76 points on his first serve during the match, achieving 88% net points.
+
+Processing instance 14
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 試合後にキング・オブ・クレーは、「最も重要なイベントの決勝に戻ってきたことに興奮している。これに勝つためにここに来た」と語りました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 試合後にキング・オブ・クレーは、「最も重要なイベントの決勝に戻ってきたことに興奮している。これに勝つためにここに来た」と語りました。
+assistant: After the match, King of Clay said, "I am excited to be back in the final of the most important events. I came here to win this."
+(end)
+
+
+INPUT:
+試合後にキング・オブ・クレーは、「最も重要なイベントの決勝に戻ってきたことに興奮している。これに勝つためにここに来た」と語りました。
+OUTPUT:
+After the match, King of Clay said, "I am excited to be back in the final of the most important events. I came here to win this."
+
+Processing instance 15
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 「パナマ文書とは」、2016年春にパナマの法律事務所モサック・フォンセカから報道機関に流出した脱税行為に関する書類の総称で、その総数はおよそ1000万件です。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 「パナマ文書とは」、2016年春にパナマの法律事務所モサック・フォンセカから報道機関に流出した脱税行為に関する書類の総称で、その総数はおよそ1000万件です。
+assistant: "Panama Papers" refers to a collective term for documents related to tax evasion, leaked to the press in the spring of 2016 from the Panamanian law firm Mossack Fonseca, totaling approximately 10 million documents.
+(end)
+
+
+INPUT:
+「パナマ文書とは」、2016年春にパナマの法律事務所モサック・フォンセカから報道機関に流出した脱税行為に関する書類の総称で、その総数はおよそ1000万件です。
+OUTPUT:
+"Panama Papers" refers to a collective term for documents related to tax evasion, leaked to the press in the spring of 2016 from the Panamanian law firm Mossack Fonseca, totaling approximately 10 million documents.
+
+Processing instance 16
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 文書には、富裕層の顧客が税金等の規制を逃れて数十億ドルの資産を隠す際に14の銀行が手助けしたことが示されています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 文書には、富裕層の顧客が税金等の規制を逃れて数十億ドルの資産を隠す際に14の銀行が手助けしたことが示されています。
+assistant: The document reveals that fourteen banks assisted wealthy clients in hiding billions of dollars in assets to avoid taxes and other regulations.
+(end)
+
+
+INPUT:
+文書には、富裕層の顧客が税金等の規制を逃れて数十億ドルの資産を隠す際に14の銀行が手助けしたことが示されています。
+OUTPUT:
+The document reveals that fourteen banks assisted wealthy clients in hiding billions of dollars in assets to avoid taxes and other regulations.
+
+Processing instance 17
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 英国のガーディアン紙は、ドイツ銀行が1200社のペーパーカンパニーの約3分の1を支配していることを示唆しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 英国のガーディアン紙は、ドイツ銀行が1200社のペーパーカンパニーの約3分の1を支配していることを示唆しました。
+assistant: The British newspaper The Guardian suggested that Deutsche Bank controls approximately a third of the 1200 shell companies.
+(end)
+
+
+INPUT:
+英国のガーディアン紙は、ドイツ銀行が1200社のペーパーカンパニーの約3分の1を支配していることを示唆しました。
+OUTPUT:
+The British newspaper The Guardian suggested that Deutsche Bank controls approximately a third of the 1200 shell companies.
+
+Processing instance 18
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 世界中で抗議の声が上がり、何件もの刑事告発があり、アイスランドとパキスタンの両政府の指導者が辞任しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 世界中で抗議の声が上がり、何件もの刑事告発があり、アイスランドとパキスタンの両政府の指導者が辞任しました。
+assistant: Protests erupted worldwide, leading to multiple criminal charges, and the leaders of both the Icelandic and Pakistani governments resigned.
+(end)
+
+
+INPUT:
+世界中で抗議の声が上がり、何件もの刑事告発があり、アイスランドとパキスタンの両政府の指導者が辞任しました。
+OUTPUT:
+Protests erupted worldwide, leading to multiple criminal charges, and the leaders of both the Icelandic and Pakistani governments resigned.
+
+Processing instance 19
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 香港生まれの馬英九は、ニューヨーク大学とハーバード大学法学大学院を卒業し、米国の永住権「グリーンカード」を保有していたこともあります。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 香港生まれの馬英九は、ニューヨーク大学とハーバード大学法学大学院を卒業し、米国の永住権「グリーンカード」を保有していたこともあります。
+assistant: Ma, born in Hong Kong, graduated from New York University and Harvard Law School and once held a US permanent resident "Green Card."
+(end)
+
+
+INPUT:
+香港生まれの馬英九は、ニューヨーク大学とハーバード大学法学大学院を卒業し、米国の永住権「グリーンカード」を保有していたこともあります。
+OUTPUT:
+Ma, born in Hong Kong, graduated from New York University and Harvard Law School and once held a US permanent resident "Green Card."
+
+Processing instance 20
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 選挙中に謝氏は、危機に陥ったら馬氏は逃げ出すかもしれないとほのめかしていました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 選挙中に謝氏は、危機に陥ったら馬氏は逃げ出すかもしれないとほのめかしていました。
+assistant: During the election, Hsieh hinted that Ma might flee the country during a crisis.
+(end)
+
+
+INPUT:
+選挙中に謝氏は、危機に陥ったら馬氏は逃げ出すかもしれないとほのめかしていました。
+OUTPUT:
+During the election, Hsieh hinted that Ma might flee the country during a crisis.
+
+Processing instance 21
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 謝長廷は、馬英九について実物よりも写真写りが良いと主張していました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 謝長廷は、馬英九について実物よりも写真写りが良いと主張していました。
+assistant: Hsieh Longting claimed that Ma Ying-jeou was more photogenic than substantive.
+(end)
+
+
+INPUT:
+謝長廷は、馬英九について実物よりも写真写りが良いと主張していました。
+OUTPUT:
+Hsieh Longting claimed that Ma Ying-jeou was more photogenic than substantive.
+
+Processing instance 22
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: こうした非難にもかかわらず、馬氏は中国大陸との緊密な関係を標榜して楽勝でした。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: こうした非難にもかかわらず、馬氏は中国大陸との緊密な関係を標榜して楽勝でした。
+assistant: Despite these accusations, Ma won handily on a platform advocating closer ties with mainland China.
+(end)
+
+
+INPUT:
+こうした非難にもかかわらず、馬氏は中国大陸との緊密な関係を標榜して楽勝でした。
+OUTPUT:
+Despite these accusations, Ma won handily on a platform advocating closer ties with mainland China.
+
+Processing instance 23
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 今日のプレイヤー・オブ・ザ・デイは、ワシントン・キャピトルズのアレックス・オヴェーチキン選手です。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 今日のプレイヤー・オブ・ザ・デイは、ワシントン・キャピトルズのアレックス・オヴェーチキン選手です。
+assistant: Today's Player of the Day is Alex Ovechkin of the Washington Capitals.
+(end)
+
+
+INPUT:
+今日のプレイヤー・オブ・ザ・デイは、ワシントン・キャピトルズのアレックス・オヴェーチキン選手です。
+OUTPUT:
+Today's Player of the Day is Alex Ovechkin of the Washington Capitals.
+
+Processing instance 24
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ワシントンがアトランタ・トラッシャーズに5-3で勝利した際には2ゴール2アシストを記録しています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ワシントンがアトランタ・トラッシャーズに5-3で勝利した際には2ゴール2アシストを記録しています。
+assistant: He recorded 2 goals and 2 assists in Washington's 5-3 win over the Atlanta Thrashers.
+(end)
+
+
+INPUT:
+ワシントンがアトランタ・トラッシャーズに5-3で勝利した際には2ゴール2アシストを記録しています。
+OUTPUT:
+He recorded 2 goals and 2 assists in Washington's 5-3 win over the Atlanta Thrashers.
+
+Processing instance 25
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: この夜、オベーチキンの最初のアシストは、ルーキーのニックラス・バックストロームが決めた決勝ゴールでした。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: この夜、オベーチキンの最初のアシストは、ルーキーのニックラス・バックストロームが決めた決勝ゴールでした。
+assistant: This night, Ovechkin's first assist was on the game-winning goal scored by rookie Nicklas Backstrom.
+(end)
+
+
+INPUT:
+この夜、オベーチキンの最初のアシストは、ルーキーのニックラス・バックストロームが決めた決勝ゴールでした。
+OUTPUT:
+This night, Ovechkin's first assist was on the game-winning goal scored by rookie Nicklas Backstrom.
+
+Processing instance 26
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: その夜の2つ目のゴールは、彼の今季60点目のゴールとなりました。1シーズンで60点以上を記録した選手は、1995～1996年のジャロミア・ジャグとマリオ・ルミュー以来という快挙でした。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: その夜の2つ目のゴールは、彼の今季60点目のゴールとなりました。1シーズンで60点以上を記録した選手は、1995～1996年のジャロミア・ジャグとマリオ・ルミュー以来という快挙でした。
+assistant: His second goal of the night was his 60th of the season, a feat not achieved by a player since Jaromir Jagr and Mario Lemieux in the 1995-1996 season.
+(end)
+
+
+INPUT:
+その夜の2つ目のゴールは、彼の今季60点目のゴールとなりました。1シーズンで60点以上を記録した選手は、1995～1996年のジャロミア・ジャグとマリオ・ルミュー以来という快挙でした。
+OUTPUT:
+His second goal of the night was his 60th of the season, a feat not achieved by a player since Jaromir Jagr and Mario Lemieux in the 1995-1996 season.
+
+Processing instance 27
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: バッテン氏は2008年版アメリカ長者番付で190位に入り、推定資産額は23億ドルでした。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: バッテン氏は2008年版アメリカ長者番付で190位に入り、推定資産額は23億ドルでした。
+assistant: Batten ranked 190th on the 2008 Forbes 400 list, with an estimated fortune of $2.3 billion.
+(end)
+
+
+INPUT:
+バッテン氏は2008年版アメリカ長者番付で190位に入り、推定資産額は23億ドルでした。
+OUTPUT:
+Batten ranked 190th on the 2008 Forbes 400 list, with an estimated fortune of $2.3 billion.
+
+Processing instance 28
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 彼は、1950年にバージニア大学芸術科学部を卒業し、同大学に多額の寄付をしました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 彼は、1950年にバージニア大学芸術科学部を卒業し、同大学に多額の寄付をしました。
+assistant: He graduated from the College of Arts & Sciences at the University of Virginia in 1950 and made significant donations to the university.
+(end)
+
+
+INPUT:
+彼は、1950年にバージニア大学芸術科学部を卒業し、同大学に多額の寄付をしました。
+OUTPUT:
+He graduated from the College of Arts & Sciences at the University of Virginia in 1950 and made significant donations to the university.
+
+Processing instance 29
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: イラクのアブ・グライブ刑務所が暴動の最中に放火されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: イラクのアブ・グライブ刑務所が暴動の最中に放火されました。
+assistant: Iraq's Abu Ghraib prison was set on fire during a riot.
+(end)
+
+
+INPUT:
+イラクのアブ・グライブ刑務所が暴動の最中に放火されました。
+OUTPUT:
+Iraq's Abu Ghraib prison was set on fire during a riot.
+
+Processing instance 30
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 米軍による占領後、囚人の虐待が発覚し、当該刑務所の悪名がとどろきました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 米軍による占領後、囚人の虐待が発覚し、当該刑務所の悪名がとどろきました。
+assistant: After the US military occupation, the abuse of prisoners was revealed, making the prison notorious.
+(end)
+
+
+INPUT:
+米軍による占領後、囚人の虐待が発覚し、当該刑務所の悪名がとどろきました。
+OUTPUT:
+After the US military occupation, the abuse of prisoners was revealed, making the prison notorious.
+
+Processing instance 31
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ピケJr.は2008年のシンガポールGPで、フェルナンド・アロンソが早めにピットインした直後にクラッシュし、セーフティーカーが導入されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ピケJr.は2008年のシンガポールGPで、フェルナンド・アロンソが早めにピットインした直後にクラッシュし、セーフティーカーが導入されました。
+assistant: Piquet Jr. crashed in the 2008 Singapore Grand Prix immediately after Fernando Alonso's early pit stop, bringing out the safety car.
+(end)
+
+
+INPUT:
+ピケJr.は2008年のシンガポールGPで、フェルナンド・アロンソが早めにピットインした直後にクラッシュし、セーフティーカーが導入されました。
+OUTPUT:
+Piquet Jr. crashed in the 2008 Singapore Grand Prix immediately after Fernando Alonso's early pit stop, bringing out the safety car.
+
+Processing instance 32
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 先行するマシンがセーフティカーの後ろで燃料を補給する中、アロンソは集団の中で順位を上げて勝利を手にしました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 先行するマシンがセーフティカーの後ろで燃料を補給する中、アロンソは集団の中で順位を上げて勝利を手にしました。
+assistant: While the cars ahead of Alonso went in for fuel under the safety car, he moved up the pack to secure the win.
+(end)
+
+
+INPUT:
+先行するマシンがセーフティカーの後ろで燃料を補給する中、アロンソは集団の中で順位を上げて勝利を手にしました。
+OUTPUT:
+While the cars ahead of Alonso went in for fuel under the safety car, he moved up the pack to secure the win.
+
+Processing instance 33
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ピケJr.は2009年のハンガリーGP後に解雇されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ピケJr.は2009年のハンガリーGP後に解雇されました。
+assistant: Piquet Jr. was fired after the 2009 Hungarian Grand Prix.
+(end)
+
+
+INPUT:
+ピケJr.は2009年のハンガリーGP後に解雇されました。
+OUTPUT:
+Piquet Jr. was fired after the 2009 Hungarian Grand Prix.
+
+Processing instance 34
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 午前8時46分ちょうどに街中が静寂に包まれました。最初のジェット機が目標に衝突した瞬間でした。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 午前8時46分ちょうどに街中が静寂に包まれました。最初のジェット機が目標に衝突した瞬間でした。
+assistant: At exactly 8:46 a.m., the city fell silent. This was the exact moment the first jet struck its target.
+(end)
+
+
+INPUT:
+午前8時46分ちょうどに街中が静寂に包まれました。最初のジェット機が目標に衝突した瞬間でした。
+OUTPUT:
+At exactly 8:46 a.m., the city fell silent. This was the exact moment the first jet struck its target.
+
+Processing instance 35
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 二筋の光が一晩中空に向かうように配備されています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 二筋の光が一晩中空に向かうように配備されています。
+assistant: Two beams of light are positioned to point skyward all night long.
+(end)
+
+
+INPUT:
+二筋の光が一晩中空に向かうように配備されています。
+OUTPUT:
+Two beams of light are positioned to point skyward all night long.
+
+Processing instance 36
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 敷地内には新たに5つの超高層ビルが建設中で、その中央には交通センターと記念公園があります。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 敷地内には新たに5つの超高層ビルが建設中で、その中央には交通センターと記念公園があります。
+assistant: There are five new skyscrapers under construction on the site, with a transportation center and memorial park in the center.
+(end)
+
+
+INPUT:
+敷地内には新たに5つの超高層ビルが建設中で、その中央には交通センターと記念公園があります。
+OUTPUT:
+There are five new skyscrapers under construction on the site, with a transportation center and memorial park in the center.
+
+Processing instance 37
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: このPBSの番組はエミー賞を20回以上も受賞しており、この番組よりも長寿の番組は「セサミストリート」や「ミスター・ロジャースのご近所さんになろう」しかありません。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: このPBSの番組はエミー賞を20回以上も受賞しており、この番組よりも長寿の番組は「セサミストリート」や「ミスター・ロジャースのご近所さんになろう」しかありません。
+assistant: This PBS show has won over 20 Emmy awards, and its run is shorter only than "Sesame Street" and "Mister Rogers' Neighborhood."
+(end)
+
+
+INPUT:
+このPBSの番組はエミー賞を20回以上も受賞しており、この番組よりも長寿の番組は「セサミストリート」や「ミスター・ロジャースのご近所さんになろう」しかありません。
+OUTPUT:
+This PBS show has won over 20 Emmy awards, and its run is shorter only than "Sesame Street" and "Mister Rogers' Neighborhood."
+
+Processing instance 38
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: この番組のエピソードはいずれも具体的な書籍のテーマに焦点を当て、いくつもの物語を通してそのテーマを探求するものでした。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: この番組のエピソードはいずれも具体的な書籍のテーマに焦点を当て、いくつもの物語を通してそのテーマを探求するものでした。
+assistant: Each episode of this show focused on a specific theme from a particular book, exploring that theme through multiple stories.
+(end)
+
+
+INPUT:
+この番組のエピソードはいずれも具体的な書籍のテーマに焦点を当て、いくつもの物語を通してそのテーマを探求するものでした。
+OUTPUT:
+Each episode of this show focused on a specific theme from a particular book, exploring that theme through multiple stories.
+
+Processing instance 39
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: また、それぞれの番組では子どもたちが図書館に行ったときに探すべきお勧めの本に関する情報も提供していました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: また、それぞれの番組では子どもたちが図書館に行ったときに探すべきお勧めの本に関する情報も提供していました。
+assistant: Additionally, each show provided recommendations for books that children should look for when they visit the library.
+(end)
+
+
+INPUT:
+また、それぞれの番組では子どもたちが図書館に行ったときに探すべきお勧めの本に関する情報も提供していました。
+OUTPUT:
+Additionally, each show provided recommendations for books that children should look for when they visit the library.
+
+Processing instance 40
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: WNED Buffalo（リーディングレインボーの放送局）のジョン・グラント氏は、「リーディングレインボーという番組は子供たちに、なぜ本を読むのかを教えてくれました。本を手に取って読むように子供たちに促してくれたのです」と語りました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: WNED Buffalo（リーディングレインボーの放送局）のジョン・グラント氏は、「リーディングレインボーという番組は子供たちに、なぜ本を読むのかを教えてくれました。本を手に取って読むように子供たちに促してくれたのです」と語りました。
+assistant: John Grant, from WNED Buffalo (the station that airs Reading Rainbow) said, "Reading Rainbow taught kids why to read, ... encouraged kids to pick up a book and to read."
+(end)
+
+
+INPUT:
+WNED Buffalo（リーディングレインボーの放送局）のジョン・グラント氏は、「リーディングレインボーという番組は子供たちに、なぜ本を読むのかを教えてくれました。本を手に取って読むように子供たちに促してくれたのです」と語りました。
+OUTPUT:
+John Grant, from WNED Buffalo (the station that airs Reading Rainbow) said, "Reading Rainbow taught kids why to read, ... encouraged kids to pick up a book and to read."
+
+Processing instance 41
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ジョン・グラントほか一部の人たちは、資金不足と教育テレビ番組に関する考え方の変化がシリーズ終了の一因であったと考えています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ジョン・グラントほか一部の人たちは、資金不足と教育テレビ番組に関する考え方の変化がシリーズ終了の一因であったと考えています。
+assistant: Some people, including John Grant, believe that both funding shortages and shifts in the philosophy of educational television programming contributed to the series' end.
+(end)
+
+
+INPUT:
+ジョン・グラントほか一部の人たちは、資金不足と教育テレビ番組に関する考え方の変化がシリーズ終了の一因であったと考えています。
+OUTPUT:
+Some people, including John Grant, believe that both funding shortages and shifts in the philosophy of educational television programming contributed to the series' end.
+
+Processing instance 42
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 暴風雨は、カーボベルデ諸島の西約645マイル(1040 km)の位置まで来ているが、上陸する前に散逸する可能性が高いと気象予報士は述べています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 暴風雨は、カーボベルデ諸島の西約645マイル(1040 km)の位置まで来ているが、上陸する前に散逸する可能性が高いと気象予報士は述べています。
+assistant: The storm, located about 645 miles (1040 km) west of the Cape Verde Islands, is likely to dissipate before making landfall, meteorologists say.
+(end)
+
+
+INPUT:
+暴風雨は、カーボベルデ諸島の西約645マイル(1040 km)の位置まで来ているが、上陸する前に散逸する可能性が高いと気象予報士は述べています。
+OUTPUT:
+The storm, located about 645 miles (1040 km) west of the Cape Verde Islands, is likely to dissipate before making landfall, meteorologists say.
+
+Processing instance 43
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: フレッドは現在、時速105マイル（165km/h）の風速で北西に向かって進んでいます。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: フレッドは現在、時速105マイル（165km/h）の風速で北西に向かって進んでいます。
+assistant: Fred is currently moving at wind speeds of 105 miles per hour (165 km/h) towards the northwest.
+(end)
+
+
+INPUT:
+フレッドは現在、時速105マイル（165km/h）の風速で北西に向かって進んでいます。
+OUTPUT:
+Fred is currently moving at wind speeds of 105 miles per hour (165 km/h) towards the northwest.
+
+Processing instance 44
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: フレッドは、衛星画像が導入されて以来、大西洋のはるか南と東で記録された最大の熱帯低気圧であり、西経35度以東で記録された3番目の大型ハリケーンである。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: フレッドは、衛星画像が導入されて以来、大西洋のはるか南と東で記録された最大の熱帯低気圧であり、西経35度以東で記録された3番目の大型ハリケーンである。
+assistant: Fred is the strongest tropical cyclone ever recorded so far south and east in the Atlantic since the advent of satellite imagery, and only the third major hurricane on record east of 35°W.
+(end)
+
+
+INPUT:
+フレッドは、衛星画像が導入されて以来、大西洋のはるか南と東で記録された最大の熱帯低気圧であり、西経35度以東で記録された3番目の大型ハリケーンである。
+OUTPUT:
+Fred is the strongest tropical cyclone ever recorded so far south and east in the Atlantic since the advent of satellite imagery, and only the third major hurricane on record east of 35°W.
+
+Processing instance 45
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ギネスビール創業者のアーサー・ギネスは、1759年9月24日にアイルランドのダブリンにあるセント・ジェームズ・ゲート醸造所を年間45ポンドで9,000年間賃り上げるというリース契約を結びました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ギネスビール創業者のアーサー・ギネスは、1759年9月24日にアイルランドのダブリンにあるセント・ジェームズ・ゲート醸造所を年間45ポンドで9,000年間賃り上げるというリース契約を結びました。
+assistant: Arthur Guinness, the founder of Guinness beer, signed a lease on September 24, 1759, for the St. James' Gate Brewery in Dublin, Ireland, for 9,000 years at an annual rent of 45 pounds.
+(end)
+
+
+INPUT:
+ギネスビール創業者のアーサー・ギネスは、1759年9月24日にアイルランドのダブリンにあるセント・ジェームズ・ゲート醸造所を年間45ポンドで9,000年間賃り上げるというリース契約を結びました。
+OUTPUT:
+Arthur Guinness, the founder of Guinness beer, signed a lease on September 24, 1759, for the St. James' Gate Brewery in Dublin, Ireland, for 9,000 years at an annual rent of 45 pounds.
+
+Processing instance 46
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: その250年後にギネスは年間売上100億ユーロ（147億米ドル）を上回る世界的なビジネスへの成長を遂げました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: その250年後にギネスは年間売上100億ユーロ（147億米ドル）を上回る世界的なビジネスへの成長を遂げました。
+assistant: After 250 years, Guinness has grown into a global business with annual sales exceeding 10 billion euros (US$14.7 billion).
+(end)
+
+
+INPUT:
+その250年後にギネスは年間売上100億ユーロ（147億米ドル）を上回る世界的なビジネスへの成長を遂げました。
+OUTPUT:
+After 250 years, Guinness has grown into a global business with annual sales exceeding 10 billion euros (US$14.7 billion).
+
+Processing instance 47
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: A1GPニュージーランドチームのコ・ドライバーであるジョニー・リードは本日、48年以上の歴史があるニュージーランドのオークランド・ハーバー・ブリッジを違反なく最速で駆け抜け、歴史に名を刻みました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: A1GPニュージーランドチームのコ・ドライバーであるジョニー・リードは本日、48年以上の歴史があるニュージーランドのオークランド・ハーバー・ブリッジを違反なく最速で駆け抜け、歴史に名を刻みました。
+assistant: A1GP New Zealand team co-driver Jonny Reid made history today by driving the fastest over the 48-year-old Auckland Harbour Bridge, New Zealand, legally.
+(end)
+
+
+INPUT:
+A1GPニュージーランドチームのコ・ドライバーであるジョニー・リードは本日、48年以上の歴史があるニュージーランドのオークランド・ハーバー・ブリッジを違反なく最速で駆け抜け、歴史に名を刻みました。
+OUTPUT:
+A1GP New Zealand team co-driver Jonny Reid made history today by driving the fastest over the 48-year-old Auckland Harbour Bridge, New Zealand, legally.
+
+Processing instance 48
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: リード氏は、ニュージーランドのA1GPカーである「ブラックビューティー」で時速160 km以上で7回も橋を渡る走行に成功しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: リード氏は、ニュージーランドのA1GPカーである「ブラックビューティー」で時速160 km以上で7回も橋を渡る走行に成功しました。
+assistant: Mr Reid successfully drove the New Zealand A1GP car, the Black Beauty, at speeds over 160 km/h seven times across the bridge.
+(end)
+
+
+INPUT:
+リード氏は、ニュージーランドのA1GPカーである「ブラックビューティー」で時速160 km以上で7回も橋を渡る走行に成功しました。
+OUTPUT:
+Mr Reid successfully drove the New Zealand A1GP car, the Black Beauty, at speeds over 160 km/h seven times across the bridge.
+
+Processing instance 49
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ニュージーランドの警察は、ブラックビューティーの速度が低いため、速度計測器でリード氏の速度を確認するのに苦労したそうで、警察がリード氏の速度を確認できたのは、時速160 kmまで減速したときだけだったそうです。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ニュージーランドの警察は、ブラックビューティーの速度が低いため、速度計測器でリード氏の速度を確認するのに苦労したそうで、警察がリード氏の速度を確認できたのは、時速160 kmまで減速したときだけだったそうです。
+assistant: New Zealand's police struggled to use their speed guns to measure Mr Reid's speed due to the Black Beauty's low speed, and the only time the police could confirm Mr Reid's speed was when he slowed down to 160 km/h.
+(end)
+
+
+INPUT:
+ニュージーランドの警察は、ブラックビューティーの速度が低いため、速度計測器でリード氏の速度を確認するのに苦労したそうで、警察がリード氏の速度を確認できたのは、時速160 kmまで減速したときだけだったそうです。
+OUTPUT:
+New Zealand's police struggled to use their speed guns to measure Mr Reid's speed due to the Black Beauty's low speed, and the only time the police could confirm Mr Reid's speed was when he slowed down to 160 km/h.
+
+Processing instance 50
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 過去3カ月間に、80人以上の逮捕者が正式に起訴されることなくセントラルブッキング施設から釈放されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 過去3カ月間に、80人以上の逮捕者が正式に起訴されることなくセントラルブッキング施設から釈放されました。
+assistant: In the past three months, over 80 arrestees have been released from the central booking facility without being formally charged.
+(end)
+
+
+INPUT:
+過去3カ月間に、80人以上の逮捕者が正式に起訴されることなくセントラルブッキング施設から釈放されました。
+OUTPUT:
+In the past three months, over 80 arrestees have been released from the central booking facility without being formally charged.
+
+Processing instance 51
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 今年4月には、グリン判事が同施設に対して、収容後24時間以上経過しても裁判所の委員による審問を受けなかった者の釈放を強制するための仮処分命令を発令しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 今年4月には、グリン判事が同施設に対して、収容後24時間以上経過しても裁判所の委員による審問を受けなかった者の釈放を強制するための仮処分命令を発令しました。
+assistant: In April of this year, Judge Glynn issued a temporary restraining order against the facility, requiring the release of individuals held for more than 24 hours after their intake who have not been heard by a court commissioner.
+(end)
+
+
+INPUT:
+今年4月には、グリン判事が同施設に対して、収容後24時間以上経過しても裁判所の委員による審問を受けなかった者の釈放を強制するための仮処分命令を発令しました。
+OUTPUT:
+In April of this year, Judge Glynn issued a temporary restraining order against the facility, requiring the release of individuals held for more than 24 hours after their intake who have not been heard by a court commissioner.
+
+Processing instance 52
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: コミッショナーは、保釈が認められた場合には保釈金を定め、逮捕した警官により申請された嫌疑を正式なものにします。その後、嫌疑内容は州のコンピューターシステムに入力され、事件が追跡されます。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: コミッショナーは、保釈が認められた場合には保釈金を定め、逮捕した警官により申請された嫌疑を正式なものにします。その後、嫌疑内容は州のコンピューターシステムに入力され、事件が追跡されます。
+assistant: The commissioner sets bail, if granted, and formalizes the charges filed by the arresting officer. The charges are then entered into the state's computer system, where the case is tracked.
+(end)
+
+
+INPUT:
+コミッショナーは、保釈が認められた場合には保釈金を定め、逮捕した警官により申請された嫌疑を正式なものにします。その後、嫌疑内容は州のコンピューターシステムに入力され、事件が追跡されます。
+OUTPUT:
+The commissioner sets bail, if granted, and formalizes the charges filed by the arresting officer. The charges are then entered into the state's computer system, where the case is tracked.
+
+Processing instance 53
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 聴聞会では、迅速な裁判を受ける被疑者の権利に基づき期日を示します。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 聴聞会では、迅速な裁判を受ける被疑者の権利に基づき期日を示します。
+assistant: The hearing sets a date for the suspect's right to a speedy trial.
+(end)
+
+
+INPUT:
+聴聞会では、迅速な裁判を受ける被疑者の権利に基づき期日を示します。
+OUTPUT:
+The hearing sets a date for the suspect's right to a speedy trial.
+
+Processing instance 54
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: オーストラリアの財務大臣であり、ジョン・ハワード首相の後任として自由党党首に就任する可能性が高いピーター・コステロ氏は、オーストラリアの原子力発電産業を支持しています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: オーストラリアの財務大臣であり、ジョン・ハワード首相の後任として自由党党首に就任する可能性が高いピーター・コステロ氏は、オーストラリアの原子力発電産業を支持しています。
+assistant: Australian Treasury Minister and likely successor to Prime Minister John Howard as Liberal Party leader, Peter Costello, supports the Australian nuclear power industry.
+(end)
+
+
+INPUT:
+オーストラリアの財務大臣であり、ジョン・ハワード首相の後任として自由党党首に就任する可能性が高いピーター・コステロ氏は、オーストラリアの原子力発電産業を支持しています。
+OUTPUT:
+Australian Treasury Minister and likely successor to Prime Minister John Howard as Liberal Party leader, Peter Costello, supports the Australian nuclear power industry.
+
+Processing instance 55
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: コステロ氏は、原子力発電で経済的に採算が取れるようになったら、オーストラリアは原子力発電の利用を追求すべきだと述べました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: コステロ氏は、原子力発電で経済的に採算が取れるようになったら、オーストラリアは原子力発電の利用を追求すべきだと述べました。
+assistant: Mr Costello said that Australia should pursue the use of nuclear power when it becomes economically viable.
+(end)
+
+
+INPUT:
+コステロ氏は、原子力発電で経済的に採算が取れるようになったら、オーストラリアは原子力発電の利用を追求すべきだと述べました。
+OUTPUT:
+Mr Costello said that Australia should pursue the use of nuclear power when it becomes economically viable.
+
+Processing instance 56
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 「商用になれば手に入れるべきです。つまり、原則として原子力発電には反対しない」とコステロ氏は語りました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 「商用になれば手に入れるべきです。つまり、原則として原子力発電には反対しない」とコステロ氏は語りました。
+assistant: "If it becomes commercial, we should have it. That is, in principle, there's no opposition to nuclear power." Mr Costello said.
+(end)
+
+
+INPUT:
+「商用になれば手に入れるべきです。つまり、原則として原子力発電には反対しない」とコステロ氏は語りました。
+OUTPUT:
+"If it becomes commercial, we should have it. That is, in principle, there's no opposition to nuclear power." Mr Costello said.
+
+Processing instance 57
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ANSAによると、「警察は、本格的な後継者争いに火がつくのを恐れていた最上層部たちによる抗争が2～3回あるだろうと懸念していた」そうです。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ANSAによると、「警察は、本格的な後継者争いに火がつくのを恐れていた最上層部たちによる抗争が2～3回あるだろうと懸念していた」そうです。
+assistant: According to ANSA, "The police were concerned that there would be 2-3 clashes among top-level figures, which they feared could ignite a full-blown succession struggle."
+(end)
+
+
+INPUT:
+ANSAによると、「警察は、本格的な後継者争いに火がつくのを恐れていた最上層部たちによる抗争が2～3回あるだろうと懸念していた」そうです。
+OUTPUT:
+According to ANSA, "The police were concerned that there would be 2-3 clashes among top-level figures, which they feared could ignite a full-blown succession struggle."
+
+Processing instance 58
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 警察によると、ロ・ピッコロはパレルモでプロヴェンツァーノの右腕として活躍していたことと、権力網を強化している間はできるだけ目立たないようにというプロヴェンツァーノの方針に従っていたため、その優れた経験が年配幹部たちから尊敬を集めたことで有利な状況にあるとのことです。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 警察によると、ロ・ピッコロはパレルモでプロヴェンツァーノの右腕として活躍していたことと、権力網を強化している間はできるだけ目立たないようにというプロヴェンツァーノの方針に従っていたため、その優れた経験が年配幹部たちから尊敬を集めたことで有利な状況にあるとのことです。
+assistant: According to the police, Lo Piccolo was in a strong position because he had been Provenzano's right-hand man in Palermo, and his vast experience won him the respect of the older generation of bosses, who followed Provenzano's policy of keeping as low as possible while strengthening their power network.
+(end)
+
+
+INPUT:
+警察によると、ロ・ピッコロはパレルモでプロヴェンツァーノの右腕として活躍していたことと、権力網を強化している間はできるだけ目立たないようにというプロヴェンツァーノの方針に従っていたため、その優れた経験が年配幹部たちから尊敬を集めたことで有利な状況にあるとのことです。
+OUTPUT:
+According to the police, Lo Piccolo was in a strong position because he had been Provenzano's right-hand man in Palermo, and his vast experience won him the respect of the older generation of bosses, who followed Provenzano's policy of keeping as low as possible while strengthening their power network.
+
+Processing instance 59
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 「1992年にマフィア撲滅運動家ジョヴァンニ・ファルコーネとパオロ・ボルセリーノの命を奪ったリイナ主導の国家との戦争に終止符を打ったとき、これらの幹部たちはプロヴェンツァーノによって抑え付けられていました。」
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 「1992年にマフィア撲滅運動家ジョヴァンニ・ファルコーネとパオロ・ボルセリーノの命を奪ったリイナ主導の国家との戦争に終止符を打ったとき、これらの幹部たちはプロヴェンツァーノによって抑え付けられていました。」
+assistant: In 1992, these bosses were reined in by Provenzano when he put an end to the Riina-driven war against the state that claimed the lives of Mafia crusaders Giovanni Falcone and Paolo Borsellino.
+(end)
+
+
+INPUT:
+「1992年にマフィア撲滅運動家ジョヴァンニ・ファルコーネとパオロ・ボルセリーノの命を奪ったリイナ主導の国家との戦争に終止符を打ったとき、これらの幹部たちはプロヴェンツァーノによって抑え付けられていました。」
+OUTPUT:
+In 1992, these bosses were reined in by Provenzano when he put an end to the Riina-driven war against the state that claimed the lives of Mafia crusaders Giovanni Falcone and Paolo Borsellino.
+
+Processing instance 60
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: Appleのスティーブ・ジョブズ最高経営責任者（CEO）は登壇し、ジーンズのポケットからiPhoneを取り出して、このデバイスを披露しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: Appleのスティーブ・ジョブズ最高経営責任者（CEO）は登壇し、ジーンズのポケットからiPhoneを取り出して、このデバイスを披露しました。
+assistant: Apple CEO Steve Jobs walked onto the stage and unveiled the device by taking out the iPhone from his jeans pocket.
+(end)
+
+
+INPUT:
+Appleのスティーブ・ジョブズ最高経営責任者（CEO）は登壇し、ジーンズのポケットからiPhoneを取り出して、このデバイスを披露しました。
+OUTPUT:
+Apple CEO Steve Jobs walked onto the stage and unveiled the device by taking out the iPhone from his jeans pocket.
+
+Processing instance 61
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 2時間のスピーチの中で彼は「今日、Appleは電話を再発明しようとしている。私たちは今日歴史を作ろうとしている」と述べました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 2時間のスピーチの中で彼は「今日、Appleは電話を再発明しようとしている。私たちは今日歴史を作ろうとしている」と述べました。
+assistant: In his 2-hour speech, he stated, "Today, Apple is reinventing the phone. We are about to make history today."
+(end)
+
+
+INPUT:
+2時間のスピーチの中で彼は「今日、Appleは電話を再発明しようとしている。私たちは今日歴史を作ろうとしている」と述べました。
+OUTPUT:
+In his 2-hour speech, he stated, "Today, Apple is reinventing the phone. We are about to make history today."
+
+Processing instance 62
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ブラジルは地球上で最大のローマ・カトリックの国であり、ローマ・カトリック教会は一貫して同性婚の合法化に反対してきた。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ブラジルは地球上で最大のローマ・カトリックの国であり、ローマ・カトリック教会は一貫して同性婚の合法化に反対してきた。
+assistant: Brazil is the largest Roman Catholic country on Earth, and the Roman Catholic Church has consistently opposed the legalization of same-sex marriage.
+(end)
+
+
+INPUT:
+ブラジルは地球上で最大のローマ・カトリックの国であり、ローマ・カトリック教会は一貫して同性婚の合法化に反対してきた。
+OUTPUT:
+Brazil is the largest Roman Catholic country on Earth, and the Roman Catholic Church has consistently opposed the legalization of same-sex marriage.
+
+Processing instance 63
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ブラジルの全国議会では10年前から合法化を巡る議論が続いており、そのような民事婚は現在、リオグランデ・ド・スル州でのみ合法化されています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ブラジルの全国議会では10年前から合法化を巡る議論が続いており、そのような民事婚は現在、リオグランデ・ド・スル州でのみ合法化されています。
+assistant: Brazil's National Congress has been debating legalization for 10 years, and such civil marriages are currently only legal in Rio Grande do Sul state.
+(end)
+
+
+INPUT:
+ブラジルの全国議会では10年前から合法化を巡る議論が続いており、そのような民事婚は現在、リオグランデ・ド・スル州でのみ合法化されています。
+OUTPUT:
+Brazil's National Congress has been debating legalization for 10 years, and such civil marriages are currently only legal in Rio Grande do Sul state.
+
+Processing instance 64
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 法案の原案は、元サンパウロ市長のマルタ・スプリシー氏によって起草された。提案された法案は、修正された後、ロベルト・ジェファーソンの手に渡りました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 法案の原案は、元サンパウロ市長のマルタ・スプリシー氏によって起草された。提案された法案は、修正された後、ロベルト・ジェファーソンの手に渡りました。
+assistant: The original bill was drafted by former São Paulo mayor Marta Suplicy. The proposed legislation, after being amended, was then handed over to Roberto Jefferson.
+(end)
+
+
+INPUT:
+法案の原案は、元サンパウロ市長のマルタ・スプリシー氏によって起草された。提案された法案は、修正された後、ロベルト・ジェファーソンの手に渡りました。
+OUTPUT:
+The original bill was drafted by former São Paulo mayor Marta Suplicy. The proposed legislation, after being amended, was then handed over to Roberto Jefferson.
+
+Processing instance 65
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 抗議者たちは、120万人の署名を集めて11月の全国大会に提出しようと考えています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 抗議者たちは、120万人の署名を集めて11月の全国大会に提出しようと考えています。
+assistant: Protesters aim to collect 1.2 million signatures to present at the National Congress in November.
+(end)
+
+
+INPUT:
+抗議者たちは、120万人の署名を集めて11月の全国大会に提出しようと考えています。
+OUTPUT:
+Protesters aim to collect 1.2 million signatures to present at the National Congress in November.
+
+Processing instance 66
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 多くの家族が立ち退きと戦うために法的支援を求めていることが明らかになった後、3月20日、東海岸地域法律相談所で住宅詐欺の被害者のための集会が開催されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 多くの家族が立ち退きと戦うために法的支援を求めていることが明らかになった後、3月20日、東海岸地域法律相談所で住宅詐欺の被害者のための集会が開催されました。
+assistant: On March 20th, a meeting was held at the East Bay Community Law Center for victims of the housing scam, as it became apparent that many families were seeking legal assistance in fighting eviction.
+(end)
+
+
+INPUT:
+多くの家族が立ち退きと戦うために法的支援を求めていることが明らかになった後、3月20日、東海岸地域法律相談所で住宅詐欺の被害者のための集会が開催されました。
+OUTPUT:
+On March 20th, a meeting was held at the East Bay Community Law Center for victims of the housing scam, as it became apparent that many families were seeking legal assistance in fighting eviction.
+
+Processing instance 67
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 入居者が状況を共有し始めた頃、関係する家族のほとんどが突然気づいたのは、OHAのキャロリン・ウィルソンが自分たちの保証金を盗んで町を飛び出したということでした。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 入居者が状況を共有し始めた頃、関係する家族のほとんどが突然気づいたのは、OHAのキャロリン・ウィルソンが自分たちの保証金を盗んで町を飛び出したということでした。
+assistant: As tenants began sharing their experiences, most of the involved families suddenly realized that Carolyn Wilson of OHA had stolen their security deposits and skipped town.
+(end)
+
+
+INPUT:
+入居者が状況を共有し始めた頃、関係する家族のほとんどが突然気づいたのは、OHAのキャロリン・ウィルソンが自分たちの保証金を盗んで町を飛び出したということでした。
+OUTPUT:
+As tenants began sharing their experiences, most of the involved families suddenly realized that Carolyn Wilson of OHA had stolen their security deposits and skipped town.
+
+Processing instance 68
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ロックウッド・ガーデンズの入居者は、OHA警察がこの住宅詐欺に巻き込まれた可能性のあるオークランドの他の公営住宅も調査していることを知ったので、さらに40世帯以上が立ち退きに直面する可能性があると考えています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ロックウッド・ガーデンズの入居者は、OHA警察がこの住宅詐欺に巻き込まれた可能性のあるオークランドの他の公営住宅も調査していることを知ったので、さらに40世帯以上が立ち退きに直面する可能性があると考えています。
+assistant: Residents of Lockwood Gardens believe that over 40 additional families may face eviction, as they learned that OHA police are also investigating other public housing properties in Oakland that may be involved in the housing scam.
+(end)
+
+
+INPUT:
+ロックウッド・ガーデンズの入居者は、OHA警察がこの住宅詐欺に巻き込まれた可能性のあるオークランドの他の公営住宅も調査していることを知ったので、さらに40世帯以上が立ち退きに直面する可能性があると考えています。
+OUTPUT:
+Residents of Lockwood Gardens believe that over 40 additional families may face eviction, as they learned that OHA police are also investigating other public housing properties in Oakland that may be involved in the housing scam.
+
+Processing instance 69
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: バンドはマウイ島の戦争記念スタジアムで90,000人を集客する予定でしたが、その公演をキャンセルし、ファンに謝罪しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: バンドはマウイ島の戦争記念スタジアムで90,000人を集客する予定でしたが、その公演をキャンセルし、ファンに謝罪しました。
+assistant: The band canceled their performance at Maui's War Memorial Stadium, which was expected to draw 9,000 people, and apologized to their fans.
+(end)
+
+
+INPUT:
+バンドはマウイ島の戦争記念スタジアムで90,000人を集客する予定でしたが、その公演をキャンセルし、ファンに謝罪しました。
+OUTPUT:
+The band canceled their performance at Maui's War Memorial Stadium, which was expected to draw 9,000 people, and apologized to their fans.
+
+Processing instance 70
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: このバンドの運営会社であるHKマネジメントは、9月20日公演の中止時に当初理由を明かさなかったが、翌日までには物流上の理由を非難しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: このバンドの運営会社であるHKマネジメントは、9月20日公演の中止時に当初理由を明かさなかったが、翌日までには物流上の理由を非難しました。
+assistant: The management company for the band, HK Management, did not initially provide a reason for the cancellation on September 20th, but blamed logistical reasons by the next day.
+(end)
+
+
+INPUT:
+このバンドの運営会社であるHKマネジメントは、9月20日公演の中止時に当初理由を明かさなかったが、翌日までには物流上の理由を非難しました。
+OUTPUT:
+The management company for the band, HK Management, did not initially provide a reason for the cancellation on September 20th, but blamed logistical reasons by the next day.
+
+Processing instance 71
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: サキス・ケチャジオグルとジョージ・ニコラコプロスは、いずれもギリシャの有名な弁護士ですが、接収と汚職の罪でアテネのコリダロス刑務所に入っています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: サキス・ケチャジオグルとジョージ・ニコラコプロスは、いずれもギリシャの有名な弁護士ですが、接収と汚職の罪でアテネのコリダロス刑務所に入っています。
+assistant: Sakis Kechagioglou and George Nikolakopoulos, both prominent Greek lawyers, are currently imprisoned in the Korydallus Prison in Athens on charges of bribery and corruption.
+(end)
+
+
+INPUT:
+サキス・ケチャジオグルとジョージ・ニコラコプロスは、いずれもギリシャの有名な弁護士ですが、接収と汚職の罪でアテネのコリダロス刑務所に入っています。
+OUTPUT:
+Sakis Kechagioglou and George Nikolakopoulos, both prominent Greek lawyers, are currently imprisoned in the Korydallus Prison in Athens on charges of bribery and corruption.
+
+Processing instance 72
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: その結果、過去数年間に裁判官、法律家、法務官士、弁護士が犯した違法行為が暴露され、ギリシャ法曹界で大いに物議を醸しています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: その結果、過去数年間に裁判官、法律家、法務官士、弁護士が犯した違法行為が暴露され、ギリシャ法曹界で大いに物議を醸しています。
+assistant: As a result, illegal actions committed over the past years by judges, lawyers, solicitors, and attorneys have been exposed, causing a major scandal within the Greek legal community.
+(end)
+
+
+INPUT:
+その結果、過去数年間に裁判官、法律家、法務官士、弁護士が犯した違法行為が暴露され、ギリシャ法曹界で大いに物議を醸しています。
+OUTPUT:
+As a result, illegal actions committed over the past years by judges, lawyers, solicitors, and attorneys have been exposed, causing a major scandal within the Greek legal community.
+
+Processing instance 73
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 数週間前にジャーナリストのマキス・トリアンタフィロプロス氏がアルファテレビの人気番組「Zoungla」で公開した情報を受けて、国会議員で弁護士のペトロス・マントゥバロス氏は、所属事務所のメンバーが違法な接待や汚職に関与していたとして退任させられました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 数週間前にジャーナリストのマキス・トリアンタフィロプロス氏がアルファテレビの人気番組「Zoungla」で公開した情報を受けて、国会議員で弁護士のペトロス・マントゥバロス氏は、所属事務所のメンバーが違法な接待や汚職に関与していたとして退任させられました。
+assistant: A few weeks ago, following information revealed by journalist Makis Triantafylopoulos in his popular Alpha TV show "Zoungla", Member of Parliament and lawyer Petros Mantouvalos was removed from his position, as members of his office were involved in illegal graft and corruption.
+(end)
+
+
+INPUT:
+数週間前にジャーナリストのマキス・トリアンタフィロプロス氏がアルファテレビの人気番組「Zoungla」で公開した情報を受けて、国会議員で弁護士のペトロス・マントゥバロス氏は、所属事務所のメンバーが違法な接待や汚職に関与していたとして退任させられました。
+OUTPUT:
+A few weeks ago, following information revealed by journalist Makis Triantafylopoulos in his popular Alpha TV show "Zoungla", Member of Parliament and lawyer Petros Mantouvalos was removed from his position, as members of his office were involved in illegal graft and corruption.
+
+Processing instance 74
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: しかも、最高裁判事エヴァンゲロス・カルーシスは、汚職と不正行為により有罪となり、投獄されています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: しかも、最高裁判事エヴァンゲロス・カルーシスは、汚職と不正行為により有罪となり、投獄されています。
+assistant: Moreover, top judge Evangelos Kalousis is imprisoned as he was found guilty of corruption and misconduct.
+(end)
+
+
+INPUT:
+しかも、最高裁判事エヴァンゲロス・カルーシスは、汚職と不正行為により有罪となり、投獄されています。
+OUTPUT:
+Moreover, top judge Evangelos Kalousis is imprisoned as he was found guilty of corruption and misconduct.
+
+Processing instance 75
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ロバーツ氏は、中絶の倫理を考えるうえで重要な「命の始まりはいつの時点か」という疑問について、「可能性の高いケースの具体的な内容についてコメントするのは倫理的ではない」と断固として拒否しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ロバーツ氏は、中絶の倫理を考えるうえで重要な「命の始まりはいつの時点か」という疑問について、「可能性の高いケースの具体的な内容についてコメントするのは倫理的ではない」と断固として拒否しました。
+assistant: Mr. Roberts firmly refused to comment on the question of when life begins, which is crucial to considering the ethics of abortion, stating it would be unethical to comment on the specifics of likely cases.
+(end)
+
+
+INPUT:
+ロバーツ氏は、中絶の倫理を考えるうえで重要な「命の始まりはいつの時点か」という疑問について、「可能性の高いケースの具体的な内容についてコメントするのは倫理的ではない」と断固として拒否しました。
+OUTPUT:
+Mr. Roberts firmly refused to comment on the question of when life begins, which is crucial to considering the ethics of abortion, stating it would be unethical to comment on the specifics of likely cases.
+
+Processing instance 76
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: しかし、彼はロー対ウェイド裁判は「確定した土地法」であるという先の発言を繰り返し、一貫した最高裁判決の重要性を強調しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: しかし、彼はロー対ウェイド裁判は「確定した土地法」であるという先の発言を繰り返し、一貫した最高裁判決の重要性を強調しました。
+assistant: However, he repeated his earlier statement that Roe v. Wade was the "settled law of the land," emphasizing the importance of consistent Supreme Court rulings.
+(end)
+
+
+INPUT:
+しかし、彼はロー対ウェイド裁判は「確定した土地法」であるという先の発言を繰り返し、一貫した最高裁判決の重要性を強調しました。
+OUTPUT:
+However, he repeated his earlier statement that Roe v. Wade was the "settled law of the land," emphasizing the importance of consistent Supreme Court rulings.
+
+Processing instance 77
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 彼はロー判決が依拠する暗黙のプライバシー権を信じていることも裏付けました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 彼はロー判決が依拠する暗黙のプライバシー権を信じていることも裏付けました。
+assistant: He also confirmed that he believed in the implied right to privacy that the Roe decision relied upon.
+(end)
+
+
+INPUT:
+彼はロー判決が依拠する暗黙のプライバシー権を信じていることも裏付けました。
+OUTPUT:
+He also confirmed that he believed in the implied right to privacy that the Roe decision relied upon.
+
+Processing instance 78
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: マルーキドールは2位のヌーサに6ポイント差をつけて首位でゴールしました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: マルーキドールは2位のヌーサに6ポイント差をつけて首位でゴールしました。
+assistant: Maroochydore finished on top of the leaderboard, six points ahead of second-place Noosa.
+(end)
+
+
+INPUT:
+マルーキドールは2位のヌーサに6ポイント差をつけて首位でゴールしました。
+OUTPUT:
+Maroochydore finished on top of the leaderboard, six points ahead of second-place Noosa.
+
+Processing instance 79
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: この両チームはメジャー準決勝で相まみえ、11点差でヌーサが勝ち抜きました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: この両チームはメジャー準決勝で相まみえ、11点差でヌーサが勝ち抜きました。
+assistant: The two teams met in the major semifinal, where Noosa emerged victorious by a margin of 11 points.
+(end)
+
+
+INPUT:
+この両チームはメジャー準決勝で相まみえ、11点差でヌーサが勝ち抜きました。
+OUTPUT:
+The two teams met in the major semifinal, where Noosa emerged victorious by a margin of 11 points.
+
+Processing instance 80
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: その後、マルーチドールは予選決勝でカブールチュールを破りました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: その後、マルーチドールは予選決勝でカブールチュールを破りました。
+assistant: Subsequently, Maroochydore defeated Caboolture in the qualifying final.
+(end)
+
+
+INPUT:
+その後、マルーチドールは予選決勝でカブールチュールを破りました。
+OUTPUT:
+Subsequently, Maroochydore defeated Caboolture in the qualifying final.
+
+Processing instance 81
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ヘスペロニクス・エリザベサエは、ドロマエサウルス科でヴェロキラプトルの一種です。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ヘスペロニクス・エリザベサエは、ドロマエサウルス科でヴェロキラプトルの一種です。
+assistant: Hesperonychus elizabethae is a species of the Dromaeosauridae family and is related to Velociraptor.
+(end)
+
+
+INPUT:
+ヘスペロニクス・エリザベサエは、ドロマエサウルス科でヴェロキラプトルの一種です。
+OUTPUT:
+Hesperonychus elizabethae is a species of the Dromaeosauridae family and is related to Velociraptor.
+
+Processing instance 82
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 全身を羽毛に覆われたこの温血猛禽は、ヴェロキラプトルのような爪を持つ2本足で直立歩行していたと考えられています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 全身を羽毛に覆われたこの温血猛禽は、ヴェロキラプトルのような爪を持つ2本足で直立歩行していたと考えられています。
+assistant: This fully feathered warm-blooded bird of prey was believed to have walked upright on two legs with claws similar to the Velociraptor.
+(end)
+
+
+INPUT:
+全身を羽毛に覆われたこの温血猛禽は、ヴェロキラプトルのような爪を持つ2本足で直立歩行していたと考えられています。
+OUTPUT:
+This fully feathered warm-blooded bird of prey was believed to have walked upright on two legs with claws similar to the Velociraptor.
+
+Processing instance 83
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 2本目の爪が大きかったことから、「西部の爪」を意味するヘスペロニクスと名付けられました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 2本目の爪が大きかったことから、「西部の爪」を意味するヘスペロニクスと名付けられました。
+assistant: The second claw was larger, giving rise to its name Hesperonychus, meaning "western claw."
+(end)
+
+
+INPUT:
+2本目の爪が大きかったことから、「西部の爪」を意味するヘスペロニクスと名付けられました。
+OUTPUT:
+The second claw was larger, giving rise to its name Hesperonychus, meaning "western claw."
+
+Processing instance 84
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 砕氷に加えて、極端な気象条件が救助活動を妨げています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 砕氷に加えて、極端な気象条件が救助活動を妨げています。
+assistant: In addition to the crushing ice, extreme weather conditions are hampering rescue efforts.
+(end)
+
+
+INPUT:
+砕氷に加えて、極端な気象条件が救助活動を妨げています。
+OUTPUT:
+In addition to the crushing ice, extreme weather conditions are hampering rescue efforts.
+
+Processing instance 85
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ピットマン氏は、来週になるまで状況は改善しないだろうと示唆した。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ピットマン氏は、来週になるまで状況は改善しないだろうと示唆した。
+assistant: Mr Pittman suggested that conditions wouldn't improve until next week.
+(end)
+
+
+INPUT:
+ピットマン氏は、来週になるまで状況は改善しないだろうと示唆した。
+OUTPUT:
+Mr Pittman suggested that conditions wouldn't improve until next week.
+
+Processing instance 86
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ピットマン氏によると、流氷の量と厚さは、アザラシ漁師にとって過去15年間で最悪の状態だそうです。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ピットマン氏によると、流氷の量と厚さは、アザラシ漁師にとって過去15年間で最悪の状態だそうです。
+assistant: According to Pittman, the amount and thickness of the sea ice are the worst they've been for sealers in the past 15 years.
+(end)
+
+
+INPUT:
+ピットマン氏によると、流氷の量と厚さは、アザラシ漁師にとって過去15年間で最悪の状態だそうです。
+OUTPUT:
+According to Pittman, the amount and thickness of the sea ice are the worst they've been for sealers in the past 15 years.
+
+Processing instance 87
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 今日、レッドレイクコミュニティでは、ジェフ・ウェイズと9人の犠牲者のうち3人の葬儀が執り行われている最中に、3月21日に発生した学校での銃撃に関連してもう1人の学生が逮捕されたというニュースが広まりました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 今日、レッドレイクコミュニティでは、ジェフ・ウェイズと9人の犠牲者のうち3人の葬儀が執り行われている最中に、3月21日に発生した学校での銃撃に関連してもう1人の学生が逮捕されたというニュースが広まりました。
+assistant: Today, as funerals for Jeff Weise and three of the nine victims were taking place in the Red Lake community, news spread of another student's arrest in connection with the school shooting of March 21.
+(end)
+
+
+INPUT:
+今日、レッドレイクコミュニティでは、ジェフ・ウェイズと9人の犠牲者のうち3人の葬儀が執り行われている最中に、3月21日に発生した学校での銃撃に関連してもう1人の学生が逮捕されたというニュースが広まりました。
+OUTPUT:
+Today, as funerals for Jeff Weise and three of the nine victims were taking place in the Red Lake community, news spread of another student's arrest in connection with the school shooting of March 21.
+
+Processing instance 88
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 当局は、本日の逮捕を認めたこと以外にほとんど公式な発言をしていません。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 当局は、本日の逮捕を認めたこと以外にほとんど公式な発言をしていません。
+assistant: Authorities have made few official statements beyond confirming today's arrest.
+(end)
+
+
+INPUT:
+当局は、本日の逮捕を認めたこと以外にほとんど公式な発言をしていません。
+OUTPUT:
+Authorities have made few official statements beyond confirming today's arrest.
+
+Processing instance 89
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: しかし、捜査に詳しい情報筋がミネアポリス・スター・トリビューン紙に語ったところによると、犯人はレッドレイク部族会長フロイド・ジュルダンの16歳の息子、ルイ・ジュルダンだったということです。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: しかし、捜査に詳しい情報筋がミネアポリス・スター・トリビューン紙に語ったところによると、犯人はレッドレイク部族会長フロイド・ジュルダンの16歳の息子、ルイ・ジュルダンだったということです。
+assistant: However, a source close to the investigation told the Minneapolis Star-Tribune that the suspect was Louis Jourdain, 16-year-old son of Red Lake Tribal Chairman Floyd Jourdain.
+(end)
+
+
+INPUT:
+しかし、捜査に詳しい情報筋がミネアポリス・スター・トリビューン紙に語ったところによると、犯人はレッドレイク部族会長フロイド・ジュルダンの16歳の息子、ルイ・ジュルダンだったということです。
+OUTPUT:
+However, a source close to the investigation told the Minneapolis Star-Tribune that the suspect was Louis Jourdain, 16-year-old son of Red Lake Tribal Chairman Floyd Jourdain.
+
+Processing instance 90
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 現時点では、どのような容疑がかけられているのか、当局が少年をのような経緯で逮捕したのかは不明ですが、連邦裁判所で少年に対する手続きが始まっています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 現時点では、どのような容疑がかけられているのか、当局が少年をのような経緯で逮捕したのかは不明ですが、連邦裁判所で少年に対する手続きが始まっています。
+assistant: At this time, it is unclear what charges will be laid or what led authorities to the boy, but juvenile proceedings have begun in federal court.
+(end)
+
+
+INPUT:
+現時点では、どのような容疑がかけられているのか、当局が少年をのような経緯で逮捕したのかは不明ですが、連邦裁判所で少年に対する手続きが始まっています。
+OUTPUT:
+At this time, it is unclear what charges will be laid or what led authorities to the boy, but juvenile proceedings have begun in federal court.
+
+Processing instance 91
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ロディン氏はまた、アフガニスタンの人々が負担することになる決選投票にかかる費用と安全保障上のリスクを避けるために、当局が出馬を中止することにしたと述べました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ロディン氏はまた、アフガニスタンの人々が負担することになる決選投票にかかる費用と安全保障上のリスクを避けるために、当局が出馬を中止することにしたと述べました。
+assistant: Mr Rodin also said officials decided to cancel the runoff to avoid the expense and security risks that a second election would have imposed on the Afghan people.
+(end)
+
+
+INPUT:
+ロディン氏はまた、アフガニスタンの人々が負担することになる決選投票にかかる費用と安全保障上のリスクを避けるために、当局が出馬を中止することにしたと述べました。
+OUTPUT:
+Mr Rodin also said officials decided to cancel the runoff to avoid the expense and security risks that a second election would have imposed on the Afghan people.
+
+Processing instance 92
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 外交官は、アフガニスタンの憲法には、決戦投票を不要と判断するのに十分な曖昧さが見つかったと述べました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 外交官は、アフガニスタンの憲法には、決戦投票を不要と判断するのに十分な曖昧さが見つかったと述べました。
+assistant: Diplomats stated that they found enough ambiguity in Afghanistan's constitution to determine that a runoff vote was unnecessary.
+(end)
+
+
+INPUT:
+外交官は、アフガニスタンの憲法には、決戦投票を不要と判断するのに十分な曖昧さが見つかったと述べました。
+OUTPUT:
+Diplomats stated that they found enough ambiguity in Afghanistan's constitution to determine that a runoff vote was unnecessary.
+
+Processing instance 93
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: これは、決選投票の中止は違憲であるとした当初の報告と矛盾しています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: これは、決選投票の中止は違憲であるとした当初の報告と矛盾しています。
+assistant: This contradicts the initial report, which stated that cancelling the runoff would be unconstitutional.
+(end)
+
+
+INPUT:
+これは、決選投票の中止は違憲であるとした当初の報告と矛盾しています。
+OUTPUT:
+This contradicts the initial report, which stated that cancelling the runoff would be unconstitutional.
+
+Processing instance 94
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: この航空機はイルクーツクに向かっており、内務省所属の部隊が操縦していました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: この航空機はイルクーツクに向かっており、内務省所属の部隊が操縦していました。
+assistant: This aircraft was heading to Irkutsk and was operated by interior ministry forces.
+(end)
+
+
+INPUT:
+この航空機はイルクーツクに向かっており、内務省所属の部隊が操縦していました。
+OUTPUT:
+This aircraft was heading to Irkutsk and was operated by interior ministry forces.
+
+Processing instance 95
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 調査のために調査機関が設立されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 調査のために調査機関が設立されました。
+assistant: An investigative agency was established for the purpose of conducting an investigation.
+(end)
+
+
+INPUT:
+調査のために調査機関が設立されました。
+OUTPUT:
+An investigative agency was established for the purpose of conducting an investigation.
+
+Processing instance 96
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: Il-76は1970年代からロシアとソビエトの両軍で主力機として活躍してきましたが、先月にはロシアではすでに重大事故が発生していました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: Il-76は1970年代からロシアとソビエトの両軍で主力機として活躍してきましたが、先月にはロシアではすでに重大事故が発生していました。
+assistant: The Il-76 has been a mainstay for both the Russian and Soviet military since the 1970s, but it had already seen a major accident in Russia last month.
+(end)
+
+
+INPUT:
+Il-76は1970年代からロシアとソビエトの両軍で主力機として活躍してきましたが、先月にはロシアではすでに重大事故が発生していました。
+OUTPUT:
+The Il-76 has been a mainstay for both the Russian and Soviet military since the 1970s, but it had already seen a major accident in Russia last month.
+
+Processing instance 97
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 10月7日、離陸時にエンジンが機体から分離し、けが人は出ませんでした。事故後、ロシアはIL-76を一時的に着陸させました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 10月7日、離陸時にエンジンが機体から分離し、けが人は出ませんでした。事故後、ロシアはIL-76を一時的に着陸させました。
+assistant: On October 7th, an engine separated during takeoff, with no injuries reported. Following the accident, Russia temporarily grounded Il-76s.
+(end)
+
+
+INPUT:
+10月7日、離陸時にエンジンが機体から分離し、けが人は出ませんでした。事故後、ロシアはIL-76を一時的に着陸させました。
+OUTPUT:
+On October 7th, an engine separated during takeoff, with no injuries reported. Following the accident, Russia temporarily grounded Il-76s.
+
+Processing instance 98
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: アラスカ州フェアバンクス南部で発生した数千バレルの原油流出事故を受けて、アラスカ横断パイプラインシステムが800マイルにわたって閉鎖されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: アラスカ州フェアバンクス南部で発生した数千バレルの原油流出事故を受けて、アラスカ横断パイプラインシステムが800マイルにわたって閉鎖されました。
+assistant: The Trans-Alaska Pipeline System has been closed over 800 miles following a spill of thousands of barrels of crude oil south of Fairbanks, Alaska.
+(end)
+
+
+INPUT:
+アラスカ州フェアバンクス南部で発生した数千バレルの原油流出事故を受けて、アラスカ横断パイプラインシステムが800マイルにわたって閉鎖されました。
+OUTPUT:
+The Trans-Alaska Pipeline System has been closed over 800 miles following a spill of thousands of barrels of crude oil south of Fairbanks, Alaska.
+
+Processing instance 99
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 消防設備の定期点検後に発生した停電により、安全弁が開き、フォートグリーリー第9ポンプ場付近で原油が溢れ出しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 消防設備の定期点検後に発生した停電により、安全弁が開き、フォートグリーリー第9ポンプ場付近で原油が溢れ出しました。
+assistant: A power outage following a routine inspection of fire safety equipment caused relief valves to open, leading to a spill of crude oil near the Fort Greely 9th Pump Station.
+(end)
+
+
+INPUT:
+消防設備の定期点検後に発生した停電により、安全弁が開き、フォートグリーリー第9ポンプ場付近で原油が溢れ出しました。
+OUTPUT:
+A power outage following a routine inspection of fire safety equipment caused relief valves to open, leading to a spill of crude oil near the Fort Greely 9th Pump Station.
+
+Processing instance 100
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 安全弁が開いたことで設備の圧力が解放され、原油がパッド上を流れ、55,000バレル（230万ガロン）を収容できるタンクに流れ込みました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 安全弁が開いたことで設備の圧力が解放され、原油がパッド上を流れ、55,000バレル（230万ガロン）を収容できるタンクに流れ込みました。
+assistant: The opening of the safety valve relieved the pressure in the system, allowing crude oil to flow on a pad and into a tank capable of holding 55,000 barrels (2.3 million gallons).
+(end)
+
+
+INPUT:
+安全弁が開いたことで設備の圧力が解放され、原油がパッド上を流れ、55,000バレル（230万ガロン）を収容できるタンクに流れ込みました。
+OUTPUT:
+The opening of the safety valve relieved the pressure in the system, allowing crude oil to flow on a pad and into a tank capable of holding 55,000 barrels (2.3 million gallons).
+
+Processing instance 101
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 水曜日の午後の時点では、タンク内の熱膨張によるものと思われるタンクの通気孔からの漏れが続いていました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 水曜日の午後の時点では、タンク内の熱膨張によるものと思われるタンクの通気孔からの漏れが続いていました。
+assistant: As of Wednesday afternoon, leaks from the tank vents were still ongoing, likely due to thermal expansion inside the tank.
+(end)
+
+
+INPUT:
+水曜日の午後の時点では、タンク内の熱膨張によるものと思われるタンクの通気孔からの漏れが続いていました。
+OUTPUT:
+As of Wednesday afternoon, leaks from the tank vents were still ongoing, likely due to thermal expansion inside the tank.
+
+Processing instance 102
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 10万4500バレルを貯蔵できるタンクの下にある別の二次格納容器は、まだ満杯ではありませんでした。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 10万4500バレルを貯蔵できるタンクの下にある別の二次格納容器は、まだ満杯ではありませんでした。
+assistant: Another secondary containment area beneath the tanks capable of storing 104,500 barrels was not yet at capacity.
+(end)
+
+
+INPUT:
+10万4500バレルを貯蔵できるタンクの下にある別の二次格納容器は、まだ満杯ではありませんでした。
+OUTPUT:
+Another secondary containment area beneath the tanks capable of storing 104,500 barrels was not yet at capacity.
+
+Processing instance 103
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: このコメントはテレビで生中継されたもので、イランの高官が制裁の効果を認めたのは初めてのことでした。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: このコメントはテレビで生中継されたもので、イランの高官が制裁の効果を認めたのは初めてのことでした。
+assistant: This comment, broadcast live on television, marked the first time that senior Iranian officials have acknowledged the effectiveness of the sanctions.
+(end)
+
+
+INPUT:
+このコメントはテレビで生中継されたもので、イランの高官が制裁の効果を認めたのは初めてのことでした。
+OUTPUT:
+This comment, broadcast live on television, marked the first time that senior Iranian officials have acknowledged the effectiveness of the sanctions.
+
+Processing instance 104
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 制裁としては、金融規制や、EUによる原油輸出禁止措置などがありますが、原油の輸出はイラン経済の対外収入の80%を占めるものです。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 制裁としては、金融規制や、EUによる原油輸出禁止措置などがありますが、原油の輸出はイラン経済の対外収入の80%を占めるものです。
+assistant: Sanctions include financial restrictions and a ban on crude oil exports by the EU, which accounts for 80% of Iran's foreign income.
+(end)
+
+
+INPUT:
+制裁としては、金融規制や、EUによる原油輸出禁止措置などがありますが、原油の輸出はイラン経済の対外収入の80%を占めるものです。
+OUTPUT:
+Sanctions include financial restrictions and a ban on crude oil exports by the EU, which accounts for 80% of Iran's foreign income.
+
+Processing instance 105
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 直近の月次報告で、OPECは原油の輸出量が日量280万バレルと20年間で最も低い水準に落ち込んだと発表しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 直近の月次報告で、OPECは原油の輸出量が日量280万バレルと20年間で最も低い水準に落ち込んだと発表しました。
+assistant: In its latest monthly report, OPEC announced that crude oil exports have fallen to their lowest level in two decades at 2.8 million barrels per day.
+(end)
+
+
+INPUT:
+直近の月次報告で、OPECは原油の輸出量が日量280万バレルと20年間で最も低い水準に落ち込んだと発表しました。
+OUTPUT:
+In its latest monthly report, OPEC announced that crude oil exports have fallen to their lowest level in two decades at 2.8 million barrels per day.
+
+Processing instance 106
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: イランの最高指導者であるアヤトラ・アリ・カーメネイ氏は、石油への依存を1979年に起イランで起きたイスラム革命以前からの「罠」と表現しており、イランはそこから解放されるべきだとしています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: イランの最高指導者であるアヤトラ・アリ・カーメネイ氏は、石油への依存を1979年に起イランで起きたイスラム革命以前からの「罠」と表現しており、イランはそこから解放されるべきだとしています。
+assistant: Iran's Supreme Leader, Ayatollah Ali Khamenei, has described oil dependency as a "trap" dating back to before the Islamic Revolution in Iran in 1979, and from which Iran should be freed.
+(end)
+
+
+INPUT:
+イランの最高指導者であるアヤトラ・アリ・カーメネイ氏は、石油への依存を1979年に起イランで起きたイスラム革命以前からの「罠」と表現しており、イランはそこから解放されるべきだとしています。
+OUTPUT:
+Iran's Supreme Leader, Ayatollah Ali Khamenei, has described oil dependency as a "trap" dating back to before the Islamic Revolution in Iran in 1979, and from which Iran should be freed.
+
+Processing instance 107
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: カプセルが地球の大気圏に突入するのは午前5時頃（東部時間）の予定で、北カリフォルニア、オレゴン、ネバダ、ユタの人々の目にまばゆい光跡が映ると期待されています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: カプセルが地球の大気圏に突入するのは午前5時頃（東部時間）の予定で、北カリフォルニア、オレゴン、ネバダ、ユタの人々の目にまばゆい光跡が映ると期待されています。
+assistant: The capsule is expected to enter Earth's atmosphere around 5 a.m. (eastern time), potentially providing a spectacular light show for people in Northern California, Oregon, Nevada, and Utah.
+(end)
+
+
+INPUT:
+カプセルが地球の大気圏に突入するのは午前5時頃（東部時間）の予定で、北カリフォルニア、オレゴン、ネバダ、ユタの人々の目にまばゆい光跡が映ると期待されています。
+OUTPUT:
+The capsule is expected to enter Earth's atmosphere around 5 a.m. (eastern time), potentially providing a spectacular light show for people in Northern California, Oregon, Nevada, and Utah.
+
+Processing instance 108
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: このカプセルは、まるで夜空に降る流れ星のように見えることでしょう。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: このカプセルは、まるで夜空に降る流れ星のように見えることでしょう。
+assistant: This capsule will look like a shooting star crossing the night sky.
+(end)
+
+
+INPUT:
+このカプセルは、まるで夜空に降る流れ星のように見えることでしょう。
+OUTPUT:
+This capsule will look like a shooting star crossing the night sky.
+
+Processing instance 109
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: カプセルの速度は約12.8 km/秒（8マイル/秒）で、サンフランシスコからロサンゼルスまで1分しかかからないほどの速さです。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: カプセルの速度は約12.8 km/秒（8マイル/秒）で、サンフランシスコからロサンゼルスまで1分しかかからないほどの速さです。
+assistant: The capsule's speed is approximately 12.8 km/s (8 miles/s), fast enough to go from San Francisco to Los Angeles in just one minute.
+(end)
+
+
+INPUT:
+カプセルの速度は約12.8 km/秒（8マイル/秒）で、サンフランシスコからロサンゼルスまで1分しかかからないほどの速さです。
+OUTPUT:
+The capsule's speed is approximately 12.8 km/s (8 miles/s), fast enough to go from San Francisco to Los Angeles in just one minute.
+
+Processing instance 110
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: スターダストは、1969年5月にアポロX号のコマンドモジュールを帰還させた際の記録を更新し、地球に帰還した宇宙船の最速記録を更新することになります。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: スターダストは、1969年5月にアポロX号のコマンドモジュールを帰還させた際の記録を更新し、地球に帰還した宇宙船の最速記録を更新することになります。
+assistant: Stardust will set a new record for the fastest spacecraft to return to Earth, breaking the previous record set in May 1969 during the return of the Apollo X command module.
+(end)
+
+
+INPUT:
+スターダストは、1969年5月にアポロX号のコマンドモジュールを帰還させた際の記録を更新し、地球に帰還した宇宙船の最速記録を更新することになります。
+OUTPUT:
+Stardust will set a new record for the fastest spacecraft to return to Earth, breaking the previous record set in May 1969 during the return of the Apollo X command module.
+
+Processing instance 111
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 「スターダストはカリフォルニア州北部の西海岸を通過し、カリフォルニアからオレゴン州中央部、ネバダ州、アイダホ州、ユタ州を通過して空を照らすでしょう」とスターダストのプロジェクトマネージャーであるトム・ダックスベリー氏は語りました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 「スターダストはカリフォルニア州北部の西海岸を通過し、カリフォルニアからオレゴン州中央部、ネバダ州、アイダホ州、ユタ州を通過して空を照らすでしょう」とスターダストのプロジェクトマネージャーであるトム・ダックスベリー氏は語りました。
+assistant: "Stardust will pass over the west coast of northern California and light the sky from California through central Oregon, Nevada, Idaho, and Utah," said Tom Duxbury, project manager for Stardust.
+(end)
+
+
+INPUT:
+「スターダストはカリフォルニア州北部の西海岸を通過し、カリフォルニアからオレゴン州中央部、ネバダ州、アイダホ州、ユタ州を通過して空を照らすでしょう」とスターダストのプロジェクトマネージャーであるトム・ダックスベリー氏は語りました。
+OUTPUT:
+"Stardust will pass over the west coast of northern California and light the sky from California through central Oregon, Nevada, Idaho, and Utah," said Tom Duxbury, project manager for Stardust.
+
+Processing instance 112
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ラッド氏が京都議定書に署名したことで、米国は孤立し、先進国で議定書に批准しない唯一の国となった。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ラッド氏が京都議定書に署名したことで、米国は孤立し、先進国で議定書に批准しない唯一の国となった。
+assistant: By signing the Kyoto Protocol, Mr. Rudd has isolated the United States, making it the only developed nation not to ratify the agreement.
+(end)
+
+
+INPUT:
+ラッド氏が京都議定書に署名したことで、米国は孤立し、先進国で議定書に批准しない唯一の国となった。
+OUTPUT:
+By signing the Kyoto Protocol, Mr. Rudd has isolated the United States, making it the only developed nation not to ratify the agreement.
+
+Processing instance 113
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: オーストラリアの旧保守政権は、インドや中国のような国は排出量目標に縛られていないのに石炭輸出への依存度が高く、経済に損害を与えるとして京都議定書の批准を拒否しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: オーストラリアの旧保守政権は、インドや中国のような国は排出量目標に縛られていないのに石炭輸出への依存度が高く、経済に損害を与えるとして京都議定書の批准を拒否しました。
+assistant: Australia's former conservative government rejected the Kyoto Protocol, arguing that its heavy reliance on coal exports would harm the economy, while countries like India and China were not bound by emissions targets.
+(end)
+
+
+INPUT:
+オーストラリアの旧保守政権は、インドや中国のような国は排出量目標に縛られていないのに石炭輸出への依存度が高く、経済に損害を与えるとして京都議定書の批准を拒否しました。
+OUTPUT:
+Australia's former conservative government rejected the Kyoto Protocol, arguing that its heavy reliance on coal exports would harm the economy, while countries like India and China were not bound by emissions targets.
+
+Processing instance 114
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: eBay史上最大の買収です。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: eBay史上最大の買収です。
+assistant: This is the largest acquisition in eBay's history.
+(end)
+
+
+INPUT:
+eBay史上最大の買収です。
+OUTPUT:
+This is the largest acquisition in eBay's history.
+
+Processing instance 115
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 同社は収益源を多様化し、中国、東欧、ブラジルなどSkypeが優勢な地域で人気を集めたいと考えています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 同社は収益源を多様化し、中国、東欧、ブラジルなどSkypeが優勢な地域で人気を集めたいと考えています。
+assistant: The company aims to diversify its revenue sources and gain popularity in regions where Skype holds a strong position, such as China, Eastern Europe, and Brazil.
+(end)
+
+
+INPUT:
+同社は収益源を多様化し、中国、東欧、ブラジルなどSkypeが優勢な地域で人気を集めたいと考えています。
+OUTPUT:
+The company aims to diversify its revenue sources and gain popularity in regions where Skype holds a strong position, such as China, Eastern Europe, and Brazil.
+
+Processing instance 116
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 科学者たちは、エンケラドゥスが地質学的に活発であり、土星の氷でできたE環の放出源ではないかと疑ってきました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 科学者たちは、エンケラドゥスが地質学的に活発であり、土星の氷でできたE環の放出源ではないかと疑ってきました。
+assistant: Scientists have suspected Enceladus as geologically active and a potential source of Saturn's icy E ring.
+(end)
+
+
+INPUT:
+科学者たちは、エンケラドゥスが地質学的に活発であり、土星の氷でできたE環の放出源ではないかと疑ってきました。
+OUTPUT:
+Scientists have suspected Enceladus as geologically active and a potential source of Saturn's icy E ring.
+
+Processing instance 117
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: エンケラドゥスは太陽系で最も反射率が高い天体であり、受けた太陽光の約90%を反射します。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: エンケラドゥスは太陽系で最も反射率が高い天体であり、受けた太陽光の約90%を反射します。
+assistant: Enceladus is the most reflective object in the solar system, reflecting approximately 90% of the sunlight that hits it.
+(end)
+
+
+INPUT:
+エンケラドゥスは太陽系で最も反射率が高い天体であり、受けた太陽光の約90%を反射します。
+OUTPUT:
+Enceladus is the most reflective object in the solar system, reflecting approximately 90% of the sunlight that hits it.
+
+Processing instance 118
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ゲームメーカーのコナミは本日、日本の新聞で、「Six Days in Fallujah」というゲームをリリースしないことを明言しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ゲームメーカーのコナミは本日、日本の新聞で、「Six Days in Fallujah」というゲームをリリースしないことを明言しました。
+assistant: Game publisher Konami stated today in a Japanese newspaper that they will not be releasing the game "Six Days in Fallujah."
+(end)
+
+
+INPUT:
+ゲームメーカーのコナミは本日、日本の新聞で、「Six Days in Fallujah」というゲームをリリースしないことを明言しました。
+OUTPUT:
+Game publisher Konami stated today in a Japanese newspaper that they will not be releasing the game "Six Days in Fallujah."
+
+Processing instance 119
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: このゲームは、アメリカ軍とイラク軍の間で繰り広げられた第二次ファルージャの戦闘を題材にしたもので、両軍の激戦を再現しています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: このゲームは、アメリカ軍とイラク軍の間で繰り広げられた第二次ファルージャの戦闘を題材にしたもので、両軍の激戦を再現しています。
+assistant: This game is based on the Second Battle of Fallujah, a fierce battle between the U.S. military and the Iraqi army.
+(end)
+
+
+INPUT:
+このゲームは、アメリカ軍とイラク軍の間で繰り広げられた第二次ファルージャの戦闘を題材にしたもので、両軍の激戦を再現しています。
+OUTPUT:
+This game is based on the Second Battle of Fallujah, a fierce battle between the U.S. military and the Iraqi army.
+
+Processing instance 120
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: また、ACMAは、インターネット上で動画が配信されていたにもかかわらず、ビッグ・ブラザーのウェブサイトにメディアが保存されていなかったため、ビッグ・ブラザーはオンラインコンテンツ検閲法に違反していなかったことを明らかにしています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: また、ACMAは、インターネット上で動画が配信されていたにもかかわらず、ビッグ・ブラザーのウェブサイトにメディアが保存されていなかったため、ビッグ・ブラザーはオンラインコンテンツ検閲法に違反していなかったことを明らかにしています。
+assistant: Additionally, ACMA found that Big Brother did not breach online content censorship laws, despite the video being streamed on the internet, because the media was not stored on Big Brother's website.
+(end)
+
+
+INPUT:
+また、ACMAは、インターネット上で動画が配信されていたにもかかわらず、ビッグ・ブラザーのウェブサイトにメディアが保存されていなかったため、ビッグ・ブラザーはオンラインコンテンツ検閲法に違反していなかったことを明らかにしています。
+OUTPUT:
+Additionally, ACMA found that Big Brother did not breach online content censorship laws, despite the video being streamed on the internet, because the media was not stored on Big Brother's website.
+
+Processing instance 121
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 放送事業法ではインターネットのコンテンツについて規制を敷いていますが、コンテンツと見なされるためには、サーバー上に物理的に存在しなければなりません。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 放送事業法ではインターネットのコンテンツについて規制を敷いていますが、コンテンツと見なされるためには、サーバー上に物理的に存在しなければなりません。
+assistant: The Broadcasting Services Act does regulate content on the internet, but to be considered content, it must physically exist on a server.
+(end)
+
+
+INPUT:
+放送事業法ではインターネットのコンテンツについて規制を敷いていますが、コンテンツと見なされるためには、サーバー上に物理的に存在しなければなりません。
+OUTPUT:
+The Broadcasting Services Act does regulate content on the internet, but to be considered content, it must physically exist on a server.
+
+Processing instance 122
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ケニアのナイロビにある米国大使館は、「ソマリアの過激派」がケニアとエチオピアで自爆テロを計画しているとの警告を発しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ケニアのナイロビにある米国大使館は、「ソマリアの過激派」がケニアとエチオピアで自爆テロを計画しているとの警告を発しました。
+assistant: The US Embassy located in Nairobi, Kenya, has issued a warning that "extremists from Somalia" are planning to carry out suicide bomb attacks in Kenya and Ethiopia.
+(end)
+
+
+INPUT:
+ケニアのナイロビにある米国大使館は、「ソマリアの過激派」がケニアとエチオピアで自爆テロを計画しているとの警告を発しました。
+OUTPUT:
+The US Embassy located in Nairobi, Kenya, has issued a warning that "extremists from Somalia" are planning to carry out suicide bomb attacks in Kenya and Ethiopia.
+
+Processing instance 123
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 米国は、エチオピアとケニアで「著名なランドマーク」を爆破するための自爆テロの使用について具体的に言及している情報を非公開の情報源から受け取ったと述べています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 米国は、エチオピアとケニアで「著名なランドマーク」を爆破するための自爆テロの使用について具体的に言及している情報を非公開の情報源から受け取ったと述べています。
+assistant: The United States states it has received information from an undisclosed source mentioning the use of suicide bombers to detonate "prominent landmarks" in Ethiopia and Kenya.
+(end)
+
+
+INPUT:
+米国は、エチオピアとケニアで「著名なランドマーク」を爆破するための自爆テロの使用について具体的に言及している情報を非公開の情報源から受け取ったと述べています。
+OUTPUT:
+The United States states it has received information from an undisclosed source mentioning the use of suicide bombers to detonate "prominent landmarks" in Ethiopia and Kenya.
+
+Processing instance 124
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ヘックとジョンソンは、The Daily ShowやThe Colbert Reportよりもずっと以前の1988年にUWの学生だった頃のニュースをパロディー化した出版物を構想していました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ヘックとジョンソンは、The Daily ShowやThe Colbert Reportよりもずっと以前の1988年にUWの学生だった頃のニュースをパロディー化した出版物を構想していました。
+assistant: Heck and Johnson envisioned a publication that parodied news—and news reporting—long before The Daily Show and The Colbert Report, dating back to their student days at UW in 1988.
+(end)
+
+
+INPUT:
+ヘックとジョンソンは、The Daily ShowやThe Colbert Reportよりもずっと以前の1988年にUWの学生だった頃のニュースをパロディー化した出版物を構想していました。
+OUTPUT:
+Heck and Johnson envisioned a publication that parodied news—and news reporting—long before The Daily Show and The Colbert Report, dating back to their student days at UW in 1988.
+
+Processing instance 125
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 創刊以来、オニオン紙は、印刷版、10月に500万人のユニークビジターを集めたウェブサイト、個人広告、24時間ニュースネットワーク、ポッドキャスト、そして最近発売された「Our Dumb World」と呼ばれる世界地図で、正真正銘のニュースパロディ帝国となりました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 創刊以来、オニオン紙は、印刷版、10月に500万人のユニークビジターを集めたウェブサイト、個人広告、24時間ニュースネットワーク、ポッドキャスト、そして最近発売された「Our Dumb World」と呼ばれる世界地図で、正真正銘のニュースパロディ帝国となりました。
+assistant: Since its inception, The Onion has become a true news parody empire, with print editions, a website that drew 5 million unique visitors in October, personal ads, a 24-hour news network, podcasts, and a recently launched world atlas called "Our Dumb World."
+(end)
+
+
+INPUT:
+創刊以来、オニオン紙は、印刷版、10月に500万人のユニークビジターを集めたウェブサイト、個人広告、24時間ニュースネットワーク、ポッドキャスト、そして最近発売された「Our Dumb World」と呼ばれる世界地図で、正真正銘のニュースパロディ帝国となりました。
+OUTPUT:
+Since its inception, The Onion has become a true news parody empire, with print editions, a website that drew 5 million unique visitors in October, personal ads, a 24-hour news network, podcasts, and a recently launched world atlas called "Our Dumb World."
+
+Processing instance 126
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: アル・ゴア氏とトミー・フランクス将軍は、さりげなく自分たちのお気に入りの見出しを口にします（ゴア氏が挙げた見出しは、2000年の選挙区での敗北後、彼とティッパーが人生で最高のセックスをしていたとオニオン紙が報じたときのことでした）。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: アル・ゴア氏とトミー・フランクス将軍は、さりげなく自分たちのお気に入りの見出しを口にします（ゴア氏が挙げた見出しは、2000年の選挙区での敗北後、彼とティッパーが人生で最高のセックスをしていたとオニオン紙が報じたときのことでした）。
+assistant: Al Gore and General Tommy Franks casually mention their favorite headlines (Gore's was when The Onion reported he and Tipper were having the best sex of their lives after his 2000 Electoral College defeat).
+(end)
+
+
+INPUT:
+アル・ゴア氏とトミー・フランクス将軍は、さりげなく自分たちのお気に入りの見出しを口にします（ゴア氏が挙げた見出しは、2000年の選挙区での敗北後、彼とティッパーが人生で最高のセックスをしていたとオニオン紙が報じたときのことでした）。
+OUTPUT:
+Al Gore and General Tommy Franks casually mention their favorite headlines (Gore's was when The Onion reported he and Tipper were having the best sex of their lives after his 2000 Electoral College defeat).
+
+Processing instance 127
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: そうした作家たちの多くは、ジョン・スチュワートやスティーブン・コルバートのニュースパロディ番組に大きな影響力を及ぼすようになりました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: そうした作家たちの多くは、ジョン・スチュワートやスティーブン・コルバートのニュースパロディ番組に大きな影響力を及ぼすようになりました。
+assistant: Many of these writers have gone on to wield significant influence on John Stewart and Stephen Colbert's news parody shows.
+(end)
+
+
+INPUT:
+そうした作家たちの多くは、ジョン・スチュワートやスティーブン・コルバートのニュースパロディ番組に大きな影響力を及ぼすようになりました。
+OUTPUT:
+Many of these writers have gone on to wield significant influence on John Stewart and Stephen Colbert's news parody shows.
+
+Processing instance 128
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: この芸術的な催しは、ブカレスト市役所によるキャンペーンの一環でもあり、ルーマニアの首都のイメージを塗り変えて創造的で色彩豊かな大都市にしようという企画です。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: この芸術的な催しは、ブカレスト市役所によるキャンペーンの一環でもあり、ルーマニアの首都のイメージを塗り変えて創造的で色彩豊かな大都市にしようという企画です。
+assistant: This artistic event is also part of a campaign by the Bucharest City Hall, aiming to rebrand the Romanian capital as a creative and vibrant metropolis.
+(end)
+
+
+INPUT:
+この芸術的な催しは、ブカレスト市役所によるキャンペーンの一環でもあり、ルーマニアの首都のイメージを塗り変えて創造的で色彩豊かな大都市にしようという企画です。
+OUTPUT:
+This artistic event is also part of a campaign by the Bucharest City Hall, aiming to rebrand the Romanian capital as a creative and vibrant metropolis.
+
+Processing instance 129
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ブカレスト市では、今年6月から8月にかけて、世界最大のパブリックアートイベント「カウパレード」がヨーロッパ南東部で初めて開催されます。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ブカレスト市では、今年6月から8月にかけて、世界最大のパブリックアートイベント「カウパレード」がヨーロッパ南東部で初めて開催されます。
+assistant: Bucharest will be the first city in southeastern Europe to host CowParade, the world's largest public art event, between June and August this year.
+(end)
+
+
+INPUT:
+ブカレスト市では、今年6月から8月にかけて、世界最大のパブリックアートイベント「カウパレード」がヨーロッパ南東部で初めて開催されます。
+OUTPUT:
+Bucharest will be the first city in southeastern Europe to host CowParade, the world's largest public art event, between June and August this year.
+
+Processing instance 130
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 本日の発表では、今年3月に掲げられた政府の公約を延長して、増便分の資金を提供することも発表されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 本日の発表では、今年3月に掲げられた政府の公約を延長して、増便分の資金を提供することも発表されました。
+assistant: Today's announcement also extended the government's commitment made in March this year to fund additional services.
+(end)
+
+
+INPUT:
+本日の発表では、今年3月に掲げられた政府の公約を延長して、増便分の資金を提供することも発表されました。
+OUTPUT:
+Today's announcement also extended the government's commitment made in March this year to fund additional services.
+
+Processing instance 131
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 混雑を緩和するために、300両を追加して計1,300両が確保される予定です。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 混雑を緩和するために、300両を追加して計1,300両が確保される予定です。
+assistant: To alleviate congestion, an additional 300 cars will be secured, bringing the total to 1,300.
+(end)
+
+
+INPUT:
+混雑を緩和するために、300両を追加して計1,300両が確保される予定です。
+OUTPUT:
+To alleviate congestion, an additional 300 cars will be secured, bringing the total to 1,300.
+
+Processing instance 132
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ロサンゼルス警察の広報担当者クリストファー・ガルシア氏によると、この男性容疑者は、破壊行為ではなく不法侵入で捜査されているということです。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ロサンゼルス警察の広報担当者クリストファー・ガルシア氏によると、この男性容疑者は、破壊行為ではなく不法侵入で捜査されているということです。
+assistant: According to Los Angeles Police Department spokesperson Christopher Garcia, the male suspect is being investigated for trespassing, not vandalism.
+(end)
+
+
+INPUT:
+ロサンゼルス警察の広報担当者クリストファー・ガルシア氏によると、この男性容疑者は、破壊行為ではなく不法侵入で捜査されているということです。
+OUTPUT:
+According to Los Angeles Police Department spokesperson Christopher Garcia, the male suspect is being investigated for trespassing, not vandalism.
+
+Processing instance 133
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 看板に物理的な破損はなく、「O」を小文字の「e」と読めるようにして平和とハートが飾った黒い防水シートで改修されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 看板に物理的な破損はなく、「O」を小文字の「e」と読めるようにして平和とハートが飾った黒い防水シートで改修されました。
+assistant: There was no physical damage to the sign; it was modified with black tarpaulins decorated with peace signs and hearts to change the "O" to read lowercase "e".
+(end)
+
+
+INPUT:
+看板に物理的な破損はなく、「O」を小文字の「e」と読めるようにして平和とハートが飾った黒い防水シートで改修されました。
+OUTPUT:
+There was no physical damage to the sign; it was modified with black tarpaulins decorated with peace signs and hearts to change the "O" to read lowercase "e".
+
+Processing instance 134
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 赤潮は、天然の単細胞海洋生物であるカレニア・ブレビスの濃度が通常よりも高くなることで発生します。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 赤潮は、天然の単細胞海洋生物であるカレニア・ブレビスの濃度が通常よりも高くなることで発生します。
+assistant: Red tide occurs when the concentration of Karenia brevis, a natural single-celled marine organism, is higher than usual.
+(end)
+
+
+INPUT:
+赤潮は、天然の単細胞海洋生物であるカレニア・ブレビスの濃度が通常よりも高くなることで発生します。
+OUTPUT:
+Red tide occurs when the concentration of Karenia brevis, a natural single-celled marine organism, is higher than usual.
+
+Processing instance 135
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 自然要因が交錯して理想的な条件を作り出し、この藻類が劇的に増殖する可能性があります。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 自然要因が交錯して理想的な条件を作り出し、この藻類が劇的に増殖する可能性があります。
+assistant: Natural factors can intersect to create ideal conditions, allowing this algae to dramatically proliferate.
+(end)
+
+
+INPUT:
+自然要因が交錯して理想的な条件を作り出し、この藻類が劇的に増殖する可能性があります。
+OUTPUT:
+Natural factors can intersect to create ideal conditions, allowing this algae to dramatically proliferate.
+
+Processing instance 136
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: この藻は、人間と魚類の両方の神経に有害な神経毒を産生します。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: この藻は、人間と魚類の両方の神経に有害な神経毒を産生します。
+assistant: This alga produces a neurotoxin that is harmful to both human and fish nerves.
+(end)
+
+
+INPUT:
+この藻は、人間と魚類の両方の神経に有害な神経毒を産生します。
+OUTPUT:
+This alga produces a neurotoxin that is harmful to both human and fish nerves.
+
+Processing instance 137
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 魚の主な死因の1つは水中に高濃度の毒素です。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 魚の主な死因の1つは水中に高濃度の毒素です。
+assistant: One of the main causes of death for fish is high concentrations of toxins in the water.
+(end)
+
+
+INPUT:
+魚の主な死因の1つは水中に高濃度の毒素です。
+OUTPUT:
+One of the main causes of death for fish is high concentrations of toxins in the water.
+
+Processing instance 138
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 人間は、風や波の力で空気中に取り込まれた水分を呼吸時に吸い込んだ場合にその影響を受けることがあります。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 人間は、風や波の力で空気中に取り込まれた水分を呼吸時に吸い込んだ場合にその影響を受けることがあります。
+assistant: Humans can be affected when they inhale water particles that have been lifted into the air by wind and waves.
+(end)
+
+
+INPUT:
+人間は、風や波の力で空気中に取り込まれた水分を呼吸時に吸い込んだ場合にその影響を受けることがあります。
+OUTPUT:
+Humans can be affected when they inhale water particles that have been lifted into the air by wind and waves.
+
+Processing instance 139
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 熱帯性サイクロン「ゴヌ」は、モルディブの言葉でヤシの葉でできた袋から名付けられ、吹き続ける風がピーク時には時速240 km（時速149マイル）に達しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 熱帯性サイクロン「ゴヌ」は、モルディブの言葉でヤシの葉でできた袋から名付けられ、吹き続ける風がピーク時には時速240 km（時速149マイル）に達しました。
+assistant: Tropical Cyclone Gonu, named after a bag of palm leaves in the language of the Maldives, reached its peak with sustained winds of 240 kilometers per hour (149 miles per hour).
+(end)
+
+
+INPUT:
+熱帯性サイクロン「ゴヌ」は、モルディブの言葉でヤシの葉でできた袋から名付けられ、吹き続ける風がピーク時には時速240 km（時速149マイル）に達しました。
+OUTPUT:
+Tropical Cyclone Gonu, named after a bag of palm leaves in the language of the Maldives, reached its peak with sustained winds of 240 kilometers per hour (149 miles per hour).
+
+Processing instance 140
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 本日早朝までに風は83km/h前後となり、今後も弱まり続けると予想されていました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 本日早朝までに風は83km/h前後となり、今後も弱まり続けると予想されていました。
+assistant: By early this morning, winds were around 83 km/h, and it was expected to continue weakening.
+(end)
+
+
+INPUT:
+本日早朝までに風は83km/h前後となり、今後も弱まり続けると予想されていました。
+OUTPUT:
+By early this morning, winds were around 83 km/h, and it was expected to continue weakening.
+
+Processing instance 141
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 水曜日に全米バスケットボール協会（NBA）は、新型コロナウイルス感染症を懸念して、シーズンの中断を発表しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 水曜日に全米バスケットボール協会（NBA）は、新型コロナウイルス感染症を懸念して、シーズンの中断を発表しました。
+assistant: On Wednesday, the National Basketball Association (NBA) of the United States announced the suspension of its season due to concerns regarding the COVID-19 coronavirus.
+(end)
+
+
+INPUT:
+水曜日に全米バスケットボール協会（NBA）は、新型コロナウイルス感染症を懸念して、シーズンの中断を発表しました。
+OUTPUT:
+On Wednesday, the National Basketball Association (NBA) of the United States announced the suspension of its season due to concerns regarding the COVID-19 coronavirus.
+
+Processing instance 142
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ユタ・ジャズの選手が新型コロナウイルス感染検査で陽性反応を示したことを受けて、NBAの決定が下されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ユタ・ジャズの選手が新型コロナウイルス感染検査で陽性反応を示したことを受けて、NBAの決定が下されました。
+assistant: The NBA's decision was made following a Utah Jazz player testing positive for the COVID-19 virus.
+(end)
+
+
+INPUT:
+ユタ・ジャズの選手が新型コロナウイルス感染検査で陽性反応を示したことを受けて、NBAの決定が下されました。
+OUTPUT:
+The NBA's decision was made following a Utah Jazz player testing positive for the COVID-19 virus.
+
+Processing instance 143
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: この化石によれば、分子レベルでの証拠から、予想していたよりもずっと以前に分裂が起きていたことになります。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: この化石によれば、分子レベルでの証拠から、予想していたよりもずっと以前に分裂が起きていたことになります。
+assistant: According to this fossil, the split occurred much earlier than predicted by molecular evidence.
+(end)
+
+
+INPUT:
+この化石によれば、分子レベルでの証拠から、予想していたよりもずっと以前に分裂が起きていたことになります。
+OUTPUT:
+According to this fossil, the split occurred much earlier than predicted by molecular evidence.
+
+Processing instance 144
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 「それはすべてを元に戻さなければならないことを意味します」とエチオピアのリフトバレー調査所の研究者であり、本研究の共著者であるベルハネ・アスフォー氏は言いました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 「それはすべてを元に戻さなければならないことを意味します」とエチオピアのリフトバレー調査所の研究者であり、本研究の共著者であるベルハネ・アスフォー氏は言いました。
+assistant: "That means we have to put everything back," said Berhane Asfaw, a researcher at the Rift Valley Research Service in Ethiopia and a co-author of the study.
+(end)
+
+
+INPUT:
+「それはすべてを元に戻さなければならないことを意味します」とエチオピアのリフトバレー調査所の研究者であり、本研究の共著者であるベルハネ・アスフォー氏は言いました。
+OUTPUT:
+"That means we have to put everything back," said Berhane Asfaw, a researcher at the Rift Valley Research Service in Ethiopia and a co-author of the study.
+
+Processing instance 145
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: AOLはこれまで米国内で広く利用されてきたため、自らのペースでIM市場を動かし、開拓することができました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: AOLはこれまで米国内で広く利用されてきたため、自らのペースでIM市場を動かし、開拓することができました。
+assistant: AOL has been widely used in the United States until now, allowing it to move and develop the IM market at its own pace.
+(end)
+
+
+INPUT:
+AOLはこれまで米国内で広く利用されてきたため、自らのペースでIM市場を動かし、開拓することができました。
+OUTPUT:
+AOL has been widely used in the United States until now, allowing it to move and develop the IM market at its own pace.
+
+Processing instance 146
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 今回の取り決めが成立した場合、こうした自由は終わるかもしれません。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 今回の取り決めが成立した場合、こうした自由は終わるかもしれません。
+assistant: If this arrangement comes into effect, this freedom may come to an end.
+(end)
+
+
+INPUT:
+今回の取り決めが成立した場合、こうした自由は終わるかもしれません。
+OUTPUT:
+If this arrangement comes into effect, this freedom may come to an end.
+
+Processing instance 147
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ヤフーとマイクロソフトのサービスを合わせたユーザー数は、AOLの顧客数に匹敵するだろう。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ヤフーとマイクロソフトのサービスを合わせたユーザー数は、AOLの顧客数に匹敵するだろう。
+assistant: The combined user base of Yahoo and Microsoft services will likely rival AOL's customer count.
+(end)
+
+
+INPUT:
+ヤフーとマイクロソフトのサービスを合わせたユーザー数は、AOLの顧客数に匹敵するだろう。
+OUTPUT:
+The combined user base of Yahoo and Microsoft services will likely rival AOL's customer count.
+
+Processing instance 148
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ノーザンロック銀行は、英国政府から緊急支援を受けていましたが、それが発覚して2008年に国有化されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ノーザンロック銀行は、英国政府から緊急支援を受けていましたが、それが発覚して2008年に国有化されました。
+assistant: Northern Rock bank was nationalized in 2008 after it emerged that it had received emergency support from the UK government.
+(end)
+
+
+INPUT:
+ノーザンロック銀行は、英国政府から緊急支援を受けていましたが、それが発覚して2008年に国有化されました。
+OUTPUT:
+Northern Rock bank was nationalized in 2008 after it emerged that it had received emergency support from the UK government.
+
+Processing instance 149
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ノーザン・ロックは、2007年のサブプライムローン危機に際して、リスクエクスポージャーが大きかったために支援を必要としていました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ノーザン・ロックは、2007年のサブプライムローン危機に際して、リスクエクスポージャーが大きかったために支援を必要としていました。
+assistant: Northern Rock required support due to its significant exposure to subprime mortgages during the 2007 subprime mortgage crisis.
+(end)
+
+
+INPUT:
+ノーザン・ロックは、2007年のサブプライムローン危機に際して、リスクエクスポージャーが大きかったために支援を必要としていました。
+OUTPUT:
+Northern Rock required support due to its significant exposure to subprime mortgages during the 2007 subprime mortgage crisis.
+
+Processing instance 150
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: リチャード・ブランソン卿のヴァージングループは、銀行国有化に先立ち、銀行への入札を拒否されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: リチャード・ブランソン卿のヴァージングループは、銀行国有化に先立ち、銀行への入札を拒否されました。
+assistant: Sir Richard Branson's Virgin Group had a bid for the bank rejected prior to the bank's nationalization.
+(end)
+
+
+INPUT:
+リチャード・ブランソン卿のヴァージングループは、銀行国有化に先立ち、銀行への入札を拒否されました。
+OUTPUT:
+Sir Richard Branson's Virgin Group had a bid for the bank rejected prior to the bank's nationalization.
+
+Processing instance 151
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 2010年当時に国有化されていた現在のハイストリート銀行ノーザン・ロックPLCは、「不良銀行」であるノーザン・ロック（アセット・マネジメント）から分割されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 2010年当時に国有化されていた現在のハイストリート銀行ノーザン・ロックPLCは、「不良銀行」であるノーザン・ロック（アセット・マネジメント）から分割されました。
+assistant: In 2010, the current high street bank Northern Rock plc, which was nationalised at the time, was split from the 'bad bank', Northern Rock (Asset Management).
+(end)
+
+
+INPUT:
+2010年当時に国有化されていた現在のハイストリート銀行ノーザン・ロックPLCは、「不良銀行」であるノーザン・ロック（アセット・マネジメント）から分割されました。
+OUTPUT:
+In 2010, the current high street bank Northern Rock plc, which was nationalised at the time, was split from the 'bad bank', Northern Rock (Asset Management).
+
+Processing instance 152
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ヴァージングループはノーザンロックの「優良銀行」を購入しただけで、資産管理会社を購入したわけではありません。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ヴァージングループはノーザンロックの「優良銀行」を購入しただけで、資産管理会社を購入したわけではありません。
+assistant: Virgin Group purchased only the "good bank" of Northern Rock, not the asset management company.
+(end)
+
+
+INPUT:
+ヴァージングループはノーザンロックの「優良銀行」を購入しただけで、資産管理会社を購入したわけではありません。
+OUTPUT:
+Virgin Group purchased only the "good bank" of Northern Rock, not the asset management company.
+
+Processing instance 153
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: これは、化学的に確認された火星物質が地球に落下してきたことを観測したのは、史上5回目と考えられています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: これは、化学的に確認された火星物質が地球に落下してきたことを観測したのは、史上5回目と考えられています。
+assistant: This is believed to be the fifth time in history that people have observed what has been chemically confirmed as Martian material falling to Earth.
+(end)
+
+
+INPUT:
+これは、化学的に確認された火星物質が地球に落下してきたことを観測したのは、史上5回目と考えられています。
+OUTPUT:
+This is believed to be the fifth time in history that people have observed what has been chemically confirmed as Martian material falling to Earth.
+
+Processing instance 154
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: これまでに地球に落下したとされる約24,000個の隕石のうち火星起源であることが確認されているのは約34個にすぎません。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: これまでに地球に落下したとされる約24,000個の隕石のうち火星起源であることが確認されているのは約34個にすぎません。
+assistant: Out of approximately 24,000 known meteorites that have fallen to Earth, only about 34 have been verified to be martian in origin.
+(end)
+
+
+INPUT:
+これまでに地球に落下したとされる約24,000個の隕石のうち火星起源であることが確認されているのは約34個にすぎません。
+OUTPUT:
+Out of approximately 24,000 known meteorites that have fallen to Earth, only about 34 have been verified to be martian in origin.
+
+Processing instance 155
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: これらの岩石のうち15個は、昨年7月に落下した隕石群に 起因するものです。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: これらの岩石のうち15個は、昨年7月に落下した隕石群に 起因するものです。
+assistant: Fifteen of these rocks are attributed to the meteorite shower last July.
+(end)
+
+
+INPUT:
+これらの岩石のうち15個は、昨年7月に落下した隕石群に 起因するものです。
+OUTPUT:
+Fifteen of these rocks are attributed to the meteorite shower last July.
+
+Processing instance 156
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 地球上で非常に希少な岩石の一部は、オンス当たり11,000～22,500米ドルで取引されており、これは金の価格の約10倍です。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 地球上で非常に希少な岩石の一部は、オンス当たり11,000～22,500米ドルで取引されており、これは金の価格の約10倍です。
+assistant: Some of the rarest rocks on Earth are traded for $11,000 to $22,500 per ounce, which is about ten times the price of gold.
+(end)
+
+
+INPUT:
+地球上で非常に希少な岩石の一部は、オンス当たり11,000～22,500米ドルで取引されており、これは金の価格の約10倍です。
+OUTPUT:
+Some of the rarest rocks on Earth are traded for $11,000 to $22,500 per ounce, which is about ten times the price of gold.
+
+Processing instance 157
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: レース後もケセロウスキーが2,250ポイントを獲得してドライバーズチャンピオンシップのトップをキープしている。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: レース後もケセロウスキーが2,250ポイントを獲得してドライバーズチャンピオンシップのトップをキープしている。
+assistant: After the race, Keselowski remains in first place in the Drivers' Championship with 2,250 points.
+(end)
+
+
+INPUT:
+レース後もケセロウスキーが2,250ポイントを獲得してドライバーズチャンピオンシップのトップをキープしている。
+OUTPUT:
+After the race, Keselowski remains in first place in the Drivers' Championship with 2,250 points.
+
+Processing instance 158
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ジョンソンは7点差の2,243点で2位となっています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ジョンソンは7点差の2,243点で2位となっています。
+assistant: Johnson is in second place with 2,243 points, a 7-point deficit.
+(end)
+
+
+INPUT:
+ジョンソンは7点差の2,243点で2位となっています。
+OUTPUT:
+Johnson is in second place with 2,243 points, a 7-point deficit.
+
+Processing instance 159
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 3位のハムリンは20ポイント差をつけられていますが、ボウヤーには5ポイント差をつけています。カーヌは2,220ポイント、トゥルークス・ジュニアは2,207ポイントでそれぞれ5位と6位につけています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 3位のハムリンは20ポイント差をつけられていますが、ボウヤーには5ポイント差をつけています。カーヌは2,220ポイント、トゥルークス・ジュニアは2,207ポイントでそれぞれ5位と6位につけています。
+assistant: In third place, Hamlin is 20 points behind, but 5 points ahead of Bowyer. Kahne and Truex, Jr. are in 5th and 6th respectively with 2,220 and 2,207 points.
+(end)
+
+
+INPUT:
+3位のハムリンは20ポイント差をつけられていますが、ボウヤーには5ポイント差をつけています。カーヌは2,220ポイント、トゥルークス・ジュニアは2,207ポイントでそれぞれ5位と6位につけています。
+OUTPUT:
+In third place, Hamlin is 20 points behind, but 5 points ahead of Bowyer. Kahne and Truex, Jr. are in 5th and 6th respectively with 2,220 and 2,207 points.
+
+Processing instance 160
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ドライバーズ選手権のトップ10にはスチュアート、ゴードン、ケンゼス、ハーヴィックらが入賞し、シーズンは残り4レースとなりました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ドライバーズ選手権のトップ10にはスチュアート、ゴードン、ケンゼス、ハーヴィックらが入賞し、シーズンは残り4レースとなりました。
+assistant: Stewart, Gordon, Kenseth, and Harvick round out the top 10 in the Drivers' Championship with four races remaining in the season.
+(end)
+
+
+INPUT:
+ドライバーズ選手権のトップ10にはスチュアート、ゴードン、ケンゼス、ハーヴィックらが入賞し、シーズンは残り4レースとなりました。
+OUTPUT:
+Stewart, Gordon, Kenseth, and Harvick round out the top 10 in the Drivers' Championship with four races remaining in the season.
+
+Processing instance 161
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 米海軍も事件を調査しているという。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 米海軍も事件を調査しているという。
+assistant: The US Navy is also investigating the incident.
+(end)
+
+
+INPUT:
+米海軍も事件を調査しているという。
+OUTPUT:
+The US Navy is also investigating the incident.
+
+Processing instance 162
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: また、「乗組員は現在、安全に船を引き上げるための最善の方法を決定するために作業を行っている」との声明を発表した。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: また、「乗組員は現在、安全に船を引き上げるための最善の方法を決定するために作業を行っている」との声明を発表した。
+assistant: The crew is currently working to determine the best method to safely tow the ship.
+(end)
+
+
+INPUT:
+また、「乗組員は現在、安全に船を引き上げるための最善の方法を決定するために作業を行っている」との声明を発表した。
+OUTPUT:
+The crew is currently working to determine the best method to safely tow the ship.
+
+Processing instance 163
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: アベンジャー級掃海艇は、パラワン島のプエルト・プリンセサに向かっていました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: アベンジャー級掃海艇は、パラワン島のプエルト・プリンセサに向かっていました。
+assistant: An Avenger-class mine countermeasures ship was heading to Puerto Princesa in Palawan.
+(end)
+
+
+INPUT:
+アベンジャー級掃海艇は、パラワン島のプエルト・プリンセサに向かっていました。
+OUTPUT:
+An Avenger-class mine countermeasures ship was heading to Puerto Princesa in Palawan.
+
+Processing instance 164
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 米海軍第7艦隊に配属され、日本の長崎県佐世保市を拠点に活動しています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 米海軍第7艦隊に配属され、日本の長崎県佐世保市を拠点に活動しています。
+assistant: Assigned to the U.S. Navy's Seventh Fleet, it is based in Sasebo, Nagasaki Prefecture, Japan.
+(end)
+
+
+INPUT:
+米海軍第7艦隊に配属され、日本の長崎県佐世保市を拠点に活動しています。
+OUTPUT:
+Assigned to the U.S. Navy's Seventh Fleet, it is based in Sasebo, Nagasaki Prefecture, Japan.
+
+Processing instance 165
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ムンバイの攻撃者たちは、2008年11月26日にボートで到着し、手榴弾、自動小銃を携えて、混雑したチャトラパティ・シヴァージ・ターミナス駅や有名なタージ・マハル・ホテルを含む複数の標的を攻撃しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ムンバイの攻撃者たちは、2008年11月26日にボートで到着し、手榴弾、自動小銃を携えて、混雑したチャトラパティ・シヴァージ・ターミナス駅や有名なタージ・マハル・ホテルを含む複数の標的を攻撃しました。
+assistant: The Mumbai attackers arrived by boat on November 26, 2008, bringing with them grenades, automatic weapons, and targeted several sites, including the crowded Chhatrapati Shivaji Terminus station and the famous Taj Mahal Hotel.
+(end)
+
+
+INPUT:
+ムンバイの攻撃者たちは、2008年11月26日にボートで到着し、手榴弾、自動小銃を携えて、混雑したチャトラパティ・シヴァージ・ターミナス駅や有名なタージ・マハル・ホテルを含む複数の標的を攻撃しました。
+OUTPUT:
+The Mumbai attackers arrived by boat on November 26, 2008, bringing with them grenades, automatic weapons, and targeted several sites, including the crowded Chhatrapati Shivaji Terminus station and the famous Taj Mahal Hotel.
+
+Processing instance 166
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: デビッド・ヘッドリーの偵察と情報収集は、パキスタンの過激派集団であるラシュカレ・タイバから送り込まれた10人の狙撃手による作戦の成功に役立ちました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: デビッド・ヘッドリーの偵察と情報収集は、パキスタンの過激派集団であるラシュカレ・タイバから送り込まれた10人の狙撃手による作戦の成功に役立ちました。
+assistant: David Headley's reconnaissance and information gathering aided the success of the operation carried out by 10 gunmen from the Pakistani militant group Laskhar-e-Taiba.
+(end)
+
+
+INPUT:
+デビッド・ヘッドリーの偵察と情報収集は、パキスタンの過激派集団であるラシュカレ・タイバから送り込まれた10人の狙撃手による作戦の成功に役立ちました。
+OUTPUT:
+David Headley's reconnaissance and information gathering aided the success of the operation carried out by 10 gunmen from the Pakistani militant group Laskhar-e-Taiba.
+
+Processing instance 167
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: この攻撃は、インドとパキスタンの関係に大きな負担をかけました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: この攻撃は、インドとパキスタンの関係に大きな負担をかけました。
+assistant: This attack put a significant strain on the relationship between India and Pakistan.
+(end)
+
+
+INPUT:
+この攻撃は、インドとパキスタンの関係に大きな負担をかけました。
+OUTPUT:
+This attack put a significant strain on the relationship between India and Pakistan.
+
+Processing instance 168
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ペリー知事は公衆衛生当局者に同行し、国民の安全を守るための措置が取られるようにすることをテキサス市民に確約しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ペリー知事は公衆衛生当局者に同行し、国民の安全を守るための措置が取られるようにすることをテキサス市民に確約しました。
+assistant: Governor Perry, accompanied by public health officials, assured Texas citizens that steps were being taken to ensure the safety of the public.
+(end)
+
+
+INPUT:
+ペリー知事は公衆衛生当局者に同行し、国民の安全を守るための措置が取られるようにすることをテキサス市民に確約しました。
+OUTPUT:
+Governor Perry, accompanied by public health officials, assured Texas citizens that steps were being taken to ensure the safety of the public.
+
+Processing instance 169
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ペリー氏は特に、「本件で提起された課題に対応するうえで、世界でこれ以上の設備を備えた場所はほとんどない」と述べました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ペリー氏は特に、「本件で提起された課題に対応するうえで、世界でこれ以上の設備を備えた場所はほとんどない」と述べました。
+assistant: Mr. Perry specifically stated, "There are few places in the world better equipped to address the challenges posed by this case."
+(end)
+
+
+INPUT:
+ペリー氏は特に、「本件で提起された課題に対応するうえで、世界でこれ以上の設備を備えた場所はほとんどない」と述べました。
+OUTPUT:
+Mr. Perry specifically stated, "There are few places in the world better equipped to address the challenges posed by this case."
+
+Processing instance 170
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 知事はまた、「本日、患者と接触した学齢児童がいることが判明しました」とも述べました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 知事はまた、「本日、患者と接触した学齢児童がいることが判明しました」とも述べました。
+assistant: The governor also stated, "Today, we have identified school-aged children who have had contact with the patient."
+(end)
+
+
+INPUT:
+知事はまた、「本日、患者と接触した学齢児童がいることが判明しました」とも述べました。
+OUTPUT:
+The governor also stated, "Today, we have identified school-aged children who have had contact with the patient."
+
+Processing instance 171
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 彼はさらに続けて、「この事件は深刻ですが、システムは正常に機能しているのでご安心ください」と述べました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 彼はさらに続けて、「この事件は深刻ですが、システムは正常に機能しているのでご安心ください」と述べました。
+assistant: He went on to say, "This incident is serious, but rest assured that the system is functioning as it should."
+(end)
+
+
+INPUT:
+彼はさらに続けて、「この事件は深刻ですが、システムは正常に機能しているのでご安心ください」と述べました。
+OUTPUT:
+He went on to say, "This incident is serious, but rest assured that the system is functioning as it should."
+
+Processing instance 172
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: もし確認されれば、これでアレンの8年間にわたった武蔵の捜索が完了する。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: もし確認されれば、これでアレンの8年間にわたった武蔵の捜索が完了する。
+assistant: If confirmed, this completes Allen's eight-year search for the Musashi.
+(end)
+
+
+INPUT:
+もし確認されれば、これでアレンの8年間にわたった武蔵の捜索が完了する。
+OUTPUT:
+If confirmed, this completes Allen's eight-year search for the Musashi.
+
+Processing instance 173
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 海底マッピングに続いて、ROVを使用して難破船が発見されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 海底マッピングに続いて、ROVを使用して難破船が発見されました。
+assistant: Following seabed mapping, the wreck was discovered using an ROV.
+(end)
+
+
+INPUT:
+海底マッピングに続いて、ROVを使用して難破船が発見されました。
+OUTPUT:
+Following seabed mapping, the wreck was discovered using an ROV.
+
+Processing instance 174
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 世界有数の富豪であるアレンは、海洋探査に多くの富を投じたと言われ、生涯にわたって戦争に関心を示し、武蔵の捜索を始めたと伝えられています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 世界有数の富豪であるアレンは、海洋探査に多くの富を投じたと言われ、生涯にわたって戦争に関心を示し、武蔵の捜索を始めたと伝えられています。
+assistant: It is said that Allen, one of the world's richest people, invested much of his wealth in marine exploration and began his quest to find the Musashi out of a lifelong interest in war.
+(end)
+
+
+INPUT:
+世界有数の富豪であるアレンは、海洋探査に多くの富を投じたと言われ、生涯にわたって戦争に関心を示し、武蔵の捜索を始めたと伝えられています。
+OUTPUT:
+It is said that Allen, one of the world's richest people, invested much of his wealth in marine exploration and began his quest to find the Musashi out of a lifelong interest in war.
+
+Processing instance 175
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 彼女はアトランタでの滞在中に批評家から称賛され、革新的な都市教育について認められました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 彼女はアトランタでの滞在中に批評家から称賛され、革新的な都市教育について認められました。
+assistant: She received critical acclaim during her stay in Atlanta and was recognized for innovative urban education.
+(end)
+
+
+INPUT:
+彼女はアトランタでの滞在中に批評家から称賛され、革新的な都市教育について認められました。
+OUTPUT:
+She received critical acclaim during her stay in Atlanta and was recognized for innovative urban education.
+
+Processing instance 176
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 2009年に彼女は年間最優秀教育長の称号を授与されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 2009年に彼女は年間最優秀教育長の称号を授与されました。
+assistant: In 2009, she was awarded the title of National Superintendent of the Year.
+(end)
+
+
+INPUT:
+2009年に彼女は年間最優秀教育長の称号を授与されました。
+OUTPUT:
+In 2009, she was awarded the title of National Superintendent of the Year.
+
+Processing instance 177
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 受賞当時、アトランタの学校ではテストの点数が大幅に伸びていました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 受賞当時、アトランタの学校ではテストの点数が大幅に伸びていました。
+assistant: At the time of the award, schools in Atlanta had seen a significant improvement in test scores.
+(end)
+
+
+INPUT:
+受賞当時、アトランタの学校ではテストの点数が大幅に伸びていました。
+OUTPUT:
+At the time of the award, schools in Atlanta had seen a significant improvement in test scores.
+
+Processing instance 178
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: その直後、「アトランタ・ジャーナル・コンスティテューション」誌は、テスト結果に問題があることを示す報告書を発表しました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: その直後、「アトランタ・ジャーナル・コンスティテューション」誌は、テスト結果に問題があることを示す報告書を発表しました。
+assistant: Shortly after, the Atlanta Journal-Constitution published a report showing issues with the test results.
+(end)
+
+
+INPUT:
+その直後、「アトランタ・ジャーナル・コンスティテューション」誌は、テスト結果に問題があることを示す報告書を発表しました。
+OUTPUT:
+Shortly after, the Atlanta Journal-Constitution published a report showing issues with the test results.
+
+Processing instance 179
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 報告書では、テストの点数が驚くほど急速に伸びたことを示し、校内で問題が発覚したにもかかわらず学校側がそれに対処しなかったと主張しています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 報告書では、テストの点数が驚くほど急速に伸びたことを示し、校内で問題が発覚したにもかかわらず学校側がそれに対処しなかったと主張しています。
+assistant: The report shows test scores rising at an astonishing rate, and claims the school identified internal issues but failed to address them.
+(end)
+
+
+INPUT:
+報告書では、テストの点数が驚くほど急速に伸びたことを示し、校内で問題が発覚したにもかかわらず学校側がそれに対処しなかったと主張しています。
+OUTPUT:
+The report shows test scores rising at an astonishing rate, and claims the school identified internal issues but failed to address them.
+
+Processing instance 180
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: それ以降の証拠は試験用紙が改ざんされたことを示しており、ホール氏は他の34人の教育関係者とともに2013年に起訴されました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: それ以降の証拠は試験用紙が改ざんされたことを示しており、ホール氏は他の34人の教育関係者とともに2013年に起訴されました。
+assistant: Subsequent evidence indicated that the test papers had been tampered with, and Hall, along with 34 other education officials, was indicted in 2013.
+(end)
+
+
+INPUT:
+それ以降の証拠は試験用紙が改ざんされたことを示しており、ホール氏は他の34人の教育関係者とともに2013年に起訴されました。
+OUTPUT:
+Subsequent evidence indicated that the test papers had been tampered with, and Hall, along with 34 other education officials, was indicted in 2013.
+
+Processing instance 181
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: アイルランド政府は、この状況を是正するための議会立法の緊急性を強調している。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: アイルランド政府は、この状況を是正するための議会立法の緊急性を強調している。
+assistant: The Irish government is emphasizing the urgency of parliamentary legislation to rectify this situation.
+(end)
+
+
+INPUT:
+アイルランド政府は、この状況を是正するための議会立法の緊急性を強調している。
+OUTPUT:
+The Irish government is emphasizing the urgency of parliamentary legislation to rectify this situation.
+
+Processing instance 182
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 「公衆衛生と刑事司法の両方の観点から、この法案をできるだけ早く成立させることが重要であると」、政府の広報担当者は述べている。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 「公衆衛生と刑事司法の両方の観点から、この法案をできるだけ早く成立させることが重要であると」、政府の広報担当者は述べている。
+assistant: "It is important to pass this bill as soon as possible from both a public health and criminal justice perspective," said a government spokesperson.
+(end)
+
+
+INPUT:
+「公衆衛生と刑事司法の両方の観点から、この法案をできるだけ早く成立させることが重要であると」、政府の広報担当者は述べている。
+OUTPUT:
+"It is important to pass this bill as soon as possible from both a public health and criminal justice perspective," said a government spokesperson.
+
+Processing instance 183
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 厚生大臣は、関連する薬物の一時的な合法性を利用している個人の福祉と、改正後の現在では違憲となった薬物関連の有罪判決の両方に懸念を表明した。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 厚生大臣は、関連する薬物の一時的な合法性を利用している個人の福祉と、改正後の現在では違憲となった薬物関連の有罪判決の両方に懸念を表明した。
+assistant: The Health Minister expressed concern for the welfare of individuals taking advantage of the temporary legality of the relevant substances, as well as for drug-related convictions made since the now-unconstitutional amendments came into effect.
+(end)
+
+
+INPUT:
+厚生大臣は、関連する薬物の一時的な合法性を利用している個人の福祉と、改正後の現在では違憲となった薬物関連の有罪判決の両方に懸念を表明した。
+OUTPUT:
+The Health Minister expressed concern for the welfare of individuals taking advantage of the temporary legality of the relevant substances, as well as for drug-related convictions made since the now-unconstitutional amendments came into effect.
+
+Processing instance 184
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: その日の未明、ジャルケはイタリアのカバーチアーノでシーズン前のトレーニング中で練習に励んでいました。彼は日曜日に予定されていたボロニア戦の試合を前にチームのホテルに滞在していました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: その日の未明、ジャルケはイタリアのカバーチアーノでシーズン前のトレーニング中で練習に励んでいました。彼は日曜日に予定されていたボロニア戦の試合を前にチームのホテルに滞在していました。
+assistant: Early that day, Jarque was practicing during pre-season training in Coverciano, Italy. He was staying in the team hotel ahead of a match planned for Sunday against Bolonia.
+(end)
+
+
+INPUT:
+その日の未明、ジャルケはイタリアのカバーチアーノでシーズン前のトレーニング中で練習に励んでいました。彼は日曜日に予定されていたボロニア戦の試合を前にチームのホテルに滞在していました。
+OUTPUT:
+Early that day, Jarque was practicing during pre-season training in Coverciano, Italy. He was staying in the team hotel ahead of a match planned for Sunday against Bolonia.
+
+Processing instance 185
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 日曜日に予定されていたボローニャ戦の試合を前に彼はチームのホテルに宿泊していました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 日曜日に予定されていたボローニャ戦の試合を前に彼はチームのホテルに宿泊していました。
+assistant: He was staying at the team hotel ahead of the match against Bologna, scheduled for Sunday.
+(end)
+
+
+INPUT:
+日曜日に予定されていたボローニャ戦の試合を前に彼はチームのホテルに宿泊していました。
+OUTPUT:
+He was staying at the team hotel ahead of the match against Bologna, scheduled for Sunday.
+
+Processing instance 186
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: バンドが乗ったバスが向かった先はミズーリ州のシックスフラッグスセントルイスで、満員の観客に演奏を披露するためだ。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: バンドが乗ったバスが向かった先はミズーリ州のシックスフラッグスセントルイスで、満員の観客に演奏を披露するためだ。
+assistant: The bus carrying the band was headed to Six Flags St. Louis in Missouri, where they were set to perform for a packed crowd.
+(end)
+
+
+INPUT:
+バンドが乗ったバスが向かった先はミズーリ州のシックスフラッグスセントルイスで、満員の観客に演奏を披露するためだ。
+OUTPUT:
+The bus carrying the band was headed to Six Flags St. Louis in Missouri, where they were set to perform for a packed crowd.
+
+Processing instance 187
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 目撃者によれば、土曜日の午前1時15分に、バスが青信号で進もうとしたときに車がバスの前で方向転換をしたということです。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 目撃者によれば、土曜日の午前1時15分に、バスが青信号で進もうとしたときに車がバスの前で方向転換をしたということです。
+assistant: According to witnesses, at 1:15 AM on Saturday, as the bus attempted to go through a green light, a car made a turn in front of the bus.
+(end)
+
+
+INPUT:
+目撃者によれば、土曜日の午前1時15分に、バスが青信号で進もうとしたときに車がバスの前で方向転換をしたということです。
+OUTPUT:
+According to witnesses, at 1:15 AM on Saturday, as the bus attempted to go through a green light, a car made a turn in front of the bus.
+
+Processing instance 188
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 8月9日夜の時点で、モラコットの目は中国の福建省から約70キロ離れた位置にありました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 8月9日夜の時点で、モラコットの目は中国の福建省から約70キロ離れた位置にありました。
+assistant: As of the night of August 9th, Morakot's eye was approximately 70 kilometers away from the Chinese province of Fujian.
+(end)
+
+
+INPUT:
+8月9日夜の時点で、モラコットの目は中国の福建省から約70キロ離れた位置にありました。
+OUTPUT:
+As of the night of August 9th, Morakot's eye was approximately 70 kilometers away from the Chinese province of Fujian.
+
+Processing instance 189
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 台風は時速11 kmの速さで中国に向かって進んでいると見られています。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 台風は時速11 kmの速さで中国に向かって進んでいると見られています。
+assistant: The typhoon is estimated to be moving towards China at a speed of 11 km/h.
+(end)
+
+
+INPUT:
+台風は時速11 kmの速さで中国に向かって進んでいると見られています。
+OUTPUT:
+The typhoon is estimated to be moving towards China at a speed of 11 km/h.
+
+Processing instance 190
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 華氏90度の暑さの中で待つ間、乗客に水が配られました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 華氏90度の暑さの中で待つ間、乗客に水が配られました。
+assistant: Passengers were given water while waiting in 90-degree Fahrenheit heat.
+(end)
+
+
+INPUT:
+華氏90度の暑さの中で待つ間、乗客に水が配られました。
+OUTPUT:
+Passengers were given water while waiting in 90-degree Fahrenheit heat.
+
+Processing instance 191
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 消防隊のスコット・クーンズ隊長は「当日サンタクララでは気温が90度を超える猛暑日でした。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 消防隊のスコット・クーンズ隊長は「当日サンタクララでは気温が90度を超える猛暑日でした。
+assistant: Fire captain Scott Kouns said, "It was a scorcher in Santa Clara, with temperatures reaching over 90 degrees.
+(end)
+
+
+INPUT:
+消防隊のスコット・クーンズ隊長は「当日サンタクララでは気温が90度を超える猛暑日でした。
+OUTPUT:
+Fire captain Scott Kouns said, "It was a scorcher in Santa Clara, with temperatures reaching over 90 degrees.
+
+Processing instance 192
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ジェットコースターに閉じ込めらるというのは時間の長短を問わず、控えめに言っても不快で、1人目が降りるまでに1時間以上かかりました。」
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ジェットコースターに閉じ込めらるというのは時間の長短を問わず、控えめに言っても不快で、1人目が降りるまでに1時間以上かかりました。」
+assistant: Being stuck on a roller coaster, for any length of time, is at the very least uncomfortable, and it took over an hour to get the first person off."
+(end)
+
+
+INPUT:
+ジェットコースターに閉じ込めらるというのは時間の長短を問わず、控えめに言っても不快で、1人目が降りるまでに1時間以上かかりました。」
+OUTPUT:
+Being stuck on a roller coaster, for any length of time, is at the very least uncomfortable, and it took over an hour to get the first person off."
+
+Processing instance 193
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: シューマッハは、F1選手権で7度の優勝を果たし、2006年に引退しましたが、負傷したフェリペ・マッサに代わって復帰する予定でした。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: シューマッハは、F1選手権で7度の優勝を果たし、2006年に引退しましたが、負傷したフェリペ・マッサに代わって復帰する予定でした。
+assistant: Schumacher, who retired in 2006 after winning the F1 championship seven times, was set to replace the injured Felipe Massa.
+(end)
+
+
+INPUT:
+シューマッハは、F1選手権で7度の優勝を果たし、2006年に引退しましたが、負傷したフェリペ・マッサに代わって復帰する予定でした。
+OUTPUT:
+Schumacher, who retired in 2006 after winning the F1 championship seven times, was set to replace the injured Felipe Massa.
+
+Processing instance 194
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ブラジル人は2009年ハンガリーGPの事故で東部に重傷を負いました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: ブラジル人は2009年ハンガリーGPの事故で東部に重傷を負いました。
+assistant: The Brazilian suffered serious head injuries in a crash during the 2009 Hungarian Grand Prix.
+(end)
+
+
+INPUT:
+ブラジル人は2009年ハンガリーGPの事故で東部に重傷を負いました。
+OUTPUT:
+The Brazilian suffered serious head injuries in a crash during the 2009 Hungarian Grand Prix.
+
+Processing instance 195
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: マッサは少なくとも2009年の残りのシーズンは欠場することになっている。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: マッサは少なくとも2009年の残りのシーズンは欠場することになっている。
+assistant: Massa is expected to be out for at least the rest of the 2009 season.
+(end)
+
+
+INPUT:
+マッサは少なくとも2009年の残りのシーズンは欠場することになっている。
+OUTPUT:
+Massa is expected to be out for at least the rest of the 2009 season.
+
+Processing instance 196
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: アリアス大統領はウイルス検査で経度の陽性反応を示した、とロドリゴ・アリアス大統領府長官は述べた。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: アリアス大統領はウイルス検査で経度の陽性反応を示した、とロドリゴ・アリアス大統領府長官は述べた。
+assistant: President Arias tested positive for the virus with mild symptoms, said Rodrigo Arias, the President's Chief of Staff.
+(end)
+
+
+INPUT:
+アリアス大統領はウイルス検査で経度の陽性反応を示した、とロドリゴ・アリアス大統領府長官は述べた。
+OUTPUT:
+President Arias tested positive for the virus with mild symptoms, said Rodrigo Arias, the President's Chief of Staff.
+
+Processing instance 197
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 大統領の容態は安定していますが、数日間は自宅で隔離されます。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 大統領の容態は安定していますが、数日間は自宅で隔離されます。
+assistant: The president's condition is stable, but he will be isolated at home for several days.
+(end)
+
+
+INPUT:
+大統領の容態は安定していますが、数日間は自宅で隔離されます。
+OUTPUT:
+The president's condition is stable, but he will be isolated at home for several days.
+
+Processing instance 198
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 熱と喉の痛みを除けば、気分も良く、在宅で仕事をこなせる状態です。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 熱と喉の痛みを除けば、気分も良く、在宅で仕事をこなせる状態です。
+assistant: Apart from the fever and sore throat, I feel well and in good shape to handle my work from home.
+(end)
+
+
+INPUT:
+熱と喉の痛みを除けば、気分も良く、在宅で仕事をこなせる状態です。
+OUTPUT:
+Apart from the fever and sore throat, I feel well and in good shape to handle my work from home.
+
+Processing instance 199
+Message: system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 「月曜日には全面的に業務に復帰する予定だ」とアリアス氏は声明で語りました。
+(end)
+
+system: I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output.
+user: 「月曜日には全面的に業務に復帰する予定だ」とアリアス氏は声明で語りました。
+assistant: "I plan to return to all my duties by Monday," Arias stated in a release.
+(end)
+
+
+INPUT:
+「月曜日には全面的に業務に復帰する予定だ」とアリアス氏は声明で語りました。
+OUTPUT:
+"I plan to return to all my duties by Monday," Arias stated in a release.
+
