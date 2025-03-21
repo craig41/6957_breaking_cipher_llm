@@ -201,7 +201,16 @@ def _aya_expanse_8b():
             temperature=0.3
         )
         text = tokenizer.decode(gen_tokens[0])
-        return text
+        # Parsing logic to extract chatbot output
+        start_token = "<|CHATBOT_TOKEN|>"
+        end_token = "<|END_OF_TURN_TOKEN|>"
+
+        start_idx = text.find(start_token) + len(start_token)
+        end_idx = text.find(end_token, start_idx)
+
+        chatbot_text = text[start_idx:end_idx].strip()
+
+        return chatbot_text
     return query
 
 

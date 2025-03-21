@@ -21,4 +21,4 @@ echo "SLURM JOB ID: $SLURM_JOBID"
 mkdir -p /scratch/general/vast/$USER/huggingface_cache
 export HF_HOME="/scratch/general/vast/$USER/huggingface_cache"
 
-python run.py -m aya_expanse_8b -w translate -d openlanguagedata/flores_plus -n 200 -k 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 -src nucl1643 --output $WORKDIR/data/aya_expanse8b/japanese/
+python run.py -m aya_expanse_8b -w translate -d openlanguagedata/flores_plus -n 200 -k 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 -src kach1280 --output $WORKDIR/data/aya_expanse8b/jingpho/
