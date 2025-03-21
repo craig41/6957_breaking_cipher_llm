@@ -21,3 +21,213 @@ Fri Mar 21 12:02:54 2025
 SLURM JOB ID: 3661037
 [rank: 0] Seed set to 1
 Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 750.11it/s]
+Encoder model frozen.
+/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:195: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']
+You are using the plain ModelCheckpoint callback. Consider using LitModelCheckpoint which with seamless uploading to Model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+Predicting: 0it [00:00, ?it/s]Predicting:   0%|          | 0/13 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|          | 0/13 [00:00<?, ?it/s]Predicting DataLoader 0:   8%|▊         | 1/13 [00:00<00:06,  1.87it/s]Predicting DataLoader 0:  15%|█▌        | 2/13 [00:00<00:03,  2.79it/s]Predicting DataLoader 0:  23%|██▎       | 3/13 [00:00<00:03,  3.22it/s]Predicting DataLoader 0:  31%|███       | 4/13 [00:01<00:02,  3.52it/s]Predicting DataLoader 0:  38%|███▊      | 5/13 [00:01<00:02,  3.67it/s]Predicting DataLoader 0:  46%|████▌     | 6/13 [00:01<00:01,  3.72it/s]Predicting DataLoader 0:  54%|█████▍    | 7/13 [00:01<00:01,  3.72it/s]Predicting DataLoader 0:  62%|██████▏   | 8/13 [00:02<00:01,  3.75it/s]Predicting DataLoader 0:  69%|██████▉   | 9/13 [00:02<00:01,  3.75it/s]Predicting DataLoader 0:  77%|███████▋  | 10/13 [00:02<00:00,  3.75it/s]Predicting DataLoader 0:  85%|████████▍ | 11/13 [00:02<00:00,  3.68it/s]Predicting DataLoader 0:  92%|█████████▏| 12/13 [00:03<00:00,  3.62it/s]Predicting DataLoader 0: 100%|██████████| 13/13 [00:03<00:00,  3.69it/s]Predicting DataLoader 0: 100%|██████████| 13/13 [00:03<00:00,  3.69it/s]
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 0	score: 0.2000
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 1	score: 0.1920
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 2	score: 0.2105
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 3	score: 0.4377
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 4	score: 0.2044
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 5	score: 0.2236
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 6	score: 0.2436
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 7	score: 0.2554
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 8	score: 0.2011
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 9	score: 0.2535
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 10	score: 0.1584
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 11	score: 0.7003
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 12	score: 0.2111
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 13	score: 0.7437
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 14	score: 0.2897
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 15	score: 0.4483
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 16	score: 0.1957
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 17	score: 0.2000
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 18	score: 0.1965
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 19	score: 0.2417
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 20	score: 0.2011
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 21	score: 0.2453
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 22	score: 0.1957
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 23	score: 0.2476
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 24	score: 0.3169
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 25	score: 0.2914
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 26	score: 0.5082
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 27	score: 0.2490
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 28	score: 0.2138
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 29	score: 0.3819
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 30	score: 0.2002
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 31	score: 0.7143
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 32	score: 0.1930
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 33	score: 0.3753
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 34	score: 0.3391
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 35	score: 0.3731
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 36	score: 0.2025
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 37	score: 0.2984
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 38	score: 0.1980
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 39	score: 0.2254
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 40	score: 0.2867
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 41	score: 0.2550
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 42	score: 0.2116
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 43	score: 0.6137
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 44	score: 0.1898
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 45	score: 0.7903
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 46	score: 0.4789
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 47	score: 0.3877
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 48	score: 0.6859
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 49	score: 0.3704
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 50	score: 0.2151
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 51	score: 0.1364
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 52	score: 0.1979
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 53	score: 0.2015
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 54	score: 0.3190
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 55	score: 0.2245
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 56	score: 0.2515
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 57	score: 0.2042
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 58	score: 0.2411
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 59	score: 0.3405
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 60	score: 0.3896
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 61	score: 0.2413
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 62	score: 0.1970
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 63	score: 0.2054
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 64	score: 0.2551
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 65	score: 0.1958
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 66	score: 0.1972
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 67	score: 0.1938
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 68	score: 0.1974
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 69	score: 0.1941
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 70	score: 0.1965
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 71	score: 0.2362
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 72	score: 0.2028
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 73	score: 0.2054
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 74	score: 0.2055
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 75	score: 0.1976
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 76	score: 0.2362
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 77	score: 0.2000
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 78	score: 0.2833
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 79	score: 0.3295
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 80	score: 0.2421
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 81	score: 0.3485
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 82	score: 0.2110
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 83	score: 0.2079
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 84	score: 0.2061
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 85	score: 0.1998
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 86	score: 0.2487
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 87	score: 0.1918
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 88	score: 0.2038
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 89	score: 0.2181
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 90	score: 0.2021
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 91	score: 0.1923
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 92	score: 0.2028
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 93	score: 0.1972
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 94	score: 0.1995
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 95	score: 0.2005
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 96	score: 0.2464
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 97	score: 0.2566
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 98	score: 0.4825
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 99	score: 0.1956
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 100	score: 0.2909
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 101	score: 0.4280
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 102	score: 0.1982
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 103	score: 0.1956
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 104	score: 0.1980
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 105	score: 0.2035
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 106	score: 0.2811
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 107	score: 0.1935
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 108	score: 0.2174
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 109	score: 0.2906
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 110	score: 0.2241
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 111	score: 0.0802
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 112	score: 0.1933
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 113	score: 0.1924
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 114	score: 0.2048
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 115	score: 0.4387
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 116	score: 0.4303
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 117	score: 0.4700
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 118	score: 0.2173
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 119	score: 0.5320
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 120	score: 0.1690
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 121	score: 0.1914
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 122	score: 0.1966
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 123	score: 0.1960
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 124	score: 0.2213
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 125	score: 0.3080
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 126	score: 0.3126
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 127	score: 0.2973
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 128	score: 0.2210
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 129	score: 0.1903
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 130	score: 0.1981
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 131	score: 0.2595
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 132	score: 0.2658
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 133	score: 0.1982
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 134	score: 0.4600
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 135	score: 0.2232
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 136	score: 0.2274
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 137	score: 0.2072
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 138	score: 0.1975
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 139	score: 0.3069
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 140	score: 0.2653
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 141	score: 0.7947
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 142	score: 0.5713
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 143	score: 0.2031
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 144	score: 0.2082
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 145	score: 0.3014
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 146	score: 0.2075
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 147	score: 0.2049
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 148	score: 0.6749
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 149	score: 0.2076
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 150	score: 0.2703
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 151	score: 0.1908
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 152	score: 0.3501
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 153	score: 0.2432
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 154	score: 0.2477
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 155	score: 0.2107
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 156	score: 0.2484
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 157	score: 0.5887
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 158	score: 0.5506
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 159	score: 0.2029
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 160	score: 0.2727
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 161	score: 0.2030
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 162	score: 0.2021
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 163	score: 0.4885
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 164	score: 0.3563
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 165	score: 0.5689
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 166	score: 0.5153
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 167	score: 0.3834
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 168	score: 0.1967
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 169	score: 0.2304
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 170	score: 0.2383
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 171	score: 0.2012
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 172	score: 0.2333
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 173	score: 0.4657
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 174	score: 0.1995
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 175	score: 0.1912
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 176	score: 0.2752
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 177	score: 0.2977
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 178	score: 0.2033
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 179	score: 0.2006
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 180	score: 0.2225
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 181	score: 0.2228
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 182	score: 0.1960
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 183	score: 0.1977
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 184	score: 0.2103
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 185	score: 0.1987
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 186	score: 0.1963
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 187	score: 0.1971
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 188	score: 0.2488
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 189	score: 0.2241
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 190	score: 0.4761
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 191	score: 0.3045
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 192	score: 0.2263
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 193	score: 0.3290
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 194	score: 0.1951
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 195	score: 0.2831
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 196	score: 0.2591
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 197	score: 0.2019
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 198	score: 0.1996
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	Segment 199	score: 0.2108
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/jingpho/translated.txt	score: 0.2769
