@@ -1,0 +1,233 @@
+Fri Mar 21 12:15:26 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                On  |   00000000:41:00.0 Off |                    0 |
+| N/A   34C    P0             64W /  400W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 3661348
+[rank: 0] Seed set to 1
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 16591.39it/s]
+Encoder model frozen.
+/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:195: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']
+You are using the plain ModelCheckpoint callback. Consider using LitModelCheckpoint which with seamless uploading to Model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+Predicting: 0it [00:00, ?it/s]Predicting:   0%|          | 0/13 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|          | 0/13 [00:00<?, ?it/s]Predicting DataLoader 0:   8%|▊         | 1/13 [00:00<00:04,  2.90it/s]Predicting DataLoader 0:  15%|█▌        | 2/13 [00:00<00:02,  4.22it/s]Predicting DataLoader 0:  23%|██▎       | 3/13 [00:00<00:02,  4.88it/s]Predicting DataLoader 0:  31%|███       | 4/13 [00:00<00:01,  5.11it/s]Predicting DataLoader 0:  38%|███▊      | 5/13 [00:00<00:01,  5.32it/s]Predicting DataLoader 0:  46%|████▌     | 6/13 [00:01<00:01,  5.41it/s]Predicting DataLoader 0:  54%|█████▍    | 7/13 [00:01<00:01,  5.36it/s]Predicting DataLoader 0:  62%|██████▏   | 8/13 [00:01<00:00,  5.23it/s]Predicting DataLoader 0:  69%|██████▉   | 9/13 [00:01<00:00,  5.10it/s]Predicting DataLoader 0:  77%|███████▋  | 10/13 [00:02<00:00,  4.98it/s]Predicting DataLoader 0:  85%|████████▍ | 11/13 [00:02<00:00,  4.87it/s]Predicting DataLoader 0:  92%|█████████▏| 12/13 [00:02<00:00,  4.75it/s]Predicting DataLoader 0: 100%|██████████| 13/13 [00:02<00:00,  4.79it/s]Predicting DataLoader 0: 100%|██████████| 13/13 [00:02<00:00,  4.79it/s]
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 0	score: 0.2931
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 1	score: 0.1951
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 2	score: 0.6831
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 3	score: 0.8679
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 4	score: 0.7440
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 5	score: 0.4911
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 6	score: 0.8570
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 7	score: 0.8527
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 8	score: 0.6652
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 9	score: 0.5416
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 10	score: 0.1784
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 11	score: 0.8469
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 12	score: 0.8204
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 13	score: 0.3983
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 14	score: 0.5813
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 15	score: 0.3975
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 16	score: 0.8132
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 17	score: 0.3388
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 18	score: 0.6520
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 19	score: 0.5278
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 20	score: 0.4760
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 21	score: 0.4119
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 22	score: 0.6305
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 23	score: 0.8290
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 24	score: 0.6524
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 25	score: 0.7044
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 26	score: 0.3536
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 27	score: 0.8479
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 28	score: 0.9116
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 29	score: 0.8457
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 30	score: 0.6877
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 31	score: 0.3165
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 32	score: 0.3165
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 33	score: 0.8592
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 34	score: 0.5167
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 35	score: 0.6628
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 36	score: 0.8162
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 37	score: 0.2624
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 38	score: 0.8706
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 39	score: 0.7718
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 40	score: 0.1621
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 41	score: 0.9111
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 42	score: 0.2406
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 43	score: 0.4520
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 44	score: 0.5205
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 45	score: 0.9222
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 46	score: 0.4680
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 47	score: 0.6130
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 48	score: 0.3818
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 49	score: 0.3482
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 50	score: 0.7437
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 51	score: 0.4279
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 52	score: 0.5886
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 53	score: 0.4538
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 54	score: 0.7720
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 55	score: 0.8094
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 56	score: 0.4708
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 57	score: 0.4668
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 58	score: 0.2837
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 59	score: 0.3387
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 60	score: 0.6719
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 61	score: 0.9085
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 62	score: 0.8872
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 63	score: 0.6408
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 64	score: 0.8506
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 65	score: 0.8944
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 66	score: 0.6173
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 67	score: 0.4340
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 68	score: 0.5990
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 69	score: 0.6797
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 70	score: 0.7456
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 71	score: 0.6602
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 72	score: 0.3229
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 73	score: 0.5388
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 74	score: 0.4167
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 75	score: 0.2435
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 76	score: 0.2227
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 77	score: 0.4489
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 78	score: 0.3442
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 79	score: 0.3368
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 80	score: 0.4260
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 81	score: 0.7003
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 82	score: 0.5073
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 83	score: 0.7298
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 84	score: 0.6028
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 85	score: 0.8217
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 86	score: 0.3140
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 87	score: 0.6362
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 88	score: 0.9108
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 89	score: 0.5360
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 90	score: 0.8302
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 91	score: 0.2675
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 92	score: 0.2767
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 93	score: 0.3991
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 94	score: 0.8540
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 95	score: 0.8808
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 96	score: 0.8301
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 97	score: 0.3269
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 98	score: 0.6757
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 99	score: 0.2726
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 100	score: 0.4838
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 101	score: 0.3544
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 102	score: 0.5413
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 103	score: 0.2483
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 104	score: 0.7511
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 105	score: 0.7114
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 106	score: 0.8046
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 107	score: 0.5344
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 108	score: 0.4709
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 109	score: 0.7940
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 110	score: 0.3626
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 111	score: 0.5400
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 112	score: 0.8151
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 113	score: 0.1848
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 114	score: 0.9216
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 115	score: 0.4823
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 116	score: 0.9082
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 117	score: 0.4956
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 118	score: 0.8579
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 119	score: 0.8102
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 120	score: 0.3337
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 121	score: 0.7839
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 122	score: 0.4721
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 123	score: 0.3124
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 124	score: 0.4386
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 125	score: 0.1571
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 126	score: 0.4126
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 127	score: 0.8008
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 128	score: 0.5568
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 129	score: 0.6933
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 130	score: 0.7537
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 131	score: 0.3694
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 132	score: 0.5342
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 133	score: 0.2747
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 134	score: 0.2720
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 135	score: 0.6935
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 136	score: 0.9000
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 137	score: 0.9753
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 138	score: 0.3466
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 139	score: 0.4921
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 140	score: 0.7444
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 141	score: 0.7144
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 142	score: 0.4830
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 143	score: 0.7149
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 144	score: 0.5897
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 145	score: 0.7620
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 146	score: 0.5044
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 147	score: 0.3058
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 148	score: 0.9454
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 149	score: 0.5803
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 150	score: 0.6978
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 151	score: 0.4653
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 152	score: 0.7050
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 153	score: 0.7619
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 154	score: 0.4549
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 155	score: 0.4982
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 156	score: 0.3343
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 157	score: 0.9248
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 158	score: 0.6764
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 159	score: 0.8405
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 160	score: 0.4639
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 161	score: 0.9120
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 162	score: 0.8458
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 163	score: 0.4799
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 164	score: 0.7564
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 165	score: 0.4579
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 166	score: 0.5841
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 167	score: 0.3920
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 168	score: 0.7950
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 169	score: 0.6428
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 170	score: 0.8323
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 171	score: 0.5007
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 172	score: 0.2838
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 173	score: 0.3766
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 174	score: 0.4817
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 175	score: 0.8461
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 176	score: 0.4645
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 177	score: 0.7712
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 178	score: 0.6608
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 179	score: 0.7396
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 180	score: 0.2252
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 181	score: 0.5645
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 182	score: 0.8867
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 183	score: 0.3330
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 184	score: 0.2920
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 185	score: 0.7447
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 186	score: 0.3953
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 187	score: 0.8015
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 188	score: 0.7508
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 189	score: 0.8382
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 190	score: 0.8062
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 191	score: 0.6046
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 192	score: 0.2648
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 193	score: 0.6223
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 194	score: 0.4041
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 195	score: 0.3991
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 196	score: 0.3025
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 197	score: 0.8113
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 198	score: 0.6445
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	Segment 199	score: 0.7869
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/marathi/translated.txt	score: 0.5862

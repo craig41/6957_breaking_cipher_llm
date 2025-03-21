@@ -1,0 +1,233 @@
+Fri Mar 21 12:15:44 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                On  |   00000000:21:00.0 Off |                    0 |
+| N/A   32C    P0             62W /  400W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 3661350
+[rank: 0] Seed set to 1
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 53092.46it/s]
+Encoder model frozen.
+/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:195: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']
+You are using the plain ModelCheckpoint callback. Consider using LitModelCheckpoint which with seamless uploading to Model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+Predicting: 0it [00:00, ?it/s]Predicting:   0%|          | 0/13 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|          | 0/13 [00:00<?, ?it/s]Predicting DataLoader 0:   8%|▊         | 1/13 [00:00<00:04,  2.81it/s]Predicting DataLoader 0:  15%|█▌        | 2/13 [00:00<00:02,  3.96it/s]Predicting DataLoader 0:  23%|██▎       | 3/13 [00:00<00:02,  4.63it/s]Predicting DataLoader 0:  31%|███       | 4/13 [00:00<00:01,  4.91it/s]Predicting DataLoader 0:  38%|███▊      | 5/13 [00:00<00:01,  5.02it/s]Predicting DataLoader 0:  46%|████▌     | 6/13 [00:01<00:01,  5.01it/s]Predicting DataLoader 0:  54%|█████▍    | 7/13 [00:01<00:01,  4.96it/s]Predicting DataLoader 0:  62%|██████▏   | 8/13 [00:01<00:01,  4.85it/s]Predicting DataLoader 0:  69%|██████▉   | 9/13 [00:01<00:00,  4.76it/s]Predicting DataLoader 0:  77%|███████▋  | 10/13 [00:02<00:00,  4.66it/s]Predicting DataLoader 0:  85%|████████▍ | 11/13 [00:02<00:00,  4.57it/s]Predicting DataLoader 0:  92%|█████████▏| 12/13 [00:02<00:00,  4.41it/s]Predicting DataLoader 0: 100%|██████████| 13/13 [00:02<00:00,  4.42it/s]Predicting DataLoader 0: 100%|██████████| 13/13 [00:02<00:00,  4.41it/s]
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 0	score: 0.2494
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 1	score: 0.4997
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 2	score: 0.4503
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 3	score: 0.5127
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 4	score: 0.3648
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 5	score: 0.2552
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 6	score: 0.2364
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 7	score: 0.3907
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 8	score: 0.2012
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 9	score: 0.1949
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 10	score: 0.3578
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 11	score: 0.9006
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 12	score: 0.7993
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 13	score: 0.1523
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 14	score: 0.2276
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 15	score: 0.7765
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 16	score: 0.2045
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 17	score: 0.2220
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 18	score: 0.1900
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 19	score: 0.4307
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 20	score: 0.2002
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 21	score: 0.2248
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 22	score: 0.1914
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 23	score: 0.8550
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 24	score: 0.1976
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 25	score: 0.2698
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 26	score: 0.4182
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 27	score: 0.3190
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 28	score: 0.8300
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 29	score: 0.5613
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 30	score: 0.2001
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 31	score: 0.3252
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 32	score: 0.2130
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 33	score: 0.3024
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 34	score: 0.2495
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 35	score: 0.2033
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 36	score: 0.1905
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 37	score: 0.5992
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 38	score: 0.2834
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 39	score: 0.1994
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 40	score: 0.7112
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 41	score: 0.2005
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 42	score: 0.1982
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 43	score: 0.2411
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 44	score: 0.1920
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 45	score: 0.8397
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 46	score: 0.4055
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 47	score: 0.3676
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 48	score: 0.4827
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 49	score: 0.1885
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 50	score: 0.2033
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 51	score: 0.4318
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 52	score: 0.1872
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 53	score: 0.2040
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 54	score: 0.1724
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 55	score: 0.2094
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 56	score: 0.2146
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 57	score: 0.2031
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 58	score: 0.1975
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 59	score: 0.5844
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 60	score: 0.2096
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 61	score: 0.2813
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 62	score: 0.2570
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 63	score: 0.2567
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 64	score: 0.4306
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 65	score: 0.1935
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 66	score: 0.2117
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 67	score: 0.2227
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 68	score: 0.3120
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 69	score: 0.2035
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 70	score: 0.3066
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 71	score: 0.2307
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 72	score: 0.1861
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 73	score: 0.1983
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 74	score: 0.1960
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 75	score: 0.1983
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 76	score: 0.2531
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 77	score: 0.2021
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 78	score: 0.7322
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 79	score: 0.2649
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 80	score: 0.2800
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 81	score: 0.8657
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 82	score: 0.5072
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 83	score: 0.2190
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 84	score: 0.2961
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 85	score: 0.2051
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 86	score: 0.1953
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 87	score: 0.2018
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 88	score: 0.2347
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 89	score: 0.1139
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 90	score: 0.1922
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 91	score: 0.1940
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 92	score: 0.1929
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 93	score: 0.1956
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 94	score: 0.4522
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 95	score: 0.2088
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 96	score: 0.3530
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 97	score: 0.2197
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 98	score: 0.2375
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 99	score: 0.2281
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 100	score: 0.2784
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 101	score: 0.1893
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 102	score: 0.2213
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 103	score: 0.2135
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 104	score: 0.3267
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 105	score: 0.2306
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 106	score: 0.3901
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 107	score: 0.3106
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 108	score: 0.3084
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 109	score: 0.4795
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 110	score: 0.1897
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 111	score: 0.1074
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 112	score: 0.2979
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 113	score: 0.2511
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 114	score: 0.2783
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 115	score: 0.1919
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 116	score: 0.2403
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 117	score: 0.3161
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 118	score: 0.2643
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 119	score: 0.6979
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 120	score: 0.1890
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 121	score: 0.1918
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 122	score: 0.6696
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 123	score: 0.3620
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 124	score: 0.2749
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 125	score: 0.4701
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 126	score: 0.2155
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 127	score: 0.2340
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 128	score: 0.1920
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 129	score: 0.1948
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 130	score: 0.1959
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 131	score: 0.6174
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 132	score: 0.2390
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 133	score: 0.1990
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 134	score: 0.8222
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 135	score: 0.2896
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 136	score: 0.9253
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 137	score: 0.2103
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 138	score: 0.2441
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 139	score: 0.2717
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 140	score: 0.2614
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 141	score: 0.4413
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 142	score: 0.3294
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 143	score: 0.2671
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 144	score: 0.1502
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 145	score: 0.2230
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 146	score: 0.2057
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 147	score: 0.4799
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 148	score: 0.5968
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 149	score: 0.5122
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 150	score: 0.3527
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 151	score: 0.2861
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 152	score: 0.3551
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 153	score: 0.1933
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 154	score: 0.2917
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 155	score: 0.2295
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 156	score: 0.2038
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 157	score: 0.3647
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 158	score: 0.2631
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 159	score: 0.2243
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 160	score: 0.0932
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 161	score: 0.2376
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 162	score: 0.2492
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 163	score: 0.2624
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 164	score: 0.3063
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 165	score: 0.5272
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 166	score: 0.2061
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 167	score: 0.4598
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 168	score: 0.2037
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 169	score: 0.1417
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 170	score: 0.2957
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 171	score: 0.2999
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 172	score: 0.2169
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 173	score: 0.2036
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 174	score: 0.3739
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 175	score: 0.5886
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 176	score: 0.4816
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 177	score: 0.2000
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 178	score: 0.4795
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 179	score: 0.1982
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 180	score: 0.1974
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 181	score: 0.4242
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 182	score: 0.1940
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 183	score: 0.1884
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 184	score: 0.2554
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 185	score: 0.1998
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 186	score: 0.1996
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 187	score: 0.2034
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 188	score: 0.3286
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 189	score: 0.5052
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 190	score: 0.2569
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 191	score: 0.3939
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 192	score: 0.1943
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 193	score: 0.5648
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 194	score: 0.2626
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 195	score: 0.1979
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 196	score: 0.2887
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 197	score: 0.2063
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 198	score: 0.1917
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	Segment 199	score: 0.2038
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/rundi/translated.txt	score: 0.3116

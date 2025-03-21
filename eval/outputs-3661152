@@ -1,0 +1,233 @@
+Fri Mar 21 12:10:47 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                On  |   00000000:21:00.0 Off |                    0 |
+| N/A   34C    P0             63W /  400W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 3661152
+[rank: 0] Seed set to 1
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 2573.82it/s]
+Encoder model frozen.
+/uufs/chpc.utah.edu/common/home/u1380656/.venv/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:195: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']
+You are using the plain ModelCheckpoint callback. Consider using LitModelCheckpoint which with seamless uploading to Model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+Predicting: 0it [00:00, ?it/s]Predicting:   0%|          | 0/13 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|          | 0/13 [00:00<?, ?it/s]Predicting DataLoader 0:   8%|▊         | 1/13 [00:00<00:10,  1.20it/s]Predicting DataLoader 0:  15%|█▌        | 2/13 [00:00<00:05,  2.06it/s]Predicting DataLoader 0:  23%|██▎       | 3/13 [00:01<00:03,  2.71it/s]Predicting DataLoader 0:  31%|███       | 4/13 [00:01<00:02,  3.15it/s]Predicting DataLoader 0:  38%|███▊      | 5/13 [00:01<00:02,  3.50it/s]Predicting DataLoader 0:  46%|████▌     | 6/13 [00:01<00:01,  3.78it/s]Predicting DataLoader 0:  54%|█████▍    | 7/13 [00:01<00:01,  3.96it/s]Predicting DataLoader 0:  62%|██████▏   | 8/13 [00:01<00:01,  4.06it/s]Predicting DataLoader 0:  69%|██████▉   | 9/13 [00:02<00:00,  4.12it/s]Predicting DataLoader 0:  77%|███████▋  | 10/13 [00:02<00:00,  4.14it/s]Predicting DataLoader 0:  85%|████████▍ | 11/13 [00:02<00:00,  4.13it/s]Predicting DataLoader 0:  92%|█████████▏| 12/13 [00:02<00:00,  4.09it/s]Predicting DataLoader 0: 100%|██████████| 13/13 [00:03<00:00,  4.18it/s]Predicting DataLoader 0: 100%|██████████| 13/13 [00:03<00:00,  4.18it/s]
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 0	score: 0.3707
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 1	score: 0.3180
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 2	score: 0.8942
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 3	score: 0.6144
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 4	score: 0.2327
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 5	score: 0.3943
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 6	score: 0.1892
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 7	score: 0.7380
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 8	score: 0.6002
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 9	score: 0.7358
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 10	score: 0.4569
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 11	score: 0.9327
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 12	score: 0.8791
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 13	score: 0.4477
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 14	score: 0.4532
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 15	score: 0.3714
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 16	score: 0.2377
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 17	score: 0.8915
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 18	score: 0.2021
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 19	score: 0.8275
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 20	score: 0.1944
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 21	score: 0.2587
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 22	score: 0.5550
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 23	score: 0.9478
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 24	score: 0.4358
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 25	score: 0.7512
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 26	score: 0.4741
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 27	score: 0.4337
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 28	score: 0.8931
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 29	score: 0.2735
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 30	score: 0.5311
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 31	score: 0.4639
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 32	score: 0.4992
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 33	score: 0.6408
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 34	score: 0.6504
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 35	score: 0.6493
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 36	score: 0.7250
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 37	score: 0.4876
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 38	score: 0.6562
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 39	score: 0.4093
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 40	score: 0.1551
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 41	score: 0.6394
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 42	score: 0.4132
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 43	score: 0.6669
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 44	score: 0.6692
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 45	score: 0.9261
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 46	score: 0.7485
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 47	score: 0.8332
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 48	score: 0.5708
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 49	score: 0.2484
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 50	score: 0.4702
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 51	score: 0.1984
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 52	score: 0.2746
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 53	score: 0.4041
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 54	score: 0.6301
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 55	score: 0.9319
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 56	score: 0.5364
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 57	score: 0.3887
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 58	score: 0.2825
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 59	score: 0.2347
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 60	score: 0.6413
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 61	score: 0.8361
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 62	score: 0.9554
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 63	score: 0.5350
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 64	score: 0.8562
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 65	score: 0.4152
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 66	score: 0.4081
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 67	score: 0.4491
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 68	score: 0.3454
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 69	score: 0.3850
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 70	score: 0.8183
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 71	score: 0.7928
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 72	score: 0.4938
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 73	score: 0.3352
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 74	score: 0.8290
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 75	score: 0.3797
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 76	score: 0.2618
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 77	score: 0.2170
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 78	score: 0.4154
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 79	score: 0.1924
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 80	score: 0.1986
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 81	score: 0.5989
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 82	score: 0.8092
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 83	score: 0.8475
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 84	score: 0.5553
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 85	score: 0.9274
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 86	score: 0.2505
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 87	score: 0.2155
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 88	score: 0.5747
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 89	score: 0.3165
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 90	score: 0.6382
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 91	score: 0.5032
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 92	score: 0.4919
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 93	score: 0.5140
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 94	score: 0.7025
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 95	score: 0.2711
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 96	score: 0.8537
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 97	score: 0.5252
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 98	score: 0.8040
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 99	score: 0.4020
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 100	score: 0.3768
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 101	score: 0.2593
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 102	score: 0.8086
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 103	score: 0.2633
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 104	score: 0.8933
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 105	score: 0.8959
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 106	score: 0.7167
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 107	score: 0.6680
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 108	score: 0.5308
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 109	score: 0.9201
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 110	score: 0.3122
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 111	score: 0.4256
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 112	score: 0.4657
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 113	score: 0.4609
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 114	score: 0.2950
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 115	score: 0.7717
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 116	score: 0.4396
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 117	score: 0.9598
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 118	score: 0.9264
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 119	score: 0.9146
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 120	score: 0.7321
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 121	score: 0.7315
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 122	score: 0.5165
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 123	score: 0.3315
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 124	score: 0.4602
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 125	score: 0.2870
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 126	score: 0.3224
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 127	score: 0.7617
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 128	score: 0.4888
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 129	score: 0.3054
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 130	score: 0.4659
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 131	score: 0.6405
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 132	score: 0.5499
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 133	score: 0.3634
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 134	score: 0.3814
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 135	score: 0.8883
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 136	score: 0.8913
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 137	score: 0.2686
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 138	score: 0.6454
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 139	score: 0.3062
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 140	score: 0.6813
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 141	score: 0.9124
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 142	score: 0.7875
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 143	score: 0.9083
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 144	score: 0.4536
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 145	score: 0.8719
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 146	score: 0.8127
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 147	score: 0.6377
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 148	score: 0.7015
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 149	score: 0.4786
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 150	score: 0.6950
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 151	score: 0.6593
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 152	score: 0.8106
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 153	score: 0.4378
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 154	score: 0.2827
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 155	score: 0.5270
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 156	score: 0.3340
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 157	score: 0.9142
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 158	score: 0.7464
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 159	score: 0.4172
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 160	score: 0.7828
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 161	score: 0.2185
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 162	score: 0.8066
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 163	score: 0.6339
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 164	score: 0.4308
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 165	score: 0.8004
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 166	score: 0.8609
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 167	score: 0.4939
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 168	score: 0.6409
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 169	score: 0.4319
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 170	score: 0.3805
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 171	score: 0.4741
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 172	score: 0.3207
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 173	score: 0.5655
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 174	score: 0.2882
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 175	score: 0.8873
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 176	score: 0.6673
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 177	score: 0.8760
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 178	score: 0.7823
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 179	score: 0.2093
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 180	score: 0.5719
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 181	score: 0.7795
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 182	score: 0.7757
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 183	score: 0.2204
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 184	score: 0.2742
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 185	score: 0.2598
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 186	score: 0.1896
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 187	score: 0.4728
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 188	score: 0.8221
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 189	score: 0.1958
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 190	score: 0.3089
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 191	score: 0.4665
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 192	score: 0.4987
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 193	score: 0.4401
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 194	score: 0.7984
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 195	score: 0.2010
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 196	score: 0.3502
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 197	score: 0.4994
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 198	score: 0.2980
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	Segment 199	score: 0.7509
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/marathi/translated.txt	score: 0.5497

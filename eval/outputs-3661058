@@ -1,0 +1,29 @@
+Fri Mar 21 12:10:00 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                On  |   00000000:61:00.0 Off |                    0 |
+| N/A   35C    P0             61W /  400W |       1MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 3661058
+usage: comet-score [-h] [-s SOURCES] [-t TRANSLATIONS [TRANSLATIONS ...]]
+                   [-r REFERENCES] [-d SACREBLEU_DATASET]
+                   [--batch_size BATCH_SIZE] [--gpus GPUS] [--quiet]
+                   [--enable-context] [--only_system] [--to_json TO_JSON]
+                   [--model MODEL] [--model_storage_path MODEL_STORAGE_PATH]
+                   [--num_workers NUM_WORKERS] [--disable_cache]
+                   [--disable_length_batching] [--print_cache_info]
+comet-score: error: Parser key "translations" element 1: Not of type Path_fr. File does not exist: /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/aya_expanse8b/japanses/translated.txt
