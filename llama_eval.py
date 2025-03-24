@@ -27,7 +27,8 @@ if __name__ == "__main__":
         llama_3_1_model_id,
         torch_dtype=torch.float16,
         device_map="auto",
-        token=access_token 
+        token=access_token,
+        low_cpu_mem_usage=True
         )
     
     config = transformers.LlamaConfig.from_pretrained(llama_3_1_model_id)

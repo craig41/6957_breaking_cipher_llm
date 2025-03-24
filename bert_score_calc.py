@@ -43,13 +43,14 @@ if __name__ == '__main__':
     # gold_file = "data/parsed/D1_5_word_groups.txt"
     # pred_file = "data/aya_pred/D1_5_word_groups.txt"
     
-    for gold_f, pred_f in itertools.zip_longest(gold_dir, pred_dir):
+    for pred_f in pred_dir:
+        gold_f = pred_f
         # if os.path.basename(gold_f) != os.path.basename(pred_f):
-        if not os.path.basename(pred_f).startswith(os.path.basename(pred_f)):
-            print(f"{gold_f} != {pred_f}")
-            break
-
-        print(gold_f, pred_f)
+        # if not os.path.basename(pred_f).startswith(os.path.basename(pred_f)):
+        #     print(f"{gold_f} != {pred_f}")
+        #     break
+        #
+        # print(gold_f, pred_f)
 
         with open("data/parsed/" + gold_f, 'r') as file:
             gold_lines = file.readlines()
