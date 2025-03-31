@@ -37,8 +37,8 @@ def calc_bert(g_lines, p_lines):
 
 if __name__ == '__main__':
 
-    gold_dir = sorted(os.listdir("data/parsed"))
-    pred_dir = sorted(os.listdir("data/aya_pred"))
+    gold_dir = sorted(os.listdir("data/encoded_limited_lines"))
+    pred_dir = sorted(os.listdir("data/llama_pred_partial"))
 
     # gold_file = "data/parsed/D1_5_word_groups.txt"
     # pred_file = "data/aya_pred/D1_5_word_groups.txt"
@@ -51,7 +51,7 @@ if __name__ == '__main__':
 
         print(gold_f, pred_f)
 
-        with open("data/parsed/" + gold_f, 'r') as file:
+        with open("data/encoded_limited_lines/" + gold_f, 'r') as file:
             gold_lines = file.readlines()
             # Remove trailing newline characters from each line
             gold_lines = [line.rstrip('\n') for line in gold_lines]
@@ -71,7 +71,7 @@ if __name__ == '__main__':
         
         orig_filename = os.path.basename(gold_f)
         orig_filename = os.path.splitext(orig_filename)[0]
-        filename = "data/bert_scores/" + orig_filename + "_scores.txt"
+        filename = "data/bert_score_llama/" + orig_filename + "_scores.txt"
         
         score_df = pd.DataFrame()
         score_df["P"] = p

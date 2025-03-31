@@ -34,5 +34,6 @@ mkdir -p $OUTDIR
 export HF_HOME="/scratch/general/vast/$USER/huggingface_cache"
 
 pip install 'accelerate>=0.26.0'
+pip install transformers
 
 python3 llama_eval.py
