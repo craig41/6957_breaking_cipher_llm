@@ -10,8 +10,8 @@ if __name__ == "__main__":
 
     start = time.time()
     tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
-    checkpoint = "CohereForAI/aya-101"
-    # checkpoint = "CohereForAI/aya-expanse-8b"
+    # checkpoint = "CohereForAI/aya-101"
+    checkpoint = "CohereForAI/aya-expanse-8b"
 
     tokenizer = AutoTokenizer.from_pretrained(checkpoint)
     aya_model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
