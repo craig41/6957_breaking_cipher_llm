@@ -36,9 +36,12 @@ def calc_bert(g_lines, p_lines):
 
 
 if __name__ == '__main__':
+    
+    gold_dir_str = "data/parsed/"
+    pred_dir_str = "data/llama_pred_partial/"
 
-    gold_dir = sorted(os.listdir("data/encoded_limited_lines"))
-    pred_dir = sorted(os.listdir("data/llama_pred_partial"))
+    gold_dir = sorted(os.listdir(gold_dir_str))
+    pred_dir = sorted(os.listdir(pred_dir_str))
 
     # gold_file = "data/parsed/D1_5_word_groups.txt"
     # pred_file = "data/aya_pred/D1_5_word_groups.txt"
@@ -52,7 +55,7 @@ if __name__ == '__main__':
         #
         # print(gold_f, pred_f)
 
-        with open("data/encoded_limited_lines/" + gold_f, 'r') as file:
+        with open(gold_dir_str + gold_f, 'r') as file:
             gold_lines = file.readlines()
             # Remove trailing newline characters from each line
             gold_lines = [line.rstrip('\n') for line in gold_lines]
@@ -61,7 +64,7 @@ if __name__ == '__main__':
             gold_lines = [line.strip() for line in gold_lines]
             gold_lines = [string for string in gold_lines if string]
 
-        with open("data/aya_pred/" + pred_f, 'r') as file:
+        with open(pred_dir_str + pred_f, 'r') as file:
             pred_lines = file.readlines()
             # Remove trailing newline characters from each line
             pred_lines = [line.rstrip('\n') for line in pred_lines]
