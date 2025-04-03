@@ -1,0 +1,9 @@
+Mean Precision for ..\data\aya_expanse8b\jingpho\translated.txt: 0.8718
+Max Precision for ..\data\aya_expanse8b\jingpho\translated.txt: 0.9514
+Min Precision for ..\data\aya_expanse8b\jingpho\translated.txt: 0.8061
+Mean Recall for ..\data\aya_expanse8b\jingpho\translated.txt: 0.8647
+Max Recall for ..\data\aya_expanse8b\jingpho\translated.txt: 0.9576
+Min Recall for ..\data\aya_expanse8b\jingpho\translated.txt: 0.7321
+Mean F1 for ..\data\aya_expanse8b\jingpho\translated.txt: 0.8681
+Max F1 for ..\data\aya_expanse8b\jingpho\translated.txt: 0.9545
+Min F1 for ..\data\aya_expanse8b\jingpho\translated.txt: 0.7833

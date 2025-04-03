@@ -1,0 +1,9 @@
+Mean Precision for ..\data\aya_expanse8b\rundi\translated.txt: 0.8742
+Max Precision for ..\data\aya_expanse8b\rundi\translated.txt: 0.9752
+Min Precision for ..\data\aya_expanse8b\rundi\translated.txt: 0.7768
+Mean Recall for ..\data\aya_expanse8b\rundi\translated.txt: 0.8739
+Max Recall for ..\data\aya_expanse8b\rundi\translated.txt: 0.9665
+Min Recall for ..\data\aya_expanse8b\rundi\translated.txt: 0.7479
+Mean F1 for ..\data\aya_expanse8b\rundi\translated.txt: 0.8740
+Max F1 for ..\data\aya_expanse8b\rundi\translated.txt: 0.9700
+Min F1 for ..\data\aya_expanse8b\rundi\translated.txt: 0.8000

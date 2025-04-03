@@ -1,0 +1,9 @@
+Mean Precision for ..\data\aya_expanse8b\marathi\translated.txt: 0.9180
+Max Precision for ..\data\aya_expanse8b\marathi\translated.txt: 0.9959
+Min Precision for ..\data\aya_expanse8b\marathi\translated.txt: 0.7963
+Mean Recall for ..\data\aya_expanse8b\marathi\translated.txt: 0.9205
+Max Recall for ..\data\aya_expanse8b\marathi\translated.txt: 0.9944
+Min Recall for ..\data\aya_expanse8b\marathi\translated.txt: 0.8315
+Mean F1 for ..\data\aya_expanse8b\marathi\translated.txt: 0.9192
+Max F1 for ..\data\aya_expanse8b\marathi\translated.txt: 0.9951
+Min F1 for ..\data\aya_expanse8b\marathi\translated.txt: 0.8231

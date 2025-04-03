@@ -1,0 +1,9 @@
+Mean Precision for ..\data\llama3_1_8b\japanese\translated.txt: 0.9432
+Max Precision for ..\data\llama3_1_8b\japanese\translated.txt: 0.9959
+Min Precision for ..\data\llama3_1_8b\japanese\translated.txt: 0.8352
+Mean Recall for ..\data\llama3_1_8b\japanese\translated.txt: 0.9444
+Max Recall for ..\data\llama3_1_8b\japanese\translated.txt: 0.9966
+Min Recall for ..\data\llama3_1_8b\japanese\translated.txt: 0.8451
+Mean F1 for ..\data\llama3_1_8b\japanese\translated.txt: 0.9438
+Max F1 for ..\data\llama3_1_8b\japanese\translated.txt: 0.9959
+Min F1 for ..\data\llama3_1_8b\japanese\translated.txt: 0.8451

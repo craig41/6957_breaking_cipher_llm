@@ -1,0 +1,9 @@
+Mean Precision for ..\data\llama3_1_8b\rundi\translated.txt: 0.8819
+Max Precision for ..\data\llama3_1_8b\rundi\translated.txt: 0.9857
+Min Precision for ..\data\llama3_1_8b\rundi\translated.txt: 0.7611
+Mean Recall for ..\data\llama3_1_8b\rundi\translated.txt: 0.8735
+Max Recall for ..\data\llama3_1_8b\rundi\translated.txt: 0.9844
+Min Recall for ..\data\llama3_1_8b\rundi\translated.txt: 0.7028
+Mean F1 for ..\data\llama3_1_8b\rundi\translated.txt: 0.8773
+Max F1 for ..\data\llama3_1_8b\rundi\translated.txt: 0.9851
+Min F1 for ..\data\llama3_1_8b\rundi\translated.txt: 0.7421

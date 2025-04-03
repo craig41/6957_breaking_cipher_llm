@@ -1,0 +1,9 @@
+Mean Precision for ..\data\aya_expanse8b\japanese\translated.txt: 0.9689
+Max Precision for ..\data\aya_expanse8b\japanese\translated.txt: 1.0000
+Min Precision for ..\data\aya_expanse8b\japanese\translated.txt: 0.9143
+Mean Recall for ..\data\aya_expanse8b\japanese\translated.txt: 0.9706
+Max Recall for ..\data\aya_expanse8b\japanese\translated.txt: 1.0000
+Min Recall for ..\data\aya_expanse8b\japanese\translated.txt: 0.8772
+Mean F1 for ..\data\aya_expanse8b\japanese\translated.txt: 0.9697
+Max F1 for ..\data\aya_expanse8b\japanese\translated.txt: 1.0000
+Min F1 for ..\data\aya_expanse8b\japanese\translated.txt: 0.8963

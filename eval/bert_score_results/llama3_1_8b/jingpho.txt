@@ -1,0 +1,9 @@
+Mean Precision for ..\data\llama3_1_8b\jingpho\translated.txt: 0.8550
+Max Precision for ..\data\llama3_1_8b\jingpho\translated.txt: 0.9543
+Min Precision for ..\data\llama3_1_8b\jingpho\translated.txt: 0.7952
+Mean Recall for ..\data\llama3_1_8b\jingpho\translated.txt: 0.8472
+Max Recall for ..\data\llama3_1_8b\jingpho\translated.txt: 0.9490
+Min Recall for ..\data\llama3_1_8b\jingpho\translated.txt: 0.6573
+Mean F1 for ..\data\llama3_1_8b\jingpho\translated.txt: 0.8508
+Max F1 for ..\data\llama3_1_8b\jingpho\translated.txt: 0.9517
+Min F1 for ..\data\llama3_1_8b\jingpho\translated.txt: 0.7351
