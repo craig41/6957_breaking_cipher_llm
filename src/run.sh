@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --account soc-gpu-np
-#SBATCH --partition soc-gpu-np
+#SBATCH --account marasovic-gpu-np
+#SBATCH --partition marasovic-gpu-np
 #SBATCH --ntasks-per-node=1
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
