@@ -8,7 +8,7 @@
 #SBATCH --mem=100GB
 #SBATCH --mail-user=u1380656@umail.utah.edu
 #SBATCH --mail-type=FAIL,END
-#SBATCH -o outputs-%j
+#SBATCH -o outputs/outputs-%j
 
 WORKDIR=/scratch/general/vast/$USER/6957_breaking_cipher_llm
 source /uufs/chpc.utah.edu/common/home/u1380656/.venv/bin/activate
