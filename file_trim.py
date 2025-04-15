@@ -1,6 +1,6 @@
 import os
 
-def trim_file(file_path, num_lines=250):
+def trim_file(file_path, num_lines=1600):
     """Trims a text file to a specified number of lines.
 
     Args:
@@ -20,7 +20,7 @@ def trim_file(file_path, num_lines=250):
 
 
 if __name__ == "__main__":
-    directory = "data/encoded/"
+    directory = "data/unused_data/test_train_trimmed/"
 
     for in_file in os.scandir(directory):
         with open(in_file, 'r') as file:
