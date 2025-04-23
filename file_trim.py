@@ -20,7 +20,7 @@ def trim_file(file_path, num_lines=250):
 
 
 if __name__ == "__main__":
-    directory = "data/encoded/"
+    directory = "data/parsed/"
 
     for in_file in os.scandir(directory):
         with open(in_file, 'r') as file:

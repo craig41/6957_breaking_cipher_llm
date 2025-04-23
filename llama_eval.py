@@ -37,7 +37,7 @@ if __name__ == "__main__":
         "factor": 8.0
     }
     
-    directory = "data/encoded_limited_lines/"
+    directory = "data/encoded_limited_lines_llama/"
 
     for in_file in os.scandir(directory):
         with open(in_file, 'r') as file:
