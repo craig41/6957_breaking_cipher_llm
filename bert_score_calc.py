@@ -38,7 +38,7 @@ def calc_bert(g_lines, p_lines):
 if __name__ == '__main__':
     
     gold_dir_str = "data/parsed/"
-    pred_dir_str = "data/llama_pred_partial/"
+    pred_dir_str = "data/aya_pred_partial/"
 
     gold_dir = sorted(os.listdir(gold_dir_str))
     pred_dir = sorted(os.listdir(pred_dir_str))
@@ -75,7 +75,7 @@ if __name__ == '__main__':
         
         orig_filename = os.path.basename(gold_f)
         orig_filename = os.path.splitext(orig_filename)[0]
-        filename = "data/bert_score_llama/" + orig_filename + "_scores.txt"
+        filename = "data/bert_score_aya/" + orig_filename + "_scores.txt"
         
         score_df = pd.DataFrame()
         score_df["P"] = p

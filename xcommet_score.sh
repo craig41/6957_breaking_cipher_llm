@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=bert_score
+#SBATCH --job-name=xcommet_score
 #SBATCH --account soc-gpu-np
 #SBATCH --partition soc-gpu-np
 #SBATCH --gres=gpu
@@ -18,8 +18,8 @@
 
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64
 
-WORKDIR=/uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm/scratch
-OUTDIR=/uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm/output2
+WORKDIR=/uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm
+OUTDIR=/uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm
 module load cuda/12.4.0
 
 nvidia-smi
@@ -30,5 +30,5 @@ mkdir -p /scratch/general/vast/$USER/huggingface_cache
 mkdir -p $OUTDIR
 export HF_HOME="/scratch/general/vast/$USER/huggingface_cache"
 
-pip install commet
+pip install unbabel-comet
 python3 xcommet_score.py
