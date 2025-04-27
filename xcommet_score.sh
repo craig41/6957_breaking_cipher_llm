@@ -31,4 +31,7 @@ mkdir -p $OUTDIR
 export HF_HOME="/scratch/general/vast/$USER/huggingface_cache"
 
 pip install unbabel-comet
-python3 xcommet_score.py
+python3 xcommet_score_aya_bm.py
+python3 xcommet_score_aya_lora.py
+python3 xcommet_score_llama_bm.py
+python3 xcommet_score_llama_lora.py

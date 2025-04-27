@@ -1,9 +1,0 @@
-Mean Precision for D3_10_word_groups: 0.8514
-Max Precision for D3_10_word_groups: 1.0000
-Min Precision for D3_10_word_groups: 0.7780
-Mean Recall for D3_10_word_groups: 0.8619
-Max Recall for D3_10_word_groups: 1.0000
-Min Recall for D3_10_word_groups: 0.7807
-Mean F1 for D3_10_word_groups: 0.8564
-Max F1 for D3_10_word_groups: 1.0000
-Min F1 for D3_10_word_groups: 0.7890

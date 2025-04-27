@@ -1,1 +1,0 @@
-model output score for drop_dev_questions_10_word_groups: 0.6415254364013672

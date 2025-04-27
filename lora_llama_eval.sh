@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=llama_eval
+#SBATCH --job-name=lora_llama_eval
 #SBATCH --account soc-gpu-np
 #SBATCH --partition soc-gpu-np
 #SBATCH --gres=gpu:1
@@ -38,4 +38,4 @@ pip install 'accelerate>=0.26.0'
 pip install transformers
 pip install peft
 
-python3 llama_eval.py --lora_path LORA_PATH
+python3 lora_llama_eval.py --lora_path LORA_PATH

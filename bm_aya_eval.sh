@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#SBATCH --job-name=bert_score
+#SBATCH --job-name=bm_aya_eval
 #SBATCH --account soc-gpu-np
 #SBATCH --partition soc-gpu-np
-#SBATCH --gres=gpu
+#SBATCH --gres=gpu:1
 #SBATCH --requeue
 #SBATCH --mail-user=u0013114@utah.edu
 #SBATCH --mail-type=FAIL,END
@@ -30,8 +30,4 @@ mkdir -p /scratch/general/vast/$USER/huggingface_cache
 mkdir -p $OUTDIR
 export HF_HOME="/scratch/general/vast/$USER/huggingface_cache"
 
-pip install bert-score
-python3 bert_score_aya_bm.py 
-python3 bert_score_aya_lora.py 
-python3 bert_score_llama_bm.py 
-python3 bert_score_llama_lora.py 
+python3 bm_aya_eval.py --output_dir $OUTDIR
