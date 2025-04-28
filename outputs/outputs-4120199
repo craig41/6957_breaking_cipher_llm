@@ -1,0 +1,59 @@
+/uufs/notchpeak.peaks/sys/var/slurm/slurmd.spool/notch475//job4120199/slurm_script: line 15: /scratch/general/vast/u0013114/6957_breaking_cipher_llm/.venv/bin/activate: No such file or directory
+Sun Apr 27 22:44:44 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A800 40GB Active        On  |   00000000:21:00.0 Off |                    0 |
+| 30%   32C    P0             38W /  240W |       1MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 4120199
+Collecting models
+  Using cached models-0.9.3.tar.gz (16 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py egg_info did not run successfully.
+  │ exit code: 1
+  ╰─> [8 lines of output]
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "/scratch/local/u0013114/4120199/pip-install-300r3p8k/models_e0c054434f8845d5b16899f698308336/setup.py", line 25, in <module>
+          import models
+        File "/scratch/local/u0013114/4120199/pip-install-300r3p8k/models_e0c054434f8845d5b16899f698308336/models/__init__.py", line 23, in <module>
+          from base import *
+      ModuleNotFoundError: No module named 'base'
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
+/uufs/chpc.utah.edu/common/home/u0013114/.conda/envs/ai_eval/lib/python3.11/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(model='llama3_1_8b_instruct_lora', model_args=None, workflow='translate', data=None, s=0, n=200, source='stan1293', split='dev', output='/scratch/general/vast/u0013114/6957_breaking_cipher_llm/data/final_eval_pred/', lora_path='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/results_llama3-8b-instruct-translator/cipher_adapter_new', csv_data='/uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm/data/unused_data/final_test/final_eval.csv')
+Loading data from /uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm/data/unused_data/final_test/final_eval.csv
+Loaded 200 examples from /uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm/data/unused_data/final_test/final_eval.csv
+Loading base model: meta-llama/Llama-3.1-8B-Instruct
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:08<00:24,  8.06s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:16<00:16,  8.14s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:24<00:08,  8.06s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:26<00:00,  5.63s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:26<00:00,  6.53s/it]
+Loading LoRA adapter from: /scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/results_llama3-8b-instruct-translator/cipher_adapter_new
+LoRA adapter loaded successfully
+0it [00:00, ?it/s]1it [00:04,  4.42s/it]2it [00:08,  4.36s/it]3it [00:10,  3.12s/it]4it [00:11,  2.35s/it]5it [00:12,  1.81s/it]6it [00:13,  1.56s/it]7it [00:14,  1.40s/it]8it [00:17,  1.85s/it]9it [00:18,  1.62s/it]10it [00:19,  1.59s/it]11it [00:22,  2.01s/it]12it [00:23,  1.68s/it]13it [00:24,  1.49s/it]14it [00:26,  1.40s/it]15it [00:28,  1.64s/it]16it [00:30,  1.70s/it]17it [00:31,  1.48s/it]18it [00:32,  1.50s/it]19it [00:33,  1.33s/it]20it [00:36,  1.81s/it]21it [00:37,  1.69s/it]22it [00:38,  1.44s/it]23it [00:39,  1.31s/it]24it [00:40,  1.24s/it]25it [00:42,  1.38s/it]26it [00:43,  1.33s/it]27it [00:46,  1.60s/it]28it [00:47,  1.62s/it]29it [00:49,  1.68s/it]30it [00:50,  1.51s/it]31it [00:51,  1.32s/it]32it [00:53,  1.56s/it]33it [00:54,  1.40s/it]34it [00:55,  1.28s/it]35it [00:56,  1.24s/it]36it [00:57,  1.12s/it]37it [00:58,  1.14s/it]38it [01:00,  1.26s/it]39it [01:01,  1.36s/it]40it [01:02,  1.22s/it]41it [01:05,  1.51s/it]42it [01:06,  1.52s/it]43it [01:07,  1.48s/it]44it [01:08,  1.33s/it]45it [01:11,  1.61s/it]46it [01:13,  1.70s/it]47it [01:14,  1.54s/it]48it [01:17,  2.18s/it]49it [01:20,  2.16s/it]50it [01:21,  2.03s/it]51it [01:22,  1.70s/it]52it [01:24,  1.76s/it]53it [01:25,  1.64s/it]54it [01:26,  1.39s/it]55it [01:29,  1.65s/it]56it [01:30,  1.55s/it]57it [01:32,  1.67s/it]58it [01:33,  1.56s/it]59it [01:36,  2.05s/it]60it [01:39,  2.19s/it]61it [01:40,  1.96s/it]62it [01:42,  1.93s/it]63it [01:44,  1.99s/it]64it [01:46,  2.03s/it]65it [01:48,  1.96s/it]66it [01:49,  1.74s/it]67it [01:51,  1.71s/it]68it [01:53,  1.84s/it]69it [01:55,  1.86s/it]70it [01:57,  1.85s/it]71it [01:58,  1.73s/it]72it [02:01,  1.91s/it]73it [02:02,  1.78s/it]74it [02:05,  2.19s/it]

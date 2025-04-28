@@ -1,0 +1,9 @@
+Mean Precision for drop_dev_questions_10_word_groups: 0.8397
+Max Precision for drop_dev_questions_10_word_groups: 0.9565
+Min Precision for drop_dev_questions_10_word_groups: 0.7592
+Mean Recall for drop_dev_questions_10_word_groups: 0.8334
+Max Recall for drop_dev_questions_10_word_groups: 0.9585
+Min Recall for drop_dev_questions_10_word_groups: 0.6502
+Mean F1 for drop_dev_questions_10_word_groups: 0.8362
+Max F1 for drop_dev_questions_10_word_groups: 0.9516
+Min F1 for drop_dev_questions_10_word_groups: 0.7251

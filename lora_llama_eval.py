@@ -3,6 +3,7 @@ import re
 import time
 import transformers
 import torch
+import sys
 from huggingface_hub import login
 from peft import PeftModel
     
@@ -14,8 +15,7 @@ model_id = "meta-llama/Llama-3.1-70B-Instruct"
 access_token = Constants.HUGGINGFACE_TOKEN_2
 
 
-def main(args):
-    lora_adapter_path = args.lora_path
+def main(lora_adapter_path):
 
     start = time.time()
 
@@ -131,4 +131,5 @@ def main(args):
                 txt_file.write(line + "\n")
 
 if __name__ == "__main__":
-    main()
+    lora_path = sys.argv[2]
+    main(lora_path)
