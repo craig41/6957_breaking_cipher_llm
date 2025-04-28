@@ -172,3 +172,4 @@ cython_debug/
 /data/openlanguagedata___flores_plus
 src/results_llama3-8b-instruct-translator
 results_llama3-8b-instruct-translator
+src/results_aya8b_translator

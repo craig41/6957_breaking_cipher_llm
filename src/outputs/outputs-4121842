@@ -1,0 +1,34 @@
+Mon Apr 28 00:40:07 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:21:00.0 Off |                    0 |
+| N/A   40C    P0             44W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 4121842
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(model='aya_8b_instruct_lora', model_args=None, workflow='translate', data=None, s=0, n=200, source='stan1293', split='dev', output='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/aya_expanse_epochs_10/', lora_path='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/results_aya8b_translator', csv_data='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv')
+Loading data from /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv
+Loaded 200 examples from /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv
+Traceback (most recent call last):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run_local.py", line 368, in <module>
+    main(args, key)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run_local.py", line 261, in main
+    model_fn = load_model(args.model)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/models.py", line 365, in load_model
+    return _models[model_name](*args, **kwargs)
+KeyError: 'aya_8b_instruct_lora'

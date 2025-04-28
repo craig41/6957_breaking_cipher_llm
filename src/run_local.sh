@@ -4,7 +4,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
-#SBATCH --time=2:00:00
+#SBATCH --time=6:00:00
 #SBATCH --mem=100GB
 #SBATCH --mail-user=u1380656@umail.utah.edu
 #SBATCH --mail-type=FAIL,END
@@ -23,16 +23,15 @@ export HF_HOME="/scratch/general/vast/$USER/huggingface_cache"
 
 # Path to test data
 TEST_DATA="$WORKDIR/data/finetune-data-full/combined_test_data.csv"
-LORA_PATH="$WORKDIR/src/results_llama3-8b-instruct-translator/cipher_adapter_epochs_10"
+LORA_PATH="$WORKDIR/src/results_aya8b_translator/system_prompt"
 
 # Run with LoRA adapter on test CSV data
 python run_local.py \
-    -m llama3_1_8b_instruct_lora \
+    -m aya_expanse_8b \
     -w translate \
-    -n 200 \
+    -n 100 \
     -k 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 \
-    --output $WORKDIR/data/lora_test/eval_results_full_epochs_10/ \
-    --lora-path $LORA_PATH \
+    --output $WORKDIR/data/lora_full/aya_expanse_base_small/  \
     --csv-data $TEST_DATA
 
 # Run with standard model for comparison (optional)

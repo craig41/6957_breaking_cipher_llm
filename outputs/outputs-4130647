@@ -1,0 +1,63 @@
+Mon Apr 28 12:17:02 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:21:00.0 Off |                    0 |
+| N/A   40C    P0             44W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 4130647
+Requirement already satisfied: tqdm in ./.venv/lib/python3.10/site-packages (4.67.1)
+WARNING: You are using pip version 22.0.4; however, version 25.0.1 is available.
+You should consider upgrading via the '/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/bin/python -m pip install --upgrade pip' command.
+Extracted 2100 translation pairs
+Will generate 2100 translations based on gold file
+Loading model meta-llama/Llama-3.1-8B-Instruct...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:20<01:01, 20.48s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:38<00:37, 18.81s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:56<00:18, 18.45s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:01<00:00, 13.11s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:01<00:00, 15.27s/it]
+Model loaded successfully
+Created 132 batches with size 16
+Processing batches:   0%|          | 0/132 [00:00<?, ?it/s]The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+Processing batches:   0%|          | 0/132 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/extract_direct_translations.py", line 247, in <module>
+    main(input_file, output_file, gold_file, batch_size)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/extract_direct_translations.py", line 198, in main
+    processed_batch = cleaner.process_batch(batch)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/extract_direct_translations.py", line 147, in process_batch
+    batch.clean_translations[i] = self.clean_translation_block(translated_block)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/extract_direct_translations.py", line 119, in clean_translation_block
+    outputs = self.model.generate(
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 2358, in generate
+    prepared_logits_processor = self._get_logits_processor(
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/transformers/generation/utils.py", line 1194, in _get_logits_processor
+    processors.append(TemperatureLogitsWarper(generation_config.temperature))
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/transformers/generation/logits_process.py", line 282, in __init__
+    raise ValueError(except_msg)
+ValueError: `temperature` (=0.0) has to be a strictly positive float, otherwise your next token scores will be invalid. If you're looking for greedy decoding strategies, set `do_sample=False`.
+Output file line count: 2100 /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/llama_base/parsed_translations.txt
+Gold file line count: 2100 /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/gold/original.txt
+First 10 lines of output:
+I3lWcnXJ+SJ+QeSX/S6qm9MiSO3ZXjH/xAxEG1FeRM=
+as time passed continued
+Despair and fear are not, but only the hazardous consequences are conditional to the regular weekly structured PIA sessions.
+彼らは、患者を壊疽から救うための四肢切断術、血流を止める止血帯、そして動脈クランプにも精通していました。
+HELLO EVERYONE Visited the Oriental Art Gallery in SF. She's literally the cutest old person ever, and it was her birthday...
+It to its glory.
+She real
+According to the government, the opposition is being watched closely by the security forces who are ready to take action against anyone who tries to cause chaos in the country.
+The itara is being changed. We are being forced to fight against the one who is changing the itara.
+My first beginnings in case you all didn't know before I was a solo artist I was in a girl group called SISTA! We were under...

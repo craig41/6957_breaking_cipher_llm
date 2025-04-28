@@ -1,0 +1,922 @@
+Mon Apr 28 13:01:31 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:41:00.0 Off |                    0 |
+| N/A   40C    P0             45W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 4130876
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(model='aya_expanse_8b', model_args=None, workflow='translate', data=None, s=0, n=100, source='stan1293', split='dev', output='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/', lora_path=None, csv_data='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv')
+Loading data from /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv
+Loaded 100 examples from /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:21<01:03, 21.31s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:42<00:41, 20.98s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:02<00:20, 20.51s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:08<00:00, 14.82s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:08<00:00, 17.03s/it]
+0it [00:00, ?it/s]/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:631: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.3` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+1it [00:01,  1.60s/it]2it [00:02,  1.36s/it]3it [00:03,  1.04s/it]4it [00:04,  1.07it/s]5it [00:05,  1.00it/s]6it [00:06,  1.04s/it]7it [00:07,  1.09s/it]8it [00:08,  1.02s/it]9it [00:09,  1.13it/s]10it [00:10,  1.00it/s]11it [00:15,  2.15s/it]12it [00:16,  1.77s/it]13it [00:16,  1.44s/it]14it [00:18,  1.53s/it]15it [00:19,  1.26s/it]16it [00:23,  2.20s/it]17it [00:24,  1.89s/it]18it [00:25,  1.52s/it]19it [00:26,  1.33s/it]20it [00:27,  1.35s/it]21it [00:27,  1.05s/it]22it [00:29,  1.11s/it]23it [00:30,  1.15s/it]24it [00:34,  1.98s/it]25it [00:35,  1.79s/it]26it [00:38,  2.24s/it]27it [00:40,  1.90s/it]28it [00:41,  1.70s/it]29it [00:42,  1.41s/it]30it [00:43,  1.39s/it]31it [00:44,  1.33s/it]32it [00:46,  1.39s/it]33it [00:47,  1.29s/it]34it [00:48,  1.43s/it]35it [00:49,  1.29s/it]36it [00:50,  1.11s/it]37it [00:51,  1.07it/s]38it [00:52,  1.06s/it]39it [00:55,  1.70s/it]40it [00:56,  1.54s/it]41it [01:00,  2.22s/it]42it [01:01,  1.95s/it]43it [01:04,  2.12s/it]44it [01:06,  2.22s/it]45it [01:07,  1.69s/it]46it [01:07,  1.29s/it]47it [01:09,  1.46s/it]48it [01:10,  1.28s/it]49it [01:11,  1.27s/it]50it [01:12,  1.09s/it]51it [01:12,  1.09it/s]52it [01:13,  1.24it/s]53it [01:14,  1.25it/s]54it [01:15,  1.03it/s]55it [01:18,  1.67s/it]56it [01:22,  2.36s/it]57it [01:23,  1.90s/it]58it [01:24,  1.71s/it]59it [01:29,  2.70s/it]60it [01:31,  2.33s/it]61it [01:31,  1.75s/it]62it [01:35,  2.35s/it]63it [01:36,  1.78s/it]64it [01:37,  1.64s/it]65it [01:38,  1.59s/it]66it [01:40,  1.49s/it]67it [01:41,  1.35s/it]68it [01:41,  1.14s/it]69it [01:42,  1.05it/s]70it [01:43,  1.09s/it]71it [01:51,  3.05s/it]72it [01:53,  2.91s/it]73it [01:54,  2.18s/it]74it [01:54,  1.66s/it]75it [01:55,  1.46s/it]76it [01:56,  1.28s/it]77it [01:57,  1.22s/it]78it [02:00,  1.70s/it]79it [02:01,  1.39s/it]80it [02:05,  2.13s/it]81it [02:06,  1.94s/it]82it [02:07,  1.51s/it]83it [02:10,  2.14s/it]84it [02:11,  1.85s/it]85it [02:12,  1.62s/it]86it [02:19,  3.19s/it]87it [02:20,  2.38s/it]88it [02:21,  1.88s/it]89it [02:21,  1.43s/it]90it [02:21,  1.18s/it]91it [02:23,  1.15s/it]92it [02:23,  1.02it/s]93it [02:24,  1.11it/s]94it [02:25,  1.08it/s]95it [02:26,  1.11s/it]96it [02:28,  1.13s/it]97it [02:29,  1.10s/it]98it [02:29,  1.01it/s]99it [02:30,  1.02s/it]100it [02:32,  1.14s/it]100it [02:32,  1.52s/it]
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: teams committed turnovers the Eagles came +I3lWcnXJ+SJ+QeSX/S6qm9MiSO3ZXjH/xAxEG1FeRM= with the win
+(end)
+
+Original: teams committed turnovers the Eagles came +I3lWcnXJ+SJ+QeSX/S6qm9MiSO3ZXjH/xAxEG1FeRM= with the win
+Translated: The teams committed turnovers, and the Eagles came back to win with a score of 13-10.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: as time passed U92nq9W5mb/TwjNsfwrY/FCyqXSJ63usFU3Qvre1cfg= continued
+(end)
+
+Original: as time passed U92nq9W5mb/TwjNsfwrY/FCyqXSJ63usFU3Qvre1cfg= continued
+Translated: As time passed, U92nq9W5mb/TwjNsfwrY/FCyqXSJ63usFU3Qvre1cfg= continued.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: नैराश्य आणि भीती नव्हे तर केवळ आपत्तिजनक परिणाम हे नियमित साप्ताहिक संरचित पीए सत्र सशर्त होते.
+(end)
+
+Original: नैराश्य आणि भीती नव्हे तर केवळ आपत्तिजनक परिणाम हे नियमित साप्ताहिक संरचित पीए सत्र सशर्त होते.
+Translated: Disappointment and fear are only the result of regular weekly structured PA sessions if they are conditional.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: 彼らは、患者を壊疽から救うための四肢切断術、血流を止める止血帯、そして動脈クランプにも精通していました。
+(end)
+
+Original: 彼らは、患者を壊疽から救うための四肢切断術、血流を止める止血帯、そして動脈クランプにも精通していました。
+Translated: They were proficient in amputation to save patients from gangrene, tourniquets to stop blood flow, and arterial clamps.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: ‼️ HELLO EVERYONE ‼️ Visited the Oriental Art Gallery in SF. Shes literally the cutest old person ever, and it was her birthd…
+(end)
+
+Original: ‼️ HELLO EVERYONE ‼️ Visited the Oriental Art Gallery in SF. Shes literally the cutest old person ever, and it was her birthd…
+Translated: 🌟 HELLO EVERYONE 🌟 Visited the Oriental Art Gallery in SF. She's literally the cutest old person ever, and it was her birthday...
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: it to its CUG02AhAd2igLQ/R3KRtc0SlVvO/+kvny5UHfyF/qFM= glory
+(end)
+
+Original: it to its CUG02AhAd2igLQ/R3KRtc0SlVvO/+kvny5UHfyF/qFM= glory
+Translated: it to its CUG02AhAd2igLQ/R3KRtc0SlVvO/+kvny5UHfyF/qFM= to its glory
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: My mom correctly referenced Seinfeld to me. She real. 👏🏽
+(end)
+
+Original: My mom correctly referenced Seinfeld to me. She real. 👏🏽
+Translated: My mom correctly referenced Seinfeld to me. She's real. 👏🏽
+
+Translation:
+
+My mom accurately quoted Seinfeld to me. She's genuine. 👏🏽
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Vugana n'ikigo, cokimwe n'igisata kijejwe abimukira c'igihugu mwipfuza kwigamwo kugira mumenye ibisabwa ido nido.
+(end)
+
+Original: Vugana n'ikigo, cokimwe n'igisata kijejwe abimukira c'igihugu mwipfuza kwigamwo kugira mumenye ibisabwa ido nido.
+Translated: In times of crisis, it is important to maintain unity and solidarity among ourselves so that we may overcome any challenges that come our way.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Itara rirategerezwa guhindurwa. Birasabwa kwitonda cane muguhindura itara.
+(end)
+
+Original: Itara rirategerezwa guhindurwa. Birasabwa kwitonda cane muguhindura itara.
+Translated: They will be punished for their crimes. Whoever tries to hide them will also be punished.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: My 1st beginnings🙌🏾 in case yall didn’t know before I was a solo artist i was in a girl group called SISTA! We were under…
+(end)
+
+Original: My 1st beginnings🙌🏾 in case yall didn’t know before I was a solo artist i was in a girl group called SISTA! We were under…
+Translated: My 1st beginnings🙌🏾 in case you didn’t know, before I was a solo artist, I was in a girl group called SISTA! We were under…
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Who threw for F3nEiSw8IjmqQCjqokgaEoinOBwKFhYbHOqLHH2b4xA= touchdowns
+(end)
+
+Original: Who threw for F3nEiSw8IjmqQCjqokgaEoinOBwKFhYbHOqLHH2b4xA= touchdowns
+Translated: Who threw for F3nEiSw8IjmqQCjqokgaEoinOBwKFhYbHOqLHH2b4xA= touchdowns?
+
+The text appears to be a mix of encoded characters and the phrase "touchdowns." Without context or a specific encoding scheme, it's challenging to provide a precise translation. However, if "F3nEiSw8IjmqQCjqokgaEoinOBwKFhYbHOqLHH2b4xA=" represents a unique identifier or code, it would need to be decoded or interpreted according to the system it originated from. In a general context, the question asks who was responsible for achieving touchdowns in a given scenario, possibly related to sports or a specific game.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Good morning TwitterWorld 😍🐴🚗😍🐴🚗😍🐴🚗
+(end)
+
+Original: Good morning TwitterWorld 😍🐴🚗😍🐴🚗😍🐴🚗
+Translated: Good morning Twitter World 😍🐴🚗😍🐴🚗😍🐴🚗
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: बच्चा सभ बहुत कम उमेर मे नस्ल आ एहि नस्लीय रूढ़ि सभक प्रति जागरूक भए जाइत अछि जे हुनक व्यवहार कें प्रभावित करैत अछि।
+(end)
+
+Original: बच्चा सभ बहुत कम उमेर मे नस्ल आ एहि नस्लीय रूढ़ि सभक प्रति जागरूक भए जाइत अछि जे हुनक व्यवहार कें प्रभावित करैत अछि।
+Translated: The child has become aware of these racial stereotypes at a very young age, which influence how they behave.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: over with just over two minutes FwCEg1r5nQOQLGfDW9ZZCPy0MZV1j8qzJjPfp7LUWIc= Rather than try
+(end)
+
+Original: over with just over two minutes FwCEg1r5nQOQLGfDW9ZZCPy0MZV1j8qzJjPfp7LUWIc= Rather than try
+Translated: over with just over two minutes FwCEg1r5nQOQLGfDW9ZZCPy0MZV1j8qzJjPfp7LUWIc= Rather than try to decode this, let's simply say "done" and move on.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: And just like that, The Resistance™ was destroyed and no one ever called Trump racist again!
+(end)
+
+Original: And just like that, The Resistance™ was destroyed and no one ever called Trump racist again!
+Translated: And just like that, The Resistance™ was destroyed and no one ever called Trump a racist again!
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: head to head win Hoping to XDZSxsoW/7rWSHab4HVUg6SimwcFPjLDu7WhtX48mQ8= a twogame losing
+(end)
+
+Original: head to head win Hoping to XDZSxsoW/7rWSHab4HVUg6SimwcFPjLDu7WhtX48mQ8= a twogame losing
+Translated: The translated text from your input is: "Head-to-head win Hoping to achieve a two-game losing streak."
+
+Here's a breakdown:
+- Head to head win: This refers to winning in a direct competition or one-on-one match.
+- Hoping to: Expresses an intention or desire.
+- XDZSxsoW/7rWSHab4HVUg6SimwcFPjLDu7WhtX48mQ8=: This appears to be an encoded or encrypted string, and it's not directly translatable without context.
+- A twogame losing: Suggests the hope is to lose two consecutive games.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: son Louis of Anjou a hostage bSnPvaFQ7UncCKOmdEdkoTUBCtgSqJbpN7veIsIOICk= Englishheld Calais escaped
+(end)
+
+Original: son Louis of Anjou a hostage bSnPvaFQ7UncCKOmdEdkoTUBCtgSqJbpN7veIsIOICk= Englishheld Calais escaped
+Translated: Son Louis of Anjou a hostage bSnPvaFQ7UncCKOmdEdkoTUBCtgSqJbpN7veIsIOICk= English held Calais escaped
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: I guess my dad is afraid of airhorns too... 🤷🏽‍♀️
+(end)
+
+Original: I guess my dad is afraid of airhorns too... 🤷🏽‍♀️
+Translated: I guess my dad is afraid of air horns, too... 🤷🏽‍♀️
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: भविष्यातून वर्तमानकाळात जाऊन भूतकाळात जाणार्‍या घटनांच्या मालिकेच्या रुपात आम्ही वेळ अनुभवतो.
+(end)
+
+Original: भविष्यातून वर्तमानकाळात जाऊन भूतकाळात जाणार्‍या घटनांच्या मालिकेच्या रुपात आम्ही वेळ अनुभवतो.
+Translated: In the future, as we move from the present to the past, we realize the nature of events that belong to the owner of time.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: was conducted under Grand Vizier Damat TP+gs/e61qfbmC7PsO5V3ZSDnDeVwT9dN39zTbXtE+w= Pasha It was
+(end)
+
+Original: was conducted under Grand Vizier Damat TP+gs/e61qfbmC7PsO5V3ZSDnDeVwT9dN39zTbXtE+w= Pasha It was
+Translated: was conducted under Grand Vizier Damat TP+gs/e61qfbmC7PsO5V3ZSDnDeVwT9dN39zTbXtE+w= Pasha It was:
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: not get anything going after that vgCpse6JNhRwYUgZa1UG/1e4vQokinLlXLDZ7Sv3Uqg= threw three interceptions
+(end)
+
+Original: not get anything going after that vgCpse6JNhRwYUgZa1UG/1e4vQokinLlXLDZ7Sv3Uqg= threw three interceptions
+Translated: not getting anything going after that; threw three interceptions
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: overjoyed leo accepted and thus began PWSv6gHVHR5qOPEVpwfLdSqIssuomLypKFY1fv+NIvk= apprenticeship under the
+(end)
+
+Original: overjoyed leo accepted and thus began PWSv6gHVHR5qOPEVpwfLdSqIssuomLypKFY1fv+NIvk= apprenticeship under the
+Translated: Overjoyed Leo accepted and thus began PWSv6gHVHR5qOPEVpwfLdSqIssuomLypKFY1fv+NIvk= apprenticeship under the
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: III the army marched through Edirne 3W6AfwQc00JuuTEpe7PSCT3Z6hvDfz/fpe6RX5wXETY=  Sofia and
+(end)
+
+Original: III the army marched through Edirne 3W6AfwQc00JuuTEpe7PSCT3Z6hvDfz/fpe6RX5wXETY=  Sofia and
+Translated: III the army marched through Edirne 3W6AfwQc00JuuTEpe7PSCT3Z6hvDfz/fpe6RX5wXETY= Sofia and
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: succeeded as king uOW9FkrOYIj2Cw4W1qZ8QlvR1Q0z0jq1cL3/mL8FgOE= many
+(end)
+
+Original: succeeded as king uOW9FkrOYIj2Cw4W1qZ8QlvR1Q0z0jq1cL3/mL8FgOE= many
+Translated: The translation of the given text to English is: "Succeeded as king many."
+
+It appears the original text is encoded or contains special characters. The part `uOW9FkrOYIj2Cw4W1qZ8QlvR1Q0z0jq1cL3/mL8FgOE=` seems to be a base64-encoded string, but it doesn't form a coherent English sentence. I've translated the visible part "Succeeded as king" and added "many" based on the context. If there's a specific meaning or context you had in mind, please provide more details.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: got a 1yard touchdown run Chicago x0LQjwj5FbDy3qITTDUE4iUmqaCY7kLf48ehpBCDdSk= take the lead
+(end)
+
+Original: got a 1yard touchdown run Chicago x0LQjwj5FbDy3qITTDUE4iUmqaCY7kLf48ehpBCDdSk= take the lead
+Translated: had a 1-yard touchdown run, Chicago takes the lead (x0LQjwj5FbDy3qITTDUE4iUmqaCY7kLf48ehpBCDdSk=)
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: people who said jin can't sing foun--- not found at all 😉 cr. owner
+(end)
+
+Original: people who said jin can't sing foun--- not found at all 😉 cr. owner
+Translated: The translation of the text "people who said jin can't sing foun--- not found at all 😉 cr. owner" to English is:
+
+"People who said Jin can't sing were completely wrong 😉 Credit owner"
+
+Here's a breakdown:
+- "foun--- not found at all" is likely a typo or incomplete phrase, but it's interpreted as "completely wrong" in this context.
+- "cr. owner" translates to "Credit owner," indicating the source or owner of the statement.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Rimwe na rimwe igishika ubwambere nk'imbarutso ni izuba rirushusha urubura, rimwe na rimwe ukugwa kw'urundi rubura, rimwe na rimwe ibindi kama bishika, cane cane umuntu.
+(end)
+
+Original: Rimwe na rimwe igishika ubwambere nk'imbarutso ni izuba rirushusha urubura, rimwe na rimwe ukugwa kw'urundi rubura, rimwe na rimwe ibindi kama bishika, cane cane umuntu.
+Translated: Little by little, the fear of death disappears, little by little we learn to face it, little by little we become like a rock, step by step a human being.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Yaciye akurikiranwa ubwonyene n'umugwi w'aganga bari ku nzira hama acajanwa kubitaro vyari hafi aho yatevye apfira.
+(end)
+
+Original: Yaciye akurikiranwa ubwonyene n'umugwi w'aganga bari ku nzira hama acajanwa kubitaro vyari hafi aho yatevye apfira.
+Translated: The accurate translation of the given text in English is: "The minds of the people in the community should be awakened to the importance of preserving the environment, so that they do not destroy it."
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Capsule Airbrush and Lunatic T-shirts available on 4/20 🥀 visuals by …
+(end)
+
+Original: Capsule Airbrush and Lunatic T-shirts available on 4/20 🥀 visuals by …
+Translated: Capsule Airbrush and Lunatic T-shirts available on 4/20 🥀 visuals by ...
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: my work 🖤
+(end)
+
+Original: my work 🖤
+Translated: The translation of "my work 🖤" to English would be: "My work." The emoji 🖤 is not necessary in this context as "work" is a clear and common word in English.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Jenerali James Ewing yari gufata abagwanyi 700 akajabuka uruzi mu gace ka Trenton Ferry, agaca acunga ikiraro cahitwa Assunpink Creek agaca acunga ntihagire umwansi arengana.
+(end)
+
+Original: Jenerali James Ewing yari gufata abagwanyi 700 akajabuka uruzi mu gace ka Trenton Ferry, agaca acunga ikiraro cahitwa Assunpink Creek agaca acunga ntihagire umwansi arengana.
+Translated: General James Ewing would take 700 militia across the river at Trenton Ferry, then turn north up Assunpink Creek and burn any mills or other buildings they encountered along the way.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: MRI हे पदार्थविज्ञान शास्त्रातील या नावाच्या अणुकेंद्रिय चुंबकीय अनूस्पंदन (NMR) घटनेवर आधारित आहे, जे 1930 साली  फेलिक्स ब्लॉक  (स्टँफोर्ड विद्यापीठात काम करणारा) आणि एडवर्ड परसेल ( हार्वर्ड विद्यापीठातून) यांनी शोधले.
+(end)
+
+Original: MRI हे पदार्थविज्ञान शास्त्रातील या नावाच्या अणुकेंद्रिय चुंबकीय अनूस्पंदन (NMR) घटनेवर आधारित आहे, जे 1930 साली  फेलिक्स ब्लॉक  (स्टँफोर्ड विद्यापीठात काम करणारा) आणि एडवर्ड परसेल ( हार्वर्ड विद्यापीठातून) यांनी शोधले.
+Translated: MRI (Magnetic Resonance Imaging) is based on the nuclear magnetic resonance (NMR) phenomenon, which was discovered in the 1930s by Felix Bloch (working at Stanford University) and Edward Purcell (from Harvard University).
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: अर्थात, 2 मिनिटांमध्ये विजय मिळवू शकतो असा एक उत्तम दर्जाचा हाफ-मिलर, त्याच्याकडे भरपूर वेग असायला पण त्याने सर्व धोक्यांचा सामना करणे आवश्यक आहे.
+(end)
+
+Original: अर्थात, 2 मिनिटांमध्ये विजय मिळवू शकतो असा एक उत्तम दर्जाचा हाफ-मिलर, त्याच्याकडे भरपूर वेग असायला पण त्याने सर्व धोक्यांचा सामना करणे आवश्यक आहे.
+Translated: That is, a top-class half-miler who can win in two minutes, with ample speed, must also be able to face all kinds of tricks.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: उत्तर आफ्रिकेमध्ये सुरुवातीपासूनच इटालियन लोकांसाठी परिस्थिती चांगली नव्हती. १० जून १९४० रोजी इटलीने युद्ध घोषित केल्यानंतर, आठवड्याभरातच ब्रिटिशांच्या ११ व्या हुस्सार रेजिमेंटने लिबियातील कापुझो किल्ला जिंकला.
+(end)
+
+Original: उत्तर आफ्रिकेमध्ये सुरुवातीपासूनच इटालियन लोकांसाठी परिस्थिती चांगली नव्हती. १० जून १९४० रोजी इटलीने युद्ध घोषित केल्यानंतर, आठवड्याभरातच ब्रिटिशांच्या ११ व्या हुस्सार रेजिमेंटने लिबियातील कापुझो किल्ला जिंकला.
+Translated: Conditions for the Italian people in North Africa had become much more favorable from the beginning. On June 10, 1940, after Italy declared war, the 11th Hussars Regiment of the British army captured the Fort Capuzzo in Libya within eight days.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: 100-मीटर लांबीचे ते जहाज आपला नेहमीचा खतांचा कार्गो उचलण्यासाठी जात होते आणि आरंभी अधिकाऱ्यांना या जहाजातील लोड खाली सांडेल अशी भिती वाटली होती.
+(end)
+
+Original: 100-मीटर लांबीचे ते जहाज आपला नेहमीचा खतांचा कार्गो उचलण्यासाठी जात होते आणि आरंभी अधिकाऱ्यांना या जहाजातील लोड खाली सांडेल अशी भिती वाटली होती.
+Translated: A 100-meter long ship is designed to transport your most precious cargo and begins its journey with a clean deck, ready to unload.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Hkrun lam hkawm ai ni gaw, manu dan ai n-gun ni hpe shama kau nna hka hpe ngam da ai lam gaw hkrit tsang hpa re.
+(end)
+
+Original: Hkrun lam hkawm ai ni gaw, manu dan ai n-gun ni hpe shama kau nna hka hpe ngam da ai lam gaw hkrit tsang hpa re.
+Translated: It is not right to do harm to others, for doing so will bring shame and disgrace to oneself.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Ndai hpun ni gaw lap masen ai, jan mau hkrang zawn re namhtan hpun kaji zawn san ai.
+(end)
+
+Original: Ndai hpun ni gaw lap masen ai, jan mau hkrang zawn re namhtan hpun kaji zawn san ai.
+Translated: It's not worth the effort, it's better to leave it as it is.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: for a Week 3 divisional fight 9Bq6CwezTc+lwwRKNsft+eYNGD/+qHxXKPwtxufwAi0= the New England
+(end)
+
+Original: for a Week 3 divisional fight 9Bq6CwezTc+lwwRKNsft+eYNGD/+qHxXKPwtxufwAi0= the New England
+Translated: For a Week 3 divisional fight, 9Bq6CwezTc+lwwRKNsft+eYNGD/+qHxXKPwtxufwAi0= the New England Patriots.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: lead as running back Thomas Jones 33dZa1z8QvY4CncMxZKN17ZiDXYMuLX9uBNgQwbNKys= a 2yard touchdown
+(end)
+
+Original: lead as running back Thomas Jones 33dZa1z8QvY4CncMxZKN17ZiDXYMuLX9uBNgQwbNKys= a 2yard touchdown
+Translated: The text translated to English is: "lead as running back Thomas Jones 33-yard touchdown pass from quarterback (Q) [encoded data removed] to [encoded data removed]."
+
+It seems like there are some encoded or placeholder data in the original text, which I have removed and replaced with "[encoded data removed]" to indicate those sections. The rest of the sentence describes a play where Thomas Jones, acting as a running back, receives a 33-yard touchdown pass from the quarterback.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Morgan and Brian Westbrook respectively This WUaiy0by5LPQ3X3OViDuaaiUOTTgziH5rt05WNRQDws= followed by Reed
+(end)
+
+Original: Morgan and Brian Westbrook respectively This WUaiy0by5LPQ3X3OViDuaaiUOTTgziH5rt05WNRQDws= followed by Reed
+Translated: Morgan and Brian Westbrook respectively This WUaiy0by5LPQ3X3OViDuaaiUOTTgziH5rt05WNRQDws= followed by Reed.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: States BU75yqOhO74ID0Psze7IuFUeJYEeZVs6sDX+ZhIeSKE= 023 Race United States BU75yqOhO74ID0Psze7IuFUeJYEeZVs6sDX+ZhIeSKE= 152 Race United
+(end)
+
+Original: States BU75yqOhO74ID0Psze7IuFUeJYEeZVs6sDX+ZhIeSKE= 023 Race United States BU75yqOhO74ID0Psze7IuFUeJYEeZVs6sDX+ZhIeSKE= 152 Race United
+Translated: The translated text from the provided encoded string is:
+
+"United States BU75yqOhO74ID0Psze7IuFUeJYEeZVs6sDX+ZhIe SKE = 023 Race
+United States BU75yqOhO74ID0Psze7IuFUeJYEeZVs6sDX+ZhIe SKE = 152 Race"
+
+It appears to be a pair of entries, possibly from a database or a list, with encoded information about races in the United States, including unique identifiers and race numbers.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: good night 💛💜
+(end)
+
+Original: good night 💛💜
+Translated: The translation of "good night 💛💜" to English is: "Good night."
+
+The heart emojis 💛 and 💜 are not translated but are often used to convey affection or feelings.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: in percent from 1cRtZkT36mecI/5EVuV7ZouhaT+gO7NeeUthGOwuxwM= census
+(end)
+
+Original: in percent from 1cRtZkT36mecI/5EVuV7ZouhaT+gO7NeeUthGOwuxwM= census
+Translated: in percent from 1cRtZkT36mecI/5EVuV7ZouhaT+gO7NeeUthGOwuxwM= census
+
+Translation:
+In percentages from 1cRtZkT36mecI/5EVuV7ZouhaT+gO7NeeUthGOwuxwM= census data
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: ALREADY 👂
+(end)
+
+Original: ALREADY 👂
+Translated: The translation of "ALREADY 👂" to English depends on context. Here are a couple of possibilities:
+
+1. If "👂" represents an emoji for listening (like an ear), the entire phrase could mean "Already listening."
+2. If "👂" is meant to be taken literally as "already" represented in text form, the translation would simply be "Already."
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: guide his people through seasons and o+DSQSMLiYq9WLFTT2tgHr6q6fEwMDxoc9t1b+4cprY= events becoming an
+(end)
+
+Original: guide his people through seasons and o+DSQSMLiYq9WLFTT2tgHr6q6fEwMDxoc9t1b+4cprY= events becoming an
+Translated: guide his people through seasons and **unforeseen events** becoming an
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: in revolt against the Ottoman suzerainty jgYJfUnpCyrKcJBJNkA7NTslxgF6crHWgICleuO0220= news soon arrived
+(end)
+
+Original: in revolt against the Ottoman suzerainty jgYJfUnpCyrKcJBJNkA7NTslxgF6crHWgICleuO0220= news soon arrived
+Translated: In revolt against Ottoman suzerainty, news soon arrived.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: How I like to chill        🍆🍆
+(end)
+
+Original: How I like to chill        🍆🍆
+Translated: The translation of "How I like to chill 🍆🍆" to English would be:
+
+"How I enjoy relaxing"
+
+The emojis 🍆 (eggplant) here seem to be used as a playful or humorous representation of "chill" or "relax."
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: So the pink bear comes out tomorrow on fortnite and I’m 100 v bucks away 😀🔫
+(end)
+
+Original: So the pink bear comes out tomorrow on fortnite and I’m 100 v bucks away 😀🔫
+Translated: So the pink bear is coming out tomorrow in Fortnite, and I'm 100 V-Bucks away 😀🔫
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Maaaaan no wonder why mfs is broke 😂😂😂
+(end)
+
+Original: Maaaaan no wonder why mfs is broke 😂😂😂
+Translated: "Maaaan, no wonder why MFs is broke 😂😂😂"
+
+Translation:
+"Man, no wonder why people are broke 😂😂😂"
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Episode 158 |  in session now 🚨 | Be sure to follow us on Instagram for…
+(end)
+
+Original: Episode 158 |  in session now 🚨 | Be sure to follow us on Instagram for…
+Translated: Episode 158 | In session now 🚨 | Make sure to follow us on Instagram for…
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Having to pretend everyone’s jokes about how much they’re spending is funny 😬
+(end)
+
+Original: Having to pretend everyone’s jokes about how much they’re spending is funny 😬
+Translated: Having to pretend everyone's jokes about how much they're spending is funny 😬
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: 📸 VIXX teams up with DAZED magazine in latest pictorial~!
+(end)
+
+Original: 📸 VIXX teams up with DAZED magazine in latest pictorial~!
+Translated: 📸 VIXX teams up with DAZED magazine in their latest pictorial!
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: RT: Stacy C. Sherwood Community Center for        🕰️🖥️🎮💎
+(end)
+
+Original: RT: Stacy C. Sherwood Community Center for        🕰️🖥️🎮💎
+Translated: RT: Stacy C. Sherwood Community Center for **time**🖥️**computer**🎮**diamond**
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: the Choe family In 1232 the 3F/wniNIHbklP3JF27oht4vATZt9Ub3ewbkkQkHKthU= under the nominal
+(end)
+
+Original: the Choe family In 1232 the 3F/wniNIHbklP3JF27oht4vATZt9Ub3ewbkkQkHKthU= under the nominal
+Translated: The Choe family In 1232 the 3F/wniNIHbklP3JF27oht4vATZt9Ub3ewbkkQkHKthU= under the nominal
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Unit 😝😩
+(end)
+
+Original: Unit 😝😩
+Translated: The translation of "Unit 😝😩" into English depends on context, as "😝" and "😩" are emoticons with various interpretations. Here are a couple of possible translations:
+
+1. If referring to a literal unit (e.g., a measurement or a part of a whole): "Unit"
+
+2. If expressing an emotional state or a humorous comment: "Unit (of effort, frustration, or something similar)"
+
+Without additional context, it's challenging to provide a precise translation.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: from the census wN61R7GTXSvg6gYTq+7bOwJqzVsNNnvtcVRqaz6shOI= Polish
+(end)
+
+Original: from the census wN61R7GTXSvg6gYTq+7bOwJqzVsNNnvtcVRqaz6shOI= Polish
+Translated: The translated text from Polish to English is: "from the census wN61R7GTXSvg6gYTq+7bOwJqzVsNNnvtcVRqaz6shOI=" becomes "from the census 776543210987654321098765432109876543210="
+
+Please note that the original text appears to be a base64 encoded string, and the translation is the decoded representation. The meaning of the decoded text is not clear without additional context.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Gumhpraw law law hte hkrum lam hkawm yang mungkan ting hpe nbungli hte sha sa nna, manam jarik law law hta nga na re.
+(end)
+
+Original: Gumhpraw law law hte hkrum lam hkawm yang mungkan ting hpe nbungli hte sha sa nna, manam jarik law law hta nga na re.
+Translated: The law should be fair and just, ensuring that everyone has a chance to speak and be heard, without any bias or discrimination.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: the end of the regular season 7aAN1sZyFoCvuGBE5CUjzRO9rz3azukpgT+KgGF/t3I= addition to their
+(end)
+
+Original: the end of the regular season 7aAN1sZyFoCvuGBE5CUjzRO9rz3azukpgT+KgGF/t3I= addition to their
+Translated: the end of the regular season 7aAN1sZyFoCvuGBE5CUjzRO9rz3azukpgT+KgGF/t3I= adds to their
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: How many more ILaKDVkpV6+HgtXo+EL4erp+n/BFj8ilCb3l3rfLAqg= units
+(end)
+
+Original: How many more ILaKDVkpV6+HgtXo+EL4erp+n/BFj8ilCb3l3rfLAqg= units
+Translated: The text you provided appears to be a base64-encoded string, not a numerical or textual data that can be directly translated into English. To determine the number of "units," you would need to decode the string first.
+
+Here's the decoded version: "How many more 1234567890+abcde12345+fghij67890+n/123456789012345678= units"
+
+Without context or a clear definition of what "units" refer to, it's impossible to provide an exact translation or count. If "units" are related to the numerical parts of the string, there are four distinct numerical segments in the decoded text.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Ndai sumtsan yu myi set ni gaw tsan ai kaw na arai ni hpe grau ni ai, grau kaba ai hku hpan lahkawng mai mu lu ai pat nhpai lahkawng hte shachyaw nna jai lang lai sai.
+(end)
+
+Original: Ndai sumtsan yu myi set ni gaw tsan ai kaw na arai ni hpe grau ni ai, grau kaba ai hku hpan lahkawng mai mu lu ai pat nhpai lahkawng hte shachyaw nna jai lang lai sai.
+Translated: I cannot understand your request as it seems to be in a mixed language with elements of Burmese and possibly another language or dialect. If you provide the text in a single, consistent language, I'd be happy to assist with the translation.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: I wanna hug this baby😭😭🍼
+(end)
+
+Original: I wanna hug this baby😭😭🍼
+Translated: I want to hug this baby 😭😭🍼
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: pass to wide receiver Vincent Jackson 1owcLvhxvcwK23y4YH0ImrgDZY/E54V4rQRt1vT0ne0= Diego would add
+(end)
+
+Original: pass to wide receiver Vincent Jackson 1owcLvhxvcwK23y4YH0ImrgDZY/E54V4rQRt1vT0ne0= Diego would add
+Translated: The text you provided appears to be encoded or in a non-standard format. Here's a best-effort translation into plain English:
+
+"Pass to wide receiver Vincent Jackson. Diego would add..."
+
+If "1owcLvhxvcwK23y4YH0ImrgDZY/E54V4rQRt1vT0ne0=" is meant to represent a specific data or value, it should be decoded or interpreted according to the context in which it's used. Without additional context, it's difficult to determine its exact meaning.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: the Sambyeolcho It marked the end h1f7mE89lEyKDcNLpJ7GrKw5dLzjm5mYbkDXGmhSZKo= the military regime
+(end)
+
+Original: the Sambyeolcho It marked the end h1f7mE89lEyKDcNLpJ7GrKw5dLzjm5mYbkDXGmhSZKo= the military regime
+Translated: The Sambyeolcho It marked the end of the military regime.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Imagine this being their 50th year anniversary rather than 50th episode 😩😩😂 still a looOong way but one can hope the bon…
+(end)
+
+Original: Imagine this being their 50th year anniversary rather than 50th episode 😩😩😂 still a looOong way but one can hope the bon…
+Translated: Imagine if this was their 50th anniversary year instead of the 50th episode 😩😩😂 Still a looOong way to go but one can hope the bon…
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Aba Sikhs bita ishengero ryabo Gurmat, n'igi Punjab gisigura ngo "inzira y'umwigisha mukuru". Umwigisha mukuru ni ngombwa bidasanzwe mu madini yose y'Abahindi ariko muri Sikhisme agira akamaro kagena imizi y'ukwemera kw'aba Sikhs.
+(end)
+
+Original: Aba Sikhs bita ishengero ryabo Gurmat, n'igi Punjab gisigura ngo "inzira y'umwigisha mukuru". Umwigisha mukuru ni ngombwa bidasanzwe mu madini yose y'Abahindi ariko muri Sikhisme agira akamaro kagena imizi y'ukwemera kw'aba Sikhs.
+Translated: All Sikhs should follow the teachings of the Guru, and not just in Punjab, they should spread the message of peace and love. Spreading peace and love is the essence of Sikhism and it is what we should all strive for.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: begin a siege on the Hungarian gzW2Bs4gFoX21bZeTia9WrtnagrW2wcUGd3y1CarKL0= of Eger 
+(end)
+
+Original: begin a siege on the Hungarian gzW2Bs4gFoX21bZeTia9WrtnagrW2wcUGd3y1CarKL0= of Eger 
+Translated: to begin a siege on the Hungarian gzW2Bs4gFoX21bZeTia9WrtnagrW2wcUGd3y1CarKL0= of Eger
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: So, a disgraced FBI director, a washed up journalist and an elderly porn star walk into a bar .......😂 barkeep asks...…
+(end)
+
+Original: So, a disgraced FBI director, a washed up journalist and an elderly porn star walk into a bar .......😂 barkeep asks...…
+Translated: So, a disgraced FBI director, a washed-up journalist, and an elderly porn star walk into a bar... 😂 The barkeep asks...
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: 乗組員12人がヘリコプターに救助され、唯一の負傷は鼻骨骨折でした。
+(end)
+
+Original: 乗組員12人がヘリコプターに救助され、唯一の負傷は鼻骨骨折でした。
+Translated: The 12 crew members were rescued by helicopter, with the only injury being a broken nose.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Ottoman army should disengage and return c3gMSmGjdP5ZTLhgL/p4lYAO2gc/ru241VLCC+czFKE= Istanbul it was
+(end)
+
+Original: Ottoman army should disengage and return c3gMSmGjdP5ZTLhgL/p4lYAO2gc/ru241VLCC+czFKE= Istanbul it was
+Translated: The Ottoman army should disengage and return to Istanbul, as it was agreed.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: So with his standin hostage gone 2ICbC/iB1RndBNrORHnHlnrjPR7h80YSKHyom8latKw= felt honorbound to
+(end)
+
+Original: So with his standin hostage gone 2ICbC/iB1RndBNrORHnHlnrjPR7h80YSKHyom8latKw= felt honorbound to
+Translated: So with his stand-in hostage gone, 2ICbC/iB1RndBNrORHnHlnrjPR7h80YSKHyom8latKw= felt honor-bound to
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: census werent Polish T3xHSrnZlK9pyE7JJeSDbdR90sJc/ATFNOr9//7jFl4= group
+(end)
+
+Original: census werent Polish T3xHSrnZlK9pyE7JJeSDbdR90sJc/ATFNOr9//7jFl4= group
+Translated: The text you provided appears to be a mix of encoded characters and non-English words. Here's a best-effort translation into plain English:
+
+"The census wasn't Polish. T3xHSrnZlK9pyE7JJeSDbdR90sJc/ATFNOr9//7jFl4= group"
+
+However, the part `T3xHSrnZlK9pyE7JJeSDbdR90sJc/ATFNOr9//7jFl4= group` seems to be an encoded string or a placeholder that doesn't have a clear meaning in English without additional context. Here's a breakdown:
+
+- `T3xHSrnZlK9pyE7JJeSDbdR90sJc` appears to be a sequence of characters that might be encoded or part of a unique identifier.
+- `ATFNOr9//7jFl4=` also seems to be an encoded string or a formula.
+
+Without more context, it's challenging to provide a precise translation. If this is related to a specific database, application, or coding system, additional information would be helpful to interpret it accurately.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Masha jahpan gaw jaw da ai lamu ga kata na tup hkrak re myu baw hpan a hkrung kanu ni hpe mahkawng da ai re.
+(end)
+
+Original: Masha jahpan gaw jaw da ai lamu ga kata na tup hkrak re myu baw hpan a hkrung kanu ni hpe mahkawng da ai re.
+Translated: The translation of the text "Masha jahpan gaw jaw da ai lamu ga kata na tup hkrak re myu baw hpan a hkrung kanu ni hpe mahkawng da ai re" into English is:
+
+"Masha, please listen to my story; I will tell you about the strange dream I had last night, which has left me perplexed."
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: of this castle were all executed k5QP0HtMbDF5XP+wpzvcKKLH+6OlzZq8KLE08gQPZgI= long after Ottoman
+(end)
+
+Original: of this castle were all executed k5QP0HtMbDF5XP+wpzvcKKLH+6OlzZq8KLE08gQPZgI= long after Ottoman
+Translated: The inhabitants of this castle were all executed long after the Ottoman period.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Happiest birthday, ! God bless you always! 🙏💛  CTTO
+(end)
+
+Original: Happiest birthday, ! God bless you always! 🙏💛  CTTO
+Translated: Happy birthday! God bless you always! 🙏💛 CTTO
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: 🚨🚨 BREAKING: Eleven GOP Congressmen Unite to Refer Comey, Clinton, McCabe, Lynch &amp; FBI Agents for Criminal Prosecution htt…
+(end)
+
+Original: 🚨🚨 BREAKING: Eleven GOP Congressmen Unite to Refer Comey, Clinton, McCabe, Lynch &amp; FBI Agents for Criminal Prosecution htt…
+Translated: 🚨🚨 BREAKING: Eleven GOP Congressmen Unite to Refer Comey, Clinton, McCabe, Lynch & FBI Agents for Criminal Prosecution http...
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: どの列車にもメトロプラスとメトロの両方の客車があり、メトロプラスの客車は常にケープタウンに一番近い列車の最後尾にあります。
+(end)
+
+Original: どの列車にもメトロプラスとメトロの両方の客車があり、メトロプラスの客車は常にケープタウンに一番近い列車の最後尾にあります。
+Translated: Every train has both MetroPlus and Metro coaches; the MetroPlus coaches are always at the very end of the train nearest Cape Town.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: This kitten was dodging traffic on a super busy road, but this lady on a motorcycle swooped in and changed his life ❤️ https://t.…
+(end)
+
+Original: This kitten was dodging traffic on a super busy road, but this lady on a motorcycle swooped in and changed his life ❤️ https://t.…
+Translated: This kitten was dodging traffic on a super busy road, but this lady on a motorcycle swooped in and changed his life ❤️ https://t.co/...
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: yes I like girls, yesss I will take your girlfriend from you. 😊
+(end)
+
+Original: yes I like girls, yesss I will take your girlfriend from you. 😊
+Translated: Here's the translation:
+
+"Yes, I like girls. Yes, I will take your girlfriend from you. 😊"
+
+However, it's important to note that the tone and intent behind these words are crucial. The statement, as written, could be interpreted as flirtatious, aggressive, or disrespectful, depending on the context and the relationship between the speakers. It's always best to communicate openly and respectfully about feelings and boundaries.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Man If a nigga ever cry cause he like me so much I would pass tf out 😭
+(end)
+
+Original: Man If a nigga ever cry cause he like me so much I would pass tf out 😭
+Translated: Man, if a black person ever cries because they like me so much, I would pass out 😭
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: English How many VZ0fuFKIERJR+907oshAVJZCGEDTYydM+OR7CspZ4dk= people
+(end)
+
+Original: English How many VZ0fuFKIERJR+907oshAVJZCGEDTYydM+OR7CspZ4dk= people
+Translated: The translation of the given text "VZ0fuFKIERJR+907oshAVJZCGEDTYydM+OR7CspZ4dk=" to English is not straightforward as it appears to be a encoded or encrypted string. Without a specific encryption method or key, it's impossible to directly translate it into meaningful English text.
+
+If this is a type of code or cipher, you would need to provide the decryption method or key to convert it into readable English. If it's a unique identifier or a hash, it doesn't typically translate to people but rather represents data or a specific entity.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: in lieu of bhigd573aB7XIfEhH2w1JiLMJ5xIfagzzsa25YBHmaw= II
+(end)
+
+Original: in lieu of bhigd573aB7XIfEhH2w1JiLMJ5xIfagzzsa25YBHmaw= II
+Translated: In place of bhigd573aB7XIfEhH2w1JiLMJ5xIfagzzsa25YBHmaw= II, it translates to "a different, valid code or key".
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: いずれの場合も、航空会社に直接電話で予約する必要があります。
+(end)
+
+Original: いずれの場合も、航空会社に直接電話で予約する必要があります。
+Translated: In any case, you need to book directly by phone with the airline.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: group from the AUfYRjQJ4XrCN6At4qFbM6SuMuQw3sxfKkoLdNPAdnA= is
+(end)
+
+Original: group from the AUfYRjQJ4XrCN6At4qFbM6SuMuQw3sxfKkoLdNPAdnA= is
+Translated: The translation of the given text "AUfYRjQJ4XrCN6At4qFbM6SuMuQw3sxfKkoLdNPAdnA=" to English is not straightforward as it appears to be encoded or a string of characters that doesn't form coherent English words. Without context or a specific encoding scheme, it's challenging to determine the exact meaning.
+
+If this is a base64-encoded string, it decodes to: "a group from the United Nations". However, without additional context, the full meaning remains unclear.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: I thought u were a good driver =] 🖖
+(end)
+
+Original: I thought u were a good driver =] 🖖
+Translated: I thought you were a good driver =] 🖖
+
+Translation: "I thought that you were a good driver :]" (with a friendly gesture emoji 🖖)
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: This kitten was dodging traffic on a super busy road, but this lady on a motorcycle swooped in and changed his life ❤️ https://t.…
+(end)
+
+Original: This kitten was dodging traffic on a super busy road, but this lady on a motorcycle swooped in and changed his life ❤️ https://t.…
+Translated: This kitten was dodging traffic on a super busy road, but this lady on a motorcycle swooped in and changed his life ❤️ https://t.co/...
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: clock T80ejr8FKbDTVXiGLtY3bLApXjYDiAJ7kGcvU0rniZA= secure the win Hoping T80ejr8FKbDTVXiGLtY3bLApXjYDiAJ7kGcvU0rniZA= break their current
+(end)
+
+Original: clock T80ejr8FKbDTVXiGLtY3bLApXjYDiAJ7kGcvU0rniZA= secure the win Hoping T80ejr8FKbDTVXiGLtY3bLApXjYDiAJ7kGcvU0rniZA= break their current
+Translated: The translated text in English is: "Clock T80ejr8FKbDTVXiGLtY3bLApXjYDiAJ7kGcvU0rniZA= secure the win Hoping T80ejr8FKbDTVXiGLtY3bLApXjYDiAJ7kGcvU0rniZA= break their current"
+
+However, it seems like the original text contains a mix of encoded data and English words, which doesn't form a coherent sentence. Here's a breakdown:
+
+- "T80ejr8FKbDTVXiGLtY3bLApXjYDiAJ7kGcvU0rniZA=" appears to be an encoded string.
+- "secure the win" and "break their current" are clear English phrases.
+
+Without context or a clear decryption method, it's challenging to provide a precise translation or interpretation. If this is a code or a specific format, additional information would be needed to translate it accurately.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Some of my things to decorate my pacifiers came in today!!!! 🎀
+(end)
+
+Original: Some of my things to decorate my pacifiers came in today!!!! 🎀
+Translated: Some of my things to decorate my pacifiers came in today!!!! 🎀
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: आफ्रिकेच्या बाहेरील सर्व स्थानांसाठी अतिरिक्त व्हिसा, निर्गमन कर, भू वाहतूक इत्यादीचा वाढीव खर्च मोजण्यास विसरू नका.
+(end)
+
+Original: आफ्रिकेच्या बाहेरील सर्व स्थानांसाठी अतिरिक्त व्हिसा, निर्गमन कर, भू वाहतूक इत्यादीचा वाढीव खर्च मोजण्यास विसरू नका.
+Translated: Do not cut costs by reducing additional expenses for all places outside Africa, such as travel, accommodation, etc.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: the Mongol Empire At the same vHChJ5rdcMe3DuTnRA/iYcna2eIVFE6nBdIz3hn1rGQ= King Gojong and
+(end)
+
+Original: the Mongol Empire At the same vHChJ5rdcMe3DuTnRA/iYcna2eIVFE6nBdIz3hn1rGQ= King Gojong and
+Translated: the Mongol Empire At the same time King Gojong and
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: College Republicans from across the state of Texas holding a Trump flag in the Texas state Capitol! 🇺🇸 AMERICA FIRST
+(end)
+
+Original: College Republicans from across the state of Texas holding a Trump flag in the Texas state Capitol! 🇺🇸 AMERICA FIRST
+Translated: Texas College Republicans holding a Trump flag at the Texas State Capitol! 🇺🇸 AMERICA FIRST
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: अवधारणा ई छल कि सभ यूरोपीय राष्ट्र सभ कें एकटा राष्ट्र कें शक्तिशाली बनय सँ रोकय कें छलाह, आ एहि प्रकार संतुलन बनाएल राखय कें लेल राष्ट्रीय सरकार सभ अक्सर अपन गठबंधन सभ कें बदलि दैत छलथि।
+(end)
+
+Original: अवधारणा ई छल कि सभ यूरोपीय राष्ट्र सभ कें एकटा राष्ट्र कें शक्तिशाली बनय सँ रोकय कें छलाह, आ एहि प्रकार संतुलन बनाएल राखय कें लेल राष्ट्रीय सरकार सभ अक्सर अपन गठबंधन सभ कें बदलि दैत छलथि।
+Translated: The concept was that all European nations had to prevent one nation from becoming powerful, and in this way maintain a balance. National governments often changed their alliances to achieve this.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: I said I would bring  I never said it would be  that the people wanted 😉
+(end)
+
+Original: I said I would bring  I never said it would be  that the people wanted 😉
+Translated: I said I would bring, I never said it would be, that the people wanted 😉
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: プエルトヒメネスの森林管理移設から直接公園利用許可証を入手できますが、クレジットカードは利用できません。
+(end)
+
+Original: プエルトヒメネスの森林管理移設から直接公園利用許可証を入手できますが、クレジットカードは利用できません。
+Translated: You can obtain park permits directly from the Ranger Station in Puerto Jiménez, but they do not accept credit cards.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: अशाप्रकारे, तुम्ही स्वतःला शक्य तितक्या कमी प्रमाणात थकवाल. लक्षात ठेवा पियानोप्रमाणे अतिरिक्त वॉल्युमसाठी कीज अतिरिक्त बळाने दाबण्याची कोणतीही गरज नाही.
+(end)
+
+Original: अशाप्रकारे, तुम्ही स्वतःला शक्य तितक्या कमी प्रमाणात थकवाल. लक्षात ठेवा पियानोप्रमाणे अतिरिक्त वॉल्युमसाठी कीज अतिरिक्त बळाने दाबण्याची कोणतीही गरज नाही.
+Translated: Without practice, you cannot develop the necessary skill. There is no need to press the keys harder for additional volume; simply focus on achieving your desired target.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Happy Birthday, Tomato Princess!! 🍅👑🌹
+(end)
+
+Original: Happy Birthday, Tomato Princess!! 🍅👑🌹
+Translated: Happy Birthday, Tomato Princess!! 🍅👑🌹
+
+Translation: "Happy Birthday, Tomato Princess!!" with emojis representing a tomato (🍅), a princess (👑), and a rose (🌹).
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: to his second t7crI8h5lMpVkXqGGzGUlT1FN/7bUW32OtWho23lgu4= scored
+(end)
+
+Original: to his second t7crI8h5lMpVkXqGGzGUlT1FN/7bUW32OtWho23lgu4= scored
+Translated: to his second 7crI8h5lMpVkXqGGzGUlT1FN/7bUW32OtWho23lgu4= scored
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Dusat Zingri Makawp na matu Dusat Shalawt hpung hte Royal Society (RSPCA) ni gaw Australian shan sat dap ni yawng hta CCTV camera ni shakap shagrin sa wa na matu kalang bai hpyi lajin nga ma ai.
+(end)
+
+Original: Dusat Zingri Makawp na matu Dusat Shalawt hpung hte Royal Society (RSPCA) ni gaw Australian shan sat dap ni yawng hta CCTV camera ni shakap shagrin sa wa na matu kalang bai hpyi lajin nga ma ai.
+Translated: Dusat Zingri Makawp (RSPCA) has not captured the culprit despite installing numerous CCTV cameras in the area due to the lack of clear footage.
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: WHO DID THIS!? 😭😭
+(end)
+
+Original: WHO DID THIS!? 😭😭
+Translated: WHO DID THIS!? 😭😭
+
+Translation: "Who did this!? 😭😭"
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: Once I get into my "IDGAF MOOD" I honestly shut down .. attitude be on 10 🤦🏼‍♀️
+(end)
+
+Original: Once I get into my "IDGAF MOOD" I honestly shut down .. attitude be on 10 🤦🏼‍♀️
+Translated: Once I get into my "I Don't Give A F*ck" mood, I honestly shut down... attitude at 10 🤦🏼‍♀️
+Gold: None
+===
+Message: system: You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.
+user: Translate this text to English: ही वसाहत उपलब्ध अन्न कमी झाले की एक भटकी अवस्था सुरु करते. या अवस्थेदरम्यान, ही वसाहत तात्पुरती घरटी तयार करते जी दररोज बदलली जातात.
+(end)
+
+Original: ही वसाहत उपलब्ध अन्न कमी झाले की एक भटकी अवस्था सुरु करते. या अवस्थेदरम्यान, ही वसाहत तात्पुरती घरटी तयार करते जी दररोज बदलली जातात.
+Translated: Here is the translation of the given text in English:
+
+"The availability of fat in the form of stored food prevents a state of scarcity. During this period, the fat reserves gradually prepare the body for daily changes."
+Gold: None
+===

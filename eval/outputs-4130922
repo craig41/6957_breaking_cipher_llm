@@ -1,0 +1,132 @@
+Mon Apr 28 13:13:44 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:21:00.0 Off |                    0 |
+| N/A   43C    P0             45W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 4130922
+[rank: 0] Seed set to 1
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 2324.74it/s]
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:195: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']
+You are using the plain ModelCheckpoint callback. Consider using LitModelCheckpoint which with seamless uploading to Model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+Predicting: 0it [00:00, ?it/s]Predicting:   0%|          | 0/7 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|          | 0/7 [00:00<?, ?it/s]Predicting DataLoader 0:  14%|█▍        | 1/7 [00:01<00:11,  1.89s/it]Predicting DataLoader 0:  29%|██▊       | 2/7 [00:02<00:07,  1.46s/it]Predicting DataLoader 0:  43%|████▎     | 3/7 [00:04<00:06,  1.52s/it]Predicting DataLoader 0:  57%|█████▋    | 4/7 [00:05<00:04,  1.35s/it]Predicting DataLoader 0:  71%|███████▏  | 5/7 [00:06<00:02,  1.22s/it]Predicting DataLoader 0:  86%|████████▌ | 6/7 [00:07<00:01,  1.27s/it]Predicting DataLoader 0: 100%|██████████| 7/7 [00:07<00:00,  1.12s/it]Predicting DataLoader 0: 100%|██████████| 7/7 [00:07<00:00,  1.12s/it]
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 0	score: 0.7444
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 1	score: 0.8186
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 2	score: 0.4801
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 3	score: 0.8811
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 4	score: 0.9510
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 5	score: 0.3726
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 6	score: 0.8674
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 7	score: 0.1914
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 8	score: 0.1370
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 9	score: 0.8352
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 10	score: 0.1290
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 11	score: 0.7747
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 12	score: 0.8708
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 13	score: 0.4183
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 14	score: 0.9944
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 15	score: 0.5586
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 16	score: 0.6492
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 17	score: 0.8542
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 18	score: 0.3802
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 19	score: 0.3315
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 20	score: 0.8259
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 21	score: 0.7918
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 22	score: 0.6546
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 23	score: 0.4083
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 24	score: 0.7595
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 25	score: 0.6373
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 26	score: 0.2138
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 27	score: 0.1981
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 28	score: 0.9168
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 29	score: 0.8992
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 30	score: 0.5034
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 31	score: 0.9368
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 32	score: 0.6422
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 33	score: 0.5237
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 34	score: 0.1315
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 35	score: 0.1975
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 36	score: 0.2079
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 37	score: 0.5280
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 38	score: 0.3581
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 39	score: 0.8005
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 40	score: 0.4044
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 41	score: 0.9334
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 42	score: 0.8982
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 43	score: 0.9490
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 44	score: 0.6667
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 45	score: 0.8484
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 46	score: 0.8489
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 47	score: 0.9275
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 48	score: 0.7492
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 49	score: 0.8874
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 50	score: 0.9827
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 51	score: 0.9666
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 52	score: 0.7322
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 53	score: 0.5265
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 54	score: 0.4957
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 55	score: 0.2803
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 56	score: 0.1861
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 57	score: 0.7082
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 58	score: 0.2497
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 59	score: 0.1942
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 60	score: 0.8626
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 61	score: 0.4292
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 62	score: 0.8157
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 63	score: 0.8132
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 64	score: 0.2061
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 65	score: 0.3450
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 66	score: 0.9524
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 67	score: 0.9827
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 68	score: 0.5661
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 69	score: 0.8103
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 70	score: 0.3572
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 71	score: 0.2761
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 72	score: 0.8323
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 73	score: 0.9685
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 74	score: 0.8416
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 75	score: 0.9773
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 76	score: 0.9065
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 77	score: 0.2192
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 78	score: 0.9539
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 79	score: 0.2319
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 80	score: 0.4760
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 81	score: 1.0003
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 82	score: 0.5632
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 83	score: 0.8146
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 84	score: 0.9065
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 85	score: 0.6005
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 86	score: 0.9690
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 87	score: 0.4049
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 88	score: 0.7415
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 89	score: 0.9417
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 90	score: 0.9373
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 91	score: 0.9099
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 92	score: 0.9749
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 93	score: 0.4421
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 94	score: 0.8752
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 95	score: 0.6152
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 96	score: 0.2043
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 97	score: 0.8073
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 98	score: 0.8713
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	Segment 99	score: 0.2067
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_base_small/translated.txt	score: 0.6442

@@ -1,0 +1,233 @@
+Sun Apr 27 19:12:02 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               On  |   00000000:81:00.0 Off |                    0 |
+| 30%   26C    P8             16W /  300W |       2MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 4119770
+[rank: 0] Seed set to 1
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 1351.87it/s]
+Encoder model frozen.
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:195: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']
+You are using the plain ModelCheckpoint callback. Consider using LitModelCheckpoint which with seamless uploading to Model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+Predicting: 0it [00:00, ?it/s]Predicting:   0%|          | 0/13 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|          | 0/13 [00:00<?, ?it/s]Predicting DataLoader 0:   8%|▊         | 1/13 [00:01<00:13,  1.17s/it]Predicting DataLoader 0:  15%|█▌        | 2/13 [00:01<00:08,  1.37it/s]Predicting DataLoader 0:  23%|██▎       | 3/13 [00:01<00:05,  1.69it/s]Predicting DataLoader 0:  31%|███       | 4/13 [00:02<00:04,  1.80it/s]Predicting DataLoader 0:  38%|███▊      | 5/13 [00:02<00:04,  1.95it/s]Predicting DataLoader 0:  46%|████▌     | 6/13 [00:02<00:03,  2.15it/s]Predicting DataLoader 0:  54%|█████▍    | 7/13 [00:03<00:02,  2.21it/s]Predicting DataLoader 0:  62%|██████▏   | 8/13 [00:03<00:02,  2.27it/s]Predicting DataLoader 0:  69%|██████▉   | 9/13 [00:03<00:01,  2.38it/s]Predicting DataLoader 0:  77%|███████▋  | 10/13 [00:04<00:01,  2.41it/s]Predicting DataLoader 0:  85%|████████▍ | 11/13 [00:04<00:00,  2.43it/s]Predicting DataLoader 0:  92%|█████████▏| 12/13 [00:04<00:00,  2.44it/s]Predicting DataLoader 0: 100%|██████████| 13/13 [00:05<00:00,  2.52it/s]Predicting DataLoader 0: 100%|██████████| 13/13 [00:05<00:00,  2.52it/s]
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 0	score: 0.7326
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 1	score: 0.5918
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 2	score: 0.3321
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 3	score: 0.8728
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 4	score: 0.5620
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 5	score: 0.7298
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 6	score: 0.7981
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 7	score: 0.1983
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 8	score: 0.5243
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 9	score: 0.7634
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 10	score: 0.7464
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 11	score: 0.0225
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 12	score: 0.9304
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 13	score: 0.7503
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 14	score: 0.9886
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 15	score: 0.6438
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 16	score: 0.8010
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 17	score: 0.8684
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 18	score: 0.9607
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 19	score: 0.6095
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 20	score: 0.4963
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 21	score: 0.6945
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 22	score: 0.6260
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 23	score: 0.7278
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 24	score: 0.6124
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 25	score: 0.8957
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 26	score: 0.2502
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 27	score: 0.7220
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 28	score: 0.7980
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 29	score: 0.9861
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 30	score: 0.8230
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 31	score: 0.8953
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 32	score: 0.3630
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 33	score: 0.8963
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 34	score: 0.8758
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 35	score: 0.3098
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 36	score: 0.2349
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 37	score: 0.7302
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 38	score: 0.7190
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 39	score: 0.7703
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 40	score: 0.6851
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 41	score: 0.9397
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 42	score: 0.6558
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 43	score: 0.9915
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 44	score: 0.6530
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 45	score: 0.6310
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 46	score: 0.9212
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 47	score: 0.7463
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 48	score: 0.5768
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 49	score: 0.9065
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 50	score: 0.9329
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 51	score: 0.9348
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 52	score: 0.6857
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 53	score: 0.5944
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 54	score: 0.8450
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 55	score: 0.6355
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 56	score: 0.2064
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 57	score: 0.7469
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 58	score: 0.6741
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 59	score: 0.4915
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 60	score: 0.6833
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 61	score: 0.6362
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 62	score: 0.7810
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 63	score: 0.7238
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 64	score: 0.3688
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 65	score: 0.7893
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 66	score: 0.7409
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 67	score: 0.9886
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 68	score: 0.8235
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 69	score: 0.6413
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 70	score: 0.6660
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 71	score: 0.1986
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 72	score: 0.7009
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 73	score: 0.8698
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 74	score: 0.5987
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 75	score: 0.9426
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 76	score: 0.9114
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 77	score: 0.9045
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 78	score: 0.8123
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 79	score: 0.7610
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 80	score: 0.6260
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 81	score: 0.9998
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 82	score: 0.6284
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 83	score: 0.9627
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 84	score: 0.9114
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 85	score: 0.7922
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 86	score: 0.9617
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 87	score: 0.9236
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 88	score: 0.7395
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 89	score: 0.8933
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 90	score: 0.8592
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 91	score: 0.9143
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 92	score: 0.9739
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 93	score: 0.8914
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 94	score: 0.9231
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 95	score: 0.4828
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 96	score: 0.5661
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 97	score: 0.8366
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 98	score: 0.6680
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 99	score: 0.8660
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 100	score: 0.8758
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 101	score: 0.4447
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 102	score: 0.9446
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 103	score: 0.5385
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 104	score: 0.8299
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 105	score: 0.7707
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 106	score: 0.7654
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 107	score: 0.9700
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 108	score: 0.6886
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 109	score: 0.7785
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 110	score: 0.3770
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 111	score: 0.1951
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 112	score: 0.4058
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 113	score: 0.2460
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 114	score: 0.9221
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 115	score: 0.7570
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 116	score: 0.4135
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 117	score: 0.9954
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 118	score: 0.8093
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 119	score: 0.7331
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 120	score: 0.8684
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 121	score: 0.6985
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 122	score: 0.9758
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 123	score: 0.9934
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 124	score: 0.6437
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 125	score: 0.9856
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 126	score: 0.1957
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 127	score: 0.9451
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 128	score: 0.6900
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 129	score: 0.7268
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 130	score: 0.6105
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 131	score: 0.7912
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 132	score: 0.2456
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 133	score: 0.8015
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 134	score: 0.5715
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 135	score: 0.5910
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 136	score: 0.5758
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 137	score: 0.2019
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 138	score: 0.8167
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 139	score: 0.9944
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 140	score: 0.8538
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 141	score: 0.7293
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 142	score: 0.8357
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 143	score: 0.4281
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 144	score: 0.7488
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 145	score: 0.5749
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 146	score: 0.6881
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 147	score: 0.5810
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 148	score: 0.9905
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 149	score: 0.2200
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 150	score: 0.9417
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 151	score: 0.9553
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 152	score: 0.9475
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 153	score: 0.2062
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 154	score: 0.9832
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 155	score: 0.7459
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 156	score: 0.6352
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 157	score: 0.9256
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 158	score: 0.5451
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 159	score: 0.7556
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 160	score: 0.9505
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 161	score: 0.5739
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 162	score: 0.8806
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 163	score: 0.7370
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 164	score: 0.3343
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 165	score: 0.7302
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 166	score: 0.9851
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 167	score: 0.8704
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 168	score: 0.6621
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 169	score: 0.9138
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 170	score: 0.6774
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 171	score: 0.9710
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 172	score: 0.7298
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 173	score: 1.0003
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 174	score: 0.8313
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 175	score: 0.9109
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 176	score: 0.2873
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 177	score: 0.9822
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 178	score: 0.2024
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 179	score: 0.8997
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 180	score: 0.9954
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 181	score: 0.9104
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 182	score: 0.9705
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 183	score: 0.6945
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 184	score: 0.7590
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 185	score: 0.4342
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 186	score: 0.6426
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 187	score: 0.8449
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 188	score: 0.6969
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 189	score: 0.9592
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 190	score: 0.9656
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 191	score: 0.7190
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 192	score: 0.8699
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 193	score: 0.8611
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 194	score: 0.7444
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 195	score: 0.6914
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 196	score: 0.5167
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 197	score: 0.2001
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 198	score: 0.5761
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	Segment 199	score: 0.6484
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/translated.txt	score: 0.7189

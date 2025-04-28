@@ -1,0 +1,9 @@
+SLURM JOB ID: 4120230
+Training for 10 epochs
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:10,  3.55s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:08<00:08,  4.17s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:12<00:04,  4.40s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:14<00:00,  3.13s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:14<00:00,  3.50s/it]
+Traceback (most recent call last):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/train_lora_aya.py", line 174, in <module>
+    main()
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/train_lora_aya.py", line 151, in main
+    trainer = SFTTrainer(
+TypeError: SFTTrainer.__init__() got an unexpected keyword argument 'tokenizer'

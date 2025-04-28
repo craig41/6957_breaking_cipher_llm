@@ -4,21 +4,27 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
-#SBATCH --time=2:00:00
+#SBATCH --time=3:00:00
 #SBATCH --mem=100GB
 #SBATCH --mail-user=u1380656@umail.utah.edu
 #SBATCH --mail-type=FAIL,END
-#SBATCH -o outputs-%j 
+#SBATCH -o outputs/outputs-%j
 
-WORKDIR=/scratch/general/vast/$USER/6957_breaking_cipher_llm
-source $WORKDIR/.venv/bin/activate
+EPOCHS=3
+if [ "$#" -ge 1 ]; then
+    EPOCHS=$1
+fi
+# Environment setup
 module load cuda/12.4.0
 
-nvidia-smi
-python -c "import torch; torch.cuda.is_available()"
-echo "SLURM JOB ID: $SLURM_JOBID"
+source ~/.bashrc
+source /scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/bin/activate
 
+echo "SLURM JOB ID: $SLURM_JOBID"
+echo "Training for $EPOCHS epochs"
+
+# Set up cache directory
 mkdir -p /scratch/general/vast/$USER/huggingface_cache
 export HF_HOME="/scratch/general/vast/$USER/huggingface_cache"
 
-comet-score -s $WORKDIR/data/lora_full/llama_base_small/original.txt -t $WORKDIR/data/lora_full/llama_base_small/translated.txt -r $WORKDIR/data/gold/translated_100.txt --model Unbabel/XCOMET-XXL 
+python train_lora_aya.py --epochs $EPOCHS

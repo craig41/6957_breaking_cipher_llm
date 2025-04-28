@@ -1,0 +1,5 @@
+,bert_f1,bert_f1,bert_f1,bert_f1,bert_f1,bert_f1,xcomet,xcomet,xcomet,xcomet,xcomet,xcomet
+variant,aya_expanse_8b_10_epochs,aya_expanse_8b_3_epochs,aya_expanse_base_small,llama_base_small,llama_epochs_10,llama_epochs_3,aya_expanse_8b_10_epochs,aya_expanse_8b_3_epochs,aya_expanse_base_small,llama_base_small,llama_epochs_10,llama_epochs_3
+model,,,,,,,,,,,,
+aya_expanse_8b,0.9648,0.9634,0.8687,,,,0.6719,0.6772,0.6442,,,
+llama,,,,0.8161,0.9717,0.9751,,,,0.5159,0.7171,0.7167

@@ -1,0 +1,28 @@
+Mon Apr 28 01:44:49 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:41:00.0 Off |                    0 |
+| N/A   52C    P0             48W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 4122979
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(model='llama3_1_8b_instruct_lora', model_args=None, workflow='translate', data=None, s=0, n=None, source='stan1293', split='dev', output='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/llama_epochs_10/', lora_path='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/results_aya8b_translator', csv_data='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv')
+Loading data from /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv
+Loaded 2100 examples from /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv
+Loading base model: meta-llama/Llama-3.1-8B-Instruct
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]slurmstepd: error: *** JOB 4122979 ON notch369 CANCELLED AT 2025-04-28T01:45:03 ***

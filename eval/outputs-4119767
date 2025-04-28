@@ -1,0 +1,29 @@
+Sun Apr 27 19:10:12 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               On  |   00000000:81:00.0 Off |                    0 |
+| 30%   26C    P8             16W /  300W |       2MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 4119767
+usage: comet-score [-h] [-s SOURCES] [-t TRANSLATIONS [TRANSLATIONS ...]]
+                   [-r REFERENCES] [-d SACREBLEU_DATASET]
+                   [--batch_size BATCH_SIZE] [--gpus GPUS] [--quiet]
+                   [--enable-context] [--only_system] [--to_json TO_JSON]
+                   [--model MODEL] [--model_storage_path MODEL_STORAGE_PATH]
+                   [--num_workers NUM_WORKERS] [--disable_cache]
+                   [--disable_length_batching] [--print_cache_info]
+comet-score: error: Parser key "translations" element 1: Not of type Path_fr. File does not exist: /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_epochs_10/translated.txt

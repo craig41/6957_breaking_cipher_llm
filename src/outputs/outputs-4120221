@@ -1,0 +1,9 @@
+SLURM JOB ID: 4120221
+Training for 10 epochs
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:21<01:03, 21.16s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:42<00:42, 21.31s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:03<00:21, 21.05s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:08<00:00, 14.82s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:08<00:00, 17.15s/it]
+Traceback (most recent call last):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/train_lora_aya.py", line 175, in <module>
+    main()
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/train_lora_aya.py", line 151, in main
+    trainer = SFTTrainer(
+TypeError: SFTTrainer.__init__() got an unexpected keyword argument 'max_seq_length'

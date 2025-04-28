@@ -1,0 +1,9 @@
+Mean Precision for /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_8b_10_epochs/translated.txt: 0.9640
+Max Precision for /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_8b_10_epochs/translated.txt: 1.0000
+Min Precision for /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_8b_10_epochs/translated.txt: 0.7276
+Mean Recall for /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_8b_10_epochs/translated.txt: 0.9658
+Max Recall for /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_8b_10_epochs/translated.txt: 1.0000
+Min Recall for /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_8b_10_epochs/translated.txt: 0.6633
+Mean F1 for /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_8b_10_epochs/translated.txt: 0.9648
+Max F1 for /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_8b_10_epochs/translated.txt: 1.0000
+Min F1 for /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_full/aya_expanse_8b_10_epochs/translated.txt: 0.6951

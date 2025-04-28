@@ -1,0 +1,9 @@
+Mean Precision for ../data/lora_full/llama_epochs_10/translated.txt: 0.9714
+Max Precision for ../data/lora_full/llama_epochs_10/translated.txt: 1.0000
+Min Precision for ../data/lora_full/llama_epochs_10/translated.txt: 0.0000
+Mean Recall for ../data/lora_full/llama_epochs_10/translated.txt: 0.9721
+Max Recall for ../data/lora_full/llama_epochs_10/translated.txt: 1.0000
+Min Recall for ../data/lora_full/llama_epochs_10/translated.txt: 0.0000
+Mean F1 for ../data/lora_full/llama_epochs_10/translated.txt: 0.9717
+Max F1 for ../data/lora_full/llama_epochs_10/translated.txt: 1.0000
+Min F1 for ../data/lora_full/llama_epochs_10/translated.txt: 0.0000

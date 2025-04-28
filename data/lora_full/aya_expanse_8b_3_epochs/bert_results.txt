@@ -1,0 +1,9 @@
+Mean Precision for ../data/lora_full/aya_expanse_8b_3_epochs/translated.txt: 0.9633
+Max Precision for ../data/lora_full/aya_expanse_8b_3_epochs/translated.txt: 1.0000
+Min Precision for ../data/lora_full/aya_expanse_8b_3_epochs/translated.txt: 0.7890
+Mean Recall for ../data/lora_full/aya_expanse_8b_3_epochs/translated.txt: 0.9637
+Max Recall for ../data/lora_full/aya_expanse_8b_3_epochs/translated.txt: 1.0000
+Min Recall for ../data/lora_full/aya_expanse_8b_3_epochs/translated.txt: 0.6553
+Mean F1 for ../data/lora_full/aya_expanse_8b_3_epochs/translated.txt: 0.9634
+Max F1 for ../data/lora_full/aya_expanse_8b_3_epochs/translated.txt: 1.0000
+Min F1 for ../data/lora_full/aya_expanse_8b_3_epochs/translated.txt: 0.7519

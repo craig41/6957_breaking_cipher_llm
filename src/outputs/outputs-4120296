@@ -1,0 +1,28 @@
+SLURM JOB ID: 4120296
+Training for 10 epochs
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:09,  3.17s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:07<00:07,  3.89s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:12<00:04,  4.16s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:13<00:00,  2.95s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:13<00:00,  3.29s/it]
+Applying formatting function to train dataset:   0%|          | 0/7988 [00:00<?, ? examples/s]Applying formatting function to train dataset:  14%|█▍        | 1118/7988 [00:00<00:00, 11103.11 examples/s]Applying formatting function to train dataset:  30%|███       | 2418/7988 [00:00<00:00, 6949.21 examples/s] Applying formatting function to train dataset:  46%|████▌     | 3642/7988 [00:00<00:00, 8655.22 examples/s]Applying formatting function to train dataset:  61%|██████    | 4885/7988 [00:00<00:00, 9843.62 examples/s]Applying formatting function to train dataset:  76%|███████▌  | 6088/7988 [00:00<00:00, 10521.27 examples/s]Applying formatting function to train dataset:  92%|█████████▏| 7365/7988 [00:00<00:00, 11208.26 examples/s]Applying formatting function to train dataset: 100%|██████████| 7988/7988 [00:00<00:00, 9717.92 examples/s] 
+Converting train dataset to ChatML:   0%|          | 0/7988 [00:00<?, ? examples/s]Converting train dataset to ChatML:  37%|███▋      | 2966/7988 [00:00<00:00, 29507.86 examples/s]Converting train dataset to ChatML:  88%|████████▊ | 7000/7988 [00:00<00:00, 27211.06 examples/s]Converting train dataset to ChatML: 100%|██████████| 7988/7988 [00:00<00:00, 24148.47 examples/s]
+Adding EOS to train dataset:   0%|          | 0/7988 [00:00<?, ? examples/s]Adding EOS to train dataset:   0%|          | 0/7988 [00:00<?, ? examples/s]
+Traceback (most recent call last):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/train_lora_aya.py", line 171, in <module>
+    main()
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/train_lora_aya.py", line 149, in main
+    trainer = SFTTrainer(
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 323, in __init__
+    train_dataset = self._prepare_dataset(
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 569, in _prepare_dataset
+    dataset = dataset.map(
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/datasets/arrow_dataset.py", line 557, in wrapper
+    out: Union["Dataset", "DatasetDict"] = func(self, *args, **kwargs)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/datasets/arrow_dataset.py", line 3074, in map
+    for rank, done, content in Dataset._map_single(**dataset_kwargs):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/datasets/arrow_dataset.py", line 3492, in _map_single
+    for i, example in iter_outputs(shard_iterable):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/datasets/arrow_dataset.py", line 3466, in iter_outputs
+    yield i, apply_function(example, i, offset=offset)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/datasets/arrow_dataset.py", line 3389, in apply_function
+    processed_inputs = function(*fn_args, *additional_args, **fn_kwargs)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/trl/trainer/sft_trainer.py", line 563, in add_eos
+    if "text" in example and not example["text"].endswith(eos_token):  # language modeling case
+AttributeError: 'dict' object has no attribute 'endswith'

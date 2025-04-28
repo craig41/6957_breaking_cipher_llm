@@ -1,0 +1,8 @@
+XCOMET Score Summary
+====================
+Average Score: 0.6442
+Median Score: 0.7415
+Min Score: 0.1290
+Max Score: 1.0003
+Standard Deviation: 0.2766
+Number of Segments: 101
