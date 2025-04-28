@@ -1,5 +1,6 @@
 from datasets import load_dataset
 from warnings import warn
+from tqdm import tqdm
 
 def read_data(dataset, split='dev'):
     """
@@ -180,8 +181,7 @@ def run(data, pipeline, gold_key = (lambda instance: None), report_generator = (
         golds = []
         outputs = []
         conversations = []
-        for i, instance in enumerate((instances)):
-            print(f"Processing instance {i}")
+        for i, instance in tqdm(enumerate((instances))):
             gold = gold_key(instance)
             golds.append(gold)
 

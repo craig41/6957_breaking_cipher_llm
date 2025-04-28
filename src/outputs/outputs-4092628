@@ -1,0 +1,48 @@
+Thu Apr 24 14:17:54 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:41:00.0 Off |                    0 |
+| N/A   57C    P0             51W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 4092628
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(model='llama3_1_8b_instruct_lora', model_args=None, workflow='translate', data=None, s=0, n=200, source='stan1293', split='dev', output='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_v2/', lora_path='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/results_llama3-8b-instruct-translator/cipher_adapter_new', csv_data='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv')
+Loading data from /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv
+Loaded 200 examples from /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv
+Loading base model: meta-llama/Llama-3.1-8B-Instruct
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.17s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.17s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.08s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.33it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.12it/s]
+Loading LoRA adapter from: /scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/results_llama3-8b-instruct-translator/cipher_adapter_new
+LoRA adapter loaded successfully
+0it [00:00, ?it/s]No pattern found in response
+0it [00:01, ?it/s]
+Traceback (most recent call last):
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run_local.py", line 282, in <module>
+    main(args, key)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run_local.py", line 178, in main
+    run(
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 188, in run
+    output, conversation = pipeline(instance)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 175, in __call__
+    return self.workflow(conversation, instance), conversation
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/workflows.py", line 10, in workflow
+    translation = messages.query(text)
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/utils.py", line 63, in query
+    model_message = postprocess(conversation._query(conversation.messages, *args, **kwargs))
+  File "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/run_local.py", line 141, in query
+    if len(response_splits) > 1:
+UnboundLocalError: local variable 'response_splits' referenced before assignment

@@ -1,0 +1,913 @@
+Thu Apr 24 14:23:37 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:21:00.0 Off |                    0 |
+| N/A   58C    P0             48W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 4092686
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(model='llama3_1_8b_instruct_lora', model_args=None, workflow='translate', data=None, s=0, n=200, source='stan1293', split='dev', output='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_v2/', lora_path='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/results_llama3-8b-instruct-translator/cipher_adapter_new', csv_data='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv')
+Loading data from /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv
+Loaded 200 examples from /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv
+Loading base model: meta-llama/Llama-3.1-8B-Instruct
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.12s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.08s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.04s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.38it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.18it/s]
+Loading LoRA adapter from: /scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/results_llama3-8b-instruct-translator/cipher_adapter_new
+LoRA adapter loaded successfully
+0it [00:00, ?it/s]Original: teams committed turnovers the Eagles came +I3lWcnXJ+SJ+QeSX/S6qm9MiSO3ZXjH/xAxEG1FeRM= with the win
+Translated: teams committed turnovers the Eagles came through with the win
+Gold: None
+===
+1it [00:01,  1.45s/it]Original: as time passed U92nq9W5mb/TwjNsfwrY/FCyqXSJ63usFU3Qvre1cfg= continued
+Translated: as time passed it continued
+Gold: None
+===
+2it [00:02,  1.03s/it]Original: नैराश्य आणि भीती नव्हे तर केवळ आपत्तिजनक परिणाम हे नियमित साप्ताहिक संरचित पीए सत्र सशर्त होते.
+Translated: The regular weekly structured PA sessions were conditional upon participants not experiencing depression and fear of exercise.
+Gold: None
+===
+3it [00:03,  1.28s/it]Original: 彼らは、患者を壊疽から救うための四肢切断術、血流を止める止血帯、そして動脈クランプにも精通していました。
+Translated: They became proficient at amputation to save patients from gangrene, tourniquets to stem blood flow, and arterial clamps to constrict blood vessels.
+Gold: None
+===
+4it [00:06,  1.76s/it]Original: ‼️ HELLO EVERYONE ‼️ Visited the Oriental Art Gallery in SF. Shes literally the cutest old person ever, and it was her birthd…
+Translated: (double exclamation mark) HELLO EVERYONE (double exclamation mark) Visited the Oriental Art Gallery in SF. Shes literally the cutest old person ever, and it was her birthd…
+Gold: None
+===
+5it [00:09,  2.24s/it]Original: it to its CUG02AhAd2igLQ/R3KRtc0SlVvO/+kvny5UHfyF/qFM= glory
+Translated: it to its former glory
+Gold: None
+===
+6it [00:10,  1.73s/it]Original: My mom correctly referenced Seinfeld to me. She real. 👏🏽
+Translated: My mom correctly referenced Seinfeld to me. She real. (clapping hands) (medium skin tone)
+Gold: None
+===
+7it [00:11,  1.76s/it]Original: Vugana n'ikigo, cokimwe n'igisata kijejwe abimukira c'igihugu mwipfuza kwigamwo kugira mumenye ibisabwa ido nido.
+Translated: Book through the airline or a direct agent in the country where you live.
+Gold: None
+===
+8it [00:13,  1.64s/it]Original: Itara rirategerezwa guhindurwa. Birasabwa kwitonda cane muguhindura itara.
+Translated: It can be customized to some extent. It is not possible to make large changes to the pattern.
+Gold: None
+===
+9it [00:15,  1.66s/it]Original: My 1st beginnings🙌🏾 in case yall didn’t know before I was a solo artist i was in a girl group called SISTA! We were under…
+Translated: My 1st beginnings (raising hands) (medium-dark skin tone) in case yall didn’t know before I was a solo artist i was in a girl group called SISTA! We were under…
+Gold: None
+===
+10it [00:18,  2.12s/it]Original: Who threw for F3nEiSw8IjmqQCjqokgaEoinOBwKFhYbHOqLHH2b4xA= touchdowns
+Translated: Who threw for the touchdowns
+Gold: None
+===
+11it [00:18,  1.69s/it]Original: Good morning TwitterWorld 😍🐴🚗😍🐴🚗😍🐴🚗
+Translated: Good morning TwitterWorld (smiling face with heart-eyeshorsecar facesmiling face with heart-eyeshorsecar facesmiling face with heart-eyeshorsecar facesmiling face with heart-eyeshorsecar face)
+Gold: None
+===
+12it [00:22,  2.22s/it]Original: बच्चा सभ बहुत कम उमेर मे नस्ल आ एहि नस्लीय रूढ़ि सभक प्रति जागरूक भए जाइत अछि जे हुनक व्यवहार कें प्रभावित करैत अछि।
+Translated: Children are becoming aware of race and racial stereotypes at a younger age and these racial stereotypes are affecting their behavior.
+Gold: None
+===
+13it [00:24,  2.10s/it]Original: over with just over two minutes FwCEg1r5nQOQLGfDW9ZZCPy0MZV1j8qzJjPfp7LUWIc= Rather than try
+Translated: over with just over two minutes remaining Rather than try
+Gold: None
+===
+14it [00:25,  1.79s/it]Original: And just like that, The Resistance™ was destroyed and no one ever called Trump racist again!
+Translated: And just like that, The Resistance (trade mark) was destroyed and no one ever called Trump racist again!
+Gold: None
+===
+15it [00:27,  1.80s/it]Original: head to head win Hoping to XDZSxsoW/7rWSHab4HVUg6SimwcFPjLDu7WhtX48mQ8= a twogame losing
+Translated: head to head win Hoping to break a twogame losing
+Gold: None
+===
+16it [00:28,  1.63s/it]Original: son Louis of Anjou a hostage bSnPvaFQ7UncCKOmdEdkoTUBCtgSqJbpN7veIsIOICk= Englishheld Calais escaped
+Translated: son Louis of Anjou a hostage to Englishheld Calais escaped
+Gold: None
+===
+17it [00:29,  1.53s/it]Original: I guess my dad is afraid of airhorns too... 🤷🏽‍♀️
+Translated: I guess my dad is afraid of airhorns too... (person shrugging) (medium skin tone)‍ (female sign)
+Gold: None
+===
+18it [00:31,  1.72s/it]Original: भविष्यातून वर्तमानकाळात जाऊन भूतकाळात जाणार्‍या घटनांच्या मालिकेच्या रुपात आम्ही वेळ अनुभवतो.
+Translated: We experience time as a series of events passing from the future through the present into the past.
+Gold: None
+===
+19it [00:33,  1.75s/it]Original: was conducted under Grand Vizier Damat TP+gs/e61qfbmC7PsO5V3ZSDnDeVwT9dN39zTbXtE+w= Pasha It was
+Translated: was conducted under Grand Vizier Damat Ibrahim Pasha It was
+Gold: None
+===
+20it [00:34,  1.62s/it]Original: not get anything going after that vgCpse6JNhRwYUgZa1UG/1e4vQokinLlXLDZ7Sv3Uqg= threw three interceptions
+Translated: not get anything going after that Palmer threw three interceptions
+Gold: None
+===
+21it [00:35,  1.45s/it]Original: overjoyed leo accepted and thus began PWSv6gHVHR5qOPEVpwfLdSqIssuomLypKFY1fv+NIvk= apprenticeship under the
+Translated: overjoyed leo accepted and thus began his apprenticeship under the
+Gold: None
+===
+22it [00:37,  1.39s/it]Original: III the army marched through Edirne 3W6AfwQc00JuuTEpe7PSCT3Z6hvDfz/fpe6RX5wXETY=  Sofia and
+Translated: III the army marched through Edirne and Sofia and
+Gold: None
+===
+23it [00:38,  1.31s/it]Original: succeeded as king uOW9FkrOYIj2Cw4W1qZ8QlvR1Q0z0jq1cL3/mL8FgOE= many
+Translated: succeeded as king How many
+Gold: None
+===
+24it [00:39,  1.15s/it]Original: got a 1yard touchdown run Chicago x0LQjwj5FbDy3qITTDUE4iUmqaCY7kLf48ehpBCDdSk= take the lead
+Translated: got a 1yard touchdown run Chicago would take the lead
+Gold: None
+===
+25it [00:40,  1.16s/it]Original: people who said jin can't sing foun--- not found at all 😉 cr. owner
+Translated: people who said jin can't sing foun--- not found at all (winking face) cr. owner
+Gold: None
+===
+26it [00:42,  1.36s/it]Original: Rimwe na rimwe igishika ubwambere nk'imbarutso ni izuba rirushusha urubura, rimwe na rimwe ukugwa kw'urundi rubura, rimwe na rimwe ibindi kama bishika, cane cane umuntu.
+Translated: Sometimes the first sign of a storm is a change in the wind, sometimes a slight drop in temperature, sometimes other things like a change in the rate of wind, sometimes the wind direction reversing, sometimes other things.
+Gold: None
+===
+27it [00:45,  1.92s/it]Original: Yaciye akurikiranwa ubwonyene n'umugwi w'aganga bari ku nzira hama acajanwa kubitaro vyari hafi aho yatevye apfira.
+Translated: He had also called for increased medical staff and more ambulances to be on hand in case of an emergency.
+Gold: None
+===
+28it [00:47,  1.92s/it]Original: Capsule Airbrush and Lunatic T-shirts available on 4/20 🥀 visuals by …
+Translated: Capsule Airbrush and Lunatic T-shirts available on 4/20 (wilted flower) visuals by …
+Gold: None
+===
+29it [00:49,  1.93s/it]Original: my work 🖤
+Translated: my work (black heart)
+Gold: None
+===
+30it [00:49,  1.59s/it]Original: Jenerali James Ewing yari gufata abagwanyi 700 akajabuka uruzi mu gace ka Trenton Ferry, agaca acunga ikiraro cahitwa Assunpink Creek agaca acunga ntihagire umwansi arengana.
+Translated: General James Ewing would launch a diversionary attack across the river at Trenton Ferry, in order to block off any reinforcements coming up the road from Princeton.
+Gold: None
+===
+31it [00:52,  1.86s/it]Original: MRI हे पदार्थविज्ञान शास्त्रातील या नावाच्या अणुकेंद्रिय चुंबकीय अनूस्पंदन (NMR) घटनेवर आधारित आहे, जे 1930 साली  फेलिक्स ब्लॉक  (स्टँफोर्ड विद्यापीठात काम करणारा) आणि एडवर्ड परसेल ( हार्वर्ड विद्यापीठातून) यांनी शोधले.
+Translated: MRI is based on the physics phenomenon of nuclear magnetic resonance (NMR), which was first observed in the 1930s by Felix Bloch (working at Stanford University) and Edward Purcell (from Harvard University).
+Gold: None
+===
+32it [00:55,  2.29s/it]Original: अर्थात, 2 मिनिटांमध्ये विजय मिळवू शकतो असा एक उत्तम दर्जाचा हाफ-मिलर, त्याच्याकडे भरपूर वेग असायला पण त्याने सर्व धोक्यांचा सामना करणे आवश्यक आहे.
+Translated: In other words, he's a half-miler of the highest quality, capable of winning in under two minutes, but he needs a strong finish to overhaul the leaders.
+Gold: None
+===
+33it [00:58,  2.43s/it]Original: उत्तर आफ्रिकेमध्ये सुरुवातीपासूनच इटालियन लोकांसाठी परिस्थिती चांगली नव्हती. १० जून १९४० रोजी इटलीने युद्ध घोषित केल्यानंतर, आठवड्याभरातच ब्रिटिशांच्या ११ व्या हुस्सार रेजिमेंटने लिबियातील कापुझो किल्ला जिंकला.
+Translated: Things did not go well for the Italians in North Africa almost from the start. Within a week of Italy's declaration of war on June 10, 1940, the British 11th Hussars had seized Fort Capuzzo in Libya.
+Gold: None
+===
+34it [01:02,  2.80s/it]Original: 100-मीटर लांबीचे ते जहाज आपला नेहमीचा खतांचा कार्गो उचलण्यासाठी जात होते आणि आरंभी अधिकाऱ्यांना या जहाजातील लोड खाली सांडेल अशी भिती वाटली होती.
+Translated: It was 100 metres long and was en route to pick up its usual fertiliser cargo, officials said.
+Gold: None
+===
+35it [01:04,  2.54s/it]Original: Hkrun lam hkawm ai ni gaw, manu dan ai n-gun ni hpe shama kau nna hka hpe ngam da ai lam gaw hkrit tsang hpa re.
+Translated: For those who enjoy outdoor activities, a trek up the Sea to Sky corridor is essential.
+Gold: None
+===
+36it [01:05,  2.25s/it]Original: Ndai hpun ni gaw lap masen ai, jan mau hkrang zawn re namhtan hpun kaji zawn san ai.
+Translated: These plates are very heavy, with a weight varying from 1,000 to 2,000 kg (2,200 to 4,400 lb), and are mounted on a steel axle with wheels on both ends.
+Gold: None
+===
+37it [01:09,  2.58s/it]Original: for a Week 3 divisional fight 9Bq6CwezTc+lwwRKNsft+eYNGD/+qHxXKPwtxufwAi0= the New England
+Translated: for a Week 3 divisional fight with the New England
+Gold: None
+===
+38it [01:10,  2.16s/it]Original: lead as running back Thomas Jones 33dZa1z8QvY4CncMxZKN17ZiDXYMuLX9uBNgQwbNKys= a 2yard touchdown
+Translated: lead as running back Thomas Jones got a 2yard touchdown
+Gold: None
+===
+39it [01:11,  1.87s/it]Original: Morgan and Brian Westbrook respectively This WUaiy0by5LPQ3X3OViDuaaiUOTTgziH5rt05WNRQDws= followed by Reed
+Translated: Morgan and Brian Westbrook respectively This was followed by Reed
+Gold: None
+===
+40it [01:12,  1.65s/it]Original: States BU75yqOhO74ID0Psze7IuFUeJYEeZVs6sDX+ZhIeSKE= 023 Race United States BU75yqOhO74ID0Psze7IuFUeJYEeZVs6sDX+ZhIeSKE= 152 Race United
+Translated: States Census 023 Race United States Census 152 Race United
+Gold: None
+===
+41it [01:13,  1.51s/it]Original: good night 💛💜
+Translated: good night (yellow heartpurple heart)
+Gold: None
+===
+42it [01:14,  1.33s/it]Original: in percent from 1cRtZkT36mecI/5EVuV7ZouhaT+gO7NeeUthGOwuxwM= census
+Translated: in percent from the census
+Gold: None
+===
+43it [01:15,  1.15s/it]Original: ALREADY 👂
+Translated: ALREADY (ear)
+Gold: None
+===
+44it [01:16,  1.02s/it]Original: guide his people through seasons and o+DSQSMLiYq9WLFTT2tgHr6q6fEwMDxoc9t1b+4cprY= events becoming an
+Translated: guide his people through seasons and historic events becoming an
+Gold: None
+===
+45it [01:17,  1.03s/it]Original: in revolt against the Ottoman suzerainty jgYJfUnpCyrKcJBJNkA7NTslxgF6crHWgICleuO0220= news soon arrived
+Translated: in revolt against the Ottoman suzerainty news soon arrived
+Gold: None
+===
+46it [01:18,  1.06s/it]Original: How I like to chill        🍆🍆
+Translated: How I like to chill (eggplanteggplant)
+Gold: None
+===
+47it [01:19,  1.08s/it]Original: So the pink bear comes out tomorrow on fortnite and I’m 100 v bucks away 😀🔫
+Translated: So the pink bear comes out tomorrow on fortnite and I’m 100 v bucks away (grinning facewater pistol)
+Gold: None
+===
+48it [01:21,  1.37s/it]Original: Maaaaan no wonder why mfs is broke 😂😂😂
+Translated: Maaaaan no wonder why mfs is broke (face with tears of joyface with tears of joyface with tears of joy)
+Gold: None
+===
+49it [01:23,  1.61s/it]Original: Episode 158 |  in session now 🚨 | Be sure to follow us on Instagram for…
+Translated: Episode 158 | in session now (police car light) | Be sure to follow us on Instagram for…
+Gold: None
+===
+50it [01:25,  1.70s/it]Original: Having to pretend everyone’s jokes about how much they’re spending is funny 😬
+Translated: Having to pretend everyone’s jokes about how much they’re spending is funny (grimacing face)
+Gold: None
+===
+51it [01:27,  1.68s/it]Original: 📸 VIXX teams up with DAZED magazine in latest pictorial~!
+Translated: (camera with flash) VIXX teams up with DAZED magazine in latest pictorial~!
+Gold: None
+===
+52it [01:28,  1.69s/it]Original: RT: Stacy C. Sherwood Community Center for        🕰️🖥️🎮💎
+Translated: RT: Stacy C. Sherwood Community Center for (mantelpiece clock) (desktop computer) (video gamegem stone)
+Gold: None
+===
+53it [01:30,  1.81s/it]Original: the Choe family In 1232 the 3F/wniNIHbklP3JF27oht4vATZt9Ub3ewbkkQkHKthU= under the nominal
+Translated: the Choe family In 1232 the Sambyeolcho under the nominal
+Gold: None
+===
+54it [01:32,  1.70s/it]Original: Unit 😝😩
+Translated: Unit (squinting face with tongueface with tears of joy)
+Gold: None
+===
+55it [01:33,  1.59s/it]Original: from the census wN61R7GTXSvg6gYTq+7bOwJqzVsNNnvtcVRqaz6shOI= Polish
+Translated: from the census werent Polish
+Gold: None
+===
+56it [01:34,  1.35s/it]Original: Gumhpraw law law hte hkrum lam hkawm yang mungkan ting hpe nbungli hte sha sa nna, manam jarik law law hta nga na re.
+Translated: If you want to see the world on the cheap, for necessity, lifestyle or challenge, for a week or a year or a lifetime, this is the book for you.
+Gold: None
+===
+57it [01:37,  1.75s/it]Original: the end of the regular season 7aAN1sZyFoCvuGBE5CUjzRO9rz3azukpgT+KgGF/t3I= addition to their
+Translated: the end of the regular season As addition to their
+Gold: None
+===
+58it [01:38,  1.54s/it]Original: How many more ILaKDVkpV6+HgtXo+EL4erp+n/BFj8ilCb3l3rfLAqg= units
+Translated: How many more housing units
+Gold: None
+===
+59it [01:39,  1.30s/it]Original: Ndai sumtsan yu myi set ni gaw tsan ai kaw na arai ni hpe grau ni ai, grau kaba ai hku hpan lahkawng mai mu lu ai pat nhpai lahkawng hte shachyaw nna jai lang lai sai.
+Translated: These larger vehicles are more comfortable, more stable, and faster with less fatigue for the driver.
+Gold: None
+===
+60it [01:40,  1.40s/it]Original: I wanna hug this baby😭😭🍼
+Translated: I wanna hug this baby (loudly crying faceloudly crying facebaby bottle)
+Gold: None
+===
+61it [01:42,  1.46s/it]Original: pass to wide receiver Vincent Jackson 1owcLvhxvcwK23y4YH0ImrgDZY/E54V4rQRt1vT0ne0= Diego would add
+Translated: pass to wide receiver Vincent Jackson but Diego would add
+Gold: None
+===
+62it [01:43,  1.34s/it]Original: the Sambyeolcho It marked the end h1f7mE89lEyKDcNLpJ7GrKw5dLzjm5mYbkDXGmhSZKo= the military regime
+Translated: the Sambyeolcho It marked the end of the military regime
+Gold: None
+===
+63it [01:44,  1.31s/it]Original: Imagine this being their 50th year anniversary rather than 50th episode 😩😩😂 still a looOong way but one can hope the bon…
+Translated: Imagine this being their 50th year anniversary rather than 50th episode (weary faceweary faceface with tears of joy) still a looOong way but one can hope the bon…
+Gold: None
+===
+64it [01:47,  1.86s/it]Original: Aba Sikhs bita ishengero ryabo Gurmat, n'igi Punjab gisigura ngo "inzira y'umwigisha mukuru". Umwigisha mukuru ni ngombwa bidasanzwe mu madini yose y'Abahindi ariko muri Sikhisme agira akamaro kagena imizi y'ukwemera kw'aba Sikhs.
+Translated: Sikhs call their religion Gurmat, which means "way of the guru". The guru is a spiritual teacher who is considered to be an incarnation of God. The guru is central to the Sikh faith and is revered as the spiritual guide of the Sikhs.
+Gold: None
+===
+65it [01:51,  2.47s/it]Original: begin a siege on the Hungarian gzW2Bs4gFoX21bZeTia9WrtnagrW2wcUGd3y1CarKL0= of Eger 
+Translated: begin a siege on the Hungarian fortress of Eger
+Gold: None
+===
+66it [01:52,  2.04s/it]Original: So, a disgraced FBI director, a washed up journalist and an elderly porn star walk into a bar .......😂 barkeep asks...…
+Translated: So, a disgraced FBI director, a washed up journalist and an elderly porn star walk into a bar....... (face with tears of joy) barkeep asks...…
+Gold: None
+===
+67it [01:55,  2.24s/it]Original: 乗組員12人がヘリコプターに救助され、唯一の負傷は鼻骨骨折でした。
+Translated: The twelve crewmembers were rescued by a helicopter and the only injury was a broken nose.
+Gold: None
+===
+68it [01:56,  2.04s/it]Original: Ottoman army should disengage and return c3gMSmGjdP5ZTLhgL/p4lYAO2gc/ru241VLCC+czFKE= Istanbul it was
+Translated: Ottoman army should disengage and return to Istanbul it was
+Gold: None
+===
+69it [01:58,  1.80s/it]Original: So with his standin hostage gone 2ICbC/iB1RndBNrORHnHlnrjPR7h80YSKHyom8latKw= felt honorbound to
+Translated: So with his standin hostage gone he felt honorbound to
+Gold: None
+===
+70it [01:59,  1.62s/it]No pattern found in response
+Original: census werent Polish T3xHSrnZlK9pyE7JJeSDbdR90sJc/ATFNOr9//7jFl4= group
+Translated: system
+
+Cutting Knowledge Date: December 2023
+Today Date: 26 Jul 2024
+
+You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.user
+
+Translate this text to English: census werent Polish T3xHSrnZlK9pyE7JJeSDbdR90sJc/ATFNOr9//7jFl4= groupassistantcensus werent Polish Which group
+Gold: None
+===
+71it [02:00,  1.39s/it]Original: Masha jahpan gaw jaw da ai lamu ga kata na tup hkrak re myu baw hpan a hkrung kanu ni hpe mahkawng da ai re.
+Translated: Many buildings are quite beautiful to look at and the view from a tall building or from a cleverly-positioned window can be a beauty to behold.
+Gold: None
+===
+72it [02:02,  1.68s/it]No pattern found in response
+Original: of this castle were all executed k5QP0HtMbDF5XP+wpzvcKKLH+6OlzZq8KLE08gQPZgI= long after Ottoman
+Translated: system
+
+Cutting Knowledge Date: December 2023
+Today Date: 26 Jul 2024
+
+You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.user
+
+Translate this text to English: of this castle were all executed k5QP0HtMbDF5XP+wpzvcKKLH+6OlzZq8KLE08gQPZgI= long after Ottomanassistant of this castle were all executed even long after Ottoman
+Gold: None
+===
+73it [02:03,  1.47s/it]Original: Happiest birthday, ! God bless you always! 🙏💛  CTTO
+Translated: Happiest birthday,! God bless you always! (folded handsyellow heart) CTTO
+Gold: None
+===
+74it [02:05,  1.54s/it]Original: 🚨🚨 BREAKING: Eleven GOP Congressmen Unite to Refer Comey, Clinton, McCabe, Lynch &amp; FBI Agents for Criminal Prosecution htt…
+Translated: (police car lightpolice car light) BREAKING: Eleven GOP Congressmen Unite to Refer Comey, Clinton, McCabe, Lynch &amp; FBI Agents for Criminal Prosecution htt…
+Gold: None
+===
+75it [02:08,  1.95s/it]Original: どの列車にもメトロプラスとメトロの両方の客車があり、メトロプラスの客車は常にケープタウンに一番近い列車の最後尾にあります。
+Translated: Every train has both MetroPlus and Metro coaches, and the MetroPlus coaches are always on the end of the train nearest Cape Town.
+Gold: None
+===
+76it [02:10,  2.02s/it]Original: This kitten was dodging traffic on a super busy road, but this lady on a motorcycle swooped in and changed his life ❤️ https://t.…
+Translated: This kitten was dodging traffic on a super busy road, but this lady on a motorcycle swooped in and changed his life (red heart) https://t.…
+Gold: None
+===
+77it [02:12,  2.18s/it]Original: yes I like girls, yesss I will take your girlfriend from you. 😊
+Translated: yes I like girls, yesss I will take your girlfriend from you. (smiling face with smiling eyes)
+Gold: None
+===
+78it [02:14,  2.12s/it]Original: Man If a nigga ever cry cause he like me so much I would pass tf out 😭
+Translated: Man If a nigga ever cry cause he like me so much I would pass tf out (loudly crying face)
+Gold: None
+===
+79it [02:16,  2.07s/it]Original: English How many VZ0fuFKIERJR+907oshAVJZCGEDTYydM+OR7CspZ4dk= people
+Translated: English How many more people
+Gold: None
+===
+80it [02:17,  1.67s/it]Original: in lieu of bhigd573aB7XIfEhH2w1JiLMJ5xIfagzzsa25YBHmaw= II
+Translated: in lieu of John II
+Gold: None
+===
+81it [02:18,  1.38s/it]Original: いずれの場合も、航空会社に直接電話で予約する必要があります。
+Translated: In all cases, you must book by phone directly with the airline.
+Gold: None
+===
+82it [02:19,  1.36s/it]Original: group from the AUfYRjQJ4XrCN6At4qFbM6SuMuQw3sxfKkoLdNPAdnA= is
+Translated: group from the census is
+Gold: None
+===
+83it [02:20,  1.17s/it]Original: I thought u were a good driver =] 🖖
+Translated: I thought u were a good driver =] (vulcan salute)
+Gold: None
+===
+84it [02:21,  1.24s/it]Original: This kitten was dodging traffic on a super busy road, but this lady on a motorcycle swooped in and changed his life ❤️ https://t.…
+Translated: This kitten was dodging traffic on a super busy road, but this lady on a motorcycle swooped in and changed his life (red heart) https://t.…
+Gold: None
+===
+85it [02:24,  1.63s/it]Original: clock T80ejr8FKbDTVXiGLtY3bLApXjYDiAJ7kGcvU0rniZA= secure the win Hoping T80ejr8FKbDTVXiGLtY3bLApXjYDiAJ7kGcvU0rniZA= break their current
+Translated: clock to secure the win Hoping to break their current
+Gold: None
+===
+86it [02:25,  1.48s/it]Original: Some of my things to decorate my pacifiers came in today!!!! 🎀
+Translated: Some of my things to decorate my pacifiers came in today!!!! (ribbon)
+Gold: None
+===
+87it [02:26,  1.47s/it]Original: आफ्रिकेच्या बाहेरील सर्व स्थानांसाठी अतिरिक्त व्हिसा, निर्गमन कर, भू वाहतूक इत्यादीचा वाढीव खर्च मोजण्यास विसरू नका.
+Translated: Don't forget to add in the extra cost of visas, departure taxes, ground transportation, etc. for all those places outside of Africa.
+Gold: None
+===
+88it [02:29,  1.70s/it]Original: the Mongol Empire At the same vHChJ5rdcMe3DuTnRA/iYcna2eIVFE6nBdIz3hn1rGQ= King Gojong and
+Translated: the Mongol Empire At the same time King Gojong and
+Gold: None
+===
+89it [02:30,  1.54s/it]Original: College Republicans from across the state of Texas holding a Trump flag in the Texas state Capitol! 🇺🇸 AMERICA FIRST
+Translated: College Republicans from across the state of Texas holding a Trump flag in the Texas state Capitol! :United_States: AMERICA FIRST
+Gold: None
+===
+90it [02:32,  1.71s/it]Original: अवधारणा ई छल कि सभ यूरोपीय राष्ट्र सभ कें एकटा राष्ट्र कें शक्तिशाली बनय सँ रोकय कें छलाह, आ एहि प्रकार संतुलन बनाएल राखय कें लेल राष्ट्रीय सरकार सभ अक्सर अपन गठबंधन सभ कें बदलि दैत छलथि।
+Translated: The concept was that all European nations had to be powerful to prevent one nation from becoming powerful, and thus national governments often changed their alliances in order to maintain the balance.
+Gold: None
+===
+91it [02:34,  1.99s/it]Original: I said I would bring  I never said it would be  that the people wanted 😉
+Translated: I said I would bring I never said it would be that the people wanted (winking face)
+Gold: None
+===
+92it [02:36,  1.90s/it]Original: プエルトヒメネスの森林管理移設から直接公園利用許可証を入手できますが、クレジットカードは利用できません。
+Translated: You can obtain a park permit directly from the Ranger Station in Puerto Jiménez, but they do not accept credit cards
+Gold: None
+===
+93it [02:38,  1.92s/it]Original: अशाप्रकारे, तुम्ही स्वतःला शक्य तितक्या कमी प्रमाणात थकवाल. लक्षात ठेवा पियानोप्रमाणे अतिरिक्त वॉल्युमसाठी कीज अतिरिक्त बळाने दाबण्याची कोणतीही गरज नाही.
+Translated: This way, you will tire yourself out as little as possible. Remember there's no need to hit the keys with a lot of force for extra volume like on the piano.
+Gold: None
+===
+94it [02:41,  2.15s/it]Original: Happy Birthday, Tomato Princess!! 🍅👑🌹
+Translated: Happy Birthday, Tomato Princess!! (tomatocrownroses)
+Gold: None
+===
+95it [02:42,  1.90s/it]No pattern found in response
+Original: to his second t7crI8h5lMpVkXqGGzGUlT1FN/7bUW32OtWho23lgu4= scored
+Translated: system
+
+Cutting Knowledge Date: December 2023
+Today Date: 26 Jul 2024
+
+You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.user
+
+Translate this text to English: to his second t7crI8h5lMpVkXqGGzGUlT1FN/7bUW32OtWho23lgu4= scoredassistant to his second touchdown scored
+Gold: None
+===
+96it [02:43,  1.53s/it]Original: Dusat Zingri Makawp na matu Dusat Shalawt hpung hte Royal Society (RSPCA) ni gaw Australian shan sat dap ni yawng hta CCTV camera ni shakap shagrin sa wa na matu kalang bai hpyi lajin nga ma ai.
+Translated: Animal Liberation and the Royal Society for the Prevention of Cruelty to Animals (RSPCA) are again calling for the mandatory installation of CCTV cameras in all Australian abattoirs.
+Gold: None
+===
+97it [02:46,  1.92s/it]Original: WHO DID THIS!? 😭😭
+Translated: WHO DID THIS!? (loudly crying faceloudly crying face)
+Gold: None
+===
+98it [02:47,  1.76s/it]Original: Once I get into my "IDGAF MOOD" I honestly shut down .. attitude be on 10 🤦🏼‍♀️
+Translated: Once I get into my "IDGAF MOOD" I honestly shut down.. attitude be on 10 (person facepalming) (medium-light skin tone)‍ (female sign)
+Gold: None
+===
+99it [02:50,  2.12s/it]Original: ही वसाहत उपलब्ध अन्न कमी झाले की एक भटकी अवस्था सुरु करते. या अवस्थेदरम्यान, ही वसाहत तात्पुरती घरटी तयार करते जी दररोज बदलली जातात.
+Translated: This colony begins a nomadic phase when available food has decreased. During this phase, the colony makes temporary nests that are changed everyday.
+Gold: None
+===
+100it [02:52,  2.13s/it]Original: विशेषेकरून तुमच्या सुरुवातीच्या काळात नवीन वातावरणाची सवय होण्यास मदत करण्यासाठी पाश्चात्य-शैली आणि-गुणवत्तापूर्ण हॉटेल्स, भोजन तसेच सर्विसेसवर मुक्तपणे खर्च करण्याचा विचार करा.
+Translated: Consider treating yourself to some Western-style and -quality hotels, food and services, especially in your initial days to help acclimatize.
+Gold: None
+===
+101it [02:54,  2.16s/it]Original: クレバスが圧雪で埋まり、旗で印をつけてあります。燃料や物資を積んだソリを積み込んだ専用トラクターでしか移動できません。
+Translated: It is filled in with snow and marked by a flag. It can only be traveled by specialized tractors, hauling sleds with fuel and supplies.
+Gold: None
+===
+102it [02:57,  2.22s/it]Original: ई 35 मिमी नकारात्मक (3136 मिमी2 बनाम 864) कें लगभग चारि गुना रेजोल्युशन दैत अछि।
+Translated: It has almost four times the resolution of a 35 mm negative (3136 mm2 versus 864).
+Gold: None
+===
+103it [02:59,  2.11s/it]No pattern found in response
+Original: and Transylvania all of whom were FmUNXc23Dk1a54m1J5MxU4o7l+4iVgKYI8NtnUYLjCk= revolt against the
+Translated: system
+
+Cutting Knowledge Date: December 2023
+Today Date: 26 Jul 2024
+
+You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.user
+
+Translate this text to English: and Transylvania all of whom were FmUNXc23Dk1a54m1J5MxU4o7l+4iVgKYI8NtnUYLjCk= revolt against theassistant and Transylvania all of whom were involved revolt against the
+Gold: None
+===
+104it [03:00,  1.79s/it]Original: oppressive political and economic systems against jFHp6HYtlTWLumAXSQDRst3vzxIt2jkVDmLvZMDf0YM= native and mestizo
+Translated: oppressive political and economic systems against the native and mestizo
+Gold: None
+===
+105it [03:01,  1.61s/it]Original: second intermittent invasion OW9r6uXgAE4p3B1vsjOPpkzbXt9OUMepUS/vvSHmtNE= Goryeo
+Translated: second intermittent invasion of Goryeo
+Gold: None
+===
+106it [03:02,  1.38s/it]Original: Boom🐱🐯❤️❤️❤️
+Translated: Boom (cat face) (tiger face) (red heart) (red heart) (red heart)
+Gold: None
+===
+107it [03:04,  1.52s/it]Original: शीख धर्म हा भारतीय उपखंडातील एक धर्म आहे. हा धर्म 15 व्या शतकात पंजाब प्रदेशात हिंदू परंपरेतील सांप्रदायिक विभाजनापासून उदयाला आला.
+Translated: Sikhism is a religion from the Indian sub-continent. It originated in the Punjab region during the 15th century from a sectarian split within the Hindu tradition.
+Gold: None
+===
+108it [03:06,  1.85s/it]Original: Famous Dex explains the time he got CATFISHED in Hollywood 😂😭
+Translated: Famous Dex explains the time he got CATFISHED in Hollywood (face with tears of joyloudly crying face)
+Gold: None
+===
+109it [03:08,  1.89s/it]Original: his curiosity grew into an obsession dH3HRPE3yUmU1irOgXeiwU78g3YM5e31lO0iv9KcziI= he could no
+Translated: his curiosity grew into an obsession as he could no
+Gold: None
+===
+110it [03:09,  1.64s/it]Original: you're so fvcking precious when you 💖💞💝💗💖💕💕💘💟💓💝💖 💝 give L…
+Translated: you're so fvcking precious when you (sparkling heartrevolving heartsheart with arrowsparkling hearttwo heartstwo heartskiss markheart with arrowribbonheart with arrowbeating heartheart with arrow) give L…
+Gold: None
+===
+111it [03:13,  2.19s/it]Original: Dai shara gaw hkyen ni hte hkyen hka lwi hkang ni hte chyu hpring chyat nga nna dawnghkawn hte masat tawn da ai. Dai kaw gaw hpang kaw sau ni gunrai ni htaw na matu leng matut da ai baw hte laksan galaw shapraw da madaw jak ni rau sha mai hkawm sa nga ai.
+Translated: The town lies immediately next to the falls, and they are the major attraction, but they are not the only thing to see and do in the area.
+Gold: None
+===
+112it [03:15,  2.26s/it]Original: ION WANNA SEE NONE OF YALL TWEET HIS LYRICS WHEN YALL WAS CALLIN HIM TRASH FOR YEARS 😠😠😠😠
+Translated: ION WANNA SEE NONE OF YALL TWEET HIS LYRICS WHEN YALL WAS CALLIN HIM TRASH FOR YEARS (angry faceangry faceangry faceangry face)
+Gold: None
+===
+113it [03:18,  2.47s/it]Original: Morning...🌇🌇🌇
+Translated: Morning... (city at duskcity at duskcity at dusk)
+Gold: None
+===
+114it [03:19,  2.11s/it]Original: Bumping for tonight’s game 🐺 🏀
+Translated: Bumping for tonight’s game (wolf) (basketball)
+Gold: None
+===
+115it [03:21,  1.85s/it]Original: 180419 JFK Airport     [cr YooTaeSeo_ss] // he played his passport cutely 😄😄 …
+Translated: 180419 JFK Airport [cr YooTaeSeo_ss] // he played his passport cutely (grinning face with smiling eyesgrinning face with smiling eyes) …
+Gold: None
+===
+116it [03:23,  2.12s/it]Original: Peace be unto you my brother🙏🏽 More life and success🍾🎈🎉 🌟🌟🌟🌟🌟living
+Translated: Peace be unto you my brother (folded hands) (medium skin tone) More life and success (champagne bottleballoonparty popper) (glowing starglowing starglowing starglowing star)living
+Gold: None
+===
+117it [03:27,  2.51s/it]Original: これらのホテルには、当時の富裕層や著名人が滞在し、高級な食事やナイトライフを楽しむことが多かったとされます。
+Translated: These hotels were where the rich and the famous of the day would stay, and would often have fine dining and nightlife.
+Gold: None
+===
+118it [03:29,  2.35s/it]Original: Dai hpang Whirling Dervishes hpung ni gaw pyinra ntsa shara la mat ai.
+Translated: Then Whirling Dervishes took to the stage.
+Gold: None
+===
+119it [03:30,  1.98s/it]Original: Love a woman I can be my self with 💯💯💪
+Translated: Love a woman I can be my self with (hundred pointshundred pointsflexed biceps)
+Gold: None
+===
+120it [03:32,  1.92s/it]Original: I guess my dad is afraid of airhorns too... 🤷🏽‍♀️
+Translated: I guess my dad is afraid of airhorns too... (person shrugging) (medium skin tone)‍ (female sign)
+Gold: None
+===
+121it [03:34,  2.00s/it]Original: Mexican Inquisition torturing and killing hundreds F3rMdtkYGyJ5F8lsr4aV6aqUJpd6idJn8/14z+g3vLc= people who did
+Translated: Mexican Inquisition torturing and killing hundreds of people who did
+Gold: None
+===
+122it [03:35,  1.77s/it]Original: 一方で、水量が非常に多いため、実際の滝をはっきりと見ることはできないでしょう。それだけ多くの水が流れているためです。
+Translated: On the other hand, because of the huge amount of water, it won't really be possible to see the actual Falls, the water will be spread out so much.
+Gold: None
+===
+123it [03:38,  2.03s/it]Original: アルメニア人の支援を得て、新しい共和国が誕生しました。しかし、アルメニアでさえその国を公式には認めていないのです。
+Translated: With Armenian backing, a new republic was created. However, Armenia does not officially recognize the country.
+Gold: None
+===
+124it [03:39,  1.93s/it]Original: Devin Hester along with kicker Robbie cyDey0IYvdyVZXmV4MYcFEY6HuE6q7cA8x9PujkpoEY= making a 47yard
+Translated: Devin Hester along with kicker Robbie Gould making a 47yard
+Gold: None
+===
+125it [03:41,  1.73s/it]Original: Nah you just emotionally abuse them and treat them like shit ... ☺️
+Translated: Nah you just emotionally abuse them and treat them like shit... (smiling face)
+Gold: None
+===
+126it [03:42,  1.68s/it]Original: Russia masha ni gaw jet pyenli hpe ga kaw na gau mai hkra galaw sai, pyenli daru a myit masa lam hpe mi na hku bai lu la sai.
+Translated: Russians had also taken to the skies, reporting an enemy air attack en route to their destination.
+Gold: None
+===
+127it [03:44,  1.69s/it]Original: It’s a fire consuming everything it knows Just to grow🔥
+Translated: It’s a fire consuming everything it knows Just to grow (fire)
+Gold: None
+===
+128it [03:45,  1.58s/it]Original: many in percent NGIYuEQcGXsvxjXisDyL47kD/S/yFcBRtTb6uow4lRU= the
+Translated: many in percent from the
+Gold: None
+===
+129it [03:46,  1.33s/it]Original: add onto their lead in the 9l9cN88vTe0P/fzZzQu+mCVJ7M28jvUmMVzSQZ4yD5c= quarter with a
+Translated: add onto their lead in the 4th quarter with a
+Gold: None
+===
+130it [03:47,  1.28s/it]No pattern found in response
+Original: raise funds to pay the ransom ZBVt3UEyBs9EzSl1aoVD78d18bRWqcBRPhfM0cEViQE= 1362 Johns son
+Translated: system
+
+Cutting Knowledge Date: December 2023
+Today Date: 26 Jul 2024
+
+You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.user
+
+Translate this text to English: raise funds to pay the ransom ZBVt3UEyBs9EzSl1aoVD78d18bRWqcBRPhfM0cEViQE= 1362 Johns sonassistantraise funds to pay the ransom of 1362 Johns son
+Gold: None
+===
+131it [03:48,  1.25s/it]Original: Jets punt Buffalo took over with sTNruEilZVeHaEKMksHxDJvN2/HIjs9Io9gXu661EC0= over two minutes
+Translated: Jets punt Buffalo took over with over two minutes
+Gold: None
+===
+132it [03:49,  1.17s/it]Original: Madu a mawdaw hte hkrun lam galu sa ai lam gaw grai sang lang ai myit kata kaw nna ra sharawng ai lam re.
+Translated: Buying food in supermarkets and cooking it in a hotel room or private apartment is a great way to stretch a budget.
+Gold: None
+===
+133it [03:51,  1.39s/it]No pattern found in response
+Original: 😭😭he said he ate noodles frm the toilet
+Translated: system
+
+Cutting Knowledge Date: December 2023
+Today Date: 26 Jul 2024
+
+You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.user
+
+Translate this text to English: 😭😭he said he ate noodles frm the toiletassistant(loudly crying faceloudly crying face)he said he ate noodles frm the toilet
+Gold: None
+===
+134it [03:53,  1.45s/it]Original: many percent were D/25or1YcNrTui7qI9Y2xdDFhfgxj1IhYUIAruJY0to= Polish
+Translated: many percent were not Polish
+Gold: None
+===
+135it [03:54,  1.23s/it]Original: units are there 4JoGOOTUWP2vB8N8vlIUuQJesOqR6GThm4xrYbPK/m4= households
+Translated: units are there than households
+Gold: None
+===
+136it [03:54,  1.08s/it]Original: Ku wa kabiri, uwahoze ari umukuru w'intara ya Massachusetts, Mitt Romney, yatsinze amatora ya mbere yo muri Floride y’umukuru w’umugambwe w'aba Républicains, ku majwi arenga 46 kw'ijana.
+Translated: Former Massachusetts governor Mitt Romney won the Florida Republican Party presidential primary election on Tuesday with over 46 percent of the vote.
+Gold: None
+===
+137it [03:56,  1.35s/it]Original: Sum mwi ni gaw kaja wa wan bum kapaw wa na n kapaw na lam byin wa mai masa hpe tang madun ai re.
+Translated: Some boots have studs and there is studded add-on equipment for slippery conditions, suitable for most shoes and boots with heels.
+Gold: None
+===
+138it [03:58,  1.55s/it]Original: I feel you 🤦🏾‍♀️
+Translated: I feel you (person facepalming) (medium-dark skin tone)‍ (female sign)
+Gold: None
+===
+139it [04:00,  1.60s/it]Original: 通常、これらはより高い帯域幅とより優れたサービス品質を提供します。そしてスパイを防止するために暗号化されます。
+Translated: They normally offer higher bandwidth and better quality of service, and are encrypted to prevent spying.
+Gold: None
+===
+140it [04:02,  1.59s/it]Original: चरणे घडतात कारण केवळ शुक्राच्या (किंवा चंद्राच्या) सूर्याच्या दिशेने असलेल्या एका बाजूलाच प्रकाश आहे. शुक्राच्या चरणांनी सूर्याभोवती फिरणार्‍या ग्रहांच्या कोपर्निकस या सिद्धांताचे समर्थन केले.
+Translated: Phases happen because only the side of Venus (or of the Moon) facing the Sun gets light. The phases of Venus supported the theory of Copernicus that the planets go around the Sun.
+Gold: None
+===
+141it [04:05,  2.03s/it]Original: 高級B&Bが主として寝具と朝食の2つの要素で競争しているのは明らかです。
+Translated: It is clear that the main focus of the high-end B&Bs is going to be two main elements: bedding and breakfast.
+Gold: None
+===
+142it [04:07,  2.05s/it]Original: seeking for a win and for NxI3SKPycf0hUPo68IwgVJZ3xQm3Byjz/iFDclG0kfY= lead in NxI3SKPycf0hUPo68IwgVJZ3xQm3Byjz/iFDclG0kfY=
+Translated: seeking for a win and for the lead in the
+Gold: None
+===
+143it [04:08,  1.75s/it]Original: When bae takes you out for ice cream🍦😍😍😍
+Translated: When bae takes you out for ice cream (soft ice creamsmiling face with heart-eyessmiling face with heart-eyessmiling face with heart-eyes)
+Gold: None
+===
+144it [04:11,  2.07s/it]Original: How many touchdowns Gnbt+NILljNhnGrjiB0UKHHvnsxnZibjFzlvyK44hJ8= scored
+Translated: How many touchdowns were scored
+Gold: None
+===
+145it [04:11,  1.67s/it]Original: that were stopped early and led Ic9hzsvy/bHbJR44nMX4xQZ4AkZYAANrmjBlbS4bRJk= points Although Eli
+Translated: that were stopped early and led to points Although Eli
+Gold: None
+===
+146it [04:12,  1.48s/it]Original: 💚 IGOT7 MTV MIAW FUN GAME 💚 ▫️Reply with GOT7 songs that start with G, M and S! Example: Girls Girls Girls, Mine and St…
+Translated: (green heart) IGOT7 MTV MIAW FUN GAME (green heart) (black medium-small)Reply with GOT7 songs that start with G, M and S! Example: Girls Girls Girls, Mine and St…
+Gold: None
+===
+147it [04:16,  2.06s/it]Original: Mexican Inquisition was first abolished by DkpP0XCwhIBqmkRbV/e6COrn2AjWqevXJwwVzLig4Gk= in 1812 However
+Translated: Mexican Inquisition was first abolished by secular in 1812 However
+Gold: None
+===
+148it [04:17,  1.84s/it]Original: This happened to me on Monday 😑
+Translated: This happened to me on Monday (expressionless face)
+Gold: None
+===
+149it [04:18,  1.62s/it]Original: Bivugwa ko mu 1649, Zhabdrung Ngawang Namgyel yubakishije iyo nyubakwa ikomeye ngo ibe icibutso c'ingene yatsinze ingabo z'Abanyatibe n'Abamongoli.
+Translated: It is said that in 1649, Zhabdrung Ngawang Namgyel created the fortress to commemorate his victory against the Mongols and the Tibetans.
+Gold: None
+===
+150it [04:21,  1.96s/it]Original: विद्यार्थी व्हिसामध्ये सामान्य पर्यटक किंवा व्यावसायीक व्हिसा यापेक्षा सामान्यत: भिन्न आवश्यकता आणि अर्ज प्रक्रिया असतात.
+Translated: Student visas generally have different requirements and application procedures from normal tourist or business visas.
+Gold: None
+===
+151it [04:22,  1.81s/it]Original: I need to wake them up🤧
+Translated: I need to wake them up (sneezing face)
+Gold: None
+===
+152it [04:24,  1.64s/it]Original: 180408 Fan Sign      👶 miss you https:…
+Translated: 180408 Fan Sign (baby) miss you https:…
+Gold: None
+===
+153it [04:25,  1.50s/it]Original: Masha ni gaw hkuwawt pat maka hpe lahkum hte gayet ma timung hkuwawt chyinghka ni gaw daw hten ai lam nnga ai.
+Translated: Humans are by far the most talented species in reading the minds of others.
+Gold: None
+===
+154it [04:26,  1.47s/it]Original: 陽子は正電荷を帯び、中性子は無電荷です。電子は負電荷を帯びた粒子です。
+Translated: Protons have a positive electric charge, neutrons have no charge, and electrons have a negative electric charge.
+Gold: None
+===
+155it [04:28,  1.58s/it]Original: maya reached out iASb5pfU4EHfZfwxuSEsxSomIpnTfCb2xFoWmr3CDLM= touched
+Translated: maya reached out and touched
+Gold: None
+===
+156it [04:29,  1.32s/it]Original: an organ of the military government 345nh7cCRvbGFZV292mKFNrw57KMpSdWkO4fP6VdbdU= were organized by
+Translated: an organ of the military government Who were organized by
+Gold: None
+===
+157it [04:30,  1.24s/it]Original: しかし、1956年6月にポーランドで食糧不足と賃金削減に抗議する労働者たちが暴動を起こし、それが共産主義に対する一般抗議行動に変わったとき、クルシチョフの公約が試されることになりました。
+Translated: However, in June 1956, workers in Poland went on a strike against food shortages and wage cuts, which eventually turned into a general protest against communism. This marked the first time a communist government's promises were put to the test.
+Gold: None
+===
+158it [04:33,  1.93s/it]Original: son was taken kQkbewWwmKwUbYxq1C+ZQ9NXIUsNHjItG4tytfvv9po= in
+Translated: son was taken hostage in
+Gold: None
+===
+159it [04:34,  1.57s/it]No pattern found in response
+Original: and placing carefully Xkpslp3uUV766brl9S9XFude4CTareqsTflmNQbaXq4= stones
+Translated: system
+
+Cutting Knowledge Date: December 2023
+Today Date: 26 Jul 2024
+
+You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.user
+
+Translate this text to English: and placing carefully Xkpslp3uUV766brl9S9XFude4CTareqsTflmNQbaXq4= stonesassistant and placing carefully chosen stones
+Gold: None
+===
+160it [04:35,  1.30s/it]Original: Expect the unexpected even from Sr1…😵
+Translated: Expect the unexpected even from Sr1… (face with crossed-out eyes)
+Gold: None
+===
+161it [04:36,  1.32s/it]Original: seize power Was ruoGEJ2xKjhRqAI8nutF5an27bITBoTJfNRQVIlihCk= in
+Translated: seize power Was he in
+Gold: None
+===
+162it [04:37,  1.14s/it]Original: I had a dream I got a tattoo on my thigh and it turned out ugly 😭 the whole time I was dreaming I kept saying “ thi…
+Translated: I had a dream I got a tattoo on my thigh and it turned out ugly (loudly crying face) the whole time I was dreaming I kept saying “ thi…
+Gold: None
+===
+163it [04:39,  1.59s/it]Original: We in the same mf boat 😭😭
+Translated: We in the same mf boat (loudly crying faceloudly crying face)
+Gold: None
+===
+164it [04:41,  1.57s/it]Original: さらに移動時間が長くなる場合は、アフリカまでの総運賃の見積もりが世界一周運賃と比較してどのくらいかを確認してください。
+Translated: If the journey involves a round the world flight, check to see how the fare quote to Africa includes or excludes the round the world fare structure.
+Gold: None
+===
+165it [04:43,  1.79s/it]Original: unlike anyone else YBMnkE7wqExPwZ84Pgg4VCJV7GoVYURVrTaiF31RsGg= her
+Translated: unlike anyone else since her
+Gold: None
+===
+166it [04:44,  1.47s/it]Original: 夏季には、北欧の蚊にも注意しましょう。蚊は病気を媒介することはありませんが、刺されると腫れることがあります。
+Translated: During the summer, also watch out for the Nordic mosquitoes. Although they do not transmit any diseases, they can be irritating if you get bitten.
+Gold: None
+===
+167it [04:46,  1.72s/it]No pattern found in response
+Original: $ 😗Follow me and everyone who like or retweets this.
+Translated: system
+
+Cutting Knowledge Date: December 2023
+Today Date: 26 Jul 2024
+
+You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.user
+
+Translate this text to English: $ 😗Follow me and everyone who like or retweets this.assistant$
+
+$ (kissing face)Follow me and everyone who like or retweets this.
+Gold: None
+===
+168it [04:48,  1.66s/it]Original: the Crown Prince 8Ar9YiJR5MRSDu9CXzFIiHMkcvpbi09oCt5AmVql2Bk= replace
+Translated: the Crown Prince to replace
+Gold: None
+===
+169it [04:49,  1.38s/it]Original: एकोणिसाव्या आणि विसाव्या शतकादरम्यान बर्‍याच काळापर्यंत, असा विश्वास होता की न्यूझीलंडमधील पहिले रहिवासी हे माओरी लोकं होते, त्यांनी मोआस नावाच्या विशालकाय पक्ष्यांची शिकार केली होती.
+Translated: For a long time during the nineteenth and twentieth centuries, it was believed the first inhabitants of New Zealand were the Maori people, who hunted giant birds called moas.
+Gold: None
+===
+170it [04:51,  1.79s/it]Original: My phone oddly been ringing all day...And I only spoke to Jessica and Nishia...I even ignored my momma 😂😂😂
+Translated: My phone oddly been ringing all day...And I only spoke to Jessica and Nishia...I even ignored my momma (face with tears of joyface with tears of joyface with tears of joy)
+Gold: None
+===
+171it [04:54,  2.20s/it]Original: Follow everyone who retweets and likes this 🍬
+Translated: Follow everyone who retweets and likes this (candy)
+Gold: None
+===
+172it [04:56,  1.90s/it]Original: spring its waters W35GrKQlo3MR7VA6jgThLRj7JsKcHOQXtRse0a1TZcs= dark
+Translated: spring its waters turned dark
+Gold: None
+===
+173it [04:56,  1.54s/it]Original: ルクセンブルクは、常に中立国としての立場を守ろうと努めていましたが、 第一次世界大戦でも第二次世界大戦でもドイツに占領されました。
+Translated: Luxembourg has always tried to remain a neutral country but it was occupied in both World War I and World War II by Germany.
+Gold: None
+===
+174it [04:58,  1.71s/it]No pattern found in response
+Original: 🙏Thank you for withdrawing your endorsement of GOP state senate candidate Julie Killian, who attacked
+Translated: system
+
+Cutting Knowledge Date: December 2023
+Today Date: 26 Jul 2024
+
+You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.user
+
+Translate this text to English: 🙏Thank you for withdrawing your endorsement of GOP state senate candidate Julie Killian, who attackedassistant (folded hands)Thank you for withdrawing your endorsement of GOP state senate candidate Julie Killian, who attacked
+Gold: None
+===
+175it [05:00,  1.73s/it]Original: What class ;) I wanna join 😂💕
+Translated: What class ;) I wanna join (face with tears of joytwo hearts)
+Gold: None
+===
+176it [05:02,  1.63s/it]Original: -First jump!! 😍🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆🦆
+Translated: -First jump!! (smiling face with heart-eyesduckduckduckduckduckduckduckduckduckduckduckduckduckduck)
+Gold: None
+===
+177it [05:04,  1.79s/it]Original: Showing his skills at the Wizards game 🏀
+Translated: Showing his skills at the Wizards game (basketball)
+Gold: None
+===
+178it [05:05,  1.58s/it]Original: Matut nna, tsi du Lee gaw Turkey mungdan na ma ni machyi makaw ai lam n nga ai sha A(H5N1) uli ana kanu shang hkrum ai lam hpe mung tsang nga ai lam sumtang kaw na tsun ai.
+Translated: For the first time, a human has become infected with the A(H5N1) avian influenza virus in Turkey.
+Gold: None
+===
+179it [05:07,  1.71s/it]Original: Shhhiiiddd I know i know 😩.
+Translated: Shhhiiiddd I know i know (weary face).
+Gold: None
+===
+180it [05:08,  1.60s/it]Original: 利用可能な宿泊先の一覧は、印刷物やオンラインで提供され、他の旅行者による評価や意見が掲載されることもあります。
+Translated: A listing of available hosts is then provided either in print and/or online, sometimes with reviews and comments by other travelers.
+Gold: None
+===
+181it [05:10,  1.71s/it]Original: संस्कृत एकटा बहुते जटिल एवं समृद्ध भाषा अछि, जे कतेक आधुनिक भारतीय भाषा सभक स्रोत होए कें काज कएलक अछि, यथा लैटिन फ्रेंच आ स्पेनिश जेहेन यूरोपीय भाषा सभक स्रोत अछि।
+Translated: Sanskrit is a very complex and rich language, which has served to be the source for many modern Indian languages, just like Latin is the source for European languages like French and Spanish.
+Gold: None
+===
+182it [05:13,  2.06s/it]Original: said NOPE! 🚫
+Translated: said NOPE! (prohibited)
+Gold: None
+===
+183it [05:14,  1.72s/it]Original: NOBODY touchin me, and thats word to ya mothersssssss😜
+Translated: NOBODY touchin me, and thats word to ya mothersssssss (winking face with tongue)
+Gold: None
+===
+184it [05:16,  1.76s/it]Original: Englishheld Calais Dauphin kUChAEYVZrnoKJS876DN9UhZOMlfU2A5jdZv11XrYZI= try
+Translated: Englishheld Calais Dauphin to try
+Gold: None
+===
+185it [05:17,  1.53s/it]Original: Twibaho igihe nk’urukurikirane rw'ibintu biva muri kazoza bikaja muri kahise biciye kuri kubu.
+Translated: Time is also how we compare the duration (length) of events.
+Gold: None
+===
+186it [05:18,  1.46s/it]Original: is smaller German g7YJ5biGBotlUhW1x2NREZb7SR9sbA55or9Y3BzwQys= Irish
+Translated: is smaller German or Irish
+Gold: None
+===
+187it [05:19,  1.24s/it]Original: I gotta be honest... nothing about that sounds fun 😂 But you go girl! lol
+Translated: I gotta be honest... nothing about that sounds fun (face with tears of joy) But you go girl! lol
+Gold: None
+===
+188it [05:21,  1.44s/it]Original: $800 for them YSL heels and I will have them for my birthday big 23 this year 🔥😜
+Translated: $800 for them YSL heels and I will have them for my birthday big 23 this year (firewinking face with tongue)
+Gold: None
+===
+189it [05:23,  1.68s/it]Original: 👈 Use this hashtag to vote for Dylan!!!!
+Translated: (backhand index pointing left) Use this hashtag to vote for Dylan!!!!
+Gold: None
+===
+190it [05:24,  1.57s/it]Original: Good morning, Star Dreamers! 😀
+Translated: Good morning, Star Dreamers! (grinning face)
+Gold: None
+===
+191it [05:26,  1.45s/it]No pattern found in response
+Original: प्रक्रियाक अनुसरणक बाद, प्रक्रिया में बनल रहय कें लेल 2015 या 2016 में अगला निर्वाचित विधायिका द्वारा HJR-3 कें फेर सँ समीक्षा कएल जैत।
+Translated: system
+
+Cutting Knowledge Date: December 2023
+Today Date: 26 Jul 2024
+
+You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English.user
+
+Translate this text to English: प्रक्रियाक अनुसरणक बाद, प्रक्रिया में बनल रहय कें लेल 2015 या 2016 में अगला निर्वाचित विधायिका द्वारा HJR-3 कें फेर सँ समीक्षा कएल जैत।assistantFollowing the process, HJR-3 will be reviewed again by the next elected legislature in either 2015 or 2016 to remain in process.
+Gold: None
+===
+192it [05:28,  1.74s/it]Original: इतर प्राइमेट्सच्या विपरीत, होमिनिड्स हालचालींसाठी किंवा वजन उचलण्यासाठी  किंवा झाडांमधून हालचाली करण्यासाठी त्यांच्या हाताचा वापर करत नाहीत.
+Translated: Unlike other primates, hominids no longer use their hands in locomotion or bearing weight or swinging through the trees.
+Gold: None
+===
+193it [05:30,  1.83s/it]Original: Just don't run out of Beers, and I talkin' bout Coronas 👍🏾..
+Translated: Just don't run out of Beers, and I talkin' bout Coronas (thumbs up) (medium-dark skin tone)..
+Gold: None
+===
+194it [05:32,  1.93s/it]Original: families residing in the county The OxcnRrZ4INCrQLfYAx8MjAFaaES/dGqm7E2tGmdiPsU= density was 496
+Translated: families residing in the county The census density was 496
+Gold: None
+===
+195it [05:33,  1.71s/it]Original: more people are B2XFFiekUKF1h2ZjI2pRJipJeFxC410Re464pn9he44= than
+Translated: more people are there than
+Gold: None
+===
+196it [05:34,  1.41s/it]Original: थोडक्यात सांगायचे तर पुनरुज्जीवन काळात अध्ययना कडे पाहण्याचा दृष्टीकोन आणि ज्ञानाचे प्रसारण यात महत्वाचा बदल घडवून आणला.
+Translated: In essence, the approach to learning changed in the Renaissance period.
+Gold: None
+===
+197it [05:36,  1.42s/it]Original: NEW GODLY ACCOUNTS FOR SALE🔥 DM FOR PRICING 🤑🤑🤑🤑
+Translated: NEW GODLY ACCOUNTS FOR SALE (fire) DM FOR PRICING (money-mouthmoney-mouthmoney-mouthmoney-mouth)
+Gold: None
+===
+198it [05:38,  1.61s/it]Original: Igihugu ca Luxembourg camye kigerageza kwirinda guhengama mu vya politike mugabo carigaruriwe n'Ubudagi mu Ntambara ya mbere y'isi yose n'iya kabiri.
+Translated: Luxembourg has always tried to remain a neutral country but it was occupied in both World War I and World War II by Germany.
+Gold: None
+===
+199it [05:40,  1.76s/it]Original: With 323 left in the game MYbwulBbKXsdhdCUXQlFcG6hQ7OtAplx30wpx4lZo00= deep in his
+Translated: With 323 left in the game and deep in his
+Gold: None
+===
+200it [05:41,  1.57s/it]200it [05:41,  1.71s/it]

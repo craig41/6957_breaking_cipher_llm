@@ -11,7 +11,7 @@
 #SBATCH -o outputs/outputs-%j
 
 WORKDIR=/scratch/general/vast/$USER/6957_breaking_cipher_llm
-source /uufs/chpc.utah.edu/common/home/u1380656/.venv/bin/activate
+source $WORKDIR/.venv/bin/activate
 module load cuda/12.4.0
 
 nvidia-smi
@@ -21,19 +21,17 @@ echo "SLURM JOB ID: $SLURM_JOBID"
 mkdir -p /scratch/general/vast/$USER/huggingface_cache
 export HF_HOME="/scratch/general/vast/$USER/huggingface_cache"
 
-# Path to the LoRA adapter
-LORA_PATH="$WORKDIR/src/results_llama3-8b-instruct-translator/cipher_adapter-final"
-
 # Path to test data
-TEST_DATA="$WORKDIR/data/finetune-data/test_data.csv"
+TEST_DATA="$WORKDIR/data/finetune-data-full/combined_test_data.csv"
+LORA_PATH="$WORKDIR/src/results_llama3-8b-instruct-translator/cipher_adapter_epochs_10"
 
 # Run with LoRA adapter on test CSV data
 python run_local.py \
     -m llama3_1_8b_instruct_lora \
     -w translate \
-    -n 20 \
+    -n 200 \
     -k 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 \
-    --output $WORKDIR/data/lora_test/csv_results/ \
+    --output $WORKDIR/data/lora_test/eval_results_full_epochs_10/ \
     --lora-path $LORA_PATH \
     --csv-data $TEST_DATA
 

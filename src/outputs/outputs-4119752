@@ -1,0 +1,55 @@
+Sun Apr 27 18:49:09 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:21:00.0 Off |                    0 |
+| N/A   45C    P0             46W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 4119752
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/transformers/utils/hub.py:105: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Namespace(model='llama3_1_8b_instruct_lora', model_args=None, workflow='translate', data=None, s=0, n=200, source='stan1293', split='dev', output='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full_epochs_10/', lora_path='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/results_llama3-8b-instruct-translator/cipher_adapter_epochs_10', csv_data='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv')
+Loading data from /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv
+Loaded 200 examples from /scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv
+Loading base model: meta-llama/Llama-3.1-8B-Instruct
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:21<01:03, 21.25s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:38<00:38, 19.11s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:58<00:19, 19.42s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:03<00:00, 13.66s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:03<00:00, 15.87s/it]
+Loading LoRA adapter from: /scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/results_llama3-8b-instruct-translator/cipher_adapter_epochs_10
+LoRA adapter loaded successfully
+0it [00:00, ?it/s]Original: teams committed turnovers the Eagles came +I3lWcnXJ+SJ+QeSX/S6qm9MiSO3ZXjH/xAxEG1FeRM= with the win
+Translated: teams committed turnovers the Eagles came away with the win
+Gold: None
+===
+1it [00:02,  2.08s/it]Original: as time passed U92nq9W5mb/TwjNsfwrY/FCyqXSJ63usFU3Qvre1cfg= continued
+Translated: as time passed Henry continued
+Gold: None
+===
+2it [00:02,  1.26s/it]Original: नैराश्य आणि भीती नव्हे तर केवळ आपत्तिजनक परिणाम हे नियमित साप्ताहिक संरचित पीए सत्र सशर्त होते.
+Translated: Depression and fear are not abnormal reactions to a real threat. They are normal reactions to a real threat.
+Gold: None
+===
+3it [00:04,  1.46s/it]Original: 彼らは、患者を壊疽から救うための四肢切断術、血流を止める止血帯、そして動脈クランプにも精通していました。
+Translated: They had developed amputation to save patients from gangrene as well as tourniquets and arterial clamps to stem blood flow.
+Gold: None
+===
+4it [00:06,  1.68s/it]Original: ‼️ HELLO EVERYONE ‼️ Visited the Oriental Art Gallery in SF. Shes literally the cutest old person ever, and it was her birthd…
+Translated: (double exclamation mark) HELLO EVERYONE (double exclamation mark) Visited the Oriental Art Gallery in SF. Shes literally the cutest old person ever, and it was her birthd…
+Gold: None
+===
+5it [00:09,  2.14s/it]Original: it to its CUG02AhAd2igLQ/R3KRtc0SlVvO/+kvny5UHfyF/qFM= glory
+Translated: it to its former glory
+Gold: None
+===
+6it [00:10,  1.63s/it]

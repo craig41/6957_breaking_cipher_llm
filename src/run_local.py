@@ -21,7 +21,10 @@ original = []
 def callback(instance, gold, output, conversation):
     translated.append(output)
     original.append(instance['text'])
-    print(f'{str(conversation)}\n\nINPUT:\n{str(instance["text"])}\nOUTPUT:\n{str(output)}\n')
+    print(f"Original: {instance['text']}")
+    print(f"Translated: {output}")
+    print(f"Gold: {gold}")
+    print("===")
 
 def load_csv_data(csv_path, n=None, start=0):
     """
@@ -103,25 +106,45 @@ def _llama3_1_8b_instruct_lora(lora_adapter_path=None):
         model_inputs = tokenizer.apply_chat_template(messages, return_tensors="pt").to('cuda')
         
         # Generate response
+        attention_mask = model_inputs.ne(tokenizer.pad_token_id)
         outputs = model.generate(
-            model_inputs, 
+            model_inputs,
+            attention_mask=attention_mask,
             max_new_tokens=512, 
             do_sample=False, 
             temperature=None, 
-            top_p=None
+            top_p=None,
+            pad_token_id=tokenizer.pad_token_id
         )
         
         # Decode and clean up response
-        raw_response = tokenizer.batch_decode(outputs, skip_special_tokens=True)[0].split('[/INST]')[-1].split('</s>')[0].strip()
+        raw_response = tokenizer.batch_decode(outputs, skip_special_tokens=True)[0]
         
         # Clean the response to remove unwanted tokens
         cleaned_response = re.sub(r'<\|eot_id\|>', '', raw_response)
         
         # Pattern to detect each occurrence of the assistant's response
         pattern = "assistant\n\n"
+        pattern2 = "assistant: "
+        pattern3= "assistant\n"
+        pattern4 = "assistant "
+        pattern5 = "assistant"
         
         # Split the response based on the pattern and grab the last split
-        response_splits = re.split(pattern, cleaned_response)
+        if pattern in cleaned_response:
+
+            response_splits = re.split(pattern, cleaned_response)
+        elif pattern2 in cleaned_response:
+            response_splits = re.split(pattern2, cleaned_response)
+        elif pattern3 in cleaned_response:
+            response_splits = re.split(pattern3, cleaned_response)
+        elif pattern4 in cleaned_response:
+            response_splits = re.split(pattern4, cleaned_response)
+        elif pattern5 in cleaned_response:
+            response_splits = re.split(pattern5, cleaned_response)
+        else:
+            print("No pattern found in response")
+            response_splits = [cleaned_response]
         
         # The last item should contain the most recent assistant response
         if len(response_splits) > 1:

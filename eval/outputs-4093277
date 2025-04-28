@@ -1,0 +1,233 @@
+Thu Apr 24 14:49:10 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.124.06             Driver Version: 570.124.06     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA RTX A6000               On  |   00000000:81:00.0 Off |                  Off |
+| 45%   60C    P8             24W /  300W |       2MiB /  49140MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+SLURM JOB ID: 4093277
+[rank: 0] Seed set to 1
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [00:00<00:00,  4.41it/s]Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 16.62it/s]
+Encoder model frozen.
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/.venv/lib/python3.10/site-packages/pytorch_lightning/core/saving.py:195: Found keys that are not in the model state dict but in the checkpoint: ['encoder.model.embeddings.position_ids']
+You are using the plain ModelCheckpoint callback. Consider using LitModelCheckpoint which with seamless uploading to Model registry.
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+Predicting: 0it [00:00, ?it/s]Predicting:   0%|          | 0/13 [00:00<?, ?it/s]Predicting DataLoader 0:   0%|          | 0/13 [00:00<?, ?it/s]Predicting DataLoader 0:   8%|▊         | 1/13 [00:01<00:12,  1.04s/it]Predicting DataLoader 0:  15%|█▌        | 2/13 [00:01<00:06,  1.58it/s]Predicting DataLoader 0:  23%|██▎       | 3/13 [00:01<00:05,  1.94it/s]Predicting DataLoader 0:  31%|███       | 4/13 [00:01<00:04,  2.14it/s]Predicting DataLoader 0:  38%|███▊      | 5/13 [00:02<00:03,  2.31it/s]Predicting DataLoader 0:  46%|████▌     | 6/13 [00:02<00:02,  2.49it/s]Predicting DataLoader 0:  54%|█████▍    | 7/13 [00:03<00:03,  1.76it/s]Predicting DataLoader 0:  62%|██████▏   | 8/13 [00:04<00:02,  1.83it/s]Predicting DataLoader 0:  69%|██████▉   | 9/13 [00:04<00:02,  1.91it/s]Predicting DataLoader 0:  77%|███████▋  | 10/13 [00:05<00:01,  1.99it/s]Predicting DataLoader 0:  85%|████████▍ | 11/13 [00:05<00:00,  2.05it/s]Predicting DataLoader 0:  92%|█████████▏| 12/13 [00:05<00:00,  2.02it/s]Predicting DataLoader 0: 100%|██████████| 13/13 [00:06<00:00,  2.08it/s]Predicting DataLoader 0: 100%|██████████| 13/13 [00:06<00:00,  2.08it/s]
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 0	score: 0.6704
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 1	score: 0.6010
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 2	score: 0.3798
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 3	score: 0.9085
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 4	score: 0.8083
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 5	score: 0.2406
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 6	score: 0.7204
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 7	score: 0.1932
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 8	score: 0.2293
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 9	score: 0.8147
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 10	score: 0.5456
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 11	score: 0.3297
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 12	score: 0.6085
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 13	score: 0.2425
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 14	score: 0.9905
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 15	score: 0.4864
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 16	score: 0.8382
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 17	score: 0.8098
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 18	score: 0.7366
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 19	score: 0.5021
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 20	score: 0.5412
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 21	score: 0.7590
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 22	score: 0.7586
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 23	score: 0.6047
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 24	score: 0.7112
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 25	score: 0.8782
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 26	score: 0.2529
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 27	score: 0.1885
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 28	score: 0.6446
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 29	score: 0.9685
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 30	score: 0.5948
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 31	score: 0.3162
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 32	score: 0.2069
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 33	score: 0.8450
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 34	score: 0.4950
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 35	score: 0.2056
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 36	score: 0.2060
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 37	score: 0.2000
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 38	score: 0.6486
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 39	score: 0.7160
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 40	score: 0.6198
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 41	score: 0.9373
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 42	score: 0.3975
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 43	score: 0.9944
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 44	score: 0.6166
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 45	score: 0.7674
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 46	score: 0.7625
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 47	score: 0.8728
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 48	score: 0.6697
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 49	score: 0.8899
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 50	score: 0.9485
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 51	score: 0.9602
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 52	score: 0.5905
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 53	score: 0.2890
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 54	score: 0.4085
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 55	score: 0.4579
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 56	score: 0.2377
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 57	score: 0.4092
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 58	score: 0.6665
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 59	score: 0.2023
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 60	score: 0.7864
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 61	score: 0.6442
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 62	score: 0.7805
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 63	score: 0.8068
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 64	score: 0.1111
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 65	score: 0.7600
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 66	score: 0.6974
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 67	score: 0.8987
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 68	score: 0.8133
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 69	score: 0.6194
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 70	score: 0.4845
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 71	score: 0.1891
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 72	score: 0.6340
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 73	score: 0.9597
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 74	score: 0.8255
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 75	score: 0.9680
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 76	score: 0.9378
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 77	score: 0.9231
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 78	score: 0.8938
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 79	score: 0.4739
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 80	score: 0.2723
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 81	score: 1.0003
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 82	score: 0.2269
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 83	score: 0.8479
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 84	score: 0.9378
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 85	score: 0.5590
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 86	score: 0.9558
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 87	score: 0.3827
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 88	score: 0.7615
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 89	score: 0.9114
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 90	score: 0.7424
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 91	score: 0.9177
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 92	score: 0.6134
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 93	score: 0.3943
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 94	score: 0.9182
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 95	score: 0.5300
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 96	score: 0.2353
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 97	score: 0.7517
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 98	score: 0.6295
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 99	score: 0.7302
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 100	score: 0.5519
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 101	score: 0.5620
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 102	score: 0.4219
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 103	score: 0.6216
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 104	score: 0.8186
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 105	score: 0.7859
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 106	score: 0.2518
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 107	score: 0.9578
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 108	score: 0.7878
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 109	score: 0.7249
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 110	score: 0.5466
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 111	score: 0.1893
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 112	score: 0.8416
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 113	score: 0.8030
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 114	score: 0.8088
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 115	score: 0.0889
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 116	score: 0.5105
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 117	score: 0.9881
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 118	score: 0.2370
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 119	score: 0.8929
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 120	score: 0.8098
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 121	score: 0.6599
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 122	score: 0.9929
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 123	score: 0.9563
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 124	score: 0.7337
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 125	score: 0.9592
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 126	score: 0.2015
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 127	score: 0.9739
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 128	score: 0.5334
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 129	score: 0.3706
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 130	score: 0.5363
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 131	score: 0.6989
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 132	score: 0.2006
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 133	score: 0.8235
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 134	score: 0.4427
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 135	score: 0.3740
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 136	score: 0.4256
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 137	score: 0.2006
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 138	score: 0.3415
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 139	score: 0.8694
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 140	score: 0.6210
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 141	score: 0.9871
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 142	score: 0.7238
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 143	score: 0.5715
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 144	score: 0.2042
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 145	score: 0.5402
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 146	score: 0.5826
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 147	score: 0.8221
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 148	score: 0.9822
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 149	score: 0.4228
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 150	score: 0.4016
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 151	score: 0.9514
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 152	score: 0.9202
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 153	score: 0.2003
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 154	score: 0.6462
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 155	score: 0.6177
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 156	score: 0.2085
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 157	score: 0.9749
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 158	score: 0.5121
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 159	score: 0.6531
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 160	score: 0.8532
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 161	score: 0.3783
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 162	score: 0.9065
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 163	score: 0.8274
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 164	score: 0.9260
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 165	score: 0.6789
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 166	score: 0.8063
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 167	score: 0.9319
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 168	score: 0.6264
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 169	score: 0.8367
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 170	score: 0.8323
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 171	score: 0.9720
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 172	score: 0.5395
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 173	score: 1.0003
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 174	score: 0.8586
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 175	score: 0.8523
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 176	score: 0.3636
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 177	score: 0.9456
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 178	score: 0.2189
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 179	score: 0.8029
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 180	score: 0.9881
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 181	score: 0.8528
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 182	score: 0.9548
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 183	score: 0.7541
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 184	score: 0.2932
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 185	score: 0.2978
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 186	score: 0.5498
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 187	score: 0.8850
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 188	score: 0.9236
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 189	score: 0.9749
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 190	score: 0.9954
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 191	score: 0.5673
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 192	score: 0.3022
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 193	score: 0.8655
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 194	score: 0.3755
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 195	score: 0.2139
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 196	score: 0.6599
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 197	score: 0.5061
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 198	score: 0.5423
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	Segment 199	score: 0.2964
+/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/llama3_1_8b/test_results_full/translated.txt	score: 0.6381

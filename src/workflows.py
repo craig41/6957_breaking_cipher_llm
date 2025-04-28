@@ -1,9 +1,10 @@
 from utils import *
 
 def _translate_basic():
-    system_message = Message(SYSTEM, "I will give you text which you will need to translate to ENGLISH. Please return ONLY the given text translated to ENGLISH, with NO additional output." )
+    system_message = Message(SYSTEM, "You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English." )
     def workflow(messages: Conversation, instance):
         text = instance["text"]
+        text = "Translate this text to English: " + text
 
         messages.append(system_message)
         translation = messages.query(text)

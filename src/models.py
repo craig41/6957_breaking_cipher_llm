@@ -60,12 +60,15 @@ def _llama3_3_70b():
         # Single message processing
         model_inputs = tokenizer.apply_chat_template(messages, return_tensors="pt").to('cuda')
 
+        attention_mask = model_inputs.ne(tokenizer.pad_token_id)
         outputs = model.generate(
-            model_inputs, 
+            model_inputs,
+            attention_mask=attention_mask,
             max_new_tokens=512, 
             do_sample=False, 
             temperature=None, 
-            top_p=None)
+            top_p=None,
+            pad_token_id=tokenizer.pad_token_id)
         raw_response = tokenizer.batch_decode(outputs, skip_special_tokens=True)[0].split('[/INST]')[-1].split('</s>')[0].strip()
 
         # Clean the response to remove unwanted tokens
@@ -109,12 +112,15 @@ def _llama3_2_3b():
         # Single message processing
         model_inputs = tokenizer.apply_chat_template(messages, return_tensors="pt").to('cuda')
 
+        attention_mask = model_inputs.ne(tokenizer.pad_token_id)
         outputs = model.generate(
-            model_inputs, 
+            model_inputs,
+            attention_mask=attention_mask,
             max_new_tokens=512, 
             do_sample=False, 
             temperature=None, 
-            top_p=None)
+            top_p=None,
+            pad_token_id=tokenizer.pad_token_id)
         raw_response = tokenizer.batch_decode(outputs, skip_special_tokens=True)[0].split('[/INST]')[-1].split('</s>')[0].strip()
 
         # Clean the response to remove unwanted tokens
@@ -158,12 +164,15 @@ def _llama3_1_8b_instruct():
         # Single message processing
         model_inputs = tokenizer.apply_chat_template(messages, return_tensors="pt").to('cuda')
 
+        attention_mask = model_inputs.ne(tokenizer.pad_token_id)
         outputs = model.generate(
-            model_inputs, 
+            model_inputs,
+            attention_mask=attention_mask,
             max_new_tokens=512, 
             do_sample=False, 
             temperature=None, 
-            top_p=None)
+            top_p=None,
+            pad_token_id=tokenizer.pad_token_id)
         raw_response = tokenizer.batch_decode(outputs, skip_special_tokens=True)[0].split('[/INST]')[-1].split('</s>')[0].strip()
 
         # Clean the response to remove unwanted tokens
@@ -194,11 +203,14 @@ def _aya_expanse_8b():
         print(f"Message: {messages}")
         input_ids = tokenizer.apply_chat_template(messages, tokenize=True, add_generation_prompt=True, return_tensors="pt").to('cuda')
 
+        attention_mask = input_ids.ne(tokenizer.pad_token_id)
         gen_tokens = model.generate(
             input_ids,
+            attention_mask=attention_mask,
             max_new_tokens=512,
             do_sample=False,
-            temperature=0.3
+            temperature=0.3,
+            pad_token_id=tokenizer.pad_token_id
         )
         text = tokenizer.decode(gen_tokens[0])
         # Parsing logic to extract chatbot output

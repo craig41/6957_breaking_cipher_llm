@@ -11,7 +11,7 @@
 #SBATCH -o outputs-%j 
 
 WORKDIR=/scratch/general/vast/$USER/6957_breaking_cipher_llm
-source /uufs/chpc.utah.edu/common/home/u1380656/.venv/bin/activate
+source $WORKDIR/.venv/bin/activate
 module load cuda/12.4.0
 
 nvidia-smi
@@ -21,4 +21,4 @@ echo "SLURM JOB ID: $SLURM_JOBID"
 mkdir -p /scratch/general/vast/$USER/huggingface_cache
 export HF_HOME="/scratch/general/vast/$USER/huggingface_cache"
 
-comet-score -s $WORKDIR/data/llama3_1_8b/rundi/original.txt -t $WORKDIR/data/llama3_1_8b/rundi/translated.txt -r $WORKDIR/data/gold/golds_small_utf8.txt --model Unbabel/XCOMET-XL 
+comet-score -s $WORKDIR/data/llama3_1_8b/test_results_full/original.txt -t $WORKDIR/data/lora_test/eval_results_full_v2/translated.txt -n 200 -r $WORKDIR/data/gold/translated_small.txt --model Unbabel/XCOMET-XL 

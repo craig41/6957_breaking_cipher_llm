@@ -171,3 +171,4 @@ cython_debug/
 .pypirc
 /data/openlanguagedata___flores_plus
 src/results_llama3-8b-instruct-translator
+results_llama3-8b-instruct-translator
