@@ -66,8 +66,14 @@ def extract_xcomet_score(file_path):
         print(f"Error processing {file_path}: {e}")
         return None
 
-def collect_results(base_dir):
-    """Collect results from all model variants."""
+def collect_results(base_dir, challenge_scores=None):
+    """Collect results from all model variants.
+    
+    Args:
+        base_dir: Directory containing model results
+        challenge_scores: Optional dict with challenge scores in format 
+                          {'model_name': {'bert_challenge': value, 'xcomet_challenge': value}}
+    """
     results = []
     
     # Define the models and their variants
@@ -106,6 +112,16 @@ def collect_results(base_dir):
                 result.update(bert_results)
             if xcomet_results:
                 result.update(xcomet_results)
+            
+            # Add challenge scores if provided
+            if challenge_scores and model in challenge_scores:
+                model_challenges = challenge_scores[model]
+                
+                if 'bert_challenge' in model_challenges:
+                    result['bert_challenge'] = model_challenges['bert_challenge']
+                
+                if 'xcomet_challenge' in model_challenges:
+                    result['xcomet_challenge'] = model_challenges['xcomet_challenge']
                 
             # Only add if we have at least one score
             if bert_results or xcomet_results:
@@ -127,6 +143,19 @@ def plot_results(df, output_dir):
         for model in df['model'].unique():
             model_data = df[df['model'] == model].sort_values('epochs')
             plt.plot(model_data['epochs'], model_data['bert_f1'], marker='o', linewidth=2, label=model)
+            
+            # Plot challenge score if available (as star marker)
+            challenge_df = model_data[model_data['bert_challenge'].notna()]
+            if len(challenge_df) > 0:
+                plt.scatter(
+                    challenge_df['epochs'], 
+                    challenge_df['bert_challenge'],
+                    marker='*',  # Star marker
+                    s=150,       # Size
+                    color=plt.gca().lines[-1].get_color(),  # Match line color
+                    edgecolor='black',
+                    label=f"{model} (challenge)"
+                )
         
         plt.title('BERT F1 Scores by Model and Training Epochs', fontsize=16)
         plt.xlabel('Training Epochs', fontsize=14)
@@ -143,6 +172,19 @@ def plot_results(df, output_dir):
         for model in df['model'].unique():
             model_data = df[df['model'] == model].sort_values('epochs')
             plt.plot(model_data['epochs'], model_data['xcomet'], marker='o', linewidth=2, label=model)
+            
+            # Plot challenge score if available (as star marker)
+            challenge_df = model_data[model_data['xcomet_challenge'].notna()]
+            if len(challenge_df) > 0:
+                plt.scatter(
+                    challenge_df['epochs'], 
+                    challenge_df['xcomet_challenge'],
+                    marker='*',  # Star marker
+                    s=150,       # Size
+                    color=plt.gca().lines[-1].get_color(),  # Match line color
+                    edgecolor='black',
+                    label=f"{model} (challenge)"
+                )
         
         plt.title('XCOMET Scores by Model and Training Epochs', fontsize=16)
         plt.xlabel('Training Epochs', fontsize=14)
@@ -164,16 +206,44 @@ def plot_results(df, output_dir):
 
 def plot_individual_models(df, output_dir):
     """Create separate plots for each metric and model."""
-    metrics = [col for col in df.columns if col not in ['model', 'variant', 'epochs']]
+    # Define metrics and their challenge counterparts
+    metric_pairs = {
+        'bert_f1': 'bert_challenge',
+        'xcomet': 'xcomet_challenge'
+    }
     
-    for metric in metrics:
+    # Create individual plots for each metric
+    for metric, challenge_metric in metric_pairs.items():
+        if metric not in df.columns:
+            continue
+            
         plt.figure(figsize=(10, 6))
         
         for model in df['model'].unique():
             model_data = df[df['model'] == model].sort_values('epochs')
-            if metric in model_data.columns and not model_data[metric].isna().all():
-                plt.plot(model_data['epochs'], model_data[metric], marker='o', linewidth=2, label=model)
+            
+            # Skip if no data for this metric
+            if metric not in model_data.columns or model_data[metric].isna().all():
+                continue
+                
+            # Plot regular metric line
+            plt.plot(model_data['epochs'], model_data[metric], marker='o', linewidth=2, label=model)
+            
+            # Add challenge points if available
+            if challenge_metric in model_data.columns:
+                challenge_data = model_data[model_data[challenge_metric].notna()]
+                if len(challenge_data) > 0:
+                    plt.scatter(
+                        challenge_data['epochs'],
+                        challenge_data[challenge_metric],
+                        marker='*',
+                        s=150,
+                        color=plt.gca().lines[-1].get_color(),
+                        edgecolor='black',
+                        label=f"{model} (challenge)"
+                    )
         
+        # Format the plot
         metric_name = metric.replace('_', ' ').upper()
         plt.title(f'{metric_name} by Model and Training Epochs', fontsize=16)
         plt.xlabel('Training Epochs', fontsize=14)
@@ -216,15 +286,60 @@ def main():
                         help='Directory containing model results')
     parser.add_argument('--output-dir', type=str, default='/scratch/general/vast/u1380656/6957_breaking_cipher_llm/eval/plots',
                         help='Directory to save plots')
+    parser.add_argument('--aya-bert-challenge', type=float, help='Aya BERT challenge score')
+    parser.add_argument('--aya-xcomet-challenge', type=float, help='Aya XCOMET challenge score')
+    parser.add_argument('--llama-bert-challenge', type=float, help='Llama BERT challenge score', default=0.8759)
+    parser.add_argument('--llama-xcomet-challenge', type=float, help='Llama XCOMET challenge score', default=0.6295)
+    parser.add_argument('--challenge-epoch', type=int, default=3, 
+                        help='Which epoch to place the challenge score at (default: 3)')
     
     args = parser.parse_args()
     
+    # Prepare challenge scores if provided
+    challenge_scores = {}
+    
+    # Add Aya challenge scores if provided
+    if args.aya_bert_challenge is not None or args.aya_xcomet_challenge is not None:
+        challenge_scores['aya_expanse_8b'] = {}
+        
+        if args.aya_bert_challenge is not None:
+            challenge_scores['aya_expanse_8b']['bert_challenge'] = args.aya_bert_challenge
+            
+        if args.aya_xcomet_challenge is not None:
+            challenge_scores['aya_expanse_8b']['xcomet_challenge'] = args.aya_xcomet_challenge
+    
+    # Add Llama challenge scores if provided
+    if args.llama_bert_challenge is not None or args.llama_xcomet_challenge is not None:
+        challenge_scores['llama'] = {}
+        
+        if args.llama_bert_challenge is not None:
+            challenge_scores['llama']['bert_challenge'] = args.llama_bert_challenge
+            
+        if args.llama_xcomet_challenge is not None:
+            challenge_scores['llama']['xcomet_challenge'] = args.llama_xcomet_challenge
+    
     # Collect results
-    results_df = collect_results(args.data_dir)
+    results_df = collect_results(args.data_dir, challenge_scores)
     
     if len(results_df) == 0:
         print("No results found. Check the paths and try again.")
         return
+    
+    # Set the challenge epoch if challenge scores were provided
+    if challenge_scores and args.challenge_epoch is not None:
+        # Only add challenge scores to rows with the specified epoch (default: 3)
+        for model in challenge_scores:
+            mask = (results_df['model'] == model) & (results_df['epochs'] == args.challenge_epoch)
+            if sum(mask) > 0:
+                for challenge_key in ['bert_challenge', 'xcomet_challenge']:
+                    if challenge_key in challenge_scores[model]:
+                        # Add challenge score only to the specified epoch
+                        results_df.loc[mask, challenge_key] = challenge_scores[model][challenge_key]
+                        
+                        # Clear any challenge scores at other epochs
+                        other_epochs_mask = (results_df['model'] == model) & (results_df['epochs'] != args.challenge_epoch)
+                        if sum(other_epochs_mask) > 0:
+                            results_df.loc[other_epochs_mask, challenge_key] = np.nan
     
     # Plot results
     plot_results(results_df, args.output_dir)
