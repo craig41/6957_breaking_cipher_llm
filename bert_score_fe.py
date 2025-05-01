@@ -37,8 +37,8 @@ def calc_bert(g_lines, p_lines):
 
 if __name__ == '__main__':
     
-    gold_dir_str = "data/unused_data/final_test/"
-    pred_dir_str = "data/final_eva_pred/"
+    gold_dir_str = "data/unused_data/final_test/mixed_text/"
+    pred_dir_str = "data/final_eval_pred/prediction/"
 
     gold_dir = sorted(os.listdir(gold_dir_str))
     pred_dir = sorted(os.listdir(pred_dir_str))
@@ -75,7 +75,7 @@ if __name__ == '__main__':
         
         orig_filename = os.path.basename(gold_f)
         orig_filename = os.path.splitext(orig_filename)[0]
-        filename = "data/bert_score_aya_bm/" + orig_filename + "_scores.txt"
+        filename = "data/bert_score_llama_fe/" + orig_filename + "_scores.txt"
         
         score_df = pd.DataFrame()
         score_df["P"] = p
@@ -93,7 +93,7 @@ if __name__ == '__main__':
         score_txt.append("Max F1 for {}: {:.4f}".format(orig_filename, score_df['F1'].max()))
         score_txt.append("Min F1 for {}: {:.4f}".format(orig_filename, score_df['F1'].min()))
 
-        with open(filename, "w") as txt_file:
+        with open(filename, "w+") as txt_file:
             for line in score_txt:
                 txt_file.write(line + "\n")
 

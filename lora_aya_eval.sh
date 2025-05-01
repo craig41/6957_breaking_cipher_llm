@@ -21,7 +21,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64
 WORKDIR=/uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm/scratch
 OUTDIR=/uufs/chpc.utah.edu/common/home/u0013114/code/6957_breaking_cipher_llm/output2
 # Path to the LoRA adapter
-LORA_PATH=/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/results_llama3-8b-instruct-translator/cipher_adapter-final
+LORA_PATH=/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/results_aya8b_translator
 module load cuda/12.4.0
 
 nvidia-smi

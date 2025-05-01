@@ -31,7 +31,4 @@ mkdir -p $OUTDIR
 export HF_HOME="/scratch/general/vast/$USER/huggingface_cache"
 
 pip install bert-score
-python3 bert_score_aya_bm.py 
-python3 bert_score_aya_lora.py 
-python3 bert_score_llama_bm.py 
-python3 bert_score_llama_lora.py 
+python3 bert_score_fe.py

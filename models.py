@@ -1,111 +1,65 @@
-import os, sys ; sys.path.append(os.getcwd()) #allow local imports
-os.environ["TRANSFORMERS_CACHE"] = "/scratch/general/vast/u1380656/huggingface_cache"
-
-import argparse
+import transformers
 import torch
-import csv
-import pandas as pd
-from datasets import Dataset
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from peft import PeftModel
-from utils import *
-from models import *
-from workflows import *
-from huggingface_hub import login
 
-def generate_report(instances, golds, outputs, conversations):
-    pass
 
-translated = []
-original = []
-def callback(instance, gold, output, conversation):
-    translated.append(output)
-    original.append(instance['text'])
-    print(f"Original: {instance['text']}")
-    print(f"Translated: {output}")
-    print(f"Gold: {gold}")
-    print("===")
-
-def load_csv_data(csv_path, n=None, start=0):
-    """
-    Load data from a CSV file into a Dataset format compatible with the existing pipeline.
-    
-    Args:
-        csv_path: Path to the CSV file
-        n: Number of examples to load (None for all)
-        start: Starting index
+def memoize(f):
+    result = [None]
+    def memoized_f():
+        if result[0] is None:
+            result[0] = f()
+        return result[0]
+    return memoized_f
         
-    Returns:
-        A HuggingFace Dataset object
-    """
-    print(f"Loading data from {csv_path}")
-    
-    # Read the CSV file
-    df = pd.read_csv(csv_path)
-    
-    # Handle selection range
-    if n is not None:
-        df = df.iloc[start:start+n]
-    else:
-        df = df.iloc[start:]
-    
-    # Create a dataset-compatible format
-    formatted_data = []
-    for _, row in df.iterrows():
-        formatted_data.append({
-            "text": row['input'],
-            "glottocode": "custom", # We don't need real glottocodes for test data
-            "gold": row['gold'],
-            "category": row.get('category', 'unknown')
-        })
-    
-    # Convert to HuggingFace Dataset
-    dataset = Dataset.from_pandas(pd.DataFrame(formatted_data))
-    print(f"Loaded {len(dataset)} examples from {csv_path}")
-    
-    return dataset
-
-def _llama3_1_8b_instruct_lora(lora_adapter_path=None):
-    """Load Llama 3.1 8B model with optional LoRA adapter"""
-    # Base model ID
-    base_model_id = "meta-llama/Llama-3.1-8B-Instruct"
-    
-    # Initialize tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(base_model_id)
-    tokenizer.pad_token = tokenizer.eos_token
-    
-    # Load the base model
-    print(f"Loading base model: {base_model_id}")
-    model = AutoModelForCausalLM.from_pretrained(
-        base_model_id,
-        torch_dtype=torch.float16,
-        device_map="auto"
+@memoize
+def _llama2():
+    import transformers
+    import torch
+    llama_2_model_id = 'meta-llama/Llama-2-70b-chat-hf'
+    nf4_config = transformers.BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_quant_type='nf4',
+        bnb_4bit_use_double_quant=True,
+        bnb_4bit_compute_dtype=torch.float16)
+    model = transformers.LlamaForCausalLM.from_pretrained(
+       llama_2_model_id,
+        torch_dtype=torch.bfloat16,
+        device_map='balanced',
+        quantization_config=nf4_config,
+        attn_implementation="flash_attention_2",# # # # # use_flash_attention_2=True
     )
-    
-    # Apply LoRA adapter if provided
-    if lora_adapter_path is not None and os.path.exists(lora_adapter_path):
-        print(f"Loading LoRA adapter from: {lora_adapter_path}")
-        model = PeftModel.from_pretrained(model, lora_adapter_path)
-        # Option to merge weights for faster inference
-        # model = model.merge_and_unload()
-        print("LoRA adapter loaded successfully")
-    else:
-        print("No LoRA adapter loaded or path doesn't exist")
-    
-    # Set model configuration
-    config = model.config
-    if hasattr(config, 'rope_scaling'):
-        config.rope_scaling = {
-            "type": "llama3",
-            "factor": 8.0
-        }
+    tokenizer = transformers.LlamaTokenizer.from_pretrained(
+        llama_2_model_id,
+        add_bos_token=False)
     
     def query(messages, n=None):
+        model_inputs = tokenizer.apply_chat_template(messages, return_tensors="pt").cuda()
+        response = tokenizer.batch_decode(model.generate(model_inputs, max_new_tokens=512, do_sample=False, temperature=None, top_p=None, ))[0].split('[/INST]')[-1].split('</s>')[0].strip()
+        return response
+
+    return query
+
+def _llama3_3_70b():
+    llama_3_1_model_id = "meta-llama/Llama-3.3-70B-Instruct"
+    
+    tokenizer = transformers.AutoTokenizer.from_pretrained(llama_3_1_model_id)
+    tokenizer.pad_token = tokenizer.eos_token 
+    model = transformers.LlamaForCausalLM.from_pretrained(
+        llama_3_1_model_id,
+        torch_dtype=torch.float16,
+        device_map="auto"
+        )
+    
+    config = transformers.LlamaConfig.from_pretrained(llama_3_1_model_id)
+    config.rope_scaling = {
+        "type": "llama3",
+        "factor": 8.0
+    }
+
+    def query(messages, n=None):
         import re
-        # Process messages through the chat template
+        # Single message processing
         model_inputs = tokenizer.apply_chat_template(messages, return_tensors="pt").to('cuda')
-        
-        # Generate response
+
         attention_mask = model_inputs.ne(tokenizer.pad_token_id)
         outputs = model.generate(
             model_inputs,
@@ -114,178 +68,298 @@ def _llama3_1_8b_instruct_lora(lora_adapter_path=None):
             do_sample=False, 
             temperature=None, 
             top_p=None,
-            pad_token_id=tokenizer.pad_token_id
-        )
-        
-        # Decode and clean up response
-        raw_response = tokenizer.batch_decode(outputs, skip_special_tokens=True)[0]
-        
+            pad_token_id=tokenizer.pad_token_id)
+        raw_response = tokenizer.batch_decode(outputs, skip_special_tokens=True)[0].split('[/INST]')[-1].split('</s>')[0].strip()
+
         # Clean the response to remove unwanted tokens
         cleaned_response = re.sub(r'<\|eot_id\|>', '', raw_response)
-        
+
         # Pattern to detect each occurrence of the assistant's response
         pattern = "assistant\n\n"
-        pattern2 = "assistant: "
-        pattern3= "assistant\n"
-        pattern4 = "assistant "
-        pattern5 = "assistant"
-        
-        # Split the response based on the pattern and grab the last split
-        if pattern in cleaned_response:
 
-            response_splits = re.split(pattern, cleaned_response)
-        elif pattern2 in cleaned_response:
-            response_splits = re.split(pattern2, cleaned_response)
-        elif pattern3 in cleaned_response:
-            response_splits = re.split(pattern3, cleaned_response)
-        elif pattern4 in cleaned_response:
-            response_splits = re.split(pattern4, cleaned_response)
-        elif pattern5 in cleaned_response:
-            response_splits = re.split(pattern5, cleaned_response)
-        else:
-            print("No pattern found in response")
-            response_splits = [cleaned_response]
-        
+        # Split the response based on the pattern and grab the last split
+        response_splits = re.split(pattern, cleaned_response)
+
         # The last item should contain the most recent assistant response
         if len(response_splits) > 1:
             last_response = response_splits[-1].split('</s>')[0].strip()
         else:
             last_response = cleaned_response.strip()
-        
+
         return last_response
+
+    return query
+
+def _llama3_2_3b():
+    llama_3_2_model_id = "meta-llama/Llama-3.2-3B-Instruct"
+    
+    tokenizer = transformers.AutoTokenizer.from_pretrained(llama_3_2_model_id)
+    tokenizer.pad_token = tokenizer.eos_token 
+    model = transformers.LlamaForCausalLM.from_pretrained(
+        llama_3_2_model_id,
+        torch_dtype=torch.float16,
+        device_map="auto"
+        )
+    
+    config = transformers.LlamaConfig.from_pretrained(llama_3_2_model_id)
+    config.rope_scaling = {
+        "type": "llama3",
+        "factor": 8.0
+    }
+
+    def query(messages, n=None):
+        import re
+        # Single message processing
+        model_inputs = tokenizer.apply_chat_template(messages, return_tensors="pt").to('cuda')
+
+        attention_mask = model_inputs.ne(tokenizer.pad_token_id)
+        outputs = model.generate(
+            model_inputs,
+            attention_mask=attention_mask,
+            max_new_tokens=512, 
+            do_sample=False, 
+            temperature=None, 
+            top_p=None,
+            pad_token_id=tokenizer.pad_token_id)
+        raw_response = tokenizer.batch_decode(outputs, skip_special_tokens=True)[0].split('[/INST]')[-1].split('</s>')[0].strip()
+
+        # Clean the response to remove unwanted tokens
+        cleaned_response = re.sub(r'<\|eot_id\|>', '', raw_response)
+
+        # Pattern to detect each occurrence of the assistant's response
+        pattern = "assistant\n\n"
+
+        # Split the response based on the pattern and grab the last split
+        response_splits = re.split(pattern, cleaned_response)
+
+        # The last item should contain the most recent assistant response
+        if len(response_splits) > 1:
+            last_response = response_splits[-1].split('</s>')[0].strip()
+        else:
+            last_response = cleaned_response.strip()
+
+        return last_response
+
+    return query
+
+def _llama3_1_8b_instruct():
+    llama_3_1_model_id = "meta-llama/Llama-3.1-8B-Instruct"
+    
+    tokenizer = transformers.AutoTokenizer.from_pretrained(llama_3_1_model_id)
+    tokenizer.pad_token = tokenizer.eos_token 
+    model = transformers.LlamaForCausalLM.from_pretrained(
+        llama_3_1_model_id,
+        torch_dtype=torch.float16,
+        device_map="auto"
+        )
+    
+    config = transformers.LlamaConfig.from_pretrained(llama_3_1_model_id)
+    config.rope_scaling = {
+        "type": "llama3",
+        "factor": 8.0
+    }
+
+    def query(messages, n=None):
+        import re
+        # Single message processing
+        model_inputs = tokenizer.apply_chat_template(messages, return_tensors="pt").to('cuda')
+
+        attention_mask = model_inputs.ne(tokenizer.pad_token_id)
+        outputs = model.generate(
+            model_inputs,
+            attention_mask=attention_mask,
+            max_new_tokens=512, 
+            do_sample=False, 
+            temperature=None, 
+            top_p=None,
+            pad_token_id=tokenizer.pad_token_id)
+        raw_response = tokenizer.batch_decode(outputs, skip_special_tokens=True)[0].split('[/INST]')[-1].split('</s>')[0].strip()
+
+        # Clean the response to remove unwanted tokens
+        cleaned_response = re.sub(r'<\|eot_id\|>', '', raw_response)
+
+        # Pattern to detect each occurrence of the assistant's response
+        pattern = "assistant\n\n"
+
+        # Split the response based on the pattern and grab the last split
+        response_splits = re.split(pattern, cleaned_response)
+
+        # The last item should contain the most recent assistant response
+        if len(response_splits) > 1:
+            last_response = response_splits[-1].split('</s>')[0].strip()
+        else:
+            last_response = cleaned_response.strip()
+
+        return last_response
+
+    return query
+
+def _aya_expanse_8b():
+    model_id = "CohereForAI/aya-expanse-8b"
+    tokenizer = transformers.AutoTokenizer.from_pretrained(model_id)
+    model = transformers.AutoModelForCausalLM.from_pretrained(model_id, device_map="auto", torch_dtype=torch.float16)
+
+    def query(messages, n=None):
+        print(f"Message: {messages}")
+        input_ids = tokenizer.apply_chat_template(messages, tokenize=True, add_generation_prompt=True, return_tensors="pt").to('cuda')
+
+        attention_mask = input_ids.ne(tokenizer.pad_token_id)
+        gen_tokens = model.generate(
+            input_ids,
+            attention_mask=attention_mask,
+            max_new_tokens=512,
+            do_sample=False,
+            temperature=0.3,
+            pad_token_id=tokenizer.pad_token_id
+        )
+        text = tokenizer.decode(gen_tokens[0])
+        # Parsing logic to extract chatbot output
+        start_token = "<|CHATBOT_TOKEN|>"
+        end_token = "<|END_OF_TURN_TOKEN|>"
+
+        start_idx = text.find(start_token) + len(start_token)
+        end_idx = text.find(end_token, start_idx)
+
+        chatbot_text = text[start_idx:end_idx].strip()
+
+        return chatbot_text
+    return query
+
+
+@memoize
+def _dummy():
+    def query(messages=None, n=None, num_tokens_container:list=None):
+        if num_tokens_container is not None:
+            num_tokens_container.append((1,1))
+        return "No" if n is None else ["No" for _ in range(n)]
+    return query
+
+def _gpt2024(openai_api_key=None, helicone_api_key=None, query_kwargs={}):
+    from helicone.openai_proxy import openai ; from helicone.globals import helicone_global # # # import openai
+    openai.api_key = openai_api_key
+    helicone_global.api_key = helicone_api_key
+
+    def query(messages, n=None, query_specific_kwargs={}, num_tokens_container=None):
+        if n is None:
+            completion = openai.ChatCompletion.create   (
+                                                            model="gpt-4-turbo-2024-04-09",
+                                                            messages=messages,
+                                                            **  {
+                                                                    "temperature":0.0,
+                                                                    "max_tokens":512,
+                                                                    "top_p":1,
+                                                                    "frequency_penalty":0,
+                                                                    "presence_penalty":0,
+                                                                    **query_kwargs,
+                                                                    **query_specific_kwargs
+                                                                },
+                                                        )
+            text = completion['choices'][0]['message']['content']
+        else:
+            completion = openai.ChatCompletion.create   (
+                                                            model="gpt-4-turbo-2024-04-09",
+                                                            messages=messages,
+                                                            n=n,
+                                                            seed=74,
+                                                            **  {
+                                                                    "temperature":1.0,
+                                                                    "max_tokens":512,
+                                                                    "top_p":1,
+                                                                    "frequency_penalty":0,
+                                                                    "presence_penalty":0,
+                                                                    **query_kwargs,
+                                                                    **query_specific_kwargs,
+                                                                },
+
+                                                        )
+            text = [choice['message']['content'] for choice in completion['choices']]
+        if num_tokens_container is not None:
+            num_tokens_container.append((completion['usage']['prompt_tokens'], completion['usage']['completion_tokens']))
+        return text
+
+    return query
+
+@memoize
+def _mistral():
+    import transformers
+    model = transformers.AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1").cuda()
+    tokenizer = transformers.AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.1")
+
+    def query(messages, n=None):
+        model_inputs = tokenizer.apply_chat_template(messages, return_tensors="pt").cuda()
+
+        generations =   [
+                            model.generate  (
+                                                model_inputs, 
+                                                max_new_tokens=512, 
+                                                do_sample=(n is not None), 
+                                                temperature=    (
+                                                                    0.0 
+                                                                    if n is None else 
+                                                                    1.0
+                                                                ), 
+                            )
+                            for _ in range  (
+                                                1
+                                                if n is None else
+                                                n
+                                            )
+                        ]
+
+        responses = [
+                        tokenizer.batch_decode(generation)[0].split('[/INST]')[-1].split('</s>')[0].strip()
+                        for generation in generations
+                    ]
+        return responses[0 if n is None else slice(None)]
+
+    return query
+
+@memoize
+def _commandrplus():
+    import torch
+    from transformers import AutoTokenizer, AutoModelForCausalLM
+    tokenizer = AutoTokenizer.from_pretrained("CohereForAI/c4ai-command-r-plus-4bit")
+    model = AutoModelForCausalLM.from_pretrained("CohereForAI/c4ai-command-r-plus-4bit")
+    def query(messages, n=None):
+        model_inputs = tokenizer.apply_chat_template(messages, return_tensors="pt")
+        model_inputs =  (
+                            model_inputs
+                            if n is None or n==1 else
+                            torch.stack([model_inputs] * n).squeeze()
+                        )
+        model_inputs = model_inputs.cuda()
+        prompt_length = model_inputs.shape[-1]
+
+        generations =   model.generate  (
+                                            model_inputs, 
+                                            max_new_tokens=512, 
+                                            do_sample=(n is not None), 
+                                            **(
+                                                {
+                                                    "temperature":1.0
+                                                }
+                                                if n is not None else 
+                                                {}
+                                            )
+                        )
+
+        responses = tokenizer.batch_decode(generations[...,prompt_length:], skip_special_tokens=True)
+        responses = [response.strip(' ').strip('\n') for response in responses]
+        return responses[0 if n is None else slice(None)]
     
     return query
 
-def main(args, key):
-    print(args)
-    if key is not None:
-        args.model_args = key
-    
-    # Load data based on source type
-    if args.csv_data:
-        # Load from CSV file
-        data = load_csv_data(args.csv_data, args.n, args.s)
-    else:
-        # Load from HuggingFace dataset
-        if args.n is None:
-            data = read_data(args.data, split=args.split)
-            data = data.filter(lambda x: x['glottocode'] == args.source)
-            data = data.select(range(args.s, len(data)))
-        else:
-            data = read_data(args.data, split=args.split)
-            data = data.filter(lambda x: x['glottocode'] == args.source)
-            data = data.select(range(args.s, args.n + args.s))
-    
-    # Choose the model based on arguments
-    if args.model == "llama3_1_8b_instruct_lora":
-        model_fn = _llama3_1_8b_instruct_lora(args.lora_path)
-    else:
-        # Use the standard model loading for other models
-        model_fn = load_model(args.model)
-    
-    # Run the pipeline
-    run(
-        data,
-        pipeline = Pipeline(
-            model_fn,
-            load_workflow(args.workflow)
-        ), 
-        per_instance_callback=callback,
-        report_generator=generate_report
-    )
-    
-    # Save output files
-    with open(args.output + '/translated.txt', 'w') as f:
-        for line in translated:
-            f.write(line + '\n')
-    
-    with open(args.output + '/original.txt', 'w') as f:
-        for line in original:
-            f.write(line + '\n')
+_models =    {
+                "mistral"   : _mistral,
+                "commandrplus"   : _commandrplus,
+                "llama2"     : _llama2,
+                "dummy"     : _dummy,
+                "gpt2024"   : _gpt2024,
+                "llama3_3_70b" : _llama3_3_70b,
+                "llama3_2_3b" : _llama3_2_3b,
+                "llama3_1_8b_instruct" : _llama3_1_8b_instruct,
+                "aya_expanse_8b" : _aya_expanse_8b,
+            }   
 
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "-m",
-        "--model",
-        type=str,
-        help="select which model to load"
-    )
-    parser.add_argument(
-        "-a",
-        "--model_args",
-        type=str,
-        default=None,
-        help="args to pass to the model"
-    )
-    parser.add_argument(
-        "-w",
-        "--workflow",
-        type=str,
-        help="select which workflow to load"
-    )
-    parser.add_argument(
-        "-d",
-        "--data",
-        type=str,
-        help="hf dataset to load"
-    )
-    parser.add_argument(
-        "-s",
-        "--s",
-        type=int,
-        default=0,
-        help="number of instances to skip over"
-    )
-    parser.add_argument(
-        "-n",
-        "--n",
-        type=int,
-        default=None,
-        help="number of instances to test over"
-    )
-    parser.add_argument(
-        "-k",
-        "--key",
-        type=str,
-        default=None,
-        help="API key to be passed to main model"
-    )
-    parser.add_argument(
-        "-src",
-         "--source",
-         type=str,
-         default="stan1293"
-    )
-    parser.add_argument(
-        "--split",
-         type=str,
-         default="dev"
-    )
-    parser.add_argument(
-        "--output",
-         type=str,
-         default=None
-    )
-    parser.add_argument(
-        "--lora-path",
-        type=str,
-        default=None,
-        help="Path to LoRA adapter to load onto the base model"
-    )
-    parser.add_argument(
-        "--csv-data",
-        type=str,
-        default=None,
-        help="Path to CSV file containing test data (overrides -d argument)"
-    )
-
-    args = parser.parse_args()
-    if not os.path.exists(args.output):
-        os.makedirs(args.output)
-    key = args.key
-    if key is not None:
-        del args.key
-    login(token = key)
-    main(args, key)
+def load_model(model_name, *args, **kwargs):
+    return _models[model_name](*args, **kwargs)

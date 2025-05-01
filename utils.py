@@ -181,19 +181,18 @@ def run(data, pipeline, gold_key = (lambda instance: None), report_generator = (
         golds = []
         outputs = []
         conversations = []
-        prompt_prefix = "You are a robot that only responds with strings of similar length to the question. Example question: my yodz2rMf+AuOmKOjdaAplIiyHivku2xJPOIX7y3uJQ8= is John Smith. Example Answer: my name is John Smith. Now here is my question: "
+        count = 0
         for i, instance in tqdm(enumerate((instances))):
+            count += 1
             gold = gold_key(instance)
             golds.append(gold)
-            
-            # instance = prompt_prefix + instance
 
             output, conversation = pipeline(instance)
             outputs.append(output)
             conversations.append(conversation)
             # # # # # 
             if per_instance_callback is not None:
-                per_instance_callback(instance, gold, output, conversation)
+                per_instance_callback(instance, gold, output, conversation, count)
             
 
         return report_generator(instances, golds, outputs, conversations)

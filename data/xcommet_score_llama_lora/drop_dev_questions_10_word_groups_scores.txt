@@ -1,1 +1,1 @@
-model output score for drop_dev_questions_10_word_groups: 0.5962032580375671
+model output score for drop_dev_questions_10_word_groups: 0.5962032585144043

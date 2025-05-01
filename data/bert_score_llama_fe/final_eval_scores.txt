@@ -1,0 +1,9 @@
+Mean Precision for final_eval: 0.8838
+Max Precision for final_eval: 0.9750
+Min Precision for final_eval: 0.6822
+Mean Recall for final_eval: 0.8266
+Max Recall for final_eval: 0.9735
+Min Recall for final_eval: 0.6807
+Mean F1 for final_eval: 0.8534
+Max F1 for final_eval: 0.9420
+Min F1 for final_eval: 0.6814

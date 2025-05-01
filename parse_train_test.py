@@ -7,7 +7,7 @@ if __name__ == "__main__":
     gold_directory = "data/unused_data/final_test/plain_text/"
     input_directory = "data/unused_data/final_test/mixed_text/"
 
-    gold_file_name = 'cleaned_english_with_delimiters.txt'
+    gold_file_name = 'final_eval.txt'
 
     column_names = ['input', 'gold', 'category']
     df = pd.DataFrame(columns=column_names)
@@ -32,7 +32,7 @@ if __name__ == "__main__":
     # print(df)
     
     # save final evaluation data
-    df.to_csv('data/unused_data/final_test/final_eval.csv')
+    df.to_csv('data/unused_data/final_test/final_eval.csv', index=False)
 
     # # Split the dataframe into training and testing sets (e.g., 80% train, 20% test)
     # train_df, test_df = train_test_split(df, test_size=0.2, random_state=42)

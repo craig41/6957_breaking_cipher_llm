@@ -35,16 +35,16 @@ def calc_xcommet(inputs, outputs, golds):
 
 if __name__ == '__main__':
     # need input file
-    input_dir_str = "data/unused_data/final_test/mixed_test/"
+    input_dir_str = "data/final_eval_pred/input/"
     input_dir = sorted(os.listdir(input_dir_str))
     
     # need prediction file
     # get dir for aya
-    pred_dir_str = "data/final_eval_pred/"
+    pred_dir_str = "data/final_eval_pred/prediction/"
     pred_dir = sorted(os.listdir(pred_dir_str))
     
     # need parsed file
-    gold_dir_str = "data/unused_data/final_test/"
+    gold_dir_str = "data/unused_data/final_test/plain_text/"
     gold_dir = sorted(os.listdir(gold_dir_str))
     
     
@@ -75,7 +75,7 @@ if __name__ == '__main__':
         
         orig_filename = os.path.basename(gold_file)
         orig_filename = os.path.splitext(orig_filename)[0]
-        filename = "data/xcommet_score_fe/" + orig_filename + "_scores.txt"
+        filename = "data/xcommet_score_llama_fe/" + orig_filename + "_scores.txt"
         
         scores_mean = np.mean(np.array(scores[0].score))
         

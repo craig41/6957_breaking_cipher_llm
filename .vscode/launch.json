@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "-m","llama3_1_8b_instruct_lora",
+                "-w","translate",
+                "-k", "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",
+                "--output", "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/lora_test/eval_results_full/",
+                "--lora-path", "/scratch/general/vast/u1380656/6957_breaking_cipher_llm/src/results_llama3-8b-instruct-translator/cipher_adapter_new",
+                "--csv-data","/scratch/general/vast/u1380656/6957_breaking_cipher_llm/data/finetune-data-full/combined_test_data.csv"
+            ]
+        }
+    ]
+}

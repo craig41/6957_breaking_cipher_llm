@@ -1,5 +1,5 @@
 import os, sys ; sys.path.append(os.getcwd()) #allow local imports
-os.environ["TRANSFORMERS_CACHE"] = "/scratch/general/vast/u0013114/huggingface_cache"
+os.environ["TRANSFORMERS_CACHE"] = "/scratch/general/vast/u1380656/huggingface_cache"
 
 import argparse
 import torch
@@ -18,8 +18,11 @@ def generate_report(instances, golds, outputs, conversations):
 
 translated = []
 original = []
-def callback(instance, gold, output, conversation):
-    translated.append(output)
+count = 0
+def callback(instance, gold, output, conversation, count):
+    count += 1
+    print('in the callback for time number: ' + str(count))
+    translated.append(output.replace('\n', ' ').replace('\r', ' ').strip())
     original.append(instance['text'])
     print(f"Original: {instance['text']}")
     print(f"Translated: {output}")
@@ -42,6 +45,9 @@ def load_csv_data(csv_path, n=None, start=0):
     
     # Read the CSV file
     df = pd.read_csv(csv_path)
+    
+    
+    print(f"Loaded {len(df)} examples from {csv_path}")
     
     # Handle selection range
     if n is not None:
@@ -156,6 +162,84 @@ def _llama3_1_8b_instruct_lora(lora_adapter_path=None):
     
     return query
 
+def _aya_expanse_8b_lora(lora_adapter_path=None):
+    import re
+    
+    """Load AYA Expanse 8B model with optional LoRA adapter"""
+    # Base model ID
+    base_model_id = "CohereForAI/aya-expanse-8b"
+    
+    # Initialize tokenizer
+    tokenizer = AutoTokenizer.from_pretrained(base_model_id)
+    
+    # Load the base model
+    print(f"Loading base model: {base_model_id}")
+    model = AutoModelForCausalLM.from_pretrained(
+        base_model_id,
+        torch_dtype=torch.bfloat16,
+        device_map="auto"
+    )
+    
+    # Apply LoRA adapter if provided
+    if lora_adapter_path is not None and os.path.exists(lora_adapter_path):
+        print(f"Loading LoRA adapter from: {lora_adapter_path}")
+        model = PeftModel.from_pretrained(model, lora_adapter_path)
+        print("LoRA adapter loaded successfully")
+    else:
+        print("No LoRA adapter loaded or path doesn't exist")
+    
+    def query(messages, n=None):
+        # Format messages for AYA
+        system_prompt = "You are a translator that converts encoded or foreign text into plain English. When given input text, translate it accurately to English."
+        
+        # Get just the user message from messages list
+        user_message = None
+        for message in messages:
+            if message["role"] == "user":
+                user_message = message["content"]
+                break
+                
+        if not user_message:
+            return "Error: No user message found"
+        
+        # Format in AYA style
+        aya_messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_message}
+        ]
+        
+        # Process messages through the chat template
+        input_ids = tokenizer.apply_chat_template(
+            [aya_messages],
+            tokenize=True,
+            add_generation_prompt=True,
+            padding=True,
+            return_tensors="pt"
+        ).to('cuda')
+        
+        prompt_padded_len = len(input_ids[0])
+        
+        # Generate response
+        gen_tokens = model.generate(
+            input_ids,
+            temperature=0.75,
+            top_p=1.0,
+            top_k=0,
+            max_new_tokens=512,
+            do_sample=True
+        )
+        
+        # Get only generated tokens
+        gen_tokens = [gt[prompt_padded_len:] for gt in gen_tokens]
+        
+        # Decode and return
+        gen_text = tokenizer.batch_decode(gen_tokens, skip_special_tokens=True)[0]
+        gen_text = re.sub(r'Translate this text to English: ', '', gen_text)
+        return gen_text
+    
+    return query
+
+
 def main(args, key):
     print(args)
     if key is not None:
@@ -179,6 +263,8 @@ def main(args, key):
     # Choose the model based on arguments
     if args.model == "llama3_1_8b_instruct_lora":
         model_fn = _llama3_1_8b_instruct_lora(args.lora_path)
+    elif args.model == "aya_expanse_8b_lora":
+        model_fn = _aya_expanse_8b_lora(args.lora_path)
     else:
         # Use the standard model loading for other models
         model_fn = load_model(args.model)

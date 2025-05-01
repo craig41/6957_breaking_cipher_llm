@@ -1,1 +1,1 @@
-model output score for D3_10_word_groups: 0.7281108747720718
+model output score for D3_10_word_groups: 0.7281108751296997

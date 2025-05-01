@@ -1,1 +1,1 @@
-model output score for D4_10_word_groups: 0.6824220947027206
+model output score for D4_10_word_groups: 0.6824221115112304

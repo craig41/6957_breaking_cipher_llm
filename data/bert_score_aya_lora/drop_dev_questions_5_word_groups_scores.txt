@@ -1,9 +1,9 @@
-Mean Precision for drop_dev_questions_5_word_groups: 0.8307
+Mean Precision for drop_dev_questions_5_word_groups: 0.8285
 Max Precision for drop_dev_questions_5_word_groups: 0.9383
-Min Precision for drop_dev_questions_5_word_groups: 0.6897
-Mean Recall for drop_dev_questions_5_word_groups: 0.8146
-Max Recall for drop_dev_questions_5_word_groups: 0.9166
-Min Recall for drop_dev_questions_5_word_groups: 0.6558
-Mean F1 for drop_dev_questions_5_word_groups: 0.8223
+Min Precision for drop_dev_questions_5_word_groups: 0.7070
+Mean Recall for drop_dev_questions_5_word_groups: 0.8129
+Max Recall for drop_dev_questions_5_word_groups: 0.9634
+Min Recall for drop_dev_questions_5_word_groups: 0.6571
+Mean F1 for drop_dev_questions_5_word_groups: 0.8203
 Max F1 for drop_dev_questions_5_word_groups: 0.9242
-Min F1 for drop_dev_questions_5_word_groups: 0.7268
+Min F1 for drop_dev_questions_5_word_groups: 0.7264
